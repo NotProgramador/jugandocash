@@ -208,9 +208,10 @@ export default function Game() {
   }
 
   return (
-    <>
-      <Cartera />
-      {cartaComponent}
-    </>
-  );
+  <div className="min-h-screen p-4 space-y-4">
+    <Cartera />
+    <div className="text-sm opacity-70">Mes {turno}</div>
+    {cartaComponent}
+  </div>
+);
 }
