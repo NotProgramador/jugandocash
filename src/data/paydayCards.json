@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "texto": "¡Día de pago! Recibes tu sueldo mensual. ¿Qué quieres hacer?",
+    "opciones": [
+      {
+        "texto": "Pagar deuda",
+        "accion": "pagarDeuda",
+        "descripcion": "Elige cuánto abonarás este mes a tu deuda.",
+        "afecta": ["dinero", "deuda"]
+      },
+      {
+        "texto": "Ahorrar/invertir",
+        "accion": "invertir",
+        "descripcion": "Aparta una parte de tu sueldo para inversiones.",
+        "afecta": ["dinero", "inversiones"]
+      },
+      {
+        "texto": "Cumplir un sueño",
+        "accion": "cumplirSuenio",
+        "descripcion": "Elige cumplir uno de tus sueños si tienes el dinero suficiente.",
+        "afecta": ["dinero", "suenios", "salud"]
+      },
+      {
+        "texto": "Salir con amigos (fiesta)",
+        "accion": "fiesta",
+        "descripcion": "Gastaste en diversión, tu salud baja.",
+        "dinero": -1500,
+        "salud": -15
+      },
+      {
+        "texto": "No hacer nada especial",
+        "accion": "seguirNormal",
+        "descripcion": "Simplemente te relajas. Salud +10.",
+        "salud": 10
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "texto": "¡Día de pago! Por fin puedes respirar y tomar decisiones.",
+    "opciones": [
+      {
+        "texto": "Pagar solo intereses de deuda",
+        "accion": "pagarIntereses",
+        "descripcion": "Pagas el mínimo requerido, tu deuda baja muy poco.",
+        "dinero": -500,
+        "deuda": -500
+      },
+      {
+        "texto": "Invertir en fondo seguro",
+        "accion": "invertirBajoRiesgo",
+        "descripcion": "Invertiste $1,000 en un instrumento de bajo riesgo.",
+        "dinero": -1000,
+        "inversiones": [
+          { "tipo": "bajo", "monto": 1000 }
+        ]
+      },
+      {
+        "texto": "Ir al parque a caminar",
+        "accion": "salud",
+        "descripcion": "Gastas $50 pero tu salud mejora.",
+        "dinero": -50,
+        "salud": 15
+      },
+      {
+        "texto": "Cumplir sueño",
+        "accion": "cumplirSuenio",
+        "descripcion": "Intenta cumplir alguno de tus sueños.",
+        "afecta": ["dinero", "suenios"]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "texto": "¡Día de pago! Recibes tu salario, pero llegan tentaciones.",
+    "opciones": [
+      {
+        "texto": "Comprar gadget nuevo",
+        "accion": "gastoInnecesario",
+        "descripcion": "Gastaste $4,000 en un nuevo teléfono.",
+        "dinero": -4000,
+        "salud": 0
+      },
+      {
+        "texto": "Ir a un retiro de meditación",
+        "accion": "salud",
+        "descripcion": "Gastas $2,000 pero tu salud mental sube +20.",
+        "dinero": -2000,
+        "salud": 20
+      },
+      {
+        "texto": "Pagar deuda agresivamente",
+        "accion": "pagarDeuda",
+        "descripcion": "Decides pagar $10,000 de deuda este mes.",
+        "dinero": -10000,
+        "deuda": -10000
+      },
+      {
+        "texto": "Guardar todo el sueldo",
+        "accion": "ahorrar",
+        "descripcion": "No gastas nada extra, solo ahorras.",
+        "dinero": 0
+      }
+    ]
+  }
+]

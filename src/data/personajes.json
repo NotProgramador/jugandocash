@@ -1,0 +1,197 @@
+[
+  {
+    "nombre": "Carlos",
+    "profesion": "Panadero",
+    "deuda": 10000,
+    "ahorros": 50000,
+    "suenos": [
+      { "nombre": "Abrir panadería", "costo": 150000 },
+      { "nombre": "Viajar a Francia", "costo": 70000 },
+      { "nombre": "Casa en CDMX", "costo": 1200000 }
+    ],
+    "ingresos": 12000,
+    "contexto": "Carlos no solo amasa panes en su pequeña panadería del barrio, sino que también amasa el sueño de tener su propio local en una zona más céntrica. Mientras amasa, imagina los croissants de París y una casa donde su familia pueda crecer."
+  },
+  {
+    "nombre": "Ana",
+    "profesion": "Diseñadora Gráfica",
+    "deuda": 20000,
+    "ahorros": 30000,
+    "suenos": [
+      { "nombre": "Agencia de diseño", "costo": 100000 },
+      { "nombre": "Auto nuevo", "costo": 200000 },
+      { "nombre": "Viajar a Japón", "costo": 60000 }
+    ],
+    "ingresos": 15000,
+    "contexto": "Ana pasa sus días creando logos y diseños para pequeños negocios, pero por las noches sueña con dirigir su propia agencia. Un auto nuevo la llevaría a todas partes, pero su corazón está puesto en las calles iluminadas de Tokio."
+  },
+  {
+    "nombre": "Luis",
+    "profesion": "Estudiante",
+    "deuda": 15000,
+    "ahorros": 10000,
+    "suenos": [
+      { "nombre": "Terminar carrera", "costo": 30000 },
+      { "nombre": "Viaje por Europa", "costo": 80000 },
+      { "nombre": "Computadora nueva", "costo": 15000 }
+    ],
+    "ingresos": 4000,
+    "contexto": "Luis estudia administración en una universidad pública y trabaja medio tiempo en una cafetería. Sueña con graduarse y emprender un viaje por Europa, pero por ahora, ahorra para una computadora que le permita hacer sus tareas sin problemas."
+  },
+  {
+    "nombre": "María",
+    "profesion": "Enfermera",
+    "deuda": 0,
+    "ahorros": 70000,
+    "suenos": [
+      { "nombre": "Especializarse en pediatría", "costo": 40000 },
+      { "nombre": "Casa en CDMX", "costo": 1000000 },
+      { "nombre": "Adoptar un perro", "costo": 5000 }
+    ],
+    "ingresos": 18000,
+    "contexto": "María trabaja en un hospital público y adora a los niños. Su mayor sueño es especializarse en pediatría y tener una casa llena de risas y, por supuesto, un perro que la espere al final del día."
+  },
+  {
+    "nombre": "Pedro",
+    "profesion": "Mecánico",
+    "deuda": 25000,
+    "ahorros": 20000,
+    "suenos": [
+      { "nombre": "Taller propio", "costo": 120000 },
+      { "nombre": "Viajar a Italia", "costo": 50000 },
+      { "nombre": "Moto nueva", "costo": 30000 }
+    ],
+    "ingresos": 10000,
+    "contexto": "Pedro arregla autos en un pequeño taller prestado. Sueña con tener su propio espacio, viajar a Italia a conocer la tierra de los autos deportivos y tener una moto para recorrer la ciudad los domingos."
+  },
+  {
+    "nombre": "Laura",
+    "profesion": "Profesora",
+    "deuda": 0,
+    "ahorros": 60000,
+    "suenos": [
+      { "nombre": "Escribir un libro", "costo": 20000 },
+      { "nombre": "Viajar a Grecia", "costo": 55000 },
+      { "nombre": "Aprender piano", "costo": 15000 }
+    ],
+    "ingresos": 16000,
+    "contexto": "Laura enseña historia en una secundaria y sueña con escribir un libro que inspire a sus estudiantes. Imagina las playas de Grecia mientras corrige exámenes y desea aprender a tocar el piano para llenar su casa de música."
+  },
+  {
+    "nombre": "Javier",
+    "profesion": "Ingeniero",
+    "deuda": 0,
+    "ahorros": 100000,
+    "suenos": [
+      { "nombre": "Empresa de consultoría", "costo": 200000 },
+      { "nombre": "Viajar a Australia", "costo": 70000 },
+      { "nombre": "Yate pequeño", "costo": 500000 }
+    ],
+    "ingresos": 30000,
+    "contexto": "Javier trabaja en una firma de ingeniería y sueña con tener su propia empresa. Le encantaría visitar Australia y navegar en un yate pequeño por las costas mexicanas los fines de semana."
+  },
+  {
+    "nombre": "Sofía",
+    "profesion": "Artista",
+    "deuda": 30000,
+    "ahorros": 15000,
+    "suenos": [
+      { "nombre": "Exposición de arte", "costo": 25000 },
+      { "nombre": "Viajar a París", "costo": 55000 },
+      { "nombre": "Estudio propio", "costo": 40000 }
+    ],
+    "ingresos": 7000,
+    "contexto": "Sofía pinta murales y cuadros que vende en mercados locales. Sueña con tener una exposición en una galería reconocida y viajar a París para inspirarse. Un estudio propio sería el lugar perfecto para crear sus obras."
+  },
+  {
+    "nombre": "Miguel",
+    "profesion": "Arquitecto",
+    "deuda": 50000,
+    "ahorros": 40000,
+    "suenos": [
+      { "nombre": "Construir su casa", "costo": 800000 },
+      { "nombre": "Viajar a Egipto", "costo": 60000 },
+      { "nombre": "Auto clásico", "costo": 90000 }
+    ],
+    "ingresos": 25000,
+    "contexto": "Miguel diseña edificios modernos, pero su sueño es construir su propia casa con un toque vintage. Viajar a Egipto para ver las pirámides y tener un auto clásico son sus mayores anhelos."
+  },
+  {
+    "nombre": "Elena",
+    "profesion": "Abogada",
+    "deuda": 0,
+    "ahorros": 90000,
+    "suenos": [
+      { "nombre": "Bufete propio", "costo": 180000 },
+      { "nombre": "Viajar a Nueva York", "costo": 50000 },
+      { "nombre": "Casa en playa", "costo": 1500000 }
+    ],
+    "ingresos": 35000,
+    "contexto": "Elena trabaja en un bufete de renombre y sueña con tener su propio despacho. Viajar a Nueva York para conocer los grandes estudios legales y tener una casa en la playa donde pueda descansar son sus metas."
+  },
+  {
+    "nombre": "Ricardo",
+    "profesion": "Músico",
+    "deuda": 35000,
+    "ahorros": 20000,
+    "suenos": [
+      { "nombre": "Grabar álbum", "costo": 30000 },
+      { "nombre": "Viajar a Brasil", "costo": 40000 },
+      { "nombre": "Guitarra nueva", "costo": 15000 }
+    ],
+    "ingresos": 8000,
+    "contexto": "Ricardo toca en bares y restaurantes, soñando con grabar su propio álbum. Viajar a Brasil para sentir el ritmo de la samba y tener una guitarra nueva son sus mayores deseos."
+  },
+  {
+    "nombre": "Patricia",
+    "profesion": "Chef",
+    "deuda": 0,
+    "ahorros": 55000,
+    "suenos": [
+      { "nombre": "Restaurante propio", "costo": 250000 },
+      { "nombre": "Viajar a Tailandia", "costo": 45000 },
+      { "nombre": "Casa", "costo": 1200000 }
+    ],
+    "ingresos": 20000,
+    "contexto": "Patricia cocina en un pequeño restaurante y sueña con tener su propio lugar. Viajar a Tailandia para aprender nuevos sabores y tener una casa donde pueda recibir a su familia son sus metas."
+  },
+  {
+    "nombre": "Jorge",
+    "profesion": "Programador",
+    "deuda": 0,
+    "ahorros": 80000,
+    "suenos": [
+      { "nombre": "Startup de software", "costo": 150000 },
+      { "nombre": "Viajar a Canadá", "costo": 40000 },
+      { "nombre": "Casa en campo", "costo": 900000 }
+    ],
+    "ingresos": 28000,
+    "contexto": "Jorge trabaja como programador y sueña con lanzar su propia startup. Viajar a Canadá para conocer la escena tecnológica y tener una casa en el campo donde pueda desconectarse son sus planes."
+  },
+  {
+    "nombre": "Claudia",
+    "profesion": "Fotógrafa",
+    "deuda": 25000,
+    "ahorros": 18000,
+    "suenos": [
+      { "nombre": "Exposición fotográfica", "costo": 20000 },
+      { "nombre": "Viajar a Islandia", "costo": 60000 },
+      { "nombre": "Cámara nueva", "costo": 25000 }
+    ],
+    "ingresos": 8500,
+    "contexto": "Claudia toma fotos en eventos y sueña con tener su propia exposición. Viajar a Islandia para capturar paisajes únicos y tener una cámara nueva son sus mayores anhelos."
+  },
+  {
+    "nombre": "Daniel",
+    "profesion": "Contador",
+    "deuda": 0,
+    "ahorros": 65000,
+    "suenos": [
+      { "nombre": "Firma contable", "costo": 150000 },
+      { "nombre": "Viajar a Suiza", "costo": 50000 },
+      { "nombre": "Auto de lujo", "costo": 250000 }
+    ],
+    "ingresos": 22000,
+    "contexto": "Daniel trabaja en una firma contable y sueña con tener su propio negocio. Viajar a Suiza para conocer el sistema financiero y tener un auto de lujo son sus metas."
+  }
+]

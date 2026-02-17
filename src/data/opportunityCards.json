@@ -1,0 +1,452 @@
+[
+  {
+    "id": 1,
+    "texto": "Te ofrecen invertir en una app de meditación.",
+    "opciones": [
+      { "texto": "Invertir fuerte -$50,000", "dinero": -50000 },
+      { "texto": "Invertir poco -$1,000", "dinero": -1000 },
+      { "texto": "No invertir $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 2,
+    "texto": "Tu tío vende terrenos en un pueblo. ¿Le entras?",
+    "opciones": [
+      { "texto": "Comprar 2 terrenos -$60,000", "dinero": -60000 },
+      { "texto": "Comprar 1 terreno -$30,000", "dinero": -30000 },
+      { "texto": "No comprar $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 3,
+    "texto": "Un amigo quiere emprender un puesto de tacos y te pide dinero.",
+    "opciones": [
+      { "texto": "Invertir lo que te pide -$20,000", "dinero": -20000 },
+      { "texto": "Prestarle un cambio -$1,000", "dinero": -1000 },
+      { "texto": "Decirle que él no hierve ni un huevo duro $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 4,
+    "texto": "Te invitan a ser socio en un gimnasio boutique.",
+    "opciones": [
+      { "texto": "Aceptar y aportar -$70,000 +5 salud", "dinero": -70000, "salud": 5 },
+      { "texto": "Aportar poco -$3,000", "dinero": -3000 },
+      { "texto": "Rechazar amablemente $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 5,
+    "texto": "Un familiar quiere que apoyes su negocio de artesanías.",
+    "opciones": [
+      { "texto": "Apoyar con gusto -$25,000", "dinero": -25000 },
+      { "texto": "Apoyar un poco -$1,500", "dinero": -1500 },
+      { "texto": "Decir que no es lo tuyo $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 6,
+    "texto": "Te ofrecen participar en un negocio de criptomonedas.",
+    "opciones": [
+      { "texto": "Invertir fuerte -$75,000", "dinero": -75000 },
+      { "texto": "Invertir poco -$2,500", "dinero": -2500 },
+      { "texto": "No invertir $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 7,
+    "texto": "Un compañero de trabajo quiere que inviertas en su startup de tecnología.",
+    "opciones": [
+      { "texto": "Invertir -$50,000", "dinero": -50000 },
+      { "texto": "Prestar algo -$1,000", "dinero": -1000 },
+      { "texto": "Decir que no $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 8,
+    "texto": "Te proponen ser parte de una franquicia de café.",
+    "opciones": [
+      { "texto": "Aceptar y aportar -$70,000 +5 salud", "dinero": -70000, "salud": 5 },
+      { "texto": "Aportar poco -$3,500", "dinero": -3500 },
+      { "texto": "Rechazar $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 9,
+    "texto": "Un amigo quiere abrir una tienda de ropa vintage y te pide ayuda.",
+    "opciones": [
+      { "texto": "Invertir -$20,000", "dinero": -20000 },
+      { "texto": "Prestar algo -$1,000", "dinero": -1000 },
+      { "texto": "Decir que no $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 10,
+    "texto": "Te invitan a invertir en un proyecto de energía renovable.",
+    "opciones": [
+      { "texto": "Invertir fuerte -$65,000", "dinero": -65000 },
+      { "texto": "Invertir poco -$2,000", "dinero": -2000 },
+      { "texto": "No invertir $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 11,
+    "texto": "Un familiar quiere que apoyes su negocio de comida saludable.",
+    "opciones": [
+      { "texto": "Apoyar con gusto -$30,000 +10 salud", "dinero": -30000, "salud": 10 },
+      { "texto": "Apoyar un poco -$1,500", "dinero": -1500 },
+      { "texto": "Decir que no es lo tuyo $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 12,
+    "texto": "Te ofrecen invertir en una plataforma de cursos en línea.",
+    "opciones": [
+      { "texto": "Invertir fuerte -$55,000", "dinero": -55000 },
+      { "texto": "Invertir poco -$2,000", "dinero": -2000 },
+      { "texto": "No invertir $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 13,
+    "texto": "Un amigo quiere montar un food truck y te pide dinero.",
+    "opciones": [
+      { "texto": "Invertir lo que te pide -$40,000", "dinero": -40000 },
+      { "texto": "Prestarle un cambio -$1,500", "dinero": -1500 },
+      { "texto": "Decirle que no $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 14,
+    "texto": "Te invitan a ser socio en una tienda de productos orgánicos.",
+    "opciones": [
+      { "texto": "Aceptar y aportar -$60,000 +5 salud", "dinero": -60000, "salud": 5 },
+      { "texto": "Aportar poco -$2,500", "dinero": -2500 },
+      { "texto": "Rechazar amablemente $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 15,
+    "texto": "Un compañero de la universidad quiere que inviertas en su app de delivery.",
+    "opciones": [
+      { "texto": "Invertir -$55,000", "dinero": -55000 },
+      { "texto": "Prestar algo -$2,000", "dinero": -2000 },
+      { "texto": "Decir que no $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 16,
+    "texto": "Te ofrecen participar en un negocio de bienes raíces.",
+    "opciones": [
+      { "texto": "Invertir fuerte -$80,000", "dinero": -80000 },
+      { "texto": "Invertir poco -$3,000", "dinero": -3000 },
+      { "texto": "No invertir $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 17,
+    "texto": "Un amigo quiere abrir un café literario y te pide ayuda.",
+    "opciones": [
+      { "texto": "Invertir -$35,000 +5 salud", "dinero": -35000, "salud": 5 },
+      { "texto": "Prestar algo -$1,500", "dinero": -1500 },
+      { "texto": "Decir que no $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 18,
+    "texto": "Te invitan a invertir en una startup de inteligencia artificial.",
+    "opciones": [
+      { "texto": "Invertir fuerte -$75,000", "dinero": -75000 },
+      { "texto": "Invertir poco -$3,000", "dinero": -3000 },
+      { "texto": "No invertir $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 19,
+    "texto": "Un familiar quiere que apoyes su negocio de muebles hechos a mano.",
+    "opciones": [
+      { "texto": "Apoyar con gusto -$45,000", "dinero": -45000 },
+      { "texto": "Apoyar un poco -$2,000", "dinero": -2000 },
+      { "texto": "Decir que no es lo tuyo $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 20,
+    "texto": "Te ofrecen invertir en una app de transporte compartido.",
+    "opciones": [
+      { "texto": "Invertir fuerte -$70,000", "dinero": -70000 },
+      { "texto": "Invertir poco -$3,000", "dinero": -3000 },
+      { "texto": "No invertir $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 21,
+    "texto": "Un amigo quiere emprender un negocio de catering y te pide dinero.",
+    "opciones": [
+      { "texto": "Invertir lo que te pide -$25,000", "dinero": -25000 },
+      { "texto": "Prestarle un cambio -$1,000", "dinero": -1000 },
+      { "texto": "Decirle que no $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 22,
+    "texto": "Te invitan a ser socio en una tienda de productos ecológicos.",
+    "opciones": [
+      { "texto": "Aceptar y aportar -$65,000 +5 salud", "dinero": -65000, "salud": 5 },
+      { "texto": "Aportar poco -$2,500", "dinero": -2500 },
+      { "texto": "Rechazar amablemente $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 23,
+    "texto": "Un compañero de trabajo quiere que inviertas en su negocio de consultoría.",
+    "opciones": [
+      { "texto": "Invertir -$45,000", "dinero": -45000 },
+      { "texto": "Prestar algo -$2,000", "dinero": -2000 },
+      { "texto": "Decir que no $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 24,
+    "texto": "Te ofrecen participar en un negocio de turismo de aventura.",
+    "opciones": [
+      { "texto": "Invertir fuerte -$70,000 +10 salud", "dinero": -70000, "salud": 10 },
+      { "texto": "Invertir poco -$3,000", "dinero": -3000 },
+      { "texto": "No invertir $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 25,
+    "texto": "Un amigo quiere abrir una galería de arte y te pide ayuda.",
+    "opciones": [
+      { "texto": "Invertir -$50,000 +5 salud", "dinero": -50000, "salud": 5 },
+      { "texto": "Prestar algo -$2,000", "dinero": -2000 },
+      { "texto": "Decir que no $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 26,
+    "texto": "Te invitan a invertir en una plataforma de streaming de música independiente.",
+    "opciones": [
+      { "texto": "Invertir fuerte -$60,000", "dinero": -60000 },
+      { "texto": "Invertir poco -$2,500", "dinero": -2500 },
+      { "texto": "No invertir $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 27,
+    "texto": "Un familiar quiere que apoyes su negocio de ropa deportiva.",
+    "opciones": [
+      { "texto": "Apoyar con gusto -$35,000", "dinero": -35000 },
+      { "texto": "Apoyar un poco -$1,500", "dinero": -1500 },
+      { "texto": "Decir que no es lo tuyo $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 28,
+    "texto": "Te ofrecen invertir en una app de citas para mascotas.",
+    "opciones": [
+      { "texto": "Invertir fuerte -$40,000 +5 salud", "dinero": -40000, "salud": 5 },
+      { "texto": "Invertir poco -$1,500", "dinero": -1500 },
+      { "texto": "No invertir $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 29,
+    "texto": "Un amigo quiere montar un negocio de venta de plantas y te pide dinero.",
+    "opciones": [
+      { "texto": "Invertir lo que te pide -$20,000 +5 salud", "dinero": -20000, "salud": 5 },
+      { "texto": "Prestarle un cambio -$1,000", "dinero": -1000 },
+      { "texto": "Decirle que no $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 30,
+    "texto": "Te invitan a ser socio en una tienda de productos para bebés.",
+    "opciones": [
+      { "texto": "Aceptar y aportar -$65,000", "dinero": -65000 },
+      { "texto": "Aportar poco -$3,000", "dinero": -3000 },
+      { "texto": "Rechazar amablemente $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 31,
+    "texto": "Un compañero de la universidad quiere que inviertas en su negocio de marketing digital.",
+    "opciones": [
+      { "texto": "Invertir -$55,000", "dinero": -55000 },
+      { "texto": "Prestar algo -$2,500", "dinero": -2500 },
+      { "texto": "Decir que no $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 32,
+    "texto": "Te ofrecen participar en un negocio de venta de productos artesanales en línea.",
+    "opciones": [
+      { "texto": "Invertir fuerte -$50,000", "dinero": -50000 },
+      { "texto": "Invertir poco -$2,000", "dinero": -2000 },
+      { "texto": "No invertir $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 33,
+    "texto": "Un amigo quiere abrir un negocio de venta de libros usados y te pide ayuda.",
+    "opciones": [
+      { "texto": "Invertir -$30,000 +5 salud", "dinero": -30000, "salud": 5 },
+      { "texto": "Prestar algo -$1,500", "dinero": -1500 },
+      { "texto": "Decir que no $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 34,
+    "texto": "Te invitan a invertir en una startup de realidad virtual.",
+    "opciones": [
+      { "texto": "Invertir fuerte -$75,000", "dinero": -75000 },
+      { "texto": "Invertir poco -$3,500", "dinero": -3500 },
+      { "texto": "No invertir $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 35,
+    "texto": "Un familiar quiere que apoyes su negocio de venta de joyería hecha a mano.",
+    "opciones": [
+      { "texto": "Apoyar con gusto -$50,000", "dinero": -50000 },
+      { "texto": "Apoyar un poco -$2,000", "dinero": -2000 },
+      { "texto": "Decir que no es lo tuyo $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 36,
+    "texto": "Te ofrecen invertir en una app de aprendizaje de idiomas.",
+    "opciones": [
+      { "texto": "Invertir fuerte -$60,000", "dinero": -60000 },
+      { "texto": "Invertir poco -$2,500", "dinero": -2500 },
+      { "texto": "No invertir $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 37,
+    "texto": "Un amigo quiere emprender un negocio de venta de productos de belleza naturales y te pide dinero.",
+    "opciones": [
+      { "texto": "Invertir lo que te pide -$35,000 +5 salud", "dinero": -35000, "salud": 5 },
+      { "texto": "Prestarle un cambio -$1,500", "dinero": -1500 },
+      { "texto": "Decirle que no $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 38,
+    "texto": "Te invitan a ser socio en una tienda de productos para mascotas.",
+    "opciones": [
+      { "texto": "Aceptar y aportar -$70,000", "dinero": -70000 },
+      { "texto": "Aportar poco -$3,000", "dinero": -3000 },
+      { "texto": "Rechazar amablemente $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 39,
+    "texto": "Un compañero de trabajo quiere que inviertas en su negocio de venta de productos tecnológicos.",
+    "opciones": [
+      { "texto": "Invertir -$65,000", "dinero": -65000 },
+      { "texto": "Prestar algo -$2,500", "dinero": -2500 },
+      { "texto": "Decir que no $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 40,
+    "texto": "Te ofrecen participar en un negocio de venta de productos gourmet.",
+    "opciones": [
+      { "texto": "Invertir fuerte -$70,000", "dinero": -70000 },
+      { "texto": "Invertir poco -$3,000", "dinero": -3000 },
+      { "texto": "No invertir $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 41,
+    "texto": "Un amigo quiere abrir un negocio de venta de productos de limpieza ecológicos y te pide ayuda.",
+    "opciones": [
+      { "texto": "Invertir -$45,000", "dinero": -45000 },
+      { "texto": "Prestar algo -$2,000", "dinero": -2000 },
+      { "texto": "Decir que no $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 42,
+    "texto": "Te invitan a invertir en una plataforma de venta de cursos en línea para niños.",
+    "opciones": [
+      { "texto": "Invertir fuerte -$55,000", "dinero": -55000 },
+      { "texto": "Invertir poco -$2,000", "dinero": -2000 },
+      { "texto": "No invertir $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 43,
+    "texto": "Un familiar quiere que apoyes su negocio de venta de productos de decoración para el hogar.",
+    "opciones": [
+      { "texto": "Apoyar con gusto -$40,000", "dinero": -40000 },
+      { "texto": "Apoyar un poco -$1,500", "dinero": -1500 },
+      { "texto": "Decir que no es lo tuyo $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 44,
+    "texto": "Te ofrecen invertir en una app de venta de productos locales.",
+    "opciones": [
+      { "texto": "Invertir fuerte -$50,000", "dinero": -50000 },
+      { "texto": "Invertir poco -$2,000", "dinero": -2000 },
+      { "texto": "No invertir $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 45,
+    "texto": "Un amigo quiere montar un negocio de venta de productos de cuidado personal y te pide dinero.",
+    "opciones": [
+      { "texto": "Invertir lo que te pide -$25,000", "dinero": -25000 },
+      { "texto": "Prestarle un cambio -$1,000", "dinero": -1000 },
+      { "texto": "Decirle que no $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 46,
+    "texto": "Te invitan a ser socio en una tienda de productos para el cuidado del cabello.",
+    "opciones": [
+      { "texto": "Aceptar y aportar -$65,000", "dinero": -65000 },
+      { "texto": "Aportar poco -$2,500", "dinero": -2500 },
+      { "texto": "Rechazar amablemente $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 47,
+    "texto": "Un compañero de la universidad quiere que inviertas en su negocio de venta de productos de belleza.",
+    "opciones": [
+      { "texto": "Invertir -$60,000", "dinero": -60000 },
+      { "texto": "Prestar algo -$2,500", "dinero": -2500 },
+      { "texto": "Decir que no $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 48,
+    "texto": "Te ofrecen participar en un negocio de venta de productos de cuidado de la piel.",
+    "opciones": [
+      { "texto": "Invertir fuerte -$75,000", "dinero": -75000 },
+      { "texto": "Invertir poco -$3,000", "dinero": -3000 },
+      { "texto": "No invertir $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 49,
+    "texto": "Un amigo quiere abrir un negocio de venta de productos de maquillaje y te pide ayuda.",
+    "opciones": [
+      { "texto": "Invertir -$35,000 +5 salud", "dinero": -35000, "salud": 5 },
+      { "texto": "Prestar algo -$1,500", "dinero": -1500 },
+      { "texto": "Decir que no $0", "dinero": 0 }
+    ]
+  },
+  {
+    "id": 50,
+    "texto": "Te invitan a invertir en una plataforma de venta de productos de moda sostenible.",
+    "opciones": [
+      { "texto": "Invertir fuerte -$70,000", "dinero": -70000 },
+      { "texto": "Invertir poco -$3,000", "dinero": -3000 },
+      { "texto": "No invertir $0", "dinero": 0 }
+    ]
+  }
+]
