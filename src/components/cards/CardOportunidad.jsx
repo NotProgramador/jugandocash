@@ -1,19 +1,45 @@
 import { useGameStore } from "../../store/gameStore";
 
-export default function CardOportunidad({ texto, opciones = [], onOpcion }) {
+export default function CardOportunidad({ texto, opciones = [], onOpcion, mesActual = 1 }) {
   const actualizarDinero = useGameStore((s) => s.actualizarDinero);
+  const actualizarDeuda = useGameStore((s) => s.actualizarDeuda);
+  const actualizarSalud = useGameStore((s) => s.actualizarSalud);
+  const agendarInversion = useGameStore((s) => s.agendarInversion);
 
   const handleClick = (op) => {
-    // Si la opción es objeto: { texto, dinero }
-    if (typeof op === "object" && op.dinero) {
-      actualizarDinero(op.dinero);
+    // NUEVO: inversión diferida
+    if (typeof op === "object" && op?.inversion) {
+      const inv = op.inversion;
+      const dmin = Number(inv.delayMin ?? 1);
+      const dmax = Number(inv.delayMax ?? 2);
+      const delay = dmin + Math.floor(Math.random() * (dmax - dmin + 1));
+
+      agendarInversion({
+        nombre: inv.nombre || texto,
+        costo: inv.costo,
+        resolveAt: Number(mesActual) + delay,
+        outcomes: inv.outcomes || [{ delta: 0, p: 1 }],
+      });
+
+      onOpcion(op);
+      return;
     }
-    // Si es string (tipo "Invertir fuerte -$50,000")
-    if (typeof op === "string" && op.includes("-$")) {
-      const monto = -parseInt(op.match(/-\$([\d,]+)/)?.[1].replace(/,/g, "") || "0", 10);
+
+    // Efectos directos (tu formato actual)
+    if (typeof op === "object") {
+      if (typeof op.dinero === "number") actualizarDinero(op.dinero);
+      if (typeof op.deuda === "number") actualizarDeuda(op.deuda);
+      if (typeof op.salud === "number") actualizarSalud(op.salud);
+      onOpcion(op);
+      return;
+    }
+
+    // Strings tipo "-$"
+    if (typeof op === "string" && op.match(/-\$([\d,]+)/)) {
+      const monto = -parseInt(op.match(/-\$([\d,]+)/)[1].replace(/,/g, ""), 10);
       actualizarDinero(monto);
     }
-    // Siempre avanza
+
     onOpcion(op);
   };
 
@@ -24,10 +50,13 @@ export default function CardOportunidad({ texto, opciones = [], onOpcion }) {
         {opciones.map((op, idx) => (
           <button
             key={idx}
-            className="bg-blue-600 text-white rounded p-2 hover:bg-blue-700 transition"
+            className="bg-blue-600 text-white rounded p-2 hover:bg-blue-700 transition text-left"
             onClick={() => handleClick(op)}
           >
-            {typeof op === "string" ? op : op.texto}
+            <div className="font-semibold">{typeof op === "string" ? op : op?.texto ?? "Opción"}</div>
+            {typeof op === "object" && op?.descripcion ? (
+              <div className="text-sm opacity-80">{op.descripcion}</div>
+            ) : null}
           </button>
         ))}
       </div>

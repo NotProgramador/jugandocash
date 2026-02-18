@@ -3,450 +3,1730 @@
     "id": 1,
     "texto": "Te ofrecen invertir en una app de meditación.",
     "opciones": [
-      { "texto": "Invertir fuerte -$50,000", "dinero": -50000 },
-      { "texto": "Invertir poco -$1,000", "dinero": -1000 },
-      { "texto": "No invertir $0", "dinero": 0 }
+      {
+        "texto": "Invertir fuerte -$25,000",
+        "descripcion": "Más potencial, más riesgo.",
+        "inversion": {
+          "nombre": "App de meditación (fuerte)",
+          "costo": 25000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 11250,
+              "p": 0.35
+            },
+            {
+              "delta": 5000,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -6250,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$1,500",
+        "descripcion": "Pruebas el agua con el dedo.",
+        "inversion": {
+          "nombre": "App de meditación (poco)",
+          "costo": 1500,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 675,
+              "p": 0.35
+            },
+            {
+              "delta": 300,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -375,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "No es tu momento."
+      }
     ]
   },
   {
     "id": 2,
     "texto": "Tu tío vende terrenos en un pueblo. ¿Le entras?",
     "opciones": [
-      { "texto": "Comprar 2 terrenos -$60,000", "dinero": -60000 },
-      { "texto": "Comprar 1 terreno -$30,000", "dinero": -30000 },
-      { "texto": "No comprar $0", "dinero": 0 }
+      {
+        "texto": "Invertir fuerte -$60,000",
+        "descripcion": "Más potencial, más riesgo.",
+        "inversion": {
+          "nombre": "Terreno en pueblo (fuerte)",
+          "costo": 60000,
+          "delayMin": 2,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 54000,
+              "p": 0.22
+            },
+            {
+              "delta": 21000,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -24000,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$5,000",
+        "descripcion": "Pruebas el agua con el dedo.",
+        "inversion": {
+          "nombre": "Terreno en pueblo (poco)",
+          "costo": 5000,
+          "delayMin": 2,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 1250,
+              "p": 0.45
+            },
+            {
+              "delta": 600,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -750,
+              "p": 0.1
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "No es tu momento."
+      }
     ]
   },
   {
     "id": 3,
     "texto": "Un amigo quiere emprender un puesto de tacos y te pide dinero.",
     "opciones": [
-      { "texto": "Invertir lo que te pide -$20,000", "dinero": -20000 },
-      { "texto": "Prestarle un cambio -$1,000", "dinero": -1000 },
-      { "texto": "Decirle que él no hierve ni un huevo duro $0", "dinero": 0 }
+      {
+        "texto": "Invertir fuerte -$20,000",
+        "descripcion": "Más potencial, más riesgo.",
+        "inversion": {
+          "nombre": "Puesto de tacos (fuerte)",
+          "costo": 20000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 9000,
+              "p": 0.35
+            },
+            {
+              "delta": 4000,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -5000,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$3,000",
+        "descripcion": "Pruebas el agua con el dedo.",
+        "inversion": {
+          "nombre": "Puesto de tacos (poco)",
+          "costo": 3000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 1350,
+              "p": 0.35
+            },
+            {
+              "delta": 600,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -750,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "No es tu momento."
+      }
     ]
   },
   {
     "id": 4,
     "texto": "Te invitan a ser socio en un gimnasio boutique.",
     "opciones": [
-      { "texto": "Aceptar y aportar -$70,000 +5 salud", "dinero": -70000, "salud": 5 },
-      { "texto": "Aportar poco -$3,000", "dinero": -3000 },
-      { "texto": "Rechazar amablemente $0", "dinero": 0 }
+      {
+        "texto": "Invertir fuerte -$40,000",
+        "descripcion": "Más potencial, más riesgo.",
+        "inversion": {
+          "nombre": "Gimnasio boutique (fuerte)",
+          "costo": 40000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 18000,
+              "p": 0.35
+            },
+            {
+              "delta": 8000,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -10000,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$6,000",
+        "descripcion": "Pruebas el agua con el dedo.",
+        "inversion": {
+          "nombre": "Gimnasio boutique (poco)",
+          "costo": 6000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 2700,
+              "p": 0.35
+            },
+            {
+              "delta": 1200,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -1500,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "No es tu momento."
+      }
     ]
   },
   {
     "id": 5,
     "texto": "Un familiar quiere que apoyes su negocio de artesanías.",
     "opciones": [
-      { "texto": "Apoyar con gusto -$25,000", "dinero": -25000 },
-      { "texto": "Apoyar un poco -$1,500", "dinero": -1500 },
-      { "texto": "Decir que no es lo tuyo $0", "dinero": 0 }
+      {
+        "texto": "Invertir fuerte -$12,000",
+        "descripcion": "Más potencial, más riesgo.",
+        "inversion": {
+          "nombre": "Artesanías (fuerte)",
+          "costo": 12000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 3000,
+              "p": 0.45
+            },
+            {
+              "delta": 1440,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -1800,
+              "p": 0.1
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$1,200",
+        "descripcion": "Pruebas el agua con el dedo.",
+        "inversion": {
+          "nombre": "Artesanías (poco)",
+          "costo": 1200,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 300,
+              "p": 0.45
+            },
+            {
+              "delta": 144,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -180,
+              "p": 0.1
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "No es tu momento."
+      }
     ]
   },
   {
     "id": 6,
     "texto": "Te ofrecen participar en un negocio de criptomonedas.",
     "opciones": [
-      { "texto": "Invertir fuerte -$75,000", "dinero": -75000 },
-      { "texto": "Invertir poco -$2,500", "dinero": -2500 },
-      { "texto": "No invertir $0", "dinero": 0 }
+      {
+        "texto": "Invertir fuerte -$15,000",
+        "descripcion": "Más potencial, más riesgo.",
+        "inversion": {
+          "nombre": "Cripto (trading) (fuerte)",
+          "costo": 15000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 13500,
+              "p": 0.22
+            },
+            {
+              "delta": 5250,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -6000,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$2,000",
+        "descripcion": "Pruebas el agua con el dedo.",
+        "inversion": {
+          "nombre": "Cripto (trading) (poco)",
+          "costo": 2000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 500,
+              "p": 0.45
+            },
+            {
+              "delta": 240,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -300,
+              "p": 0.1
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "No es tu momento."
+      }
     ]
   },
   {
     "id": 7,
-    "texto": "Un compañero de trabajo quiere que inviertas en su startup de tecnología.",
+    "texto": "Te proponen ser parte de una franquicia de café.",
     "opciones": [
-      { "texto": "Invertir -$50,000", "dinero": -50000 },
-      { "texto": "Prestar algo -$1,000", "dinero": -1000 },
-      { "texto": "Decir que no $0", "dinero": 0 }
+      {
+        "texto": "Invertir fuerte -$50,000",
+        "descripcion": "Más potencial, más riesgo.",
+        "inversion": {
+          "nombre": "Franquicia café (fuerte)",
+          "costo": 50000,
+          "delayMin": 2,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 22500,
+              "p": 0.35
+            },
+            {
+              "delta": 10000,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -12500,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$8,000",
+        "descripcion": "Pruebas el agua con el dedo.",
+        "inversion": {
+          "nombre": "Franquicia café (poco)",
+          "costo": 8000,
+          "delayMin": 2,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 3600,
+              "p": 0.35
+            },
+            {
+              "delta": 1600,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -2000,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "No es tu momento."
+      }
     ]
   },
   {
     "id": 8,
-    "texto": "Te proponen ser parte de una franquicia de café.",
+    "texto": "Un amigo quiere abrir una tienda de ropa vintage.",
     "opciones": [
-      { "texto": "Aceptar y aportar -$70,000 +5 salud", "dinero": -70000, "salud": 5 },
-      { "texto": "Aportar poco -$3,500", "dinero": -3500 },
-      { "texto": "Rechazar $0", "dinero": 0 }
+      {
+        "texto": "Invertir fuerte -$18,000",
+        "descripcion": "Más potencial, más riesgo.",
+        "inversion": {
+          "nombre": "Ropa vintage (fuerte)",
+          "costo": 18000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 8100,
+              "p": 0.35
+            },
+            {
+              "delta": 3600,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -4500,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$2,500",
+        "descripcion": "Pruebas el agua con el dedo.",
+        "inversion": {
+          "nombre": "Ropa vintage (poco)",
+          "costo": 2500,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 1125,
+              "p": 0.35
+            },
+            {
+              "delta": 500,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -625,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "No es tu momento."
+      }
     ]
   },
   {
     "id": 9,
-    "texto": "Un amigo quiere abrir una tienda de ropa vintage y te pide ayuda.",
+    "texto": "Proyecto de energía renovable comunitario.",
     "opciones": [
-      { "texto": "Invertir -$20,000", "dinero": -20000 },
-      { "texto": "Prestar algo -$1,000", "dinero": -1000 },
-      { "texto": "Decir que no $0", "dinero": 0 }
+      {
+        "texto": "Invertir fuerte -$30,000",
+        "descripcion": "Más potencial, más riesgo.",
+        "inversion": {
+          "nombre": "Energía renovable (fuerte)",
+          "costo": 30000,
+          "delayMin": 2,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 7500,
+              "p": 0.45
+            },
+            {
+              "delta": 3600,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -4500,
+              "p": 0.1
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$4,000",
+        "descripcion": "Pruebas el agua con el dedo.",
+        "inversion": {
+          "nombre": "Energía renovable (poco)",
+          "costo": 4000,
+          "delayMin": 2,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 1000,
+              "p": 0.45
+            },
+            {
+              "delta": 480,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -600,
+              "p": 0.1
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "No es tu momento."
+      }
     ]
   },
   {
     "id": 10,
-    "texto": "Te invitan a invertir en un proyecto de energía renovable.",
+    "texto": "Plataforma de cursos en línea (tu nicho).",
     "opciones": [
-      { "texto": "Invertir fuerte -$65,000", "dinero": -65000 },
-      { "texto": "Invertir poco -$2,000", "dinero": -2000 },
-      { "texto": "No invertir $0", "dinero": 0 }
+      {
+        "texto": "Invertir fuerte -$15,000",
+        "descripcion": "Más potencial, más riesgo.",
+        "inversion": {
+          "nombre": "Cursos online (fuerte)",
+          "costo": 15000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 6750,
+              "p": 0.35
+            },
+            {
+              "delta": 3000,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -3750,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$2,000",
+        "descripcion": "Pruebas el agua con el dedo.",
+        "inversion": {
+          "nombre": "Cursos online (poco)",
+          "costo": 2000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 900,
+              "p": 0.35
+            },
+            {
+              "delta": 400,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -500,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "No es tu momento."
+      }
     ]
   },
   {
     "id": 11,
-    "texto": "Un familiar quiere que apoyes su negocio de comida saludable.",
+    "texto": "Food truck (pagas permisos y equipo).",
     "opciones": [
-      { "texto": "Apoyar con gusto -$30,000 +10 salud", "dinero": -30000, "salud": 10 },
-      { "texto": "Apoyar un poco -$1,500", "dinero": -1500 },
-      { "texto": "Decir que no es lo tuyo $0", "dinero": 0 }
+      {
+        "texto": "Invertir fuerte -$35,000",
+        "descripcion": "Más potencial, más riesgo.",
+        "inversion": {
+          "nombre": "Food truck (fuerte)",
+          "costo": 35000,
+          "delayMin": 2,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 31500,
+              "p": 0.22
+            },
+            {
+              "delta": 12250,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -14000,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$6,000",
+        "descripcion": "Pruebas el agua con el dedo.",
+        "inversion": {
+          "nombre": "Food truck (poco)",
+          "costo": 6000,
+          "delayMin": 2,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 1500,
+              "p": 0.45
+            },
+            {
+              "delta": 720,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -900,
+              "p": 0.1
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "No es tu momento."
+      }
     ]
   },
   {
     "id": 12,
-    "texto": "Te ofrecen invertir en una plataforma de cursos en línea.",
+    "texto": "Tienda de productos orgánicos en colonia nice.",
     "opciones": [
-      { "texto": "Invertir fuerte -$55,000", "dinero": -55000 },
-      { "texto": "Invertir poco -$2,000", "dinero": -2000 },
-      { "texto": "No invertir $0", "dinero": 0 }
+      {
+        "texto": "Invertir fuerte -$22,000",
+        "descripcion": "Más potencial, más riesgo.",
+        "inversion": {
+          "nombre": "Orgánicos (fuerte)",
+          "costo": 22000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 9900,
+              "p": 0.35
+            },
+            {
+              "delta": 4400,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -5500,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$3,000",
+        "descripcion": "Pruebas el agua con el dedo.",
+        "inversion": {
+          "nombre": "Orgánicos (poco)",
+          "costo": 3000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 1350,
+              "p": 0.35
+            },
+            {
+              "delta": 600,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -750,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "No es tu momento."
+      }
     ]
   },
   {
     "id": 13,
-    "texto": "Un amigo quiere montar un food truck y te pide dinero.",
+    "texto": "Startup de IA (suena increíble).",
     "opciones": [
-      { "texto": "Invertir lo que te pide -$40,000", "dinero": -40000 },
-      { "texto": "Prestarle un cambio -$1,500", "dinero": -1500 },
-      { "texto": "Decirle que no $0", "dinero": 0 }
+      {
+        "texto": "Invertir fuerte -$45,000",
+        "descripcion": "Más potencial, más riesgo.",
+        "inversion": {
+          "nombre": "Startup IA (fuerte)",
+          "costo": 45000,
+          "delayMin": 2,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 40500,
+              "p": 0.22
+            },
+            {
+              "delta": 15750,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -18000,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$5,000",
+        "descripcion": "Pruebas el agua con el dedo.",
+        "inversion": {
+          "nombre": "Startup IA (poco)",
+          "costo": 5000,
+          "delayMin": 2,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 1250,
+              "p": 0.45
+            },
+            {
+              "delta": 600,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -750,
+              "p": 0.1
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "No es tu momento."
+      }
     ]
   },
   {
     "id": 14,
-    "texto": "Te invitan a ser socio en una tienda de productos orgánicos.",
+    "texto": "App de transporte compartido local.",
     "opciones": [
-      { "texto": "Aceptar y aportar -$60,000 +5 salud", "dinero": -60000, "salud": 5 },
-      { "texto": "Aportar poco -$2,500", "dinero": -2500 },
-      { "texto": "Rechazar amablemente $0", "dinero": 0 }
+      {
+        "texto": "Invertir fuerte -$20,000",
+        "descripcion": "Más potencial, más riesgo.",
+        "inversion": {
+          "nombre": "App transporte (fuerte)",
+          "costo": 20000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 9000,
+              "p": 0.35
+            },
+            {
+              "delta": 4000,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -5000,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$2,500",
+        "descripcion": "Pruebas el agua con el dedo.",
+        "inversion": {
+          "nombre": "App transporte (poco)",
+          "costo": 2500,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 1125,
+              "p": 0.35
+            },
+            {
+              "delta": 500,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -625,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "No es tu momento."
+      }
     ]
   },
   {
     "id": 15,
-    "texto": "Un compañero de la universidad quiere que inviertas en su app de delivery.",
+    "texto": "Cliente grande: te paga a 2 meses (anticipo materiales).",
     "opciones": [
-      { "texto": "Invertir -$55,000", "dinero": -55000 },
-      { "texto": "Prestar algo -$2,000", "dinero": -2000 },
-      { "texto": "Decir que no $0", "dinero": 0 }
+      {
+        "texto": "Invertir fuerte -$15,000",
+        "descripcion": "Más potencial, más riesgo.",
+        "inversion": {
+          "nombre": "Cliente grande (fuerte)",
+          "costo": 15000,
+          "delayMin": 2,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 3750,
+              "p": 0.45
+            },
+            {
+              "delta": 1800,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -2250,
+              "p": 0.1
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$3,500",
+        "descripcion": "Pruebas el agua con el dedo.",
+        "inversion": {
+          "nombre": "Cliente grande (poco)",
+          "costo": 3500,
+          "delayMin": 2,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 875,
+              "p": 0.45
+            },
+            {
+              "delta": 420,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -525,
+              "p": 0.1
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "No es tu momento."
+      }
     ]
   },
   {
     "id": 16,
-    "texto": "Te ofrecen participar en un negocio de bienes raíces.",
+    "texto": "Herramienta para producir más (compras hoy, recuperas después).",
     "opciones": [
-      { "texto": "Invertir fuerte -$80,000", "dinero": -80000 },
-      { "texto": "Invertir poco -$3,000", "dinero": -3000 },
-      { "texto": "No invertir $0", "dinero": 0 }
+      {
+        "texto": "Invertir fuerte -$6,000",
+        "descripcion": "Más potencial, más riesgo.",
+        "inversion": {
+          "nombre": "Herramienta (fuerte)",
+          "costo": 6000,
+          "delayMin": 2,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 2700,
+              "p": 0.35
+            },
+            {
+              "delta": 1200,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -1500,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$2,500",
+        "descripcion": "Pruebas el agua con el dedo.",
+        "inversion": {
+          "nombre": "Herramienta (poco)",
+          "costo": 2500,
+          "delayMin": 2,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 1125,
+              "p": 0.35
+            },
+            {
+              "delta": 500,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -625,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "No es tu momento."
+      }
     ]
   },
   {
     "id": 17,
-    "texto": "Un amigo quiere abrir un café literario y te pide ayuda.",
+    "texto": "Te cae un bono inesperado en el trabajo.",
     "opciones": [
-      { "texto": "Invertir -$35,000 +5 salud", "dinero": -35000, "salud": 5 },
-      { "texto": "Prestar algo -$1,500", "dinero": -1500 },
-      { "texto": "Decir que no $0", "dinero": 0 }
+      {
+        "texto": "Agradecer en silencio +$2,000",
+        "dinero": 2000
+      },
+      {
+        "texto": "Celebrar caro -$1,200",
+        "dinero": -1200,
+        "salud": 2
+      },
+      {
+        "texto": "Guardarlo $0",
+        "dinero": 0
+      }
     ]
   },
   {
     "id": 18,
-    "texto": "Te invitan a invertir en una startup de inteligencia artificial.",
+    "texto": "Vendes algo que tenías guardado en casa.",
     "opciones": [
-      { "texto": "Invertir fuerte -$75,000", "dinero": -75000 },
-      { "texto": "Invertir poco -$3,000", "dinero": -3000 },
-      { "texto": "No invertir $0", "dinero": 0 }
+      {
+        "texto": "Vender rápido +$800",
+        "dinero": 800
+      },
+      {
+        "texto": "Vender bien +$1,600 (tarda, pero hoy cae)",
+        "dinero": 1600
+      },
+      {
+        "texto": "Mejor me lo quedo $0",
+        "dinero": 0
+      }
     ]
   },
   {
     "id": 19,
-    "texto": "Un familiar quiere que apoyes su negocio de muebles hechos a mano.",
+    "texto": "Te ofrecen un freelance express.",
     "opciones": [
-      { "texto": "Apoyar con gusto -$45,000", "dinero": -45000 },
-      { "texto": "Apoyar un poco -$2,000", "dinero": -2000 },
-      { "texto": "Decir que no es lo tuyo $0", "dinero": 0 }
+      {
+        "texto": "Aceptar +$1,500 (pero te desvelas)",
+        "dinero": 1500,
+        "salud": -3
+      },
+      {
+        "texto": "Negociar +$2,200 (más estrés)",
+        "dinero": 2200,
+        "salud": -5
+      },
+      {
+        "texto": "Pasar $0",
+        "dinero": 0,
+        "salud": 1
+      }
     ]
   },
   {
     "id": 20,
-    "texto": "Te ofrecen invertir en una app de transporte compartido.",
+    "texto": "Te llega una devolución (depósito / reembolso).",
     "opciones": [
-      { "texto": "Invertir fuerte -$70,000", "dinero": -70000 },
-      { "texto": "Invertir poco -$3,000", "dinero": -3000 },
-      { "texto": "No invertir $0", "dinero": 0 }
+      {
+        "texto": "Recibir +$1,000",
+        "dinero": 1000
+      },
+      {
+        "texto": "Invertirlo en comida chatarra -$600",
+        "dinero": -600,
+        "salud": -2
+      },
+      {
+        "texto": "Pasar $0",
+        "dinero": 0
+      }
     ]
   },
   {
     "id": 21,
-    "texto": "Un amigo quiere emprender un negocio de catering y te pide dinero.",
+    "texto": "Un amigo te paga lo que te debía (milagro).",
     "opciones": [
-      { "texto": "Invertir lo que te pide -$25,000", "dinero": -25000 },
-      { "texto": "Prestarle un cambio -$1,000", "dinero": -1000 },
-      { "texto": "Decirle que no $0", "dinero": 0 }
+      {
+        "texto": "Cobrar +$1,200",
+        "dinero": 1200
+      },
+      {
+        "texto": "Perdonar la mitad +$600 (karma)",
+        "dinero": 600,
+        "salud": 2
+      },
+      {
+        "texto": "Decirle 'luego' $0",
+        "dinero": 0
+      }
     ]
   },
   {
     "id": 22,
-    "texto": "Te invitan a ser socio en una tienda de productos ecológicos.",
+    "texto": "Te ofrecen comisión por recomendar a alguien.",
     "opciones": [
-      { "texto": "Aceptar y aportar -$65,000 +5 salud", "dinero": -65000, "salud": 5 },
-      { "texto": "Aportar poco -$2,500", "dinero": -2500 },
-      { "texto": "Rechazar amablemente $0", "dinero": 0 }
+      {
+        "texto": "Hacerlo +$900",
+        "dinero": 900
+      },
+      {
+        "texto": "Hacerlo bien +$1,500 (más tiempo)",
+        "dinero": 1500,
+        "salud": -2
+      },
+      {
+        "texto": "No hacerlo $0",
+        "dinero": 0
+      }
     ]
   },
   {
     "id": 23,
-    "texto": "Un compañero de trabajo quiere que inviertas en su negocio de consultoría.",
+    "texto": "Te llega una multa o cobro pendejo (sí pasa).",
     "opciones": [
-      { "texto": "Invertir -$45,000", "dinero": -45000 },
-      { "texto": "Prestar algo -$2,000", "dinero": -2000 },
-      { "texto": "Decir que no $0", "dinero": 0 }
+      {
+        "texto": "Pagar -$900",
+        "dinero": -900
+      },
+      {
+        "texto": "Pelearla (pierdes tiempo) -1 salud",
+        "salud": -1
+      },
+      {
+        "texto": "Ignorar (crece deuda) +$1,200 deuda",
+        "deuda": 1200
+      }
     ]
   },
   {
     "id": 24,
-    "texto": "Te ofrecen participar en un negocio de turismo de aventura.",
+    "texto": "Te invitan a un evento con 'oportunidades'.",
     "opciones": [
-      { "texto": "Invertir fuerte -$70,000 +10 salud", "dinero": -70000, "salud": 10 },
-      { "texto": "Invertir poco -$3,000", "dinero": -3000 },
-      { "texto": "No invertir $0", "dinero": 0 }
+      {
+        "texto": "Ir (networking) +1 salud",
+        "salud": 1
+      },
+      {
+        "texto": "Ir y gastar en chelas -$700",
+        "dinero": -700,
+        "salud": -1
+      },
+      {
+        "texto": "No ir $0",
+        "dinero": 0
+      }
     ]
   },
   {
     "id": 25,
-    "texto": "Un amigo quiere abrir una galería de arte y te pide ayuda.",
+    "texto": "Te ofrecen horas extra.",
     "opciones": [
-      { "texto": "Invertir -$50,000 +5 salud", "dinero": -50000, "salud": 5 },
-      { "texto": "Prestar algo -$2,000", "dinero": -2000 },
-      { "texto": "Decir que no $0", "dinero": 0 }
+      {
+        "texto": "Aceptar +$1,000",
+        "dinero": 1000,
+        "salud": -2
+      },
+      {
+        "texto": "Aceptar fuerte +$2,000",
+        "dinero": 2000,
+        "salud": -5
+      },
+      {
+        "texto": "No $0",
+        "dinero": 0,
+        "salud": 1
+      }
     ]
   },
   {
     "id": 26,
-    "texto": "Te invitan a invertir en una plataforma de streaming de música independiente.",
+    "texto": "Te sale una reparación pequeña en casa.",
     "opciones": [
-      { "texto": "Invertir fuerte -$60,000", "dinero": -60000 },
-      { "texto": "Invertir poco -$2,500", "dinero": -2500 },
-      { "texto": "No invertir $0", "dinero": 0 }
+      {
+        "texto": "Arreglar ya -$700 (evitas peor)",
+        "dinero": -700,
+        "salud": 1
+      },
+      {
+        "texto": "Hacerlo tú -$200",
+        "dinero": -200,
+        "salud": -1
+      },
+      {
+        "texto": "Ignorar (te estresa) -2 salud",
+        "salud": -2
+      }
     ]
   },
   {
     "id": 27,
-    "texto": "Un familiar quiere que apoyes su negocio de ropa deportiva.",
+    "texto": "Encuentras un billete en un pantalón viejo.",
     "opciones": [
-      { "texto": "Apoyar con gusto -$35,000", "dinero": -35000 },
-      { "texto": "Apoyar un poco -$1,500", "dinero": -1500 },
-      { "texto": "Decir que no es lo tuyo $0", "dinero": 0 }
+      {
+        "texto": "Cobrar +$300",
+        "dinero": 300
+      },
+      {
+        "texto": "Invitar un café -$150",
+        "dinero": -150,
+        "salud": 1
+      },
+      {
+        "texto": "No pasa nada $0",
+        "dinero": 0
+      }
     ]
   },
   {
     "id": 28,
-    "texto": "Te ofrecen invertir en una app de citas para mascotas.",
+    "texto": "Te ofrecen cambiarte a un trabajo mejor pagado… pero pesado.",
     "opciones": [
-      { "texto": "Invertir fuerte -$40,000 +5 salud", "dinero": -40000, "salud": 5 },
-      { "texto": "Invertir poco -$1,500", "dinero": -1500 },
-      { "texto": "No invertir $0", "dinero": 0 }
+      {
+        "texto": "Aceptar +$3,000 (pero te drena)",
+        "dinero": 3000,
+        "salud": -6
+      },
+      {
+        "texto": "Negociar +$2,000",
+        "dinero": 2000,
+        "salud": -3
+      },
+      {
+        "texto": "Quedarme como estoy $0",
+        "dinero": 0
+      }
     ]
   },
   {
     "id": 29,
-    "texto": "Un amigo quiere montar un negocio de venta de plantas y te pide dinero.",
+    "texto": "Te sientes al 70%. ¿Qué haces con tu salud?",
     "opciones": [
-      { "texto": "Invertir lo que te pide -$20,000 +5 salud", "dinero": -20000, "salud": 5 },
-      { "texto": "Prestarle un cambio -$1,000", "dinero": -1000 },
-      { "texto": "Decirle que no $0", "dinero": 0 }
+      {
+        "texto": "Ir al médico -$800 (+8 salud)",
+        "dinero": -800,
+        "salud": 8
+      },
+      {
+        "texto": "Remedios caseros -$200 (+3 salud)",
+        "dinero": -200,
+        "salud": 3
+      },
+      {
+        "texto": "Aguantarme (baja) -4 salud",
+        "salud": -4
+      }
     ]
   },
   {
     "id": 30,
-    "texto": "Te invitan a ser socio en una tienda de productos para bebés.",
+    "texto": "Tu amigo te invita a salir. Tu cartera llora.",
     "opciones": [
-      { "texto": "Aceptar y aportar -$65,000", "dinero": -65000 },
-      { "texto": "Aportar poco -$3,000", "dinero": -3000 },
-      { "texto": "Rechazar amablemente $0", "dinero": 0 }
+      {
+        "texto": "Salir leve -$400 (+2 salud)",
+        "dinero": -400,
+        "salud": 2
+      },
+      {
+        "texto": "Salir fuerte -$1200 (+4 salud)",
+        "dinero": -1200,
+        "salud": 4
+      },
+      {
+        "texto": "No salir (+1 salud)",
+        "salud": 1
+      }
     ]
   },
   {
     "id": 31,
-    "texto": "Un compañero de la universidad quiere que inviertas en su negocio de marketing digital.",
+    "texto": "Te ofrecen un plan para 'refinanciar' tu deuda.",
     "opciones": [
-      { "texto": "Invertir -$55,000", "dinero": -55000 },
-      { "texto": "Prestar algo -$2,500", "dinero": -2500 },
-      { "texto": "Decir que no $0", "dinero": 0 }
+      {
+        "texto": "Aceptar (baja deuda -$3,000 pero cuesta -$700)",
+        "deuda": -3000,
+        "dinero": -700
+      },
+      {
+        "texto": "Negociar (baja deuda -$1,500)",
+        "deuda": -1500
+      },
+      {
+        "texto": "No moverle $0",
+        "dinero": 0
+      }
     ]
   },
   {
     "id": 32,
-    "texto": "Te ofrecen participar en un negocio de venta de productos artesanales en línea.",
+    "texto": "Se te antoja comprar algo por impulso.",
     "opciones": [
-      { "texto": "Invertir fuerte -$50,000", "dinero": -50000 },
-      { "texto": "Invertir poco -$2,000", "dinero": -2000 },
-      { "texto": "No invertir $0", "dinero": 0 }
+      {
+        "texto": "Comprar -$600",
+        "dinero": -600,
+        "salud": 1
+      },
+      {
+        "texto": "No comprar (+1 salud)",
+        "salud": 1
+      },
+      {
+        "texto": "Comprar caro -$2,000",
+        "dinero": -2000,
+        "salud": 2
+      }
     ]
   },
   {
     "id": 33,
-    "texto": "Un amigo quiere abrir un negocio de venta de libros usados y te pide ayuda.",
+    "texto": "Te ofrecen un curso GRATIS… pero con trampa de tiempo.",
     "opciones": [
-      { "texto": "Invertir -$30,000 +5 salud", "dinero": -30000, "salud": 5 },
-      { "texto": "Prestar algo -$1,500", "dinero": -1500 },
-      { "texto": "Decir que no $0", "dinero": 0 }
+      {
+        "texto": "Tomarlo (+2 salud, -1 dinero no)",
+        "salud": 2
+      },
+      {
+        "texto": "Tomarlo y obsesionarte (-3 salud)",
+        "salud": -3
+      },
+      {
+        "texto": "Pasar $0",
+        "dinero": 0
+      }
     ]
   },
   {
     "id": 34,
-    "texto": "Te invitan a invertir en una startup de realidad virtual.",
+    "texto": "Tu familia te pide apoyo económico.",
     "opciones": [
-      { "texto": "Invertir fuerte -$75,000", "dinero": -75000 },
-      { "texto": "Invertir poco -$3,500", "dinero": -3500 },
-      { "texto": "No invertir $0", "dinero": 0 }
+      {
+        "texto": "Ayudar -$1,000 (+2 salud emocional)",
+        "dinero": -1000,
+        "salud": 2
+      },
+      {
+        "texto": "Ayudar poco -$300",
+        "dinero": -300,
+        "salud": 1
+      },
+      {
+        "texto": "No puedo $0 (-1 salud)",
+        "salud": -1
+      }
     ]
   },
   {
     "id": 35,
-    "texto": "Un familiar quiere que apoyes su negocio de venta de joyería hecha a mano.",
+    "texto": "Te ofrecen una membresía de gimnasio.",
     "opciones": [
-      { "texto": "Apoyar con gusto -$50,000", "dinero": -50000 },
-      { "texto": "Apoyar un poco -$2,000", "dinero": -2000 },
-      { "texto": "Decir que no es lo tuyo $0", "dinero": 0 }
+      {
+        "texto": "Pagar mensual -$600 (+6 salud)",
+        "dinero": -600,
+        "salud": 6
+      },
+      {
+        "texto": "Hacer ejercicio en casa (+3 salud)",
+        "salud": 3
+      },
+      {
+        "texto": "No hacer nada (-2 salud)",
+        "salud": -2
+      }
     ]
   },
   {
     "id": 36,
-    "texto": "Te ofrecen invertir en una app de aprendizaje de idiomas.",
+    "texto": "Te proponen un seguro médico básico.",
     "opciones": [
-      { "texto": "Invertir fuerte -$60,000", "dinero": -60000 },
-      { "texto": "Invertir poco -$2,500", "dinero": -2500 },
-      { "texto": "No invertir $0", "dinero": 0 }
+      {
+        "texto": "Contratar -$900 (+10 salud)",
+        "dinero": -900,
+        "salud": 10
+      },
+      {
+        "texto": "No contratar $0",
+        "dinero": 0
+      },
+      {
+        "texto": "Guardar para emergencias (+1 salud mental)",
+        "salud": 1
+      }
     ]
   },
   {
     "id": 37,
-    "texto": "Un amigo quiere emprender un negocio de venta de productos de belleza naturales y te pide dinero.",
+    "texto": "Un vecino te ofrece un 'trabajo rápido' dudoso.",
     "opciones": [
-      { "texto": "Invertir lo que te pide -$35,000 +5 salud", "dinero": -35000, "salud": 5 },
-      { "texto": "Prestarle un cambio -$1,500", "dinero": -1500 },
-      { "texto": "Decirle que no $0", "dinero": 0 }
+      {
+        "texto": "Aceptar +$1,500 (pero te estresa)",
+        "dinero": 1500,
+        "salud": -4
+      },
+      {
+        "texto": "Rechazar (+1 salud)",
+        "salud": 1
+      },
+      {
+        "texto": "Aceptar y sale mal (pierdes) -$800",
+        "dinero": -800,
+        "salud": -2
+      }
     ]
   },
   {
     "id": 38,
-    "texto": "Te invitan a ser socio en una tienda de productos para mascotas.",
+    "texto": "Te llega una tentación de comprar a meses.",
     "opciones": [
-      { "texto": "Aceptar y aportar -$70,000", "dinero": -70000 },
-      { "texto": "Aportar poco -$3,000", "dinero": -3000 },
-      { "texto": "Rechazar amablemente $0", "dinero": 0 }
+      {
+        "texto": "Aceptar (sube deuda +$2,500)",
+        "deuda": 2500,
+        "salud": 1
+      },
+      {
+        "texto": "No aceptar (+1 salud)",
+        "salud": 1
+      },
+      {
+        "texto": "Buscar usado -$700",
+        "dinero": -700
+      }
     ]
   },
   {
     "id": 39,
-    "texto": "Un compañero de trabajo quiere que inviertas en su negocio de venta de productos tecnológicos.",
+    "texto": "Te invitan a comer diario fuera.",
     "opciones": [
-      { "texto": "Invertir -$65,000", "dinero": -65000 },
-      { "texto": "Prestar algo -$2,500", "dinero": -2500 },
-      { "texto": "Decir que no $0", "dinero": 0 }
+      {
+        "texto": "Sí, me lo merezco -$900 (-2 salud)",
+        "dinero": -900,
+        "salud": -2
+      },
+      {
+        "texto": "Cocinar en casa -$300 (+2 salud)",
+        "dinero": -300,
+        "salud": 2
+      },
+      {
+        "texto": "Mitad y mitad -$600",
+        "dinero": -600
+      }
     ]
   },
   {
     "id": 40,
-    "texto": "Te ofrecen participar en un negocio de venta de productos gourmet.",
+    "texto": "Un amigo te pide prestado (riesgo social).",
     "opciones": [
-      { "texto": "Invertir fuerte -$70,000", "dinero": -70000 },
-      { "texto": "Invertir poco -$3,000", "dinero": -3000 },
-      { "texto": "No invertir $0", "dinero": 0 }
+      {
+        "texto": "Prestar -$1,200",
+        "dinero": -1200
+      },
+      {
+        "texto": "Prestar poco -$300",
+        "dinero": -300
+      },
+      {
+        "texto": "No prestar (+1 salud)",
+        "salud": 1
+      }
     ]
   },
   {
     "id": 41,
-    "texto": "Un amigo quiere abrir un negocio de venta de productos de limpieza ecológicos y te pide ayuda.",
+    "texto": "Te ofrecen comprar herramientas usadas.",
     "opciones": [
-      { "texto": "Invertir -$45,000", "dinero": -45000 },
-      { "texto": "Prestar algo -$2,000", "dinero": -2000 },
-      { "texto": "Decir que no $0", "dinero": 0 }
+      {
+        "texto": "Comprar -$900 (+1 salud por productividad)",
+        "dinero": -900,
+        "salud": 1
+      },
+      {
+        "texto": "No comprar $0",
+        "dinero": 0
+      },
+      {
+        "texto": "Regatear -$500",
+        "dinero": -500
+      }
     ]
   },
   {
     "id": 42,
-    "texto": "Te invitan a invertir en una plataforma de venta de cursos en línea para niños.",
+    "texto": "Te inscriben sin querer a un servicio mensual.",
     "opciones": [
-      { "texto": "Invertir fuerte -$55,000", "dinero": -55000 },
-      { "texto": "Invertir poco -$2,000", "dinero": -2000 },
-      { "texto": "No invertir $0", "dinero": 0 }
+      {
+        "texto": "Cancelar (+1 salud)",
+        "salud": 1
+      },
+      {
+        "texto": "Dejarlo -$250",
+        "dinero": -250
+      },
+      {
+        "texto": "Olvidarlo (crece deuda) +$500 deuda",
+        "deuda": 500
+      }
     ]
   },
   {
     "id": 43,
-    "texto": "Un familiar quiere que apoyes su negocio de venta de productos de decoración para el hogar.",
+    "texto": "Tu cuerpo te pide descanso.",
     "opciones": [
-      { "texto": "Apoyar con gusto -$40,000", "dinero": -40000 },
-      { "texto": "Apoyar un poco -$1,500", "dinero": -1500 },
-      { "texto": "Decir que no es lo tuyo $0", "dinero": 0 }
+      {
+        "texto": "Dormir temprano (+6 salud)",
+        "salud": 6
+      },
+      {
+        "texto": "Seguir en chinga (-4 salud)",
+        "salud": -4
+      },
+      {
+        "texto": "Café y aguante (-2 salud)",
+        "salud": -2
+      }
     ]
   },
   {
     "id": 44,
-    "texto": "Te ofrecen invertir en una app de venta de productos locales.",
+    "texto": "Te ofrecen un descuento si pagas una parte de tu deuda hoy.",
     "opciones": [
-      { "texto": "Invertir fuerte -$50,000", "dinero": -50000 },
-      { "texto": "Invertir poco -$2,000", "dinero": -2000 },
-      { "texto": "No invertir $0", "dinero": 0 }
+      {
+        "texto": "Pagar -$1,000 y baja deuda -$2,000",
+        "dinero": -1000,
+        "deuda": -2000
+      },
+      {
+        "texto": "Pagar -$500 y baja deuda -$900",
+        "dinero": -500,
+        "deuda": -900
+      },
+      {
+        "texto": "No pagar $0",
+        "dinero": 0
+      }
     ]
   },
   {
     "id": 45,
-    "texto": "Un amigo quiere montar un negocio de venta de productos de cuidado personal y te pide dinero.",
+    "texto": "Te da por ordenar tu vida financiera.",
     "opciones": [
-      { "texto": "Invertir lo que te pide -$25,000", "dinero": -25000 },
-      { "texto": "Prestarle un cambio -$1,000", "dinero": -1000 },
-      { "texto": "Decirle que no $0", "dinero": 0 }
+      {
+        "texto": "Hacer presupuesto (+2 salud)",
+        "salud": 2
+      },
+      {
+        "texto": "Ignorar (-1 salud)",
+        "salud": -1
+      },
+      {
+        "texto": "Comprar app -$200",
+        "dinero": -200,
+        "salud": 1
+      }
     ]
   },
   {
     "id": 46,
-    "texto": "Te invitan a ser socio en una tienda de productos para el cuidado del cabello.",
+    "texto": "Te ofrecen un 'reto de ahorro' con amigos.",
     "opciones": [
-      { "texto": "Aceptar y aportar -$65,000", "dinero": -65000 },
-      { "texto": "Aportar poco -$2,500", "dinero": -2500 },
-      { "texto": "Rechazar amablemente $0", "dinero": 0 }
+      {
+        "texto": "Entrarle -$400 (pero te motiva +2 salud)",
+        "dinero": -400,
+        "salud": 2
+      },
+      {
+        "texto": "Entrarle fuerte -$800 (+3 salud)",
+        "dinero": -800,
+        "salud": 3
+      },
+      {
+        "texto": "No entrar $0",
+        "dinero": 0
+      }
     ]
   },
   {
     "id": 47,
-    "texto": "Un compañero de la universidad quiere que inviertas en su negocio de venta de productos de belleza.",
+    "texto": "Te sugieren invertir en tu imagen (ropa / corte / etc.).",
     "opciones": [
-      { "texto": "Invertir -$60,000", "dinero": -60000 },
-      { "texto": "Prestar algo -$2,500", "dinero": -2500 },
-      { "texto": "Decir que no $0", "dinero": 0 }
+      {
+        "texto": "Invertir -$700 (+1 salud)",
+        "dinero": -700,
+        "salud": 1
+      },
+      {
+        "texto": "No invertir $0",
+        "dinero": 0
+      },
+      {
+        "texto": "Invertir fuerte -$1,800 (+2 salud)",
+        "dinero": -1800,
+        "salud": 2
+      }
     ]
   },
   {
     "id": 48,
-    "texto": "Te ofrecen participar en un negocio de venta de productos de cuidado de la piel.",
+    "texto": "Te dan una oportunidad de trueque.",
     "opciones": [
-      { "texto": "Invertir fuerte -$75,000", "dinero": -75000 },
-      { "texto": "Invertir poco -$3,000", "dinero": -3000 },
-      { "texto": "No invertir $0", "dinero": 0 }
+      {
+        "texto": "Aceptar (+$500 equivalente)",
+        "dinero": 500
+      },
+      {
+        "texto": "Aceptar y te salen con trampa (-$300)",
+        "dinero": -300
+      },
+      {
+        "texto": "No aceptar $0",
+        "dinero": 0
+      }
     ]
   },
   {
     "id": 49,
-    "texto": "Un amigo quiere abrir un negocio de venta de productos de maquillaje y te pide ayuda.",
+    "texto": "Te sientes al límite mental.",
     "opciones": [
-      { "texto": "Invertir -$35,000 +5 salud", "dinero": -35000, "salud": 5 },
-      { "texto": "Prestar algo -$1,500", "dinero": -1500 },
-      { "texto": "Decir que no $0", "dinero": 0 }
+      {
+        "texto": "Terapia -$900 (+10 salud)",
+        "dinero": -900,
+        "salud": 10
+      },
+      {
+        "texto": "Caminar (+4 salud)",
+        "salud": 4
+      },
+      {
+        "texto": "Ignorar (-6 salud)",
+        "salud": -6
+      }
     ]
   },
   {
     "id": 50,
-    "texto": "Te invitan a invertir en una plataforma de venta de productos de moda sostenible.",
+    "texto": "Te ofrecen un servicio de suscripción útil.",
     "opciones": [
-      { "texto": "Invertir fuerte -$70,000", "dinero": -70000 },
-      { "texto": "Invertir poco -$3,000", "dinero": -3000 },
-      { "texto": "No invertir $0", "dinero": 0 }
+      {
+        "texto": "Contratar -$250 (+1 salud)",
+        "dinero": -250,
+        "salud": 1
+      },
+      {
+        "texto": "No contratar $0",
+        "dinero": 0
+      },
+      {
+        "texto": "Contratar caro -$600",
+        "dinero": -600
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "texto": "Te invitan a participar en una cooperacha.",
+    "opciones": [
+      {
+        "texto": "Poner -$300 (+1 salud social)",
+        "dinero": -300,
+        "salud": 1
+      },
+      {
+        "texto": "Poner -$800 (+2 salud)",
+        "dinero": -800,
+        "salud": 2
+      },
+      {
+        "texto": "No poner (-1 salud)",
+        "salud": -1
+      }
     ]
   }
 ]
