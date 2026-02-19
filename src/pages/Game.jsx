@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import personajes from "../data/personajes.json";
@@ -20,13 +20,8 @@ import CardSaludEspecial from "../components/cards/CardSaludEspecial";
 import ModalSimple from "../components/ui/ModalSimple";
 import { useGameStore } from "../store/gameStore";
 
-// Utilidades
-function getRandomItem(arr) {
-  return arr[Math.floor(Math.random() * arr.length)];
-}
-function getRandomPersonaje() {
-  return personajes[Math.floor(Math.random() * personajes.length)];
-}
+const rand = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
 function normCard(c) {
   if (typeof c === "string") return { texto: c };
   return c || { texto: "..." };
@@ -34,16 +29,17 @@ function normCard(c) {
 function wrap(kind, card) {
   return { ...card, __kind: kind };
 }
+
 function generarSecuenciaMes() {
   const normales = [
-    wrap("normal", normCard(getRandomItem(normalCards))),
-    wrap("normal", normCard(getRandomItem(normalCards))),
-    wrap("normal", normCard(getRandomItem(normalCards))),
+    wrap("normal", normCard(rand(normalCards))),
+    wrap("normal", normCard(rand(normalCards))),
+    wrap("normal", normCard(rand(normalCards))),
   ];
 
-  const oportunidad = wrap("oportunidad", getRandomItem(opportunityCards));
-  const tragedia = wrap("tragedia", getRandomItem(tragedyCards));
-  const payday = wrap("payday", getRandomItem(paydayCards));
+  const oportunidad = wrap("oportunidad", rand(opportunityCards));
+  const tragedia = wrap("tragedia", rand(tragedyCards));
+  const payday = wrap("payday", rand(paydayCards));
 
   const primeras = [...normales, oportunidad, tragedia].sort(() => Math.random() - 0.5);
   return [...primeras, payday];
@@ -53,45 +49,49 @@ export default function Game() {
   const navigate = useNavigate();
 
   // --- Selección personaje ---
-  const [personaje, setPersonaje] = useState(getRandomPersonaje());
+  const [personaje, setPersonaje] = useState(rand(personajes));
   const [intentos, setIntentos] = useState(1);
   const [confirmado, setConfirmado] = useState(false);
 
   // --- Juego ---
-  const [turno, setTurno] = useState(1);
+  const [mes, setMes] = useState(1);
   const [maxMeses, setMaxMeses] = useState(24);
   const [tarjetas, setTarjetas] = useState([]);
   const [indice, setIndice] = useState(0);
-  const [resumenTurno, setResumenTurno] = useState("");
+  const [resumen, setResumen] = useState("");
 
-  // --- Overlays ---
-  const [overlay, setOverlay] = useState(null); // null | checkpoint | gameover | finished
-  const [endReason, setEndReason] = useState(""); // salud | dinero | tiempo | checkpoint_24
+  // Overlays
+  const [overlay, setOverlay] = useState(null); // checkpoint | gameover | finished
+  const [endReason, setEndReason] = useState("");
 
-  // --- Store ---
+  // Store
   const setValoresIniciales = useGameStore((s) => s.setValoresIniciales);
-  const reiniciarStore = useGameStore((s) => s.reiniciar);
+  const reiniciar = useGameStore((s) => s.reiniciar);
 
   const sueldo = useGameStore((s) => s.sueldo);
-  const setDinero = useGameStore((s) => s.actualizarDinero);
-  const setSalud = useGameStore((s) => s.actualizarSalud);
-  const setDeuda = useGameStore((s) => s.actualizarDeuda);
+
+  const actualizarDinero = useGameStore((s) => s.actualizarDinero);
+  const actualizarDeuda = useGameStore((s) => s.actualizarDeuda);
+  const actualizarSalud = useGameStore((s) => s.actualizarSalud);
+
   const pagarDeuda = useGameStore((s) => s.pagarDeuda);
+  const aplicarInteres = useGameStore((s) => s.aplicarInteres);
+
+  const invertirAhorro = useGameStore((s) => s.invertirAhorro);
+  const agregarInversiones = useGameStore((s) => s.agregarInversiones);
 
   const tomarResultadosInversion = useGameStore((s) => s.tomarResultadosInversion);
-  const invResults = useGameStore((s) => s.invResults || s.__invResults || []);
+  const invResults = useGameStore((s) => s.invResults || []);
 
-  // refs
   const mesPagadoRef = useRef(null);
-  const paydayProcesadoRef = useRef(null);
 
-  const salud60Disparada = useRef(false);
-  const salud20Disparada = useRef(false);
+  // --- Cartas especiales de salud (repetibles con umbral dinámico) ---
+  const saludThresholdRef = useRef(60); // 60 inicial, luego 40–60 al azar
+  const saludCooldownRef = useRef(false);
 
-  // --- Cartas especiales de salud ---
   const CARD_SALUD_60 = {
     __kind: "salud",
-    titulo: "60% — Te has descuidado",
+    titulo: "Te has descuidado",
     texto:
       "Vas bajando sin darte cuenta. Si no haces algo, tu energía (y tus decisiones) se van a ir al suelo.",
     opciones: [
@@ -143,6 +143,8 @@ export default function Game() {
     ],
   };
 
+  const nuevoUmbralSalud = () => 40 + Math.floor(Math.random() * 21); // 40..60
+
   const checkGameOver = () => {
     const { dinero, salud } = useGameStore.getState();
     if (salud <= 0) {
@@ -158,40 +160,74 @@ export default function Game() {
     return false;
   };
 
-  // --- Pago de sueldo (una vez por mes) ---
+  // Pagar sueldo 1 vez por mes
   useEffect(() => {
     if (!confirmado) return;
-    if (mesPagadoRef.current === turno) return;
-    setDinero(sueldo);
-    mesPagadoRef.current = turno;
+    if (mesPagadoRef.current === mes) return;
+    actualizarDinero(sueldo);
+    mesPagadoRef.current = mes;
     // eslint-disable-next-line
-  }, [turno, confirmado, sueldo]);
+  }, [mes, confirmado, sueldo]);
 
-  // Compat: si tu store viejo genera __invResults, lo convertimos a invResults
-  const normalizarInvResultsLegacy = () => {
-    const st = useGameStore.getState();
-    if ((!st.invResults || st.invResults.length === 0) && Array.isArray(st.__invResults) && st.__invResults.length) {
-      useGameStore.setState({ invResults: st.__invResults, __invResults: [] });
+  const insertarSiguienteCarta = (card) => {
+    setTarjetas((prev) => {
+      const next = [...prev];
+      next.splice(indice + 1, 0, card);
+      return next;
+    });
+  };
+
+  const maybeQueueHealthCard = () => {
+    const { salud } = useGameStore.getState();
+
+    // Si recuperas, permitimos que vuelva a disparar más adelante
+    if (salud >= 65) {
+      saludCooldownRef.current = false;
+      saludThresholdRef.current = 60;
+      return;
+    }
+
+    // Urgencias: siempre manda (se puede repetir)
+    if (salud <= 20) {
+      insertarSiguienteCarta(CARD_SALUD_20);
+      return;
+    }
+
+    // Descuido: umbral dinámico (primera vez 60, luego 40–60 al azar)
+    if (!saludCooldownRef.current && salud <= saludThresholdRef.current && salud >= 40) {
+      saludCooldownRef.current = true;
+      saludThresholdRef.current = nuevoUmbralSalud();
+      insertarSiguienteCarta(CARD_SALUD_60);
     }
   };
 
   const prependHealthIfNeeded = (deck) => {
     const { salud } = useGameStore.getState();
 
-    if (salud <= 20 && !salud20Disparada.current) {
-      salud20Disparada.current = true;
+    // Reset si recuperaste
+    if (salud >= 65) {
+      saludCooldownRef.current = false;
+      saludThresholdRef.current = 60;
+    }
+
+    // Urgencias primero (repetible)
+    if (salud <= 20) {
       return [CARD_SALUD_20, ...deck];
     }
-    if (salud <= 60 && !salud60Disparada.current) {
-      salud60Disparada.current = true;
+
+    // Descuido: solo si estás entre 40 y el umbral, y no estás en cooldown
+    if (!saludCooldownRef.current && salud <= saludThresholdRef.current && salud >= 40) {
+      saludCooldownRef.current = true;
+      saludThresholdRef.current = nuevoUmbralSalud();
       return [CARD_SALUD_60, ...deck];
     }
+
     return deck;
   };
 
-  const prepararMes = (mes) => {
-    tomarResultadosInversion(mes);
-    normalizarInvResultsLegacy();
+  // Preparar mes: resultados inversión + secuencia
+  const prepararMes = (m) => {
+    tomarResultadosInversion(m);
 
     const resultsNow = (useGameStore.getState().invResults || []);
     const base = generarSecuenciaMes();
@@ -199,127 +235,40 @@ export default function Game() {
       ? [wrap("portfolio", { texto: "Revisión de portafolio" }), ...base]
       : base;
 
-    const deck = prependHealthIfNeeded(deckBase);
-
-    setTarjetas(deck);
+    setTarjetas(prependHealthIfNeeded(deckBase));
     setIndice(0);
-    setResumenTurno("");
-    paydayProcesadoRef.current = null;
+    setResumen("");
   };
 
-  // preparar mes 1 al confirmar personaje
   useEffect(() => {
     if (!confirmado) return;
-    prepararMes(1);
+    prepararMes(mes);
     // eslint-disable-next-line
-  }, [confirmado]);
+  }, [confirmado, mes]);
 
-  // --- Cobro automático “pago mínimo” en Payday (si existe en store; si no, fallback) ---
-  const cobrarPagoMinimoSafe = () => {
-    const st = useGameStore.getState();
+  const avanzarMes = () => {
+    setResumen(`¡Terminaste el mes ${mes}!`);
 
-    if (typeof st.cobrarPagoMinimo === "function") {
-      return st.cobrarPagoMinimo();
-    }
-
-    // fallback si tu store no lo tiene
-    const deuda = Number(st.deuda || 0);
-    if (deuda <= 0) return { ok: true, pagoMin: 0 };
-
-    const minimo = Math.min(deuda, Math.max(Math.round(deuda * 0.05), 200));
-    const dinero = Number(st.dinero || 0);
-
-    if (dinero < minimo) return { ok: false, pagoMin: minimo };
-
-    st.actualizarDinero(-minimo);
-    st.actualizarDeuda(-minimo);
-    return { ok: true, pagoMin: minimo };
-  };
-
-  const aplicarInteresSafe = (tasa) => {
-    const st = useGameStore.getState();
-    if (typeof st.aplicarInteres === "function") return st.aplicarInteres(tasa);
-
-    const deuda = Number(st.deuda || 0);
-    if (deuda <= 0) return 0;
-
-    const nuevo = Math.round(deuda * (1 + Number(tasa || 0)));
-    const delta = nuevo - deuda;
-    st.actualizarDeuda(delta);
-    return delta;
-  };
-
-  // efecto: cuando la carta actual es payday, cobra mínimo 1 sola vez por mes
-  useEffect(() => {
-    if (!confirmado) return;
-    if (overlay) return;
-    const carta = tarjetas[indice];
-    if (!carta || carta.__kind !== "payday") return;
-
-    if (paydayProcesadoRef.current === turno) return;
-    paydayProcesadoRef.current = turno;
-
-    const r = cobrarPagoMinimoSafe();
-    if (!r.ok) {
-      setOverlay("gameover");
-      setEndReason("dinero");
-    }
-    // eslint-disable-next-line
-  }, [confirmado, overlay, tarjetas, indice, turno]);
-
-  // Inserta una carta al siguiente slot y mueve el índice a esa carta
-  const insertarYAvanzar = (card) => {
-    const currentIdx = indice;
-    setTarjetas((prev) => {
-      const next = [...prev];
-      next.splice(currentIdx + 1, 0, card);
-      return next;
-    });
-    setIndice(currentIdx + 1);
-  };
-
-  const maybeTriggerHealthNext = () => {
-    const { salud } = useGameStore.getState();
-
-    if (salud <= 20 && !salud20Disparada.current) {
-      salud20Disparada.current = true;
-      insertarYAvanzar(CARD_SALUD_20);
-      return true;
-    }
-
-    if (salud <= 60 && !salud60Disparada.current) {
-      salud60Disparada.current = true;
-      insertarYAvanzar(CARD_SALUD_60);
-      return true;
-    }
-
-    return false;
-  };
-
-  const cerrarMesYAvanzar = () => {
-    setResumenTurno(`¡Terminaste el mes ${turno}!`);
     setTimeout(() => {
-      if (overlay) return;
+      setResumen("");
 
-      if (turno === 24 && maxMeses === 24) {
+      if (mes === 24 && maxMeses === 24) {
         setOverlay("checkpoint");
         setEndReason("checkpoint_24");
         return;
       }
 
-      if (turno >= maxMeses) {
+      if (mes >= maxMeses) {
         setOverlay("finished");
         setEndReason("tiempo");
         return;
       }
 
-      const next = turno + 1;
-      setTurno(next);
-      prepararMes(next);
-    }, 900);
+      setMes((v) => v + 1);
+    }, 800);
   };
 
-  const avanzarNormal = () => {
+  const avanzarCarta = () => {
     if (overlay) return;
 
     if (indice < tarjetas.length - 1) {
@@ -327,21 +276,97 @@ export default function Game() {
       return;
     }
 
-    cerrarMesYAvanzar();
+    avanzarMes();
   };
 
-  const avanzarConHealthCheck = () => {
+  const cobrarCosto = (cost) => {
+    const c = Number(cost || 0);
+    if (c <= 0) return;
+
+    const { dinero } = useGameStore.getState();
+    if (dinero >= c) {
+      actualizarDinero(-c);
+      return;
+    }
+    // si no alcanza: se va todo tu dinero y lo restante se vuelve deuda
+    const faltante = c - dinero;
+    if (dinero > 0) actualizarDinero(-dinero);
+    if (faltante > 0) actualizarDeuda(faltante);
+  };
+
+  const setSaludTo = (target) => {
+    const t = Number(target);
+    if (!Number.isFinite(t)) return;
+    const { salud } = useGameStore.getState();
+    actualizarSalud(t - salud);
+  };
+
+  const handleSaludOption = (op) => {
+    if (overlay) return;
+
+    if (typeof op?.cost === "number") cobrarCosto(op.cost);
+    if (typeof op?.saludTo === "number") setSaludTo(op.saludTo);
+    if (typeof op?.saludDelta === "number") actualizarSalud(op.saludDelta);
+
+    if (Array.isArray(op?.randomHealth)) {
+      const pick = op.randomHealth[Math.floor(Math.random() * op.randomHealth.length)];
+      if (pick) actualizarSalud(pick);
+    }
+
+    if (checkGameOver()) return;
+    maybeQueueHealthCard();
+    avanzarCarta();
+  };
+
+  const handleOpcion = () => {
     if (overlay) return;
     if (checkGameOver()) return;
-
-    // si hay que disparar carta de salud, se inserta y AVANZA a ella
-    if (maybeTriggerHealthNext()) return;
-
-    // si no, avanza normal
-    avanzarNormal();
+    maybeQueueHealthCard();
+    avanzarCarta();
   };
 
-  // ---- Elección personaje ----
+  const handlePayDayOption = (op) => {
+    if (overlay) return;
+
+    let pagoExtra = false;
+
+    if (op?.accion === "pagarDeuda" && op?.montoPago) {
+      const pago = pagarDeuda(op.montoPago);
+      if (pago > 0) pagoExtra = true;
+    }
+
+    if (op?.accion === "invertir" && op?.montoInvertir) {
+      invertirAhorro(op.montoInvertir);
+    }
+
+    if (typeof op?.dinero === "number") actualizarDinero(op.dinero);
+    if (typeof op?.salud === "number") actualizarSalud(op.salud);
+    if (typeof op?.deuda === "number") {
+      actualizarDeuda(op.deuda);
+      if (op.deuda < 0) pagoExtra = true;
+    }
+
+    if (Array.isArray(op?.inversiones)) agregarInversiones(op.inversiones);
+
+    // interés mensual (si sigue habiendo deuda) + dificultad año extra
+    const { deuda, salud: saludActual } = useGameStore.getState();
+    const esAnioExtra = mes >= 25;
+    let tasa = pagoExtra ? 0.02 : 0.03;
+    if (esAnioExtra) tasa += 0.01; // +1% en meses 25-36
+
+    if (deuda > 0) aplicarInteres(tasa);
+
+    // Presión extra por salud en año extra (fatiga leve, no siempre)
+    if (esAnioExtra && saludActual < 60 && Math.random() < 0.5) {
+      actualizarSalud(-2);
+    }
+
+    if (checkGameOver()) return;
+    maybeQueueHealthCard();
+    avanzarCarta();
+  };
+
+  // --- Selección personaje ---
   if (!confirmado) {
     return (
       <div className="min-h-screen p-4">
@@ -353,23 +378,15 @@ export default function Game() {
           <button
             className="bg-green-600 text-white px-4 py-2 rounded"
             onClick={() => {
-              // reset flags salud
-              salud60Disparada.current = false;
-              salud20Disparada.current = false;
+              saludThresholdRef.current = 60;
+              saludCooldownRef.current = false;
 
               setValoresIniciales(personaje);
               setConfirmado(true);
-
-              // reset juego local
+              setMes(1);
+              setMaxMeses(24);
               setOverlay(null);
               setEndReason("");
-              setTurno(1);
-              setMaxMeses(24);
-              setTarjetas([]);
-              setIndice(0);
-              setResumenTurno("");
-              mesPagadoRef.current = null;
-              paydayProcesadoRef.current = null;
             }}
           >
             Elegir este personaje
@@ -379,7 +396,7 @@ export default function Game() {
             <button
               className="bg-blue-600 text-white px-4 py-2 rounded"
               onClick={() => {
-                setPersonaje(getRandomPersonaje());
+                setPersonaje(rand(personajes));
                 setIntentos(2);
               }}
             >
@@ -391,23 +408,17 @@ export default function Game() {
             <button
               className="bg-orange-600 text-white px-4 py-2 rounded"
               onClick={() => {
-                const tercero = getRandomPersonaje();
+                const tercero = rand(personajes);
 
-                salud60Disparada.current = false;
-                salud20Disparada.current = false;
+                saludThresholdRef.current = 60;
+                saludCooldownRef.current = false;
 
                 setValoresIniciales(tercero);
                 setConfirmado(true);
-
+                setMes(1);
+                setMaxMeses(24);
                 setOverlay(null);
                 setEndReason("");
-                setTurno(1);
-                setMaxMeses(24);
-                setTarjetas([]);
-                setIndice(0);
-                setResumenTurno("");
-                mesPagadoRef.current = null;
-                paydayProcesadoRef.current = null;
               }}
             >
               La tercera ya no es opción, aquí te tocó nacer
@@ -424,191 +435,103 @@ export default function Game() {
     );
   }
 
-  // --- Handlers ---
-  const handleOpcion = () => {
-    if (overlay) return;
-    avanzarConHealthCheck();
-  };
-
-  const handlePayDayOption = (op) => {
-    if (overlay) return;
-
-    let pagoExtra = false;
-
-    if (op?.accion === "pagarDeuda" && op?.montoPago) {
-      const pago = pagarDeuda(op.montoPago);
-      if (pago > 0) pagoExtra = true;
-    }
-
-    // invertir/ahorrar (si existe en store)
-    if (op?.accion === "invertir" && op?.montoInvertir) {
-      const st = useGameStore.getState();
-      if (typeof st.invertirAhorro === "function") {
-        st.invertirAhorro(op.montoInvertir);
-      } else {
-        // fallback: solo descuenta dinero
-        setDinero(-Number(op.montoInvertir || 0));
-      }
-    }
-
-    // efectos directos (fiesta, no hacer nada, etc.)
-    if (typeof op?.dinero === "number") setDinero(op.dinero);
-    if (typeof op?.salud === "number") setSalud(op.salud);
-    if (typeof op?.deuda === "number") {
-      setDeuda(op.deuda);
-      if (op.deuda < 0) pagoExtra = true;
-    }
-
-    // interés si sigue habiendo deuda
-    const { deuda } = useGameStore.getState();
-    if (Number(deuda || 0) > 0) aplicarInteresSafe(pagoExtra ? 0.02 : 0.03);
-
-    avanzarConHealthCheck();
-  };
-
-  const cobrarCosto = (cost) => {
-    const c = Number(cost || 0);
-    if (c <= 0) return;
-
-    const { dinero } = useGameStore.getState();
-    if (dinero >= c) {
-      setDinero(-c);
-      return;
-    }
-    // si no alcanza: se va tu dinero y el resto se vuelve deuda (vida real)
-    const faltante = c - dinero;
-    if (dinero > 0) setDinero(-dinero);
-    if (faltante > 0) setDeuda(faltante);
-  };
-
-  const setSaludTo = (target) => {
-    const t = Number(target);
-    if (!Number.isFinite(t)) return;
-    const { salud } = useGameStore.getState();
-    setSalud(t - salud); // convierte a delta
-  };
-
-  const handleSaludOption = (op) => {
-    if (overlay) return;
-
-    if (typeof op?.cost === "number") cobrarCosto(op.cost);
-
-    if (typeof op?.saludTo === "number") setSaludTo(op.saludTo);
-    if (typeof op?.saludDelta === "number") setSalud(op.saludDelta);
-
-    if (Array.isArray(op?.randomHealth)) {
-      const arr = op.randomHealth;
-      const pick = arr[Math.floor(Math.random() * arr.length)];
-      if (pick) setSalud(pick);
-    }
-
-    avanzarConHealthCheck();
-  };
-
-  // --- Render carta ---
+  // Render carta actual
   let cartaComponent = null;
+  const cartaActual = tarjetas[indice];
 
-  if (resumenTurno) {
+  if (resumen) {
     cartaComponent = (
-      <div className="text-center my-16 text-xl font-bold text-green-600">{resumenTurno}</div>
+      <div className="text-center my-16 text-xl font-bold text-green-600">{resumen}</div>
+    );
+  } else if (!cartaActual) {
+    cartaComponent = (
+      <div className="text-center mt-10 text-xl text-red-700">
+        No hay carta para mostrar. Índice: {indice} / {tarjetas.length}
+      </div>
+    );
+  } else if (cartaActual.__kind === "salud") {
+    cartaComponent = (
+      <CardSaludEspecial
+        titulo={cartaActual.titulo}
+        texto={cartaActual.texto}
+        opciones={cartaActual.opciones}
+        onOpcion={handleSaludOption}
+      />
+    );
+  } else if (cartaActual.__kind === "portfolio") {
+    cartaComponent = <CardPortafolioReview onContinue={handleOpcion} />;
+  } else if (cartaActual.__kind === "payday") {
+    cartaComponent = (
+      <CardPayDay texto={cartaActual.texto} opciones={cartaActual.opciones} onOpcion={handlePayDayOption} />
+    );
+  } else if (cartaActual.__kind === "oportunidad") {
+    cartaComponent = (
+      <CardOportunidad
+        texto={cartaActual.texto}
+        opciones={cartaActual.opciones}
+        mesActual={mes}
+        onOpcion={handleOpcion}
+      />
+    );
+  } else if (cartaActual.__kind === "tragedia") {
+    cartaComponent = (
+      <CardTragedia texto={cartaActual.texto} opciones={cartaActual.opciones} onOpcion={handleOpcion} />
     );
   } else {
-    const carta = tarjetas[indice];
-
-    if (!carta) {
-      cartaComponent = (
-        <div className="text-center mt-10 text-xl text-red-700">
-          No hay carta para mostrar.<br />
-          Indice: {indice}, Total: {tarjetas.length}
-        </div>
-      );
-    } else if (carta.__kind === "salud") {
-      cartaComponent = (
-        <CardSaludEspecial
-          titulo={carta.titulo}
-          texto={carta.texto}
-          opciones={carta.opciones}
-          onOpcion={handleSaludOption}
-        />
-      );
-    } else if (carta.__kind === "portfolio") {
-      cartaComponent = <CardPortafolioReview onContinue={handleOpcion} />;
-    } else if (carta.__kind === "payday") {
-      cartaComponent = (
-        <CardPayDay texto={carta.texto} opciones={carta.opciones} onOpcion={handlePayDayOption} />
-      );
-    } else if (carta.__kind === "oportunidad") {
-      cartaComponent = (
-        <CardOportunidad texto={carta.texto} opciones={carta.opciones} mesActual={turno} onOpcion={handleOpcion} />
-      );
-    } else if (carta.__kind === "tragedia") {
-      cartaComponent = (
-        <CardTragedia texto={carta.texto} opciones={carta.opciones} onOpcion={handleOpcion} />
-      );
-    } else {
-      cartaComponent = <CardNormal texto={carta.texto} onSiguiente={avanzarNormal} />;
-    }
+    cartaComponent = <CardNormal texto={cartaActual.texto} onSiguiente={avanzarCarta} />;
   }
 
-  // --- Acciones overlay ---
-  const reiniciarTodo = () => {
-    reiniciarStore();
-    setOverlay(null);
-    setEndReason("");
+  const resetAll = () => {
+    reiniciar();
     setConfirmado(false);
-    setPersonaje(getRandomPersonaje());
+    setPersonaje(rand(personajes));
     setIntentos(1);
-    setTurno(1);
+    setMes(1);
     setMaxMeses(24);
     setTarjetas([]);
     setIndice(0);
-    setResumenTurno("");
-    mesPagadoRef.current = null;
-    paydayProcesadoRef.current = null;
-
-    salud60Disparada.current = false;
-    salud20Disparada.current = false;
-  };
-
-  const irAResultados = () => {
-    setOverlay(null);
-    navigate("/resultados");
-  };
-
-  const aceptarAnioExtra = () => {
-    setMaxMeses(36);
+    setResumen("");
     setOverlay(null);
     setEndReason("");
-
-    const next = turno + 1;
-    setTurno(next);
-    prepararMes(next);
+    saludThresholdRef.current = 60;
+    saludCooldownRef.current = false;
   };
 
   return (
     <div className="min-h-screen p-4 space-y-4">
-      <Cartera />
+      <Cartera mesActual={mes} />
+
       <div className="text-sm opacity-70">
-        Mes {turno} / {maxMeses}
+        Mes {mes} / {maxMeses}{" "}
         {invResults.length ? <span className="ml-2">• 🧾 resultados pendientes</span> : null}
       </div>
 
       {cartaComponent}
 
+      {/* CHECKPOINT 24 */}
       <ModalSimple open={overlay === "checkpoint"} title="Fin parcial: 24 meses" onClose={() => {}}>
         <p className="opacity-80">
-          Llegaste al mes 24. Puedes cerrar aquí con tu evaluación o jugar 12 meses más (más reto).
+          Llegaste al mes 24. Puedes ver resultados o jugar 12 meses más (más reto).
         </p>
         <div className="mt-4 grid gap-2">
-          <button className="p-3 rounded border" onClick={irAResultados}>
+          <button className="p-3 rounded border" onClick={() => navigate("/resultados")}>
             Ver resultados
           </button>
-          <button className="p-3 rounded border" onClick={aceptarAnioExtra}>
+          <button
+            className="p-3 rounded border"
+            onClick={() => {
+              setMaxMeses(36);
+              setOverlay(null);
+              setEndReason("");
+              setMes(25);
+            }}
+          >
             Jugar 12 meses más
           </button>
         </div>
       </ModalSimple>
 
+      {/* GAMEOVER */}
       <ModalSimple open={overlay === "gameover"} title="Game Over" onClose={() => {}}>
         <p className="opacity-80">
           {endReason === "salud"
@@ -616,22 +539,23 @@ export default function Game() {
             : "Bancarrota: te quedaste sin dinero."}
         </p>
         <div className="mt-4 grid gap-2">
-          <button className="p-3 rounded border" onClick={reiniciarTodo}>
-            Reiniciar
-          </button>
-          <button className="p-3 rounded border" onClick={irAResultados}>
+          <button className="p-3 rounded border" onClick={() => navigate("/resultados")}>
             Ir a resultados
+          </button>
+          <button className="p-3 rounded border" onClick={resetAll}>
+            Reiniciar
           </button>
         </div>
       </ModalSimple>
 
+      {/* FIN */}
       <ModalSimple open={overlay === "finished"} title="Fin del juego" onClose={() => {}}>
-        <p className="opacity-80">Terminaste el periodo del juego. Es momento de ver tu resumen.</p>
+        <p className="opacity-80">Terminaste el periodo del juego. Ve tu resumen.</p>
         <div className="mt-4 grid gap-2">
-          <button className="p-3 rounded border" onClick={irAResultados}>
+          <button className="p-3 rounded border" onClick={() => navigate("/resultados")}>
             Ver resultados
           </button>
-          <button className="p-3 rounded border" onClick={reiniciarTodo}>
+          <button className="p-3 rounded border" onClick={resetAll}>
             Reiniciar
           </button>
         </div>

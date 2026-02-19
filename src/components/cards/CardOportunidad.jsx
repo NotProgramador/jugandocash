@@ -1,64 +1,119 @@
+import { useMemo } from "react";
 import { useGameStore } from "../../store/gameStore";
 
-export default function CardOportunidad({ texto, opciones = [], onOpcion, mesActual = 1 }) {
+function parseMoneyFromText(text = "") {
+  const m = String(text).match(/([+-])\$\s*([\d,]+)/);
+  if (!m) return null;
+  const sign = m[1] === "-" ? -1 : 1;
+  const amount = parseInt(m[2].replace(/,/g, ""), 10);
+  return sign * (Number.isFinite(amount) ? amount : 0);
+}
+
+function pickDelay(op) {
+  const min = Number(op?.delayMin ?? op?.mesesMin ?? op?.minMeses ?? op?.minDelay);
+  const max = Number(op?.delayMax ?? op?.mesesMax ?? op?.maxMeses ?? op?.maxDelay);
+
+  if (Number.isFinite(min) && Number.isFinite(max)) {
+    const a = Math.min(min, max);
+    const b = Math.max(min, max);
+    return a + Math.floor(Math.random() * (b - a + 1));
+  }
+
+  const single = Number(op?.delay ?? op?.meses ?? op?.wait);
+  if (Number.isFinite(single) && single > 0) return single;
+
+  return 1 + Math.floor(Math.random() * 2); // default 1–2
+}
+
+function delayLabel(op) {
+  const min = Number(op?.delayMin ?? op?.mesesMin ?? op?.minMeses ?? op?.minDelay);
+  const max = Number(op?.delayMax ?? op?.mesesMax ?? op?.maxMeses ?? op?.maxDelay);
+
+  if (Number.isFinite(min) && Number.isFinite(max)) {
+    const a = Math.min(min, max);
+    const b = Math.max(min, max);
+    return a === b
+      ? `Se resuelve en ${a} mes${a > 1 ? "es" : ""}`
+      : `Se resuelve en ${a}–${b} meses`;
+  }
+
+  const single = Number(op?.delay ?? op?.meses ?? op?.wait);
+  if (Number.isFinite(single) && single > 0) {
+    return `Se resuelve en ${single} mes${single > 1 ? "es" : ""}`;
+  }
+
+  return "Se resuelve en 1–2 meses";
+}
+
+export default function CardOportunidad({ texto, opciones = [], mesActual = 1, onOpcion }) {
   const actualizarDinero = useGameStore((s) => s.actualizarDinero);
   const actualizarDeuda = useGameStore((s) => s.actualizarDeuda);
   const actualizarSalud = useGameStore((s) => s.actualizarSalud);
+
   const agendarInversion = useGameStore((s) => s.agendarInversion);
 
+  const opcionesNorm = useMemo(() => (Array.isArray(opciones) ? opciones : []), [opciones]);
+
   const handleClick = (op) => {
-    // NUEVO: inversión diferida
-    if (typeof op === "object" && op?.inversion) {
-      const inv = op.inversion;
-      const dmin = Number(inv.delayMin ?? 1);
-      const dmax = Number(inv.delayMax ?? 2);
-      const delay = dmin + Math.floor(Math.random() * (dmax - dmin + 1));
-
-      agendarInversion({
-        nombre: inv.nombre || texto,
-        costo: inv.costo,
-        resolveAt: Number(mesActual) + delay,
-        outcomes: inv.outcomes || [{ delta: 0, p: 1 }],
-      });
-
-      onOpcion(op);
+    if (typeof op === "string") {
+      const delta = parseMoneyFromText(op);
+      if (typeof delta === "number") actualizarDinero(delta);
+      onOpcion?.(op);
       return;
     }
 
-    // Efectos directos (tu formato actual)
-    if (typeof op === "object") {
-      if (typeof op.dinero === "number") actualizarDinero(op.dinero);
-      if (typeof op.deuda === "number") actualizarDeuda(op.deuda);
-      if (typeof op.salud === "number") actualizarSalud(op.salud);
-      onOpcion(op);
+    const accion = op?.accion || op?.type || op?.tipo;
+
+    if (accion === "invertir" || accion === "inversion" || accion === "invertirNegocio") {
+      const costo =
+        Number(op?.costo ?? op?.monto ?? op?.inversion ?? 0) ||
+        Math.abs(parseMoneyFromText(op?.texto || "") || 0);
+
+      const nombre = op?.nombre || op?.negocio || op?.titulo || "Inversión";
+      const delay = pickDelay(op);
+      const resolveAt = Number(mesActual) + delay;
+
+      const outcomes = op?.outcomes || op?.resultados || op?.resultado || [{ delta: 0, p: 1 }];
+
+      agendarInversion({ nombre, costo, resolveAt, outcomes });
+      onOpcion?.(op);
       return;
     }
 
-    // Strings tipo "-$"
-    if (typeof op === "string" && op.match(/-\$([\d,]+)/)) {
-      const monto = -parseInt(op.match(/-\$([\d,]+)/)[1].replace(/,/g, ""), 10);
-      actualizarDinero(monto);
+    if (typeof op?.dinero === "number") actualizarDinero(op.dinero);
+    if (typeof op?.deuda === "number") actualizarDeuda(op.deuda);
+    if (typeof op?.salud === "number") actualizarSalud(op.salud);
+
+    if (typeof op?.dinero !== "number" && typeof op?.texto === "string") {
+      const delta = parseMoneyFromText(op.texto);
+      if (typeof delta === "number") actualizarDinero(delta);
     }
 
-    onOpcion(op);
+    onOpcion?.(op);
   };
 
   return (
     <div className="max-w-lg mx-auto bg-white p-6 rounded-xl shadow text-center">
       <p className="mb-6 text-lg font-semibold">{texto}</p>
+
       <div className="flex flex-col gap-3">
-        {opciones.map((op, idx) => (
-          <button
-            key={idx}
-            className="bg-blue-600 text-white rounded p-2 hover:bg-blue-700 transition text-left"
-            onClick={() => handleClick(op)}
-          >
-            <div className="font-semibold">{typeof op === "string" ? op : op?.texto ?? "Opción"}</div>
-            {typeof op === "object" && op?.descripcion ? (
-              <div className="text-sm opacity-80">{op.descripcion}</div>
-            ) : null}
-          </button>
-        ))}
+        {opcionesNorm.map((op, idx) => {
+          const isObj = typeof op === "object" && op !== null;
+          const label = typeof op === "string" ? op : op?.texto ?? "Opción";
+          const accion = isObj ? (op?.accion || op?.type || op?.tipo) : null;
+          const isInv = accion === "invertir" || accion === "inversion" || accion === "invertirNegocio";
+
+          return (
+            <button
+              key={idx}
+              className="bg-blue-600 text-white rounded p-2 hover:bg-blue-700 transition text-left"
+              onClick={() => handleClick(op)}
+            >
+              <div className="font-semibold">{label}</div>
+              {isInv ? <div className="text-xs opacity-80 mt-1">{delayLabel(op)}</div> : null}
+            </button>
+          );
+        })}
       </div>
     </div>
   );
