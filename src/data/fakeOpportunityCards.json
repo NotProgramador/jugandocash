@@ -1,0 +1,461 @@
+[
+  {
+    "id": 1,
+    "texto": "Tu primo te ofrece entrar a un negocio de perfumes con nombre sospechosamente francés.",
+    "opciones": [
+      {
+        "texto": "Entrarle con fe -$2,000",
+        "descripcion": "Fe hay. Facturas no.",
+        "dinero": -2000,
+        "bienestar": -4
+      },
+      {
+        "texto": "Preguntar por números",
+        "descripcion": "Se ofende. Eso ya era respuesta.",
+        "bienestar": 3
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz financiera te aplaude.",
+        "bienestar": 2
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "texto": "Te invitan a una tanda organizada por alguien que cambia de número cada mes.",
+    "opciones": [
+      {
+        "texto": "Entrar -$1,000",
+        "descripcion": "La emoción de no saber si existe el próximo pago.",
+        "dinero": -1000,
+        "bienestar": -6
+      },
+      {
+        "texto": "Entrar poquito -$300",
+        "descripcion": "Dices que es para aprender, no para sufrir.",
+        "dinero": -300,
+        "bienestar": -2
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Dormiste mejor esa noche.",
+        "bienestar": 3
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "texto": "Un compañero te ofrece criptomoneda con nombre de fruta exótica.",
+    "opciones": [
+      {
+        "texto": "Comprar fuerte -$3,500",
+        "descripcion": "Se va a 100x, dijo. Se fue a 0.1x.",
+        "dinero": -3500,
+        "bienestar": -8
+      },
+      {
+        "texto": "Comprar simbólico -$300",
+        "descripcion": "Para no quedarte sin la historia.",
+        "dinero": -300,
+        "bienestar": -1
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu cartera respira aliviada.",
+        "bienestar": 4
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "texto": "Un gurú de TikTok promete enseñarte a comprar departamentos sin dinero.",
+    "opciones": [
+      {
+        "texto": "Comprar curso -$4,500",
+        "descripcion": "El secreto era ser tu propio cliente.",
+        "dinero": -4500,
+        "bienestar": -5
+      },
+      {
+        "texto": "Comprar mini-curso -$700",
+        "descripcion": "Una versión light de la decepción.",
+        "dinero": -700,
+        "bienestar": -2
+      },
+      {
+        "texto": "No comprar",
+        "descripcion": "Aprendiste algo: no todo lo viral es información.",
+        "bienestar": 4
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "texto": "Te ofrecen un terreno baratísimo, pero los papeles 'andan en trámite'.",
+    "opciones": [
+      {
+        "texto": "Apartar terreno -$8,000",
+        "descripcion": "El dueño desaparece cuando aparece la pregunta legal.",
+        "dinero": -8000,
+        "bienestar": -10
+      },
+      {
+        "texto": "Dar anticipo simbólico -$1,500",
+        "descripcion": "Por si las moscas. Las moscas vinieron.",
+        "dinero": -1500,
+        "bienestar": -4
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Sin papeles no hay paraíso.",
+        "bienestar": 5
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "texto": "Un amigo quiere abrir una franquicia de micheladas en una esquina sin permisos.",
+    "opciones": [
+      {
+        "texto": "Ser socio -$6,000",
+        "descripcion": "Inversión emocional, regulatoria y municipal.",
+        "dinero": -6000,
+        "bienestar": -6
+      },
+      {
+        "texto": "Prestarle un poco -$1,000",
+        "descripcion": "Te lo paga 'el próximo viernes'.",
+        "dinero": -1000,
+        "bienestar": -3
+      },
+      {
+        "texto": "Decir que no",
+        "descripcion": "La amistad se conserva mejor sin tequila.",
+        "bienestar": 3
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "texto": "Te invitan a una rifa donde el premio es 'una sorpresa exclusiva'.",
+    "opciones": [
+      {
+        "texto": "Comprar 10 boletos -$1,500",
+        "descripcion": "La sorpresa fue que no había sorpresa.",
+        "dinero": -1500,
+        "bienestar": -3
+      },
+      {
+        "texto": "Comprar 1 boleto -$150",
+        "descripcion": "Por la causa, dijiste.",
+        "dinero": -150,
+        "bienestar": -1
+      },
+      {
+        "texto": "No comprar",
+        "descripcion": "La causa era el cuñado.",
+        "bienestar": 2
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "texto": "Un conocido te invita a invertir en una app que 'va a ser el nuevo Uber'.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$10,000",
+        "descripcion": "El nuevo Uber resultó ser el nuevo nada.",
+        "dinero": -10000,
+        "bienestar": -8
+      },
+      {
+        "texto": "Invertir simbólico -$1,500",
+        "descripcion": "Para presumir el screenshot.",
+        "dinero": -1500,
+        "bienestar": -2
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu cuenta de banco también es una app, y sí funciona.",
+        "bienestar": 4
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "texto": "Un coach financiero te quiere vender un sistema 'que jamás falla'.",
+    "opciones": [
+      {
+        "texto": "Pagar el sistema -$3,200",
+        "descripcion": "El sistema sí falló. El coach no.",
+        "dinero": -3200,
+        "bienestar": -5
+      },
+      {
+        "texto": "Pedir demo gratis",
+        "descripcion": "La demo te llenó de WhatsApp.",
+        "bienestar": -2
+      },
+      {
+        "texto": "Bloquear y pasar",
+        "descripcion": "Capítulo cerrado.",
+        "bienestar": 4
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "texto": "Te ofrecen comprar mercancía 'súper barata' que se vende sola.",
+    "opciones": [
+      {
+        "texto": "Comprar lote -$5,500",
+        "descripcion": "El lote llevaba 2 años durmiendo en una bodega.",
+        "dinero": -5500,
+        "bienestar": -7
+      },
+      {
+        "texto": "Comprar muestra -$800",
+        "descripcion": "Para 'probar el mercado'. El mercado no probó.",
+        "dinero": -800,
+        "bienestar": -2
+      },
+      {
+        "texto": "No comprar",
+        "descripcion": "Lo barato sale caro y a veces caduca.",
+        "bienestar": 3
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "texto": "Un cuate te propone meterle a NFTs de gatitos pixelados.",
+    "opciones": [
+      {
+        "texto": "Comprar 3 NFTs -$4,000",
+        "descripcion": "Tienes los gatitos. Y la captura. Y el remordimiento.",
+        "dinero": -4000,
+        "bienestar": -6
+      },
+      {
+        "texto": "Comprar 1 NFT -$1,200",
+        "descripcion": "Solo para entender el meme.",
+        "dinero": -1200,
+        "bienestar": -2
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Los gatitos reales no cobran gas.",
+        "bienestar": 4
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "texto": "Te ofrecen una membresía vitalicia a un club exclusivo de inversionistas.",
+    "opciones": [
+      {
+        "texto": "Pagar membresía -$7,000",
+        "descripcion": "El club te invita a invitar a más miembros.",
+        "dinero": -7000,
+        "deuda": 0,
+        "bienestar": -6
+      },
+      {
+        "texto": "Pagar trimestral -$1,800",
+        "descripcion": "Versión más económica del mismo guion.",
+        "dinero": -1800,
+        "bienestar": -3
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Lo exclusivo a veces es excluyente de tu dinero.",
+        "bienestar": 4
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "texto": "Una página promete duplicar tu dinero en 7 días con un 'bot inteligente'.",
+    "opciones": [
+      {
+        "texto": "Depositar -$2,500",
+        "descripcion": "El bot tomó el dinero y se hizo el muerto.",
+        "dinero": -2500,
+        "bienestar": -7
+      },
+      {
+        "texto": "Probar mínimo -$500",
+        "descripcion": "Apostaste lo justo para confirmar la estafa.",
+        "dinero": -500,
+        "bienestar": -3
+      },
+      {
+        "texto": "Cerrar página",
+        "descripcion": "Tu dinero seguirá siendo tuyo. Por hoy.",
+        "bienestar": 4
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "texto": "Un familiar lejano te propone ser socio en un food truck sin tener el truck.",
+    "opciones": [
+      {
+        "texto": "Aportar para comprar truck -$9,000",
+        "descripcion": "El truck no llegó. La sazón tampoco.",
+        "dinero": -9000,
+        "bienestar": -8
+      },
+      {
+        "texto": "Prestar un poco -$1,200",
+        "descripcion": "Para 'arrancar'. Arrancó sin ti.",
+        "dinero": -1200,
+        "bienestar": -3
+      },
+      {
+        "texto": "No invertir",
+        "descripcion": "Los sueños familiares también necesitan plan.",
+        "bienestar": 3
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "texto": "Te invitan a un seminario gratuito que termina con una oferta 'irresistible'.",
+    "opciones": [
+      {
+        "texto": "Comprar paquete VIP -$6,500",
+        "descripcion": "El verdadero VIP era el organizador.",
+        "dinero": -6500,
+        "bienestar": -6
+      },
+      {
+        "texto": "Comprar libro -$900",
+        "descripcion": "100 páginas de obviedades con tipografía cara.",
+        "dinero": -900,
+        "bienestar": -2
+      },
+      {
+        "texto": "Pararte y salir",
+        "descripcion": "Ganaste tiempo y dignidad.",
+        "bienestar": 5
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "texto": "Un youtuber te invita a 'aprender forex' con un mentor de su 'familia trader'.",
+    "opciones": [
+      {
+        "texto": "Pagar mentoría -$4,200",
+        "descripcion": "El mentor desapareció con tu zoom abierto.",
+        "dinero": -4200,
+        "bienestar": -6
+      },
+      {
+        "texto": "Pagar acceso al grupo -$800",
+        "descripcion": "El grupo solo manda capturas Photoshop.",
+        "dinero": -800,
+        "bienestar": -3
+      },
+      {
+        "texto": "Cerrar el video",
+        "descripcion": "Ahorraste plata y autoestima.",
+        "bienestar": 4
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "texto": "Un vecino quiere venderte su 'kit de éxito empresarial' en pequeñas mensualidades.",
+    "opciones": [
+      {
+        "texto": "Aceptar kit -$3,000 + deuda +$2,000",
+        "descripcion": "Vienen 12 audios, 1 PDF y un grupo de WhatsApp.",
+        "dinero": -3000,
+        "deuda": 2000,
+        "bienestar": -5
+      },
+      {
+        "texto": "Probar nivel básico -$500",
+        "descripcion": "El kit promete mucho. Cumplir, poco.",
+        "dinero": -500,
+        "bienestar": -2
+      },
+      {
+        "texto": "Rechazar",
+        "descripcion": "Cerraste la puerta, no la oportunidad.",
+        "bienestar": 3
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "texto": "Un viejo amigo aparece después de años con 'un negocio que va a cambiarte la vida'.",
+    "opciones": [
+      {
+        "texto": "Confiar -$5,000",
+        "descripcion": "Cambió la vida, pero la de él.",
+        "dinero": -5000,
+        "bienestar": -7
+      },
+      {
+        "texto": "Pedir tiempo para pensar",
+        "descripcion": "Se enojó y eso ya era información valiosa.",
+        "bienestar": 2
+      },
+      {
+        "texto": "Decir 'gracias, pero no'",
+        "descripcion": "Los amigos verdaderos no presionan.",
+        "bienestar": 4
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "texto": "Un grupo de WhatsApp te invita a un 'pool de inversión' con rendimientos seguros.",
+    "opciones": [
+      {
+        "texto": "Aportar -$3,800",
+        "descripcion": "El admin del grupo borró el chat al día siguiente.",
+        "dinero": -3800,
+        "bienestar": -7
+      },
+      {
+        "texto": "Aportar mínimo -$600",
+        "descripcion": "Por curiosidad sociológica.",
+        "dinero": -600,
+        "bienestar": -3
+      },
+      {
+        "texto": "Salir del grupo",
+        "descripcion": "Lo más rentable del día.",
+        "bienestar": 4
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "texto": "Te ofrecen vender productos por catálogo prometiendo 'libertad financiera'.",
+    "opciones": [
+      {
+        "texto": "Comprar inventario inicial -$4,500",
+        "descripcion": "El catálogo se queda en tu sala. Por años.",
+        "dinero": -4500,
+        "bienestar": -5
+      },
+      {
+        "texto": "Comprar muestra -$700",
+        "descripcion": "Aprendes que vender es trabajo, no magia.",
+        "dinero": -700,
+        "bienestar": -1
+      },
+      {
+        "texto": "No aceptar",
+        "descripcion": "Tu sala también lo agradece.",
+        "bienestar": 3
+      }
+    ]
+  }
+]

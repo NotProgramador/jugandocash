@@ -6,6 +6,7 @@ import normalCards from "../data/normalCards.json";
 import opportunityCards from "../data/opportunityCards.json";
 import tragedyCards from "../data/tragedyCards.json";
 import paydayCards from "../data/paydayCards.json";
+import fakeOpportunityCards from "../data/fakeOpportunityCards.json";
 
 import TarjetaPersonaje from "../components/game/TarjetaPersonaje";
 import Cartera from "../components/game/Cartera";
@@ -16,6 +17,7 @@ import CardTragedia from "../components/cards/CardTragedia";
 import CardPayDay from "../components/cards/CardPayDay";
 import CardPortafolioReview from "../components/cards/CardPortafolioReview";
 import CardSaludEspecial from "../components/cards/CardSaludEspecial";
+import CardFakeOpportunity from "../components/cards/CardFakeOpportunity";
 
 import ModalSimple from "../components/ui/ModalSimple";
 import { useGameStore } from "../store/gameStore";
@@ -30,21 +32,180 @@ function wrap(kind, card) {
   return { ...card, __kind: kind };
 }
 
-function generarSecuenciaMes() {
-  const normales = [
-    wrap("normal", normCard(rand(normalCards))),
-    wrap("normal", normCard(rand(normalCards))),
-    wrap("normal", normCard(rand(normalCards))),
-  ];
+// --- Lógica de generación mensual dinámica ---
 
-  const oportunidad = wrap("oportunidad", rand(opportunityCards));
-  const tragedia = wrap("tragedia", rand(tragedyCards));
-  const payday = wrap("payday", rand(paydayCards));
+function getBienestarTier(bienestar) {
+  const b = Number(bienestar || 0);
+  if (b <= 24) return "critico";
+  if (b <= 49) return "bajo";
+  if (b <= 74) return "medio";
+  return "alto";
+}
 
-  const primeras = [...normales, oportunidad, tragedia].sort(
+function pickWeighted(items) {
+  const total = items.reduce((sum, item) => sum + item.weight, 0);
+  let r = Math.random() * total;
+  for (const item of items) {
+    r -= item.weight;
+    if (r <= 0) return item.value;
+  }
+  return items[items.length - 1].value;
+}
+
+const EVENTO_PRINCIPAL_WEIGHTS = {
+  critico: [
+    { value: "tragedia", weight: 55 },
+    { value: "fake", weight: 25 },
+    { value: "oportunidad", weight: 20 },
+  ],
+  bajo: [
+    { value: "tragedia", weight: 40 },
+    { value: "fake", weight: 25 },
+    { value: "oportunidad", weight: 35 },
+  ],
+  medio: [
+    { value: "tragedia", weight: 30 },
+    { value: "fake", weight: 20 },
+    { value: "oportunidad", weight: 50 },
+  ],
+  alto: [
+    { value: "tragedia", weight: 18 },
+    { value: "fake", weight: 17 },
+    { value: "oportunidad", weight: 65 },
+  ],
+};
+
+const EVENTO_FLEX_WEIGHTS = {
+  critico: [
+    { value: "normal", weight: 30 },
+    { value: "tragedia", weight: 35 },
+    { value: "fake", weight: 25 },
+    { value: "oportunidad", weight: 10 },
+  ],
+  bajo: [
+    { value: "normal", weight: 35 },
+    { value: "tragedia", weight: 25 },
+    { value: "fake", weight: 25 },
+    { value: "oportunidad", weight: 15 },
+  ],
+  medio: [
+    { value: "normal", weight: 40 },
+    { value: "tragedia", weight: 15 },
+    { value: "fake", weight: 20 },
+    { value: "oportunidad", weight: 25 },
+  ],
+  alto: [
+    { value: "normal", weight: 40 },
+    { value: "tragedia", weight: 8 },
+    { value: "fake", weight: 17 },
+    { value: "oportunidad", weight: 35 },
+  ],
+};
+
+const TRAGEDIA_SEVERIDAD_WEIGHTS = {
+  critico: [
+    { value: "fuerte", weight: 50 },
+    { value: "media", weight: 35 },
+    { value: "leve", weight: 15 },
+  ],
+  bajo: [
+    { value: "fuerte", weight: 30 },
+    { value: "media", weight: 45 },
+    { value: "leve", weight: 25 },
+  ],
+  medio: [
+    { value: "fuerte", weight: 15 },
+    { value: "media", weight: 45 },
+    { value: "leve", weight: 40 },
+  ],
+  alto: [
+    { value: "fuerte", weight: 5 },
+    { value: "media", weight: 30 },
+    { value: "leve", weight: 65 },
+  ],
+};
+
+function calcularSeveridadTragedia(card) {
+  if (card?.severidad) return card.severidad;
+  const opciones = Array.isArray(card?.opciones) ? card.opciones : [];
+  let maxScore = 0;
+  for (const op of opciones) {
+    if (typeof op !== "object" || !op) continue;
+    let score = 0;
+    if (typeof op.dinero === "number" && op.dinero < 0) {
+      score += Math.abs(op.dinero) / 1000;
+    }
+    if (typeof op.deuda === "number" && op.deuda > 0) {
+      score += op.deuda / 1000;
+    }
+    if (typeof op.salud === "number" && op.salud < 0) {
+      score += Math.abs(op.salud) / 5;
+    }
+    if (typeof op.bienestar === "number" && op.bienestar < 0) {
+      score += Math.abs(op.bienestar) / 5;
+    }
+    if (score > maxScore) maxScore = score;
+  }
+  if (maxScore <= 3) return "leve";
+  if (maxScore <= 7) return "media";
+  return "fuerte";
+}
+
+function pickTragediaForTier(tier) {
+  const sev = pickWeighted(TRAGEDIA_SEVERIDAD_WEIGHTS[tier]);
+  const filtered = tragedyCards.filter(
+    (c) => calcularSeveridadTragedia(c) === sev
+  );
+  const pool = filtered.length > 0 ? filtered : tragedyCards;
+  return rand(pool);
+}
+
+function eventoToCarta(type, tier) {
+  if (type === "tragedia") return wrap("tragedia", pickTragediaForTier(tier));
+  if (type === "fake") return wrap("fake", rand(fakeOpportunityCards));
+  if (type === "oportunidad") return wrap("oportunidad", rand(opportunityCards));
+  return wrap("normal", normCard(rand(normalCards)));
+}
+
+function generarSecuenciaMes(bienestar) {
+  const tier = getBienestarTier(bienestar);
+
+  // 2 o 3 cartas normales (50/50)
+  const numNormales = Math.random() < 0.5 ? 2 : 3;
+  const normales = Array.from({ length: numNormales }, () =>
+    wrap("normal", normCard(rand(normalCards)))
+  );
+
+  // Eventos: 1 principal + 1 flexible + (0 o 1 extra)
+  const principal = pickWeighted(EVENTO_PRINCIPAL_WEIGHTS[tier]);
+  const flex = pickWeighted(EVENTO_FLEX_WEIGHTS[tier]);
+  const extra =
+    Math.random() < 0.45 ? pickWeighted(EVENTO_FLEX_WEIGHTS[tier]) : null;
+
+  const eventos = [principal, flex];
+  if (extra) eventos.push(extra);
+
+  // Limitar a máximo 2 tragedias por mes
+  let tragediaCount = 0;
+  const eventosLimitados = eventos.map((e) => {
+    if (e === "tragedia") {
+      if (tragediaCount >= 2) {
+        return Math.random() < 0.5 ? "normal" : "fake";
+      }
+      tragediaCount += 1;
+    }
+    return e;
+  });
+
+  const cartasEvento = eventosLimitados.map((t) => eventoToCarta(t, tier));
+
+  // Mezclar normales + eventos antes del payday
+  const todas = [...normales, ...cartasEvento].sort(
     () => Math.random() - 0.5
   );
-  return [...primeras, payday];
+
+  const payday = wrap("payday", rand(paydayCards));
+  return [...todas, payday];
 }
 
 export default function Game() {
@@ -254,8 +415,10 @@ export default function Game() {
   const prepararMes = (m) => {
     tomarResultadosInversion(m);
 
-    const resultsNow = useGameStore.getState().invResults || [];
-    const base = generarSecuenciaMes();
+    const state = useGameStore.getState();
+    const resultsNow = state.invResults || [];
+    const bienestarActual = Number(state.bienestar || 0);
+    const base = generarSecuenciaMes(bienestarActual);
     const deckBase = resultsNow.length
       ? [wrap("portfolio", { texto: "Revisión de portafolio" }), ...base]
       : base;
@@ -365,10 +528,11 @@ export default function Game() {
     const { dinero } = useGameStore.getState();
     const capital = Math.min(m, dinero);
     if (capital <= 0) return;
+    // Mínimo 2 meses para no aparecer inmediatamente en el siguiente PayDay
     agendarInversion({
       nombre: "Ahorro/inversión conservadora",
       costo: capital,
-      resolveAt: Number(mes) + 1,
+      resolveAt: Number(mes) + 2,
       outcomes: [
         { delta: Math.round(capital * 0.04), p: 0.45 },
         { delta: Math.round(capital * 0.02), p: 0.35 },
@@ -584,6 +748,14 @@ export default function Game() {
   } else if (cartaActual.__kind === "tragedia") {
     cartaComponent = (
       <CardTragedia
+        texto={cartaActual.texto}
+        opciones={cartaActual.opciones}
+        onOpcion={handleOpcion}
+      />
+    );
+  } else if (cartaActual.__kind === "fake") {
+    cartaComponent = (
+      <CardFakeOpportunity
         texto={cartaActual.texto}
         opciones={cartaActual.opciones}
         onOpcion={handleOpcion}

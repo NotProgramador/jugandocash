@@ -32,6 +32,7 @@ export default function Cartera({ mesActual = null }) {
 
   return (
     <div className="bg-white rounded-xl shadow p-4">
+      {/* Métricas arriba */}
       <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 mb-3">
         <div className="p-2 bg-gray-50 rounded-lg text-center">
           <div className="text-xs text-gray-500 font-medium">Dinero</div>
@@ -70,51 +71,58 @@ export default function Cartera({ mesActual = null }) {
         </div>
       </div>
 
-      {(inversionesPendientes.length > 0 || sueños.length > 0) && (
-        <div className="grid sm:grid-cols-2 gap-3 text-sm">
-          {inversionesPendientes.length > 0 && (
-            <div className="p-2 bg-gray-50 rounded-lg">
-              <div className="font-semibold text-xs text-gray-500 mb-1">
-                Inversiones pendientes
-              </div>
-              <ul className="space-y-0.5">
-                {inversionesPendientes.map((inv) => (
-                  <li key={inv.id} className="text-gray-700">
-                    {inv.nombre || "Inversión"} — $
-                    {Number(inv.costo || 0).toLocaleString()} ({fmtMeses(inv)})
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {sueños.length > 0 && (
-            <div className="p-2 bg-gray-50 rounded-lg">
-              <div className="font-semibold text-xs text-gray-500 mb-1">
-                Sueños
-              </div>
-              <ul className="space-y-0.5">
-                {sueños.map((s, idx) => (
-                  <li key={idx} className="text-gray-700">
-                    <span
-                      className={
-                        s.cumplido ? "line-through text-green-600" : ""
-                      }
-                    >
-                      {s.nombre} (${Number(s.costo || 0).toLocaleString()})
-                    </span>
-                    {s.cumplido && (
-                      <span className="ml-1 text-green-500 font-bold">
-                        ✔
-                      </span>
-                    )}
-                  </li>
-                ))}
-              </ul>
+      {/* Dos columnas: inversiones a la izquierda, sueños a la derecha */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+        <div className="p-3 bg-gray-50 rounded-lg">
+          <div className="font-semibold text-xs text-gray-500 mb-2">
+            Inversiones pendientes
+          </div>
+          {inversionesPendientes.length > 0 ? (
+            <ul className="space-y-1">
+              {inversionesPendientes.map((inv) => (
+                <li key={inv.id} className="text-gray-700">
+                  <span className="font-medium">
+                    {inv.nombre || "Inversión"}
+                  </span>{" "}
+                  — ${Number(inv.costo || 0).toLocaleString()}
+                  <span className="text-gray-500 italic">
+                    {" "}
+                    ({fmtMeses(inv)})
+                  </span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div className="text-gray-400 italic text-xs">
+              Sin inversiones pendientes por ahora.
             </div>
           )}
         </div>
-      )}
+
+        <div className="p-3 bg-gray-50 rounded-lg">
+          <div className="font-semibold text-xs text-gray-500 mb-2">Sueños</div>
+          {sueños.length > 0 ? (
+            <ul className="space-y-1">
+              {sueños.map((s, idx) => (
+                <li key={idx} className="text-gray-700">
+                  <span
+                    className={s.cumplido ? "line-through text-green-600" : ""}
+                  >
+                    {s.nombre} (${Number(s.costo || 0).toLocaleString()})
+                  </span>
+                  {s.cumplido && (
+                    <span className="ml-1 text-green-500 font-bold">✔</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div className="text-gray-400 italic text-xs">
+              Aún no tienes sueños registrados.
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
