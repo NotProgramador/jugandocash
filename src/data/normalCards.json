@@ -1,52 +1,494 @@
 [
-{ "id": 1, "texto": "Encontraste $50 en tu bolsillo. Era dinero del Monopoly." },
-    { "id": 2, "texto": "Perdiste una tarde entera viendo videos de gatitos." },
-    { "id": 3, "texto": "Te diste cuenta de que tu 'agua fresca' favorita es en realidad solo agua con un poco de sabor." },
-    { "id": 4, "texto": "Una semana más de trabajo viendo reels... trabajando digo." },
-    { "id": 5, "texto": "Te despertaste con hambre de chilaquiles, pero solo había cereal." },
-    { "id": 6, "texto": "Pensaste que era viernes, pero en realidad es solo miércoles." },
-    { "id": 7, "texto": "Te emocionaste porque creíste que habías ganado la lotería, pero era un billete viejo." },
-    { "id": 8, "texto": "Pasaste una hora discutiendo con alguien en internet sobre cuál es la mejor salsa picante." },
-    { "id": 9, "texto": "Te diste cuenta de que tu 'día productivo' consistió en reorganizar tu lista de pendientes." },
-    { "id": 10, "texto": "Te emocionaste porque creíste que habías encontrado el control perdido, pero era el de la tele del vecino." },
-    { "id": 11, "texto": "Pasaste media hora buscando tus lentes, solo para darte cuenta de que ya los tenías puestos." },
-    { "id": 12, "texto": "Te emocionaste porque creíste que habías encontrado un atajo, pero terminaste dando vueltas en círculos." },
-    { "id": 13, "texto": "Te diste cuenta de que tu 'dieta saludable' incluye tacos de canasta." },
-    { "id": 14, "texto": "Pasaste una hora planeando un viaje que nunca harás." },
-    { "id": 15, "texto": "Te emocionaste porque creíste que habías encontrado la solución a todos tus problemas, pero era solo café." },
-    { "id": 16, "texto": "Te diste cuenta de que tu 'ejercicio diario' consiste en caminar del sillón a la cocina." },
-    { "id": 17, "texto": "Pasaste una hora viendo memes de 'antes y después' del lunes." },
-    { "id": 18, "texto": "Te emocionaste porque creíste que habías encontrado el amor de tu vida, pero era solo el perro del vecino." },
-    { "id": 19, "texto": "Te diste cuenta de que tu 'nuevo hobby' es coleccionar bolsas de plástico." },
-    { "id": 20, "texto": "Pasaste una hora discutiendo con tu familia sobre cuál es la mejor receta de mole." },
-    { "id": 21, "texto": "Te emocionaste porque creíste que habías encontrado un tesoro, pero era solo la basura que tiraste ayer." },
-    { "id": 22, "texto": "Te diste cuenta de que tu 'nuevo look' es en realidad solo no haberte peinado." },
-    { "id": 23, "texto": "Pasaste una hora viendo videos de cómo organizar tu vida, pero no hiciste nada." },
-    { "id": 24, "texto": "Te emocionaste porque creíste que habías encontrado la solución a todos tus problemas, pero era solo una siesta." },
-    { "id": 25, "texto": "Te diste cuenta de que tu 'nuevo amigo' es en realidad solo el repartidor de pizza." },
-    { "id": 26, "texto": "Pasaste una hora planeando una fiesta que nunca organizarás." },
-    { "id": 27, "texto": "Te emocionaste porque creíste que habías encontrado el control perdido, pero era el de la tele del vecino." },
-    { "id": 28, "texto": "Te diste cuenta de que tu 'nuevo proyecto' es en realidad solo una lista de ideas en una servilleta." },
-    { "id": 29, "texto": "Pasaste una hora viendo videos de cómo hacer ejercicio, pero terminaste comiendo una orden de tacos." },
-    { "id": 30, "texto": "Te emocionaste porque creíste que habías encontrado la solución a todos tus problemas, pero era solo un nuevo episodio de tu serie favorita." },
-    { "id": 31, "texto": "Te diste cuenta de que tu 'nuevo pasatiempo' es en realidad solo ver a otras personas hacer cosas interesantes en internet." },
-    { "id": 32, "texto": "Pasaste una hora planeando un viaje a la playa, pero terminaste yendo al parque de la esquina." },
-    { "id": 33, "texto": "Te emocionaste porque creíste que habías encontrado un billete de $500, pero era un cupón de descuento vencido." },
-    { "id": 34, "texto": "Te diste cuenta de que tu 'nuevo estilo de vida saludable' incluye comer el pan dulce 'light'." },
-    { "id": 35, "texto": "Pasaste una hora viendo videos de cómo ahorrar dinero, pero terminaste comprando algo que no necesitabas." },
-    { "id": 36, "texto": "Te emocionaste porque creíste que habías encontrado la solución a todos tus problemas, pero era solo un nuevo filtro para tus fotos." },
-    { "id": 37, "texto": "Te diste cuenta de que tu 'nuevo mejor amigo' es en realidad solo el perro del vecino." },
-    { "id": 38, "texto": "Pasaste una hora planeando una cena gourmet, pero terminaste comiendo sopa instantánea." },
-    { "id": 39, "texto": "Te emocionaste porque creíste que habías encontrado un tesoro, pero era solo la basura que tiraste ayer." },
-    { "id": 40, "texto": "Te diste cuenta de que tu 'nuevo look' es en realidad solo no haberte peinado." },
-    { "id": 41, "texto": "Pasaste una hora viendo videos de cómo organizar tu vida, pero no hiciste nada." },
-    { "id": 42, "texto": "Te emocionaste porque creíste que habías encontrado la solución a todos tus problemas, pero era solo una siesta." },
-    { "id": 43, "texto": "Te diste cuenta de que tu 'nuevo amigo' es en realidad solo el repartidor de pizza." },
-    { "id": 44, "texto": "Pasaste una hora planeando una fiesta que nunca organizarás." },
-    { "id": 45, "texto": "Te emocionaste porque creíste que habías encontrado el control perdido, pero era el de la tele del vecino." },
-    { "id": 46, "texto": "Te diste cuenta de que tu 'nuevo proyecto' es en realidad solo una lista de ideas en una servilleta." },
-    { "id": 47, "texto": "Pasaste una hora viendo videos de cómo hacer ejercicio, pero terminaste comiendo una orden de tacos." },
-    { "id": 48, "texto": "Te emocionaste porque creíste que habías encontrado la solución a todos tus problemas, pero era solo un nuevo episodio de tu serie favorita." },
-    { "id": 49, "texto": "Te diste cuenta de que tu 'nuevo pasatiempo' es en realidad solo ver a otras personas hacer cosas interesantes en internet." },
-    { "id": 50, "texto": "Pasaste una hora planeando un viaje a la playa, pero terminaste yendo al parque de la esquina." }
+  {
+    "id": 1,
+    "texto": "Encontraste $200 en un chamarra vieja. También encontraste un chicle fósil."
+  },
+  {
+    "id": 2,
+    "texto": "Te levantaste temprano para ser productivo y usaste ese tiempo para ver el techo."
+  },
+  {
+    "id": 3,
+    "texto": "El cajero te dio saldo positivo y por un segundo creíste en los milagros."
+  },
+  {
+    "id": 4,
+    "texto": "Tu lunch casero sobrevivió intacto porque compraste tacos de todos modos."
+  },
+  {
+    "id": 5,
+    "texto": "Cancelaste una suscripción que no recordabas tener. Tu yo financiero aplaude lento."
+  },
+  {
+    "id": 6,
+    "texto": "Fuiste al súper por pan y saliste con pan, queso, velas y una planta llamada Rogelio."
+  },
+  {
+    "id": 7,
+    "texto": "Revisaste tu presupuesto y descubriste que tu categoría principal es 'antojitos emocionales'."
+  },
+  {
+    "id": 8,
+    "texto": "El internet se cayó justo cuando ibas a trabajar. Qué coincidencia tan conveniente."
+  },
+  {
+    "id": 9,
+    "texto": "Lograste no comprar café de la calle. Celebraste comprando un muffin."
+  },
+  {
+    "id": 10,
+    "texto": "Te llegó una notificación bancaria y sudaste como si fuera final de novela."
+  },
+  {
+    "id": 11,
+    "texto": "Tuviste una idea millonaria en la regadera. Se fue por la coladera."
+  },
+  {
+    "id": 12,
+    "texto": "Te propusiste hacer ejercicio. Caminaste hasta la cocina con determinación."
+  },
+  {
+    "id": 13,
+    "texto": "El perro del vecino te saludó. Tu salud emocional subió, tu productividad bajó."
+  },
+  {
+    "id": 14,
+    "texto": "Descubriste que el modo ahorro de energía también aplica a tu personalidad."
+  },
+  {
+    "id": 15,
+    "texto": "Te invitaron a un plan caro y contestaste 'lo reviso'. Traducción: no."
+  },
+  {
+    "id": 16,
+    "texto": "Encontraste monedas en el sillón. El sillón exige comisión."
+  },
+  {
+    "id": 17,
+    "texto": "Hiciste meal prep. Duró 24 horas antes de convertirse en 'mejor pido algo'."
+  },
+  {
+    "id": 18,
+    "texto": "Le pusiste nombre a tu deuda para hacerla menos intimidante. Se llama Don Interés."
+  },
+  {
+    "id": 19,
+    "texto": "Venciste la tentación de comprar en línea. Luego entraste 'solo a ver'."
+  },
+  {
+    "id": 20,
+    "texto": "Te sentiste adulto porque comparaste precios de papel higiénico."
+  },
+  {
+    "id": 21,
+    "texto": "Te llegó un cupón del 10%. Compraste algo que no necesitabas con orgullo."
+  },
+  {
+    "id": 22,
+    "texto": "La app del banco te pidió actualizar. Tu ansiedad también se actualizó."
+  },
+  {
+    "id": 23,
+    "texto": "Tuviste una reunión que pudo ser correo. Tu café no pudo ser gratis."
+  },
+  {
+    "id": 24,
+    "texto": "Intentaste meditar, pero tu cerebro abrió 37 pestañas."
+  },
+  {
+    "id": 25,
+    "texto": "Te bañaste con agua fría por error. Despertaste tú y tus ancestros."
+  },
+  {
+    "id": 26,
+    "texto": "Alguien dijo 'inversión segura' y tu ceja hizo auditoría."
+  },
+  {
+    "id": 27,
+    "texto": "Compraste una libreta para organizar tus finanzas. La usaste para dibujar taquitos."
+  },
+  {
+    "id": 28,
+    "texto": "Te dormiste viendo videos de educación financiera. Aprendiste a roncar con criterio."
+  },
+  {
+    "id": 29,
+    "texto": "Tu planta sobrevivió otra semana. Ya administra mejor sus recursos que tú."
+  },
+  {
+    "id": 30,
+    "texto": "Pagaste a tiempo un servicio. La adultez te guiñó el ojo."
+  },
+  {
+    "id": 31,
+    "texto": "Olvidaste descongelar comida. El universo autorizó quesadillas."
+  },
+  {
+    "id": 32,
+    "texto": "Viste tu historial de gastos y cerraste la app por salud mental."
+  },
+  {
+    "id": 33,
+    "texto": "El mercado bajó y tú también, pero de ánimo."
+  },
+  {
+    "id": 34,
+    "texto": "El mercado subió y tú no tenías nada invertido. Aplausos internos incómodos."
+  },
+  {
+    "id": 35,
+    "texto": "Reutilizaste una bolsa del súper. Te sentiste inversionista ecológico."
+  },
+  {
+    "id": 36,
+    "texto": "Compraste café soluble para ahorrar. Le llamas 'espresso humilde'."
+  },
+  {
+    "id": 37,
+    "texto": "Tuviste un antojo de sushi y tu cartera fingió no hablar español."
+  },
+  {
+    "id": 38,
+    "texto": "Ganaste una discusión sobre finanzas personales en internet. Nadie te pagó."
+  },
+  {
+    "id": 39,
+    "texto": "Descubriste que 'solo son $99 al mes' son $1,188 al año. Drama en tres actos."
+  },
+  {
+    "id": 40,
+    "texto": "Te pusiste a limpiar para evitar revisar tus deudas. Tu casa quedó impecable."
+  },
+  {
+    "id": 41,
+    "texto": "Hiciste presupuesto en Excel y te sentiste CFO de tu sala."
+  },
+  {
+    "id": 42,
+    "texto": "Tuviste suerte: el antojo caro estaba cerrado."
+  },
+  {
+    "id": 43,
+    "texto": "Te pagaron con transferencia y no con 'te lo paso al rato'. Día histórico."
+  },
+  {
+    "id": 44,
+    "texto": "Encontraste una tarjeta de regalo con $37. Riqueza fraccionada."
+  },
+  {
+    "id": 45,
+    "texto": "El microondas sonó y corriste como si anunciaran dividendos."
+  },
+  {
+    "id": 46,
+    "texto": "Te llegó correo de 'última oportunidad'. Lo ignoraste como campeón."
+  },
+  {
+    "id": 47,
+    "texto": "Tu refri tenía comida, pero tu corazón quería comida callejera."
+  },
+  {
+    "id": 48,
+    "texto": "Lograste decir 'no gracias' a una tanda sospechosa."
+  },
+  {
+    "id": 49,
+    "texto": "Tuviste una siesta tan buena que parecía deducible de impuestos."
+  },
+  {
+    "id": 50,
+    "texto": "El tráfico te dio tiempo para pensar en tus metas. Y en tacos."
+  },
+  {
+    "id": 51,
+    "texto": "Entraste a una tienda 'solo a cambiar'. Saliste con recibo nuevo."
+  },
+  {
+    "id": 52,
+    "texto": "Te hiciste un café en casa y lo presumiste como logro financiero."
+  },
+  {
+    "id": 53,
+    "texto": "Tu amigo dijo 'esta vez sí te pago'. Guardaste captura como documento legal."
+  },
+  {
+    "id": 54,
+    "texto": "Revisaste tus monedas y apareció una ficha de maquinitas."
+  },
+  {
+    "id": 55,
+    "texto": "Tu app de gastos clasificó tus compras como 'entretenimiento'. Tú las llamas supervivencia."
+  },
+  {
+    "id": 56,
+    "texto": "El cajón de cables viejos sigue sin generar ingresos, pero da seguridad emocional."
+  },
+  {
+    "id": 57,
+    "texto": "Tuviste ganas de emprender. Luego recordaste que hay que contestar correos."
+  },
+  {
+    "id": 58,
+    "texto": "Compraste fruta para ser saludable. Se maduró mientras pedías pizza."
+  },
+  {
+    "id": 59,
+    "texto": "Lograste no abrir la app de delivery. El pulgar todavía tiembla."
+  },
+  {
+    "id": 60,
+    "texto": "Tu playlist motivacional funcionó durante 11 minutos."
+  },
+  {
+    "id": 61,
+    "texto": "Leíste un hilo de inversión y entendiste la mitad. La otra mitad sonaba cara."
+  },
+  {
+    "id": 62,
+    "texto": "La lavadora se comió un calcetín. Seguro lo invirtió a largo plazo."
+  },
+  {
+    "id": 63,
+    "texto": "Tu recibo de luz llegó más bajo. Sospechas que fue un error del universo."
+  },
+  {
+    "id": 64,
+    "texto": "Te cayó bien alguien hasta que dijo 'ganancias garantizadas'."
+  },
+  {
+    "id": 65,
+    "texto": "Tuviste una idea de negocio: cobrar por escuchar quejas de lunes."
+  },
+  {
+    "id": 66,
+    "texto": "Organizaste tus contraseñas y sentiste que dominas la vida moderna."
+  },
+  {
+    "id": 67,
+    "texto": "Te pusiste bloqueador. Tu salud futura hizo una ovación."
+  },
+  {
+    "id": 68,
+    "texto": "Compraste genérico y no pasó nada. La marca famosa está ofendida."
+  },
+  {
+    "id": 69,
+    "texto": "Tuviste ansiedad por dinero y la calmó una sopita. Economía conductual con fideo."
+  },
+  {
+    "id": 70,
+    "texto": "El elevador no funcionó. Subiste escaleras y fingiste que era crossfit."
+  },
+  {
+    "id": 71,
+    "texto": "Guardaste cambio en un frasco. Suena más rico de lo que es."
+  },
+  {
+    "id": 72,
+    "texto": "Aprendiste a decir 'no está en mi presupuesto' sin llorar."
+  },
+  {
+    "id": 73,
+    "texto": "Te dio pena pedir descuento. Luego se te quitó al ver el total."
+  },
+  {
+    "id": 74,
+    "texto": "Tu celular te recordó respirar. Le cobraste consultoría emocional."
+  },
+  {
+    "id": 75,
+    "texto": "Tuviste una junta con cámara apagada. Nadie supo que desayunabas cereal en taza."
+  },
+  {
+    "id": 76,
+    "texto": "Compraste una alcancía. Ahora tienes un puerquito con responsabilidades."
+  },
+  {
+    "id": 77,
+    "texto": "Tu tarjeta pasó a la primera. Pequeña victoria, gran sospecha."
+  },
+  {
+    "id": 78,
+    "texto": "Un tutorial prometía cambiar tu vida en 5 minutos. Te cambió el algoritmo."
+  },
+  {
+    "id": 79,
+    "texto": "El aguinaldo todavía no llega y ya tiene lista de espera."
+  },
+  {
+    "id": 80,
+    "texto": "Tuviste un día sin gastos. Lo celebraste no gastando, por increíble que parezca."
+  },
+  {
+    "id": 81,
+    "texto": "Pagaste algo en efectivo y descubriste que el dinero sí se va físicamente."
+  },
+  {
+    "id": 82,
+    "texto": "El banco te ofreció crédito. Tu autocontrol pidió vacaciones."
+  },
+  {
+    "id": 83,
+    "texto": "Hiciste lista del súper. El súper hizo lista de tus debilidades."
+  },
+  {
+    "id": 84,
+    "texto": "Tuviste una epifanía financiera: los snacks también cuentan."
+  },
+  {
+    "id": 85,
+    "texto": "Compraste un termo para ahorrar café. Ahora cargas tu futuro en acero inoxidable."
+  },
+  {
+    "id": 86,
+    "texto": "Tuviste energía para cocinar. El gas y tú trabajaron en equipo."
+  },
+  {
+    "id": 87,
+    "texto": "Te dieron ganas de ordenar recibos. Duró hasta el tercer papelito."
+  },
+  {
+    "id": 88,
+    "texto": "El calendario dijo quincena próxima. Tu alma dijo 'resiste'."
+  },
+  {
+    "id": 89,
+    "texto": "Encontraste un billete lavado en la ropa. Literalmente dinero limpio."
+  },
+  {
+    "id": 90,
+    "texto": "Tu sueño de comprar casa miró los precios y pidió sentarse."
+  },
+  {
+    "id": 91,
+    "texto": "Te preguntaron '¿transferencia o efectivo?' y respondiste con mirada de adulto cansado."
+  },
+  {
+    "id": 92,
+    "texto": "El cajero no cobró comisión. Sentiste que ganaste un premio."
+  },
+  {
+    "id": 93,
+    "texto": "Un influencer recomendó austeridad desde una playa. Cerraste el video."
+  },
+  {
+    "id": 94,
+    "texto": "Tuviste antojo de pan dulce. Negociaste contigo mismo y perdiste."
+  },
+  {
+    "id": 95,
+    "texto": "Descubriste que caminar es gratis. Tus tenis piden mantenimiento."
+  },
+  {
+    "id": 96,
+    "texto": "El recibo del agua llegó normal. No hiciste fiesta para no gastar agua."
+  },
+  {
+    "id": 97,
+    "texto": "Te sobró comida y la guardaste. Mañana será 'comida gourmet recalentada'."
+  },
+  {
+    "id": 98,
+    "texto": "Compraste pilas recargables y te sentiste fundador de una startup verde."
+  },
+  {
+    "id": 99,
+    "texto": "Tuviste una conversación seria con tu cartera. Ella solo suspiró."
+  },
+  {
+    "id": 100,
+    "texto": "Aprendiste que 'barato' no siempre significa 'necesario'. Duró poco el aprendizaje."
+  },
+  {
+    "id": 101,
+    "texto": "Tu alarma sonó y tú invertiste 10 minutos más en sueño."
+  },
+  {
+    "id": 102,
+    "texto": "Pasaste frente a una panadería y resististe. La panadería no lo tomó personal."
+  },
+  {
+    "id": 103,
+    "texto": "Guardaste una factura. No sabes para qué, pero se sintió profesional."
+  },
+  {
+    "id": 104,
+    "texto": "Te llegó una promoción 2x1. Compraste dos de algo que no iba en la lista."
+  },
+  {
+    "id": 105,
+    "texto": "Tuviste un gasto hormiga. La hormiga venía con familia."
+  },
+  {
+    "id": 106,
+    "texto": "El semáforo en verde te ahorró gasolina y estrés. Gracias, infraestructura."
+  },
+  {
+    "id": 107,
+    "texto": "Lograste tomar agua en vez de refresco. Tu riñón te mandó sticker."
+  },
+  {
+    "id": 108,
+    "texto": "Te dijeron 'la vida es una' justo antes de una compra cara."
+  },
+  {
+    "id": 109,
+    "texto": "Tuviste un ataque de minimalismo. Tiraste una caja, guardaste cuatro."
+  },
+  {
+    "id": 110,
+    "texto": "Revisaste tus metas y decidiste empezar mañana, tradición ancestral."
+  },
+  {
+    "id": 111,
+    "texto": "La báscula financiera marcó 'mucho delivery'."
+  },
+  {
+    "id": 112,
+    "texto": "Te dieron vuelto exacto. El universo cuadró caja."
+  },
+  {
+    "id": 113,
+    "texto": "Pagaste una deuda pequeña. Don Interés perdió un soldado."
+  },
+  {
+    "id": 114,
+    "texto": "Tu amigo presumió criptos. Tú presumiste no deber el internet."
+  },
+  {
+    "id": 115,
+    "texto": "Te organizaste tanto que hasta tu desorden parece intencional."
+  },
+  {
+    "id": 116,
+    "texto": "El cajón de recibos fue oficialmente declarado zona arqueológica."
+  },
+  {
+    "id": 117,
+    "texto": "Tu tarjeta acumuló puntos. La emoción no alcanza para un vuelo, pero sí para presumir."
+  },
+  {
+    "id": 118,
+    "texto": "Te salió barato el mandado porque olvidaste comprar la mitad."
+  },
+  {
+    "id": 119,
+    "texto": "Te pusiste a comparar precios y descubriste tu vocación de detective."
+  },
+  {
+    "id": 120,
+    "texto": "Tuviste un momento de paz: ninguna app pidió renovar suscripción."
+  },
+  {
+    "id": 121,
+    "texto": "El refrigerador hizo ruido raro. Lo miraste con diplomacia."
+  },
+  {
+    "id": 122,
+    "texto": "Tu billetera está más ligera, pero tú dices que es por ergonomía."
+  },
+  {
+    "id": 123,
+    "texto": "Le dijiste 'luego vemos' a un gasto innecesario. Madurez nivel jefe final."
+  }
 ]

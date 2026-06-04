@@ -21,6 +21,7 @@ export default function CardPayDay({ texto, opciones = [], onOpcion }) {
 
   const actualizarDinero = useGameStore((s) => s.actualizarDinero);
   const actualizarSalud = useGameStore((s) => s.actualizarSalud);
+  const actualizarBienestar = useGameStore((s) => s.actualizarBienestar);
   const cumplirSueño = useGameStore((s) => s.cumplirSueño);
 
   const opcionesFinal = useMemo(() => {
@@ -66,6 +67,9 @@ export default function CardPayDay({ texto, opciones = [], onOpcion }) {
 
     const deltaSalud = efectoSaludPorSueno(s.nombre);
     if (deltaSalud) actualizarSalud(deltaSalud);
+
+    // Cumplir un sueño es siempre bueno para el bienestar
+    actualizarBienestar(12);
 
     setModal(null);
     onOpcion?.({ accion: "cumplirSuenio", suenio: s.nombre, costo });

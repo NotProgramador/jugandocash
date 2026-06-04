@@ -1,106 +1,800 @@
 [
   {
     "id": 1,
-    "texto": "¡Día de pago! Recibes tu sueldo mensual. ¿Qué quieres hacer?",
+    "texto": "¡Día de pago! La quincena llegó con capa de superhéroe… y botas de lluvia.",
     "opciones": [
       {
         "texto": "Pagar deuda",
         "accion": "pagarDeuda",
-        "descripcion": "Elige cuánto abonarás este mes a tu deuda.",
-        "afecta": ["dinero", "deuda"]
+        "descripcion": "Elige cuánto abonarás a Don Interés antes de que se ponga intenso.",
+        "afecta": [
+          "dinero",
+          "deuda"
+        ]
       },
       {
         "texto": "Ahorrar/invertir",
         "accion": "invertir",
-        "descripcion": "Aparta una parte de tu sueldo para inversiones.",
-        "afecta": ["dinero", "inversiones"]
+        "descripcion": "Aparta una parte de tu sueldo para que no se evapore en antojitos.",
+        "afecta": [
+          "dinero",
+          "inversiones"
+        ]
       },
       {
         "texto": "Cumplir un sueño",
         "accion": "cumplirSuenio",
-        "descripcion": "Elige cumplir uno de tus sueños si tienes el dinero suficiente.",
-        "afecta": ["dinero", "suenios", "salud"]
+        "descripcion": "Intenta cumplir un sueño si el dinero alcanza y la vida coopera.",
+        "afecta": [
+          "dinero",
+          "suenios",
+          "salud"
+        ]
       },
       {
-        "texto": "Salir con amigos (fiesta)",
+        "texto": "Salir con amigos -$1,500",
         "accion": "fiesta",
-        "descripcion": "Gastaste en diversión, tu salud baja.",
+        "descripcion": "Diversión hoy, cartera en terapia mañana.",
         "dinero": -1500,
-        "salud": -15
+        "salud": 8
       },
       {
         "texto": "No hacer nada especial",
         "accion": "seguirNormal",
-        "descripcion": "Simplemente te relajas. Salud +10.",
+        "descripcion": "Descansas, respiras, no compras cosas raras. Salud +10.",
         "salud": 10
       }
     ]
   },
   {
     "id": 2,
-    "texto": "¡Día de pago! Por fin puedes respirar y tomar decisiones.",
+    "texto": "¡Día de pago! Tu nómina entró y el banco ya la estaba esperando con cubiertos.",
     "opciones": [
       {
-        "texto": "Pagar solo intereses de deuda",
+        "texto": "Pagar solo intereses -$500",
         "accion": "pagarIntereses",
-        "descripcion": "Pagas el mínimo requerido, tu deuda baja muy poco.",
+        "descripcion": "Cumples lo mínimo. La deuda baja poquito, pero baja.",
         "dinero": -500,
         "deuda": -500
       },
       {
-        "texto": "Invertir en fondo seguro",
+        "texto": "Invertir en fondo seguro -$1,000",
         "accion": "invertirBajoRiesgo",
-        "descripcion": "Invertiste $1,000 en un instrumento de bajo riesgo.",
+        "descripcion": "Pones $1,000 en bajo riesgo. No emociona, pero tampoco asusta.",
         "dinero": -1000,
         "inversiones": [
-          { "tipo": "bajo", "monto": 1000 }
+          {
+            "tipo": "bajo",
+            "monto": 1000
+          }
         ]
       },
       {
-        "texto": "Ir al parque a caminar",
+        "texto": "Ir al parque -$50 (+15 salud)",
         "accion": "salud",
-        "descripcion": "Gastas $50 pero tu salud mejora.",
+        "descripcion": "Caminar: el DLC gratis de la vida adulta.",
         "dinero": -50,
         "salud": 15
       },
       {
         "texto": "Cumplir sueño",
         "accion": "cumplirSuenio",
-        "descripcion": "Intenta cumplir alguno de tus sueños.",
-        "afecta": ["dinero", "suenios"]
+        "descripcion": "Vas por una meta personal sin pedir permiso al caos.",
+        "afecta": [
+          "dinero",
+          "suenios"
+        ]
       }
     ]
   },
   {
     "id": 3,
-    "texto": "¡Día de pago! Recibes tu salario, pero llegan tentaciones.",
+    "texto": "¡Día de pago! Hoy eres millonario por aproximadamente 11 minutos.",
     "opciones": [
       {
-        "texto": "Comprar gadget nuevo",
+        "texto": "Comprar gadget nuevo -$4,000",
         "accion": "gastoInnecesario",
-        "descripcion": "Gastaste $4,000 en un nuevo teléfono.",
+        "descripcion": "Tiene cámara, brillo y arrepentimiento en HD.",
         "dinero": -4000,
-        "salud": 0
+        "salud": 1
       },
       {
-        "texto": "Ir a un retiro de meditación",
+        "texto": "Retiro de meditación -$2,000 (+20 salud)",
         "accion": "salud",
-        "descripcion": "Gastas $2,000 pero tu salud mental sube +20.",
+        "descripcion": "Respiras, sueltas estrés y temporalmente no revisas el banco.",
         "dinero": -2000,
         "salud": 20
       },
       {
-        "texto": "Pagar deuda agresivamente",
+        "texto": "Pagar deuda agresivamente -$10,000",
         "accion": "pagarDeuda",
-        "descripcion": "Decides pagar $10,000 de deuda este mes.",
+        "descripcion": "Le pegas directo al monstruo de intereses.",
         "dinero": -10000,
         "deuda": -10000
       },
       {
-        "texto": "Guardar todo el sueldo",
+        "texto": "Guardar todo",
         "accion": "ahorrar",
-        "descripcion": "No gastas nada extra, solo ahorras.",
+        "descripcion": "Movimiento frío, calculado y casi mítico.",
         "dinero": 0
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "texto": "¡Día de pago! El sueldo cayó y tus suscripciones hicieron fila.",
+    "opciones": [
+      {
+        "texto": "Cancelar y ahorrar",
+        "accion": "seguirNormal",
+        "descripcion": "Revisas gastos fijos y recuperas calma. Salud +8.",
+        "salud": 8
+      },
+      {
+        "texto": "Pagar deuda",
+        "accion": "pagarDeuda",
+        "descripcion": "Abona lo que puedas antes de que se esconda el dinero.",
+        "afecta": [
+          "dinero",
+          "deuda"
+        ]
+      },
+      {
+        "texto": "Invertir",
+        "accion": "invertir",
+        "descripcion": "Mueves una parte a inversiones.",
+        "afecta": [
+          "dinero",
+          "inversiones"
+        ]
+      },
+      {
+        "texto": "Pedir comida cara -$900",
+        "accion": "gastoInnecesario",
+        "descripcion": "La salsa venía aparte y el remordimiento incluido.",
+        "dinero": -900,
+        "salud": 2
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "texto": "¡Día de pago! Tu cartera sonríe con miedo.",
+    "opciones": [
+      {
+        "texto": "Pagar deuda agresivamente -$5,000",
+        "accion": "pagarDeuda",
+        "descripcion": "Un golpe serio a la deuda.",
+        "dinero": -5000,
+        "deuda": -5000
+      },
+      {
+        "texto": "Fondo seguro -$1,500",
+        "accion": "invertirBajoRiesgo",
+        "descripcion": "Inversión tranquila para dormir mejor.",
+        "dinero": -1500,
+        "inversiones": [
+          {
+            "tipo": "bajo",
+            "monto": 1500
+          }
+        ]
+      },
+      {
+        "texto": "Día de autocuidado -$700 (+12 salud)",
+        "accion": "salud",
+        "descripcion": "Cuidas tu cuerpo antes de que mande queja formal.",
+        "dinero": -700,
+        "salud": 12
+      },
+      {
+        "texto": "No hacer nada",
+        "accion": "seguirNormal",
+        "descripcion": "Disfrutas no complicarte. Salud +6.",
+        "salud": 6
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "texto": "¡Día de pago! La nómina entra, las tentaciones bailan.",
+    "opciones": [
+      {
+        "texto": "Comprar ropa -$1,800",
+        "accion": "gastoInnecesario",
+        "descripcion": "Tu outfit sube, tu saldo baja.",
+        "dinero": -1800,
+        "salud": 3
+      },
+      {
+        "texto": "Pagar intereses -$700",
+        "accion": "pagarIntereses",
+        "descripcion": "Mantienes la deuda a raya, más o menos.",
+        "dinero": -700,
+        "deuda": -700
+      },
+      {
+        "texto": "Cumplir un sueño",
+        "accion": "cumplirSuenio",
+        "descripcion": "Revisa si ya puedes tachar una meta.",
+        "afecta": [
+          "dinero",
+          "suenios",
+          "salud"
+        ]
+      },
+      {
+        "texto": "Ahorrar/invertir",
+        "accion": "invertir",
+        "descripcion": "Primero tú del futuro.",
+        "afecta": [
+          "dinero",
+          "inversiones"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "texto": "¡Día de pago! Tu sueldo llegó con música épica de 3 segundos.",
+    "opciones": [
+      {
+        "texto": "Pagar deuda",
+        "accion": "pagarDeuda",
+        "descripcion": "El clásico responsable que sí funciona.",
+        "afecta": [
+          "dinero",
+          "deuda"
+        ]
+      },
+      {
+        "texto": "Supermercado estratégico -$1,200 (+8 salud)",
+        "accion": "salud",
+        "descripcion": "Compras comida real, no solo botanas con forma de cena.",
+        "dinero": -1200,
+        "salud": 8
+      },
+      {
+        "texto": "Fiesta -$2,200 (+6 salud)",
+        "accion": "fiesta",
+        "descripcion": "La noche estuvo buena; la mañana, no tanto.",
+        "dinero": -2200,
+        "salud": 6
+      },
+      {
+        "texto": "Guardar todo",
+        "accion": "ahorrar",
+        "descripcion": "El dinero se queda quietecito.",
+        "dinero": 0
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "texto": "¡Día de pago! Hoy toca decidir entre paz mental y 'me lo merezco'.",
+    "opciones": [
+      {
+        "texto": "Fondo seguro -$2,000",
+        "accion": "invertirBajoRiesgo",
+        "descripcion": "No presume, pero suma.",
+        "dinero": -2000,
+        "inversiones": [
+          {
+            "tipo": "bajo",
+            "monto": 2000
+          }
+        ]
+      },
+      {
+        "texto": "Cumplir sueño",
+        "accion": "cumplirSuenio",
+        "descripcion": "Una meta puede volverse realidad.",
+        "afecta": [
+          "dinero",
+          "suenios",
+          "salud"
+        ]
+      },
+      {
+        "texto": "Salir tranqui -$600 (+5 salud)",
+        "accion": "fiesta",
+        "descripcion": "Socializas sin romper la alcancía.",
+        "dinero": -600,
+        "salud": 5
+      },
+      {
+        "texto": "No hacer nada especial",
+        "accion": "seguirNormal",
+        "descripcion": "Descanso y cero drama. Salud +10.",
+        "salud": 10
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "texto": "¡Día de pago! El banco dice 'depósito recibido' y tú dices 'a ver cuánto dura'.",
+    "opciones": [
+      {
+        "texto": "Abonar deuda -$3,000",
+        "accion": "pagarDeuda",
+        "descripcion": "Bajas capital y subes autoestima.",
+        "dinero": -3000,
+        "deuda": -3000
+      },
+      {
+        "texto": "Invertir",
+        "accion": "invertir",
+        "descripcion": "Elige cuánto apartar para crecer.",
+        "afecta": [
+          "dinero",
+          "inversiones"
+        ]
+      },
+      {
+        "texto": "Curso útil -$1,200 (+10 salud)",
+        "accion": "salud",
+        "descripcion": "Inviertes en habilidades y en presumir agenda.",
+        "dinero": -1200,
+        "salud": 10
+      },
+      {
+        "texto": "Comprar tonterías -$1,000",
+        "accion": "gastoInnecesario",
+        "descripcion": "Eran baratas hasta que fueron cinco.",
+        "dinero": -1000,
+        "salud": 1
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "texto": "¡Día de pago! Tu yo responsable y tu yo antojado se miran feo.",
+    "opciones": [
+      {
+        "texto": "Pagar intereses -$500",
+        "accion": "pagarIntereses",
+        "descripcion": "No es glamuroso, pero evita llamadas incómodas.",
+        "dinero": -500,
+        "deuda": -500
+      },
+      {
+        "texto": "Despensa saludable -$900 (+10 salud)",
+        "accion": "salud",
+        "descripcion": "Verduras con intención de ser comidas.",
+        "dinero": -900,
+        "salud": 10
+      },
+      {
+        "texto": "Cumplir sueño",
+        "accion": "cumplirSuenio",
+        "descripcion": "Haz que el esfuerzo tenga cara de meta.",
+        "afecta": [
+          "dinero",
+          "suenios",
+          "salud"
+        ]
+      },
+      {
+        "texto": "Fiesta -$1,700 (+7 salud)",
+        "accion": "fiesta",
+        "descripcion": "La alegría también se presupuesta. A veces mal.",
+        "dinero": -1700,
+        "salud": 7
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "texto": "¡Día de pago! Se desbloquea el modo adulto por tiempo limitado.",
+    "opciones": [
+      {
+        "texto": "Pagar deuda",
+        "accion": "pagarDeuda",
+        "descripcion": "Reduce deuda antes de que se reproduzca.",
+        "afecta": [
+          "dinero",
+          "deuda"
+        ]
+      },
+      {
+        "texto": "Ahorrar/invertir",
+        "accion": "invertir",
+        "descripcion": "Aparta dinero antes de que huela comida.",
+        "afecta": [
+          "dinero",
+          "inversiones"
+        ]
+      },
+      {
+        "texto": "Mantenimiento preventivo -$800 (+5 salud)",
+        "accion": "salud",
+        "descripcion": "Arreglas algo antes de que sea tragedia.",
+        "dinero": -800,
+        "salud": 5
+      },
+      {
+        "texto": "No hacer nada",
+        "accion": "seguirNormal",
+        "descripcion": "Tu paz mental agradece. Salud +8.",
+        "salud": 8
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "texto": "¡Día de pago! El sueldo llegó y el carrito de compras despertó.",
+    "opciones": [
+      {
+        "texto": "Cerrar carrito (+5 salud)",
+        "accion": "seguirNormal",
+        "descripcion": "Victoria contra el algoritmo.",
+        "salud": 5
+      },
+      {
+        "texto": "Comprar carrito -$2,500",
+        "accion": "gastoInnecesario",
+        "descripcion": "Llegará en 3 días y el arrepentimiento en 3 minutos.",
+        "dinero": -2500,
+        "salud": 1
+      },
+      {
+        "texto": "Fondo seguro -$1,000",
+        "accion": "invertirBajoRiesgo",
+        "descripcion": "Un paso prudente.",
+        "dinero": -1000,
+        "inversiones": [
+          {
+            "tipo": "bajo",
+            "monto": 1000
+          }
+        ]
+      },
+      {
+        "texto": "Pagar deuda",
+        "accion": "pagarDeuda",
+        "descripcion": "Decisión seria, aplauso serio.",
+        "afecta": [
+          "dinero",
+          "deuda"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "texto": "¡Día de pago! Esta vez prometiste no improvisar. El destino toma nota.",
+    "opciones": [
+      {
+        "texto": "Hacer presupuesto (+12 salud)",
+        "accion": "seguirNormal",
+        "descripcion": "La claridad también sana.",
+        "salud": 12
+      },
+      {
+        "texto": "Invertir",
+        "accion": "invertir",
+        "descripcion": "Pones a trabajar una parte.",
+        "afecta": [
+          "dinero",
+          "inversiones"
+        ]
+      },
+      {
+        "texto": "Cumplir sueño",
+        "accion": "cumplirSuenio",
+        "descripcion": "Tal vez hoy se compra futuro bonito.",
+        "afecta": [
+          "dinero",
+          "suenios",
+          "salud"
+        ]
+      },
+      {
+        "texto": "Cena elegante -$1,600 (+4 salud)",
+        "accion": "fiesta",
+        "descripcion": "Elegante también fue la cuenta.",
+        "dinero": -1600,
+        "salud": 4
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "texto": "¡Día de pago! Hay dinero, pero también recibos con hambre.",
+    "opciones": [
+      {
+        "texto": "Pagar deuda -$4,000",
+        "accion": "pagarDeuda",
+        "descripcion": "Menos deuda, menos ruido mental.",
+        "dinero": -4000,
+        "deuda": -4000
+      },
+      {
+        "texto": "Salud preventiva -$1,000 (+15 salud)",
+        "accion": "salud",
+        "descripcion": "Chequeo, vitaminas y sentirte persona responsable.",
+        "dinero": -1000,
+        "salud": 15
+      },
+      {
+        "texto": "Ahorrar/invertir",
+        "accion": "invertir",
+        "descripcion": "Apartas antes de gastar.",
+        "afecta": [
+          "dinero",
+          "inversiones"
+        ]
+      },
+      {
+        "texto": "Guardar todo",
+        "accion": "ahorrar",
+        "descripcion": "Cero movimientos extra.",
+        "dinero": 0
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "texto": "¡Día de pago! Tus metas te miran desde el refrigerador.",
+    "opciones": [
+      {
+        "texto": "Cumplir sueño",
+        "accion": "cumplirSuenio",
+        "descripcion": "Revisa si ya se puede dar el gran paso.",
+        "afecta": [
+          "dinero",
+          "suenios",
+          "salud"
+        ]
+      },
+      {
+        "texto": "Pagar intereses -$600",
+        "accion": "pagarIntereses",
+        "descripcion": "Mantienes la deuda con correa corta.",
+        "dinero": -600,
+        "deuda": -600
+      },
+      {
+        "texto": "Gimnasio -$700 (+12 salud)",
+        "accion": "salud",
+        "descripcion": "Ahora sí, según tú y el contrato.",
+        "dinero": -700,
+        "salud": 12
+      },
+      {
+        "texto": "No hacer nada",
+        "accion": "seguirNormal",
+        "descripcion": "No todo depósito necesita drama. Salud +5.",
+        "salud": 5
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "texto": "¡Día de pago! El dinero entró y tu grupo de amigos lo olió.",
+    "opciones": [
+      {
+        "texto": "Salir -$1,200 (+6 salud)",
+        "accion": "fiesta",
+        "descripcion": "Risas, fotos y ticket largo.",
+        "dinero": -1200,
+        "salud": 6
+      },
+      {
+        "texto": "Salir barato -$350 (+4 salud)",
+        "accion": "fiesta",
+        "descripcion": "Plan de banqueta con dignidad.",
+        "dinero": -350,
+        "salud": 4
+      },
+      {
+        "texto": "Invertir",
+        "accion": "invertir",
+        "descripcion": "Tu yo futuro también quiere invitación.",
+        "afecta": [
+          "dinero",
+          "inversiones"
+        ]
+      },
+      {
+        "texto": "Pagar deuda",
+        "accion": "pagarDeuda",
+        "descripcion": "Responsabilidad con cara de lunes.",
+        "afecta": [
+          "dinero",
+          "deuda"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "texto": "¡Día de pago! Hoy puedes arreglar algo que llevabas posponiendo desde la era del módem.",
+    "opciones": [
+      {
+        "texto": "Mantenimiento -$1,300 (+7 salud)",
+        "accion": "salud",
+        "descripcion": "El problema deja de mirarte feo.",
+        "dinero": -1300,
+        "salud": 7
+      },
+      {
+        "texto": "Pagar deuda",
+        "accion": "pagarDeuda",
+        "descripcion": "Menos pendiente, más aire.",
+        "afecta": [
+          "dinero",
+          "deuda"
+        ]
+      },
+      {
+        "texto": "Fondo seguro -$1,200",
+        "accion": "invertirBajoRiesgo",
+        "descripcion": "Tu colchón financiero gana relleno.",
+        "dinero": -1200,
+        "inversiones": [
+          {
+            "tipo": "bajo",
+            "monto": 1200
+          }
+        ]
+      },
+      {
+        "texto": "Comprar capricho -$900",
+        "accion": "gastoInnecesario",
+        "descripcion": "Pequeño capricho, mediano recibo.",
+        "dinero": -900,
+        "salud": 2
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "texto": "¡Día de pago! Tu plan financiero entra al ring contra los antojos.",
+    "opciones": [
+      {
+        "texto": "Ahorrar/invertir",
+        "accion": "invertir",
+        "descripcion": "Aparta primero, llora menos después.",
+        "afecta": [
+          "dinero",
+          "inversiones"
+        ]
+      },
+      {
+        "texto": "Pagar deuda -$2,500",
+        "accion": "pagarDeuda",
+        "descripcion": "Abono directo al jefe final.",
+        "dinero": -2500,
+        "deuda": -2500
+      },
+      {
+        "texto": "Autocuidado gratis (+8 salud)",
+        "accion": "seguirNormal",
+        "descripcion": "Dormir temprano, tomar agua, actuar como planta bien regada.",
+        "salud": 8
+      },
+      {
+        "texto": "Compras impulsivas -$1,400",
+        "accion": "gastoInnecesario",
+        "descripcion": "El 'lo necesitaba' está en revisión.",
+        "dinero": -1400,
+        "salud": 1
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "texto": "¡Día de pago! El sueldo cayó; tu app bancaria parece confeti.",
+    "opciones": [
+      {
+        "texto": "Pagar intereses -$800",
+        "accion": "pagarIntereses",
+        "descripcion": "No resuelve todo, pero evita que empeore.",
+        "dinero": -800,
+        "deuda": -800
+      },
+      {
+        "texto": "Cumplir sueño",
+        "accion": "cumplirSuenio",
+        "descripcion": "Una meta podría cruzar la meta.",
+        "afecta": [
+          "dinero",
+          "suenios",
+          "salud"
+        ]
+      },
+      {
+        "texto": "Invertir bajo riesgo -$2,500",
+        "accion": "invertirBajoRiesgo",
+        "descripcion": "Estrategia tranquila para gente que duerme.",
+        "dinero": -2500,
+        "inversiones": [
+          {
+            "tipo": "bajo",
+            "monto": 2500
+          }
+        ]
+      },
+      {
+        "texto": "Fiesta grande -$2,800 (+8 salud)",
+        "accion": "fiesta",
+        "descripcion": "La vida es una, pero el estado de cuenta también.",
+        "dinero": -2800,
+        "salud": 8
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "texto": "¡Día de pago! Se siente bonito hasta que recuerdas que existen servicios.",
+    "opciones": [
+      {
+        "texto": "Pagar deuda",
+        "accion": "pagarDeuda",
+        "descripcion": "Hazle daño a la deuda, no a tu hígado.",
+        "afecta": [
+          "dinero",
+          "deuda"
+        ]
+      },
+      {
+        "texto": "Chequeo médico -$1,100 (+18 salud)",
+        "accion": "salud",
+        "descripcion": "Prevención con bata blanca.",
+        "dinero": -1100,
+        "salud": 18
+      },
+      {
+        "texto": "Ahorrar",
+        "accion": "ahorrar",
+        "descripcion": "No gastar también es movimiento.",
+        "dinero": 0
+      },
+      {
+        "texto": "Gadget innecesario -$3,000",
+        "accion": "gastoInnecesario",
+        "descripcion": "Tiene luces. No tiene sentido.",
+        "dinero": -3000,
+        "salud": 1
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "texto": "¡Día de pago! Tu cartera ya no está en modo avión.",
+    "opciones": [
+      {
+        "texto": "Invertir",
+        "accion": "invertir",
+        "descripcion": "Mueves dinero a futuro.",
+        "afecta": [
+          "dinero",
+          "inversiones"
+        ]
+      },
+      {
+        "texto": "Cumplir sueño",
+        "accion": "cumplirSuenio",
+        "descripcion": "Intenta convertir ahorro en historia bonita.",
+        "afecta": [
+          "dinero",
+          "suenios",
+          "salud"
+        ]
+      },
+      {
+        "texto": "Plan familiar -$1,000 (+6 salud)",
+        "accion": "fiesta",
+        "descripcion": "Compartir también alimenta, aunque cobre.",
+        "dinero": -1000,
+        "salud": 6
+      },
+      {
+        "texto": "Seguir normal",
+        "accion": "seguirNormal",
+        "descripcion": "Paz, calma y ningún ticket raro. Salud +10.",
+        "salud": 10
       }
     ]
   }

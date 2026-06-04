@@ -66,29 +66,26 @@ export default function Game() {
   const setValoresIniciales = useGameStore((s) => s.setValoresIniciales);
   const reiniciar = useGameStore((s) => s.reiniciar);
   const setFinJuego = useGameStore((s) => s.setFinJuego);
-  const setMesActual = useGameStore((s) => s.setMesActual);
   const setMesesObjetivo = useGameStore((s) => s.setMesesObjetivo);
+  const pagarSueldoMensual = useGameStore((s) => s.pagarSueldoMensual);
 
   const sueldo = useGameStore((s) => s.sueldo);
-  const meta = useGameStore((s) => s.meta);
 
   const actualizarDinero = useGameStore((s) => s.actualizarDinero);
   const actualizarDeuda = useGameStore((s) => s.actualizarDeuda);
   const actualizarSalud = useGameStore((s) => s.actualizarSalud);
+  const actualizarBienestar = useGameStore((s) => s.actualizarBienestar);
 
   const pagarDeuda = useGameStore((s) => s.pagarDeuda);
   const cobrarPagoMinimo = useGameStore((s) => s.cobrarPagoMinimo);
   const aplicarInteres = useGameStore((s) => s.aplicarInteres);
 
-  const invertirAhorro = useGameStore((s) => s.invertirAhorro);
-  const agregarInversiones = useGameStore((s) => s.agregarInversiones);
+  const agendarInversion = useGameStore((s) => s.agendarInversion);
 
   const tomarResultadosInversion = useGameStore(
     (s) => s.tomarResultadosInversion
   );
   const invResults = useGameStore((s) => s.invResults || []);
-
-  const mesPagadoRef = useRef(null);
 
   // Restore from persisted state if game was in progress
   const restoredRef = useRef(false);
@@ -191,11 +188,10 @@ export default function Game() {
 
   useEffect(() => {
     if (!confirmado) return;
-    if (mesPagadoRef.current === mes) return;
-    actualizarDinero(sueldo);
-    mesPagadoRef.current = mes;
-    setMesActual(mes);
-  }, [mes, confirmado, sueldo, actualizarDinero, setMesActual]);
+    // pagarSueldoMensual valida contra meta.ultimoMesSueldoPagado en el store
+    // (persistido), así que aunque recargues no se duplica.
+    pagarSueldoMensual(mes);
+  }, [mes, confirmado, pagarSueldoMensual]);
 
   const insertarSiguienteCarta = (card) => {
     setTarjetas((prev) => {
@@ -335,11 +331,18 @@ export default function Game() {
     if (typeof op?.cost === "number") cobrarCosto(op.cost);
     if (typeof op?.saludTo === "number") setSaludTo(op.saludTo);
     if (typeof op?.saludDelta === "number") actualizarSalud(op.saludDelta);
+    if (typeof op?.bienestar === "number") actualizarBienestar(op.bienestar);
 
     if (Array.isArray(op?.randomHealth)) {
       const pick =
         op.randomHealth[Math.floor(Math.random() * op.randomHealth.length)];
       if (pick) actualizarSalud(pick);
+    }
+
+    // Las opciones "Para morir nacimos" y "No todo se puede en la vida" estresan
+    if (typeof op?.bienestar !== "number") {
+      if (op?.saludDelta && op.saludDelta < 0) actualizarBienestar(-4);
+      else if (op?.saludDelta && op.saludDelta > 0) actualizarBienestar(2);
     }
 
     if (checkGameOver()) return;
@@ -356,34 +359,73 @@ export default function Game() {
     avanzarCarta();
   };
 
+  const agendarAhorroConservador = (monto) => {
+    const m = Number(monto || 0);
+    if (m <= 0) return;
+    const { dinero } = useGameStore.getState();
+    const capital = Math.min(m, dinero);
+    if (capital <= 0) return;
+    agendarInversion({
+      nombre: "Ahorro/inversión conservadora",
+      costo: capital,
+      resolveAt: Number(mes) + 1,
+      outcomes: [
+        { delta: Math.round(capital * 0.04), p: 0.45 },
+        { delta: Math.round(capital * 0.02), p: 0.35 },
+        { delta: 0, p: 0.15 },
+        { delta: -Math.round(capital * 0.02), p: 0.05 },
+      ],
+    });
+  };
+
   const handlePayDayOption = (op) => {
     if (overlay) return;
 
     let pagoExtra = false;
 
+    // Pagar deuda con monto elegido en modal
     if (op?.accion === "pagarDeuda" && op?.montoPago) {
       const pago = pagarDeuda(op.montoPago);
       if (pago > 0) pagoExtra = true;
     }
 
-    if (op?.accion === "invertir" && op?.montoInvertir) {
-      invertirAhorro(op.montoInvertir);
+    // Convertir acciones de inversión legacy a inversión real
+    if (op?.accion === "invertir" || op?.accion === "invertirBajoRiesgo") {
+      // Si la opción ya descontó dinero vía op.dinero, hay que evitar doble cobro:
+      // calculamos el monto del op.inversiones[0].monto o op.montoInvertir y NO aplicamos op.dinero.
+      let monto = 0;
+      if (typeof op?.montoInvertir === "number") monto = op.montoInvertir;
+      else if (Array.isArray(op?.inversiones) && op.inversiones[0]?.monto) {
+        monto = Number(op.inversiones[0].monto);
+      } else if (typeof op?.dinero === "number" && op.dinero < 0) {
+        monto = Math.abs(op.dinero);
+      } else {
+        monto = 500;
+      }
+      agendarAhorroConservador(monto);
+    } else {
+      // Solo aplicar op.dinero si NO es acción de inversión
+      // (en inversión, el costo ya se descontó en agendarInversion)
+      if (typeof op?.dinero === "number") actualizarDinero(op.dinero);
     }
 
-    if (typeof op?.dinero === "number") actualizarDinero(op.dinero);
     if (typeof op?.salud === "number") actualizarSalud(op.salud);
+    if (typeof op?.bienestar === "number") actualizarBienestar(op.bienestar);
     if (typeof op?.deuda === "number") {
       actualizarDeuda(op.deuda);
       if (op.deuda < 0) pagoExtra = true;
     }
 
-    if (Array.isArray(op?.inversiones)) agregarInversiones(op.inversiones);
+    // Bienestar implícito según acción (si la opción no trae bienestar explícito)
+    if (typeof op?.bienestar !== "number") {
+      if (op?.accion === "fiesta") actualizarBienestar(8);
+      else if (op?.accion === "seguirNormal") actualizarBienestar(4);
+      else if (op?.accion === "gastoInnecesario") actualizarBienestar(-3);
+      else if (op?.accion === "pagarDeuda" && pagoExtra) actualizarBienestar(3);
+    }
 
     // Cobrar pago mínimo de deuda
-    const pagoMinResult = cobrarPagoMinimo();
-    if (pagoMinResult && !pagoMinResult.ok) {
-      // No alcanzó para pago mínimo — se aplica interés penalizado
-    }
+    cobrarPagoMinimo();
 
     // Interés mensual
     const { deuda: deudaActual, salud: saludActual } =
@@ -423,7 +465,6 @@ export default function Game() {
     setEndReason("");
     saludThresholdRef.current = 60;
     saludCooldownRef.current = false;
-    mesPagadoRef.current = null;
   };
 
   // --- Character selection ---
@@ -442,8 +483,7 @@ export default function Game() {
             onClick={() => {
               saludThresholdRef.current = 60;
               saludCooldownRef.current = false;
-              mesPagadoRef.current = null;
-
+          
               setValoresIniciales(personaje);
               setConfirmado(true);
               setMes(1);
@@ -474,8 +514,7 @@ export default function Game() {
                 const tercero = rand(personajes);
                 saludThresholdRef.current = 60;
                 saludCooldownRef.current = false;
-                mesPagadoRef.current = null;
-
+            
                 setValoresIniciales(tercero);
                 setConfirmado(true);
                 setMes(1);

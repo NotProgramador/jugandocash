@@ -4,20 +4,27 @@ export default function CardTragedia({ texto, opciones = [], onOpcion }) {
   const actualizarDinero = useGameStore((s) => s.actualizarDinero);
   const actualizarDeuda = useGameStore((s) => s.actualizarDeuda);
   const actualizarSalud = useGameStore((s) => s.actualizarSalud);
+  const actualizarBienestar = useGameStore((s) => s.actualizarBienestar);
 
   const handleClick = (op) => {
-    // Si la opción es objeto
-    if (typeof op === "object") {
-      if (op.dinero) actualizarDinero(op.dinero);
-      if (op.deuda) actualizarDeuda(op.deuda);
-      if (op.salud) actualizarSalud(op.salud);
+    if (typeof op === "object" && op !== null) {
+      if (typeof op.dinero === "number") actualizarDinero(op.dinero);
+      if (typeof op.deuda === "number") actualizarDeuda(op.deuda);
+      if (typeof op.salud === "number") actualizarSalud(op.salud);
+      if (typeof op.bienestar === "number") actualizarBienestar(op.bienestar);
+      // Tragedia sin campo bienestar: pequeño golpe emocional implícito
+      if (typeof op.bienestar !== "number") {
+        actualizarBienestar(-2);
+      }
     }
-    // Si la opción es string y menciona dinero
+    // Si la opción es string y menciona dinero negativo
     if (typeof op === "string" && op.match(/-\$([\d,]+)/)) {
       const monto = -parseInt(op.match(/-\$([\d,]+)/)[1].replace(/,/g, ""), 10);
       actualizarDinero(monto);
+      actualizarBienestar(-2);
     }
-    // SIEMPRE avanza
+    // TODO: si dinero gastado > dinero disponible, evaluar convertir faltante en deuda
+    // (hoy se descuenta hasta 0 y el resto se evapora; tragedia no genera deuda automática).
     onOpcion(op);
   };
 

@@ -36,6 +36,7 @@ function initialBaseline() {
     dineroInicial: 5000,
     deudaInicial: 2000,
     saludInicial: 100,
+    bienestarInicial: 70,
     suenosTotal: 0,
   };
 }
@@ -47,6 +48,7 @@ function initialMeta() {
     finMotivo: null,
     terminado: false,
     personajeNombre: null,
+    ultimoMesSueldoPagado: 0,
   };
 }
 
@@ -59,9 +61,11 @@ function initialStats() {
     interesTotal: 0,
     inversionesCount: 0,
     inversionesTotalInvertido: 0,
-    inversionesNeto: 0,
+    inversionesNeto: 0, // ganancia/pérdida neta REAL (suma de delta)
     saludGanada: 0,
     saludPerdida: 0,
+    bienestarGanado: 0,
+    bienestarPerdido: 0,
     gastoImpulsivoCount: 0,
     gastoImpulsivoTotal: 0,
   };
@@ -73,6 +77,7 @@ export const useGameStore = create(
       dinero: 5000,
       deuda: 2000,
       salud: 100,
+      bienestar: 70,
       sueldo: 0,
 
       sueños: [],
@@ -95,6 +100,20 @@ export const useGameStore = create(
           meta: { ...s.meta, finMotivo: motivo || null, terminado: true },
         })),
 
+      // --- Sueldo persistente (evita doble pago al recargar) ---
+      pagarSueldoMensual: (mes) => {
+        const state = get();
+        const m = Number(mes || 1);
+        if (Number(state.meta?.ultimoMesSueldoPagado || 0) >= m) {
+          return false;
+        }
+        set((s) => ({
+          dinero: s.dinero + Number(s.sueldo || 0),
+          meta: { ...s.meta, ultimoMesSueldoPagado: m, mesActual: m },
+        }));
+        return true;
+      },
+
       setValoresIniciales: (personaje) =>
         set(() => {
           const dineroInicial = Number(personaje?.ahorros ?? 0);
@@ -107,6 +126,7 @@ export const useGameStore = create(
             dinero: dineroInicial,
             deuda: deudaInicial,
             salud: 100,
+            bienestar: 70,
             sueldo: Number(personaje?.ingresos ?? 0),
 
             sueños: suenos,
@@ -118,6 +138,7 @@ export const useGameStore = create(
               dineroInicial,
               deudaInicial,
               saludInicial: 100,
+              bienestarInicial: 70,
               suenosTotal: suenos.length,
             },
 
@@ -143,6 +164,16 @@ export const useGameStore = create(
           if (delta > 0) stats.saludGanada += delta;
           if (delta < 0) stats.saludPerdida += Math.abs(delta);
           return { salud: saludNueva, stats };
+        }),
+
+      actualizarBienestar: (monto) =>
+        set((s) => {
+          const delta = Number(monto || 0);
+          const nuevo = clamp(Number(s.bienestar || 0) + delta, 0, 100);
+          const stats = { ...s.stats };
+          if (delta > 0) stats.bienestarGanado = (stats.bienestarGanado || 0) + delta;
+          if (delta < 0) stats.bienestarPerdido = (stats.bienestarPerdido || 0) + Math.abs(delta);
+          return { bienestar: nuevo, stats };
         }),
 
       pagarDeuda: (deseado) => {
@@ -212,6 +243,9 @@ export const useGameStore = create(
           ),
         })),
 
+      // NOTA: invertirAhorro legacy. Hoy NO se usa desde PayDay
+      // (Game.jsx convierte la opción a una inversión real via agendarInversion).
+      // Se conserva por compatibilidad con código antiguo.
       invertirAhorro: (monto) =>
         set((s) => {
           const m = Number(monto || 0);
@@ -221,11 +255,6 @@ export const useGameStore = create(
             ...s,
             dinero: Math.max(0, s.dinero - m),
             inversiones: [...(s.inversiones || []), { tipo: "ahorro", monto: m }],
-            stats: {
-              ...s.stats,
-              inversionesCount: s.stats.inversionesCount + 1,
-              inversionesTotalInvertido: s.stats.inversionesTotalInvertido + m,
-            },
           };
         }),
 
@@ -237,6 +266,8 @@ export const useGameStore = create(
           ],
         })),
 
+      // Agenda una inversión real. costo se descuenta YA del dinero.
+      // delta de outcomes es ganancia/pérdida NETA sobre el capital.
       agendarInversion: ({ nombre, costo, resolveAt, outcomes }) =>
         set((s) => {
           const c = Number(costo || 0);
@@ -263,6 +294,8 @@ export const useGameStore = create(
           };
         }),
 
+      // Resuelve inversiones cuyo resolveAt <= mesActual.
+      // Guarda costo, delta, retorno y gananciaNeta para que el portafolio los muestre.
       tomarResultadosInversion: (mesActual) =>
         set((s) => {
           const m = Number(mesActual || 1);
@@ -271,11 +304,19 @@ export const useGameStore = create(
           const due = pendientes.filter((i) => Number(i.resolveAt) <= m);
           const rest = pendientes.filter((i) => Number(i.resolveAt) > m);
 
-          const results = due.map((inv) => ({
-            id: inv.id,
-            nombre: inv.nombre,
-            delta: pickOutcome(inv.outcomes),
-          }));
+          const results = due.map((inv) => {
+            const costo = Number(inv.costo || 0);
+            const delta = pickOutcome(inv.outcomes);
+            const retorno = Math.max(0, costo + delta);
+            return {
+              id: inv.id,
+              nombre: inv.nombre,
+              costo,
+              delta,
+              retorno,
+              gananciaNeta: delta,
+            };
+          });
 
           return {
             ...s,
@@ -284,22 +325,35 @@ export const useGameStore = create(
           };
         }),
 
+      // Aplica retornos: SUMA al dinero el retorno (capital + delta, min 0).
+      // SUMA a stats.inversionesNeto la ganancia/pérdida neta real (delta).
       aplicarInvResults: () => {
         const { invResults } = get();
-        if (!invResults?.length) return 0;
+        if (!invResults?.length) return { totalRetorno: 0, totalNeto: 0 };
 
-        const total = invResults.reduce(
+        // Compat con registros viejos sin retorno
+        const totalRetorno = invResults.reduce((acc, r) => {
+          if (typeof r?.retorno === "number") return acc + r.retorno;
+          const c = Number(r?.costo || 0);
+          const d = Number(r?.delta || 0);
+          return acc + Math.max(0, c + d);
+        }, 0);
+
+        const totalNeto = invResults.reduce(
           (acc, r) => acc + Number(r?.delta || 0),
           0
         );
 
         set((s) => ({
-          dinero: Math.max(0, s.dinero + total),
+          dinero: s.dinero + totalRetorno,
           invResults: [],
-          stats: { ...s.stats, inversionesNeto: s.stats.inversionesNeto + total },
+          stats: {
+            ...s.stats,
+            inversionesNeto: s.stats.inversionesNeto + totalNeto,
+          },
         }));
 
-        return total;
+        return { totalRetorno, totalNeto };
       },
 
       limpiarInvResults: () => set(() => ({ invResults: [] })),
@@ -309,6 +363,7 @@ export const useGameStore = create(
           dinero: 5000,
           deuda: 2000,
           salud: 100,
+          bienestar: 70,
           sueldo: 0,
 
           sueños: [],
@@ -328,6 +383,7 @@ export const useGameStore = create(
         dinero: state.dinero,
         deuda: state.deuda,
         salud: state.salud,
+        bienestar: state.bienestar,
         sueldo: state.sueldo,
         sueños: state.sueños,
         inversiones: state.inversiones,

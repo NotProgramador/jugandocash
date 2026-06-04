@@ -1,475 +1,13 @@
 [
   {
     "id": 1,
-    "texto": "Te ofrecen invertir en una app de meditación.",
-    "opciones": [
-      {
-        "texto": "Invertir fuerte -$25,000",
-        "descripcion": "Más potencial, más riesgo.",
-        "inversion": {
-          "nombre": "App de meditación (fuerte)",
-          "costo": 25000,
-          "delayMin": 1,
-          "delayMax": 2,
-          "outcomes": [
-            {
-              "delta": 11250,
-              "p": 0.35
-            },
-            {
-              "delta": 5000,
-              "p": 0.25
-            },
-            {
-              "delta": 0,
-              "p": 0.15
-            },
-            {
-              "delta": -6250,
-              "p": 0.25
-            }
-          ]
-        }
-      },
-      {
-        "texto": "Invertir poco -$1,500",
-        "descripcion": "Pruebas el agua con el dedo.",
-        "inversion": {
-          "nombre": "App de meditación (poco)",
-          "costo": 1500,
-          "delayMin": 1,
-          "delayMax": 2,
-          "outcomes": [
-            {
-              "delta": 675,
-              "p": 0.35
-            },
-            {
-              "delta": 300,
-              "p": 0.25
-            },
-            {
-              "delta": 0,
-              "p": 0.15
-            },
-            {
-              "delta": -375,
-              "p": 0.25
-            }
-          ]
-        }
-      },
-      {
-        "texto": "Pasar",
-        "descripcion": "No es tu momento."
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "texto": "Tu tío vende terrenos en un pueblo. ¿Le entras?",
-    "opciones": [
-      {
-        "texto": "Invertir fuerte -$60,000",
-        "descripcion": "Más potencial, más riesgo.",
-        "inversion": {
-          "nombre": "Terreno en pueblo (fuerte)",
-          "costo": 60000,
-          "delayMin": 2,
-          "delayMax": 2,
-          "outcomes": [
-            {
-              "delta": 54000,
-              "p": 0.22
-            },
-            {
-              "delta": 21000,
-              "p": 0.18
-            },
-            {
-              "delta": 0,
-              "p": 0.25
-            },
-            {
-              "delta": -24000,
-              "p": 0.35
-            }
-          ]
-        }
-      },
-      {
-        "texto": "Invertir poco -$5,000",
-        "descripcion": "Pruebas el agua con el dedo.",
-        "inversion": {
-          "nombre": "Terreno en pueblo (poco)",
-          "costo": 5000,
-          "delayMin": 2,
-          "delayMax": 2,
-          "outcomes": [
-            {
-              "delta": 1250,
-              "p": 0.45
-            },
-            {
-              "delta": 600,
-              "p": 0.35
-            },
-            {
-              "delta": 0,
-              "p": 0.1
-            },
-            {
-              "delta": -750,
-              "p": 0.1
-            }
-          ]
-        }
-      },
-      {
-        "texto": "Pasar",
-        "descripcion": "No es tu momento."
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "texto": "Un amigo quiere emprender un puesto de tacos y te pide dinero.",
-    "opciones": [
-      {
-        "texto": "Invertir fuerte -$20,000",
-        "descripcion": "Más potencial, más riesgo.",
-        "inversion": {
-          "nombre": "Puesto de tacos (fuerte)",
-          "costo": 20000,
-          "delayMin": 1,
-          "delayMax": 2,
-          "outcomes": [
-            {
-              "delta": 9000,
-              "p": 0.35
-            },
-            {
-              "delta": 4000,
-              "p": 0.25
-            },
-            {
-              "delta": 0,
-              "p": 0.15
-            },
-            {
-              "delta": -5000,
-              "p": 0.25
-            }
-          ]
-        }
-      },
-      {
-        "texto": "Invertir poco -$3,000",
-        "descripcion": "Pruebas el agua con el dedo.",
-        "inversion": {
-          "nombre": "Puesto de tacos (poco)",
-          "costo": 3000,
-          "delayMin": 1,
-          "delayMax": 2,
-          "outcomes": [
-            {
-              "delta": 1350,
-              "p": 0.35
-            },
-            {
-              "delta": 600,
-              "p": 0.25
-            },
-            {
-              "delta": 0,
-              "p": 0.15
-            },
-            {
-              "delta": -750,
-              "p": 0.25
-            }
-          ]
-        }
-      },
-      {
-        "texto": "Pasar",
-        "descripcion": "No es tu momento."
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "texto": "Te invitan a ser socio en un gimnasio boutique.",
-    "opciones": [
-      {
-        "texto": "Invertir fuerte -$40,000",
-        "descripcion": "Más potencial, más riesgo.",
-        "inversion": {
-          "nombre": "Gimnasio boutique (fuerte)",
-          "costo": 40000,
-          "delayMin": 1,
-          "delayMax": 2,
-          "outcomes": [
-            {
-              "delta": 18000,
-              "p": 0.35
-            },
-            {
-              "delta": 8000,
-              "p": 0.25
-            },
-            {
-              "delta": 0,
-              "p": 0.15
-            },
-            {
-              "delta": -10000,
-              "p": 0.25
-            }
-          ]
-        }
-      },
-      {
-        "texto": "Invertir poco -$6,000",
-        "descripcion": "Pruebas el agua con el dedo.",
-        "inversion": {
-          "nombre": "Gimnasio boutique (poco)",
-          "costo": 6000,
-          "delayMin": 1,
-          "delayMax": 2,
-          "outcomes": [
-            {
-              "delta": 2700,
-              "p": 0.35
-            },
-            {
-              "delta": 1200,
-              "p": 0.25
-            },
-            {
-              "delta": 0,
-              "p": 0.15
-            },
-            {
-              "delta": -1500,
-              "p": 0.25
-            }
-          ]
-        }
-      },
-      {
-        "texto": "Pasar",
-        "descripcion": "No es tu momento."
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "texto": "Un familiar quiere que apoyes su negocio de artesanías.",
-    "opciones": [
-      {
-        "texto": "Invertir fuerte -$12,000",
-        "descripcion": "Más potencial, más riesgo.",
-        "inversion": {
-          "nombre": "Artesanías (fuerte)",
-          "costo": 12000,
-          "delayMin": 1,
-          "delayMax": 2,
-          "outcomes": [
-            {
-              "delta": 3000,
-              "p": 0.45
-            },
-            {
-              "delta": 1440,
-              "p": 0.35
-            },
-            {
-              "delta": 0,
-              "p": 0.1
-            },
-            {
-              "delta": -1800,
-              "p": 0.1
-            }
-          ]
-        }
-      },
-      {
-        "texto": "Invertir poco -$1,200",
-        "descripcion": "Pruebas el agua con el dedo.",
-        "inversion": {
-          "nombre": "Artesanías (poco)",
-          "costo": 1200,
-          "delayMin": 1,
-          "delayMax": 2,
-          "outcomes": [
-            {
-              "delta": 300,
-              "p": 0.45
-            },
-            {
-              "delta": 144,
-              "p": 0.35
-            },
-            {
-              "delta": 0,
-              "p": 0.1
-            },
-            {
-              "delta": -180,
-              "p": 0.1
-            }
-          ]
-        }
-      },
-      {
-        "texto": "Pasar",
-        "descripcion": "No es tu momento."
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "texto": "Te ofrecen participar en un negocio de criptomonedas.",
-    "opciones": [
-      {
-        "texto": "Invertir fuerte -$15,000",
-        "descripcion": "Más potencial, más riesgo.",
-        "inversion": {
-          "nombre": "Cripto (trading) (fuerte)",
-          "costo": 15000,
-          "delayMin": 1,
-          "delayMax": 2,
-          "outcomes": [
-            {
-              "delta": 13500,
-              "p": 0.22
-            },
-            {
-              "delta": 5250,
-              "p": 0.18
-            },
-            {
-              "delta": 0,
-              "p": 0.25
-            },
-            {
-              "delta": -6000,
-              "p": 0.35
-            }
-          ]
-        }
-      },
-      {
-        "texto": "Invertir poco -$2,000",
-        "descripcion": "Pruebas el agua con el dedo.",
-        "inversion": {
-          "nombre": "Cripto (trading) (poco)",
-          "costo": 2000,
-          "delayMin": 1,
-          "delayMax": 2,
-          "outcomes": [
-            {
-              "delta": 500,
-              "p": 0.45
-            },
-            {
-              "delta": 240,
-              "p": 0.35
-            },
-            {
-              "delta": 0,
-              "p": 0.1
-            },
-            {
-              "delta": -300,
-              "p": 0.1
-            }
-          ]
-        }
-      },
-      {
-        "texto": "Pasar",
-        "descripcion": "No es tu momento."
-      }
-    ]
-  },
-  {
-    "id": 7,
-    "texto": "Te proponen ser parte de una franquicia de café.",
-    "opciones": [
-      {
-        "texto": "Invertir fuerte -$50,000",
-        "descripcion": "Más potencial, más riesgo.",
-        "inversion": {
-          "nombre": "Franquicia café (fuerte)",
-          "costo": 50000,
-          "delayMin": 2,
-          "delayMax": 2,
-          "outcomes": [
-            {
-              "delta": 22500,
-              "p": 0.35
-            },
-            {
-              "delta": 10000,
-              "p": 0.25
-            },
-            {
-              "delta": 0,
-              "p": 0.15
-            },
-            {
-              "delta": -12500,
-              "p": 0.25
-            }
-          ]
-        }
-      },
-      {
-        "texto": "Invertir poco -$8,000",
-        "descripcion": "Pruebas el agua con el dedo.",
-        "inversion": {
-          "nombre": "Franquicia café (poco)",
-          "costo": 8000,
-          "delayMin": 2,
-          "delayMax": 2,
-          "outcomes": [
-            {
-              "delta": 3600,
-              "p": 0.35
-            },
-            {
-              "delta": 1600,
-              "p": 0.25
-            },
-            {
-              "delta": 0,
-              "p": 0.15
-            },
-            {
-              "delta": -2000,
-              "p": 0.25
-            }
-          ]
-        }
-      },
-      {
-        "texto": "Pasar",
-        "descripcion": "No es tu momento."
-      }
-    ]
-  },
-  {
-    "id": 8,
-    "texto": "Un amigo quiere abrir una tienda de ropa vintage.",
+    "texto": "Una señora del tianguis vende salsas tan buenas que deberían cotizar en bolsa.",
     "opciones": [
       {
         "texto": "Invertir fuerte -$18,000",
-        "descripcion": "Más potencial, más riesgo.",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
         "inversion": {
-          "nombre": "Ropa vintage (fuerte)",
+          "nombre": "Salsas del tianguis (fuerte)",
           "costo": 18000,
           "delayMin": 1,
           "delayMax": 2,
@@ -495,15 +33,15 @@
       },
       {
         "texto": "Invertir poco -$2,500",
-        "descripcion": "Pruebas el agua con el dedo.",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
         "inversion": {
-          "nombre": "Ropa vintage (poco)",
+          "nombre": "Salsas del tianguis (poco)",
           "costo": 2500,
           "delayMin": 1,
           "delayMax": 2,
           "outcomes": [
             {
-              "delta": 1125,
+              "delta": 1100,
               "p": 0.35
             },
             {
@@ -515,7 +53,7 @@
               "p": 0.15
             },
             {
-              "delta": -625,
+              "delta": -600,
               "p": 0.25
             }
           ]
@@ -523,29 +61,161 @@
       },
       {
         "texto": "Pasar",
-        "descripcion": "No es tu momento."
+        "descripcion": "Tu paz mental también es un activo."
       }
     ]
   },
   {
-    "id": 9,
-    "texto": "Proyecto de energía renovable comunitario.",
+    "id": 2,
+    "texto": "Te invitan a invertir en una dark kitchen de chilaquiles nocturnos.",
     "opciones": [
       {
-        "texto": "Invertir fuerte -$30,000",
-        "descripcion": "Más potencial, más riesgo.",
+        "texto": "Invertir fuerte -$32,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
         "inversion": {
-          "nombre": "Energía renovable (fuerte)",
-          "costo": 30000,
-          "delayMin": 2,
+          "nombre": "Chilaquiles 24/7 (fuerte)",
+          "costo": 32000,
+          "delayMin": 1,
           "delayMax": 2,
           "outcomes": [
             {
-              "delta": 7500,
+              "delta": 28800,
+              "p": 0.22
+            },
+            {
+              "delta": 11200,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -12800,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$4,500",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Chilaquiles 24/7 (poco)",
+          "costo": 4500,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 4050,
+              "p": 0.22
+            },
+            {
+              "delta": 1600,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -1800,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "texto": "Tu primo tiene una app para dividir cuentas sin perder amistades.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$22,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "App anti-cuentas-raras (fuerte)",
+          "costo": 22000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 19800,
+              "p": 0.22
+            },
+            {
+              "delta": 7700,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -8800,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$3,000",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "App anti-cuentas-raras (poco)",
+          "costo": 3000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 2700,
+              "p": 0.22
+            },
+            {
+              "delta": 1050,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -1200,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "texto": "Un vecino quiere poner paneles solares en edificios pequeños.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$45,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Paneles solares vecinales (fuerte)",
+          "costo": 45000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 11250,
               "p": 0.45
             },
             {
-              "delta": 3600,
+              "delta": 5400,
               "p": 0.35
             },
             {
@@ -553,27 +223,27 @@
               "p": 0.1
             },
             {
-              "delta": -4500,
+              "delta": -6750,
               "p": 0.1
             }
           ]
         }
       },
       {
-        "texto": "Invertir poco -$4,000",
-        "descripcion": "Pruebas el agua con el dedo.",
+        "texto": "Invertir poco -$6,500",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
         "inversion": {
-          "nombre": "Energía renovable (poco)",
-          "costo": 4000,
+          "nombre": "Paneles solares vecinales (poco)",
+          "costo": 6500,
           "delayMin": 2,
-          "delayMax": 2,
+          "delayMax": 3,
           "outcomes": [
             {
-              "delta": 1000,
+              "delta": 1600,
               "p": 0.45
             },
             {
-              "delta": 480,
+              "delta": 800,
               "p": 0.35
             },
             {
@@ -581,7 +251,7 @@
               "p": 0.1
             },
             {
-              "delta": -600,
+              "delta": -1000,
               "p": 0.1
             }
           ]
@@ -589,19 +259,217 @@
       },
       {
         "texto": "Pasar",
-        "descripcion": "No es tu momento."
+        "descripcion": "Tu paz mental también es un activo."
       }
     ]
   },
   {
-    "id": 10,
-    "texto": "Plataforma de cursos en línea (tu nicho).",
+    "id": 5,
+    "texto": "Te ofrecen entrarle a una cafetería con pan dulce de autor.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$28,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Café y concha gourmet (fuerte)",
+          "costo": 28000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 12600,
+              "p": 0.35
+            },
+            {
+              "delta": 5600,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -7000,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$4,000",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Café y concha gourmet (poco)",
+          "costo": 4000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 1800,
+              "p": 0.35
+            },
+            {
+              "delta": 800,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -1000,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "texto": "Un diseñador local quiere lanzar playeras con frases de quincena.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$12,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Playeras de quincena (fuerte)",
+          "costo": 12000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 5400,
+              "p": 0.35
+            },
+            {
+              "delta": 2400,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -3000,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$1,800",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Playeras de quincena (poco)",
+          "costo": 1800,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 800,
+              "p": 0.35
+            },
+            {
+              "delta": 350,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -450,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "texto": "Te invitan a comprar una máquina expendedora de snacks saludables que igual vende papitas.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$26,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Vending indecisa (fuerte)",
+          "costo": 26000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 11700,
+              "p": 0.35
+            },
+            {
+              "delta": 5200,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -6500,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$3,500",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Vending indecisa (poco)",
+          "costo": 3500,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 1600,
+              "p": 0.35
+            },
+            {
+              "delta": 700,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -900,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "texto": "Un amigo arma cursos express para aprender Excel sin llorar.",
     "opciones": [
       {
         "texto": "Invertir fuerte -$15,000",
-        "descripcion": "Más potencial, más riesgo.",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
         "inversion": {
-          "nombre": "Cursos online (fuerte)",
+          "nombre": "Cursos Excel sin lágrimas (fuerte)",
           "costo": 15000,
           "delayMin": 1,
           "delayMax": 2,
@@ -627,9 +495,9 @@
       },
       {
         "texto": "Invertir poco -$2,000",
-        "descripcion": "Pruebas el agua con el dedo.",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
         "inversion": {
-          "nombre": "Cursos online (poco)",
+          "nombre": "Cursos Excel sin lágrimas (poco)",
           "costo": 2000,
           "delayMin": 1,
           "delayMax": 2,
@@ -655,217 +523,217 @@
       },
       {
         "texto": "Pasar",
-        "descripcion": "No es tu momento."
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "texto": "Te ofrecen participar en una mini franquicia de jugos detox con garnacha opcional.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$24,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Jugos detox y garnacha (fuerte)",
+          "costo": 24000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 21600,
+              "p": 0.22
+            },
+            {
+              "delta": 8400,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -9600,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$3,200",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Jugos detox y garnacha (poco)",
+          "costo": 3200,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 2900,
+              "p": 0.22
+            },
+            {
+              "delta": 1100,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -1300,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "texto": "Una startup promete usar IA para ordenar recibos arrugados.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$50,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "IA de recibos (fuerte)",
+          "costo": 50000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 45000,
+              "p": 0.22
+            },
+            {
+              "delta": 17500,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -20000,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$7,000",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "IA de recibos (poco)",
+          "costo": 7000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 6300,
+              "p": 0.22
+            },
+            {
+              "delta": 2450,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -2800,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
       }
     ]
   },
   {
     "id": 11,
-    "texto": "Food truck (pagas permisos y equipo).",
+    "texto": "Te proponen comprar equipo para rentar cabinas de podcast.",
     "opciones": [
       {
         "texto": "Invertir fuerte -$35,000",
-        "descripcion": "Más potencial, más riesgo.",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
         "inversion": {
-          "nombre": "Food truck (fuerte)",
+          "nombre": "Cabinas de podcast (fuerte)",
           "costo": 35000,
           "delayMin": 2,
-          "delayMax": 2,
+          "delayMax": 3,
           "outcomes": [
-            {
-              "delta": 31500,
-              "p": 0.22
-            },
-            {
-              "delta": 12250,
-              "p": 0.18
-            },
-            {
-              "delta": 0,
-              "p": 0.25
-            },
-            {
-              "delta": -14000,
-              "p": 0.35
-            }
-          ]
-        }
-      },
-      {
-        "texto": "Invertir poco -$6,000",
-        "descripcion": "Pruebas el agua con el dedo.",
-        "inversion": {
-          "nombre": "Food truck (poco)",
-          "costo": 6000,
-          "delayMin": 2,
-          "delayMax": 2,
-          "outcomes": [
-            {
-              "delta": 1500,
-              "p": 0.45
-            },
-            {
-              "delta": 720,
-              "p": 0.35
-            },
-            {
-              "delta": 0,
-              "p": 0.1
-            },
-            {
-              "delta": -900,
-              "p": 0.1
-            }
-          ]
-        }
-      },
-      {
-        "texto": "Pasar",
-        "descripcion": "No es tu momento."
-      }
-    ]
-  },
-  {
-    "id": 12,
-    "texto": "Tienda de productos orgánicos en colonia nice.",
-    "opciones": [
-      {
-        "texto": "Invertir fuerte -$22,000",
-        "descripcion": "Más potencial, más riesgo.",
-        "inversion": {
-          "nombre": "Orgánicos (fuerte)",
-          "costo": 22000,
-          "delayMin": 1,
-          "delayMax": 2,
-          "outcomes": [
-            {
-              "delta": 9900,
-              "p": 0.35
-            },
-            {
-              "delta": 4400,
-              "p": 0.25
-            },
-            {
-              "delta": 0,
-              "p": 0.15
-            },
-            {
-              "delta": -5500,
-              "p": 0.25
-            }
-          ]
-        }
-      },
-      {
-        "texto": "Invertir poco -$3,000",
-        "descripcion": "Pruebas el agua con el dedo.",
-        "inversion": {
-          "nombre": "Orgánicos (poco)",
-          "costo": 3000,
-          "delayMin": 1,
-          "delayMax": 2,
-          "outcomes": [
-            {
-              "delta": 1350,
-              "p": 0.35
-            },
-            {
-              "delta": 600,
-              "p": 0.25
-            },
-            {
-              "delta": 0,
-              "p": 0.15
-            },
-            {
-              "delta": -750,
-              "p": 0.25
-            }
-          ]
-        }
-      },
-      {
-        "texto": "Pasar",
-        "descripcion": "No es tu momento."
-      }
-    ]
-  },
-  {
-    "id": 13,
-    "texto": "Startup de IA (suena increíble).",
-    "opciones": [
-      {
-        "texto": "Invertir fuerte -$45,000",
-        "descripcion": "Más potencial, más riesgo.",
-        "inversion": {
-          "nombre": "Startup IA (fuerte)",
-          "costo": 45000,
-          "delayMin": 2,
-          "delayMax": 2,
-          "outcomes": [
-            {
-              "delta": 40500,
-              "p": 0.22
-            },
             {
               "delta": 15750,
-              "p": 0.18
+              "p": 0.35
             },
             {
-              "delta": 0,
+              "delta": 7000,
               "p": 0.25
             },
             {
-              "delta": -18000,
-              "p": 0.35
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -8750,
+              "p": 0.25
             }
           ]
         }
       },
       {
         "texto": "Invertir poco -$5,000",
-        "descripcion": "Pruebas el agua con el dedo.",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
         "inversion": {
-          "nombre": "Startup IA (poco)",
+          "nombre": "Cabinas de podcast (poco)",
           "costo": 5000,
           "delayMin": 2,
-          "delayMax": 2,
+          "delayMax": 3,
           "outcomes": [
             {
-              "delta": 1250,
-              "p": 0.45
-            },
-            {
-              "delta": 600,
+              "delta": 2250,
               "p": 0.35
             },
             {
-              "delta": 0,
-              "p": 0.1
+              "delta": 1000,
+              "p": 0.25
             },
             {
-              "delta": -750,
-              "p": 0.1
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -1250,
+              "p": 0.25
             }
           ]
         }
       },
       {
         "texto": "Pasar",
-        "descripcion": "No es tu momento."
+        "descripcion": "Tu paz mental también es un activo."
       }
     ]
   },
   {
-    "id": 14,
-    "texto": "App de transporte compartido local.",
+    "id": 12,
+    "texto": "Un chef quiere lanzar salsas premium para gente que dice 'maridaje'.",
     "opciones": [
       {
         "texto": "Invertir fuerte -$20,000",
-        "descripcion": "Más potencial, más riesgo.",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
         "inversion": {
-          "nombre": "App transporte (fuerte)",
+          "nombre": "Salsas premium (fuerte)",
           "costo": 20000,
           "delayMin": 1,
           "delayMax": 2,
@@ -891,15 +759,15 @@
       },
       {
         "texto": "Invertir poco -$2,500",
-        "descripcion": "Pruebas el agua con el dedo.",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
         "inversion": {
-          "nombre": "App transporte (poco)",
+          "nombre": "Salsas premium (poco)",
           "costo": 2500,
           "delayMin": 1,
           "delayMax": 2,
           "outcomes": [
             {
-              "delta": 1125,
+              "delta": 1100,
               "p": 0.35
             },
             {
@@ -911,7 +779,7 @@
               "p": 0.15
             },
             {
-              "delta": -625,
+              "delta": -600,
               "p": 0.25
             }
           ]
@@ -919,21 +787,1275 @@
       },
       {
         "texto": "Pasar",
-        "descripcion": "No es tu momento."
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "texto": "Te ofrecen entrarle a una lavandería autoservicio cerca de estudiantes.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$55,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Lavandería universitaria (fuerte)",
+          "costo": 55000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 13750,
+              "p": 0.45
+            },
+            {
+              "delta": 6600,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -8250,
+              "p": 0.1
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$8,000",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Lavandería universitaria (poco)",
+          "costo": 8000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 2000,
+              "p": 0.45
+            },
+            {
+              "delta": 950,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -1200,
+              "p": 0.1
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "texto": "Tu amigo compró impresoras 3D y quiere fabricar macetas con cara triste.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$18,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Macetas 3D (fuerte)",
+          "costo": 18000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 16200,
+              "p": 0.22
+            },
+            {
+              "delta": 6300,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -7200,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$2,200",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Macetas 3D (poco)",
+          "costo": 2200,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 2000,
+              "p": 0.22
+            },
+            {
+              "delta": 750,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -900,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
       }
     ]
   },
   {
     "id": 15,
-    "texto": "Cliente grande: te paga a 2 meses (anticipo materiales).",
+    "texto": "Te ofrecen inversión en un food truck de tortas gigantes.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$40,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Tortas tamaño deuda (fuerte)",
+          "costo": 40000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 36000,
+              "p": 0.22
+            },
+            {
+              "delta": 14000,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -16000,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$6,000",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Tortas tamaño deuda (poco)",
+          "costo": 6000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 5400,
+              "p": 0.22
+            },
+            {
+              "delta": 2100,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -2400,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "texto": "Un grupo quiere importar termos bonitos para gente que sí toma agua.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$16,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Termos motivacionales (fuerte)",
+          "costo": 16000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 7200,
+              "p": 0.35
+            },
+            {
+              "delta": 3200,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -4000,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$2,000",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Termos motivacionales (poco)",
+          "costo": 2000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 900,
+              "p": 0.35
+            },
+            {
+              "delta": 400,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -500,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "texto": "Te invitan a entrar a un coworking de barrio con café decente.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$48,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Coworking de barrio (fuerte)",
+          "costo": 48000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 21600,
+              "p": 0.35
+            },
+            {
+              "delta": 9600,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -12000,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$7,000",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Coworking de barrio (poco)",
+          "costo": 7000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 3150,
+              "p": 0.35
+            },
+            {
+              "delta": 1400,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -1750,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "texto": "Un familiar quiere abrir estética canina con fotos profesionales.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$22,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Spa de lomitos (fuerte)",
+          "costo": 22000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 9900,
+              "p": 0.35
+            },
+            {
+              "delta": 4400,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -5500,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$3,000",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Spa de lomitos (poco)",
+          "costo": 3000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 1350,
+              "p": 0.35
+            },
+            {
+              "delta": 600,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -750,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "texto": "Te ofrecen invertir en una app que compara precios del súper.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$30,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Comparador de mandado (fuerte)",
+          "costo": 30000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 27000,
+              "p": 0.22
+            },
+            {
+              "delta": 10500,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -12000,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$4,500",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Comparador de mandado (poco)",
+          "costo": 4500,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 4050,
+              "p": 0.22
+            },
+            {
+              "delta": 1600,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -1800,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "texto": "Una amiga quiere vender kits para armar huertos en departamentos.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$14,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Huertos de ventana (fuerte)",
+          "costo": 14000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 3500,
+              "p": 0.45
+            },
+            {
+              "delta": 1700,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -2100,
+              "p": 0.1
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$1,800",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Huertos de ventana (poco)",
+          "costo": 1800,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 450,
+              "p": 0.45
+            },
+            {
+              "delta": 200,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -250,
+              "p": 0.1
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "texto": "Te proponen rentar bicicletas eléctricas en zona turística.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$60,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Bicis eléctricas (fuerte)",
+          "costo": 60000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 54000,
+              "p": 0.22
+            },
+            {
+              "delta": 21000,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -24000,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$8,500",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Bicis eléctricas (poco)",
+          "costo": 8500,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 7650,
+              "p": 0.22
+            },
+            {
+              "delta": 3000,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -3400,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "texto": "Un conocido jura que su marca de kombucha ahora sí va a despegar.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$18,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Kombucha dramática (fuerte)",
+          "costo": 18000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 16200,
+              "p": 0.22
+            },
+            {
+              "delta": 6300,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -7200,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$2,500",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Kombucha dramática (poco)",
+          "costo": 2500,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 2250,
+              "p": 0.22
+            },
+            {
+              "delta": 900,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -1000,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "texto": "Te ofrecen comprar equipo de fotografía para eventos pequeños.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$25,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Foto eventos express (fuerte)",
+          "costo": 25000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 11250,
+              "p": 0.35
+            },
+            {
+              "delta": 5000,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -6250,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$3,500",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Foto eventos express (poco)",
+          "costo": 3500,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 1600,
+              "p": 0.35
+            },
+            {
+              "delta": 700,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -900,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "texto": "Una panadería quiere vender conchas rellenas por suscripción.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$30,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Conchas subscription (fuerte)",
+          "costo": 30000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 27000,
+              "p": 0.22
+            },
+            {
+              "delta": 10500,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -12000,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$4,000",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Conchas subscription (poco)",
+          "costo": 4000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 3600,
+              "p": 0.22
+            },
+            {
+              "delta": 1400,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -1600,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "texto": "Te invitan a financiar una tienda online de regalos para godínez.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$17,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Regalos godín (fuerte)",
+          "costo": 17000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 7650,
+              "p": 0.35
+            },
+            {
+              "delta": 3400,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -4250,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$2,200",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Regalos godín (poco)",
+          "costo": 2200,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 1000,
+              "p": 0.35
+            },
+            {
+              "delta": 450,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -550,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "texto": "Un amigo quiere vender muebles restaurados con nombres elegantes.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$36,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Muebles rescatados (fuerte)",
+          "costo": 36000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 16200,
+              "p": 0.35
+            },
+            {
+              "delta": 7200,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -9000,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$5,000",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Muebles rescatados (poco)",
+          "costo": 5000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 2250,
+              "p": 0.35
+            },
+            {
+              "delta": 1000,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -1250,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "texto": "Te ofrecen un lote de celulares reacondicionados para reventa.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$42,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Celulares reacondicionados (fuerte)",
+          "costo": 42000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 37800,
+              "p": 0.22
+            },
+            {
+              "delta": 14700,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -16800,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$6,500",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Celulares reacondicionados (poco)",
+          "costo": 6500,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 5850,
+              "p": 0.22
+            },
+            {
+              "delta": 2300,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -2600,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "texto": "Tu tía quiere profesionalizar sus tamales y aceptar tarjeta.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$20,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Tamales fintech (fuerte)",
+          "costo": 20000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 5000,
+              "p": 0.45
+            },
+            {
+              "delta": 2400,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -3000,
+              "p": 0.1
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$3,000",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Tamales fintech (poco)",
+          "costo": 3000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 750,
+              "p": 0.45
+            },
+            {
+              "delta": 350,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -450,
+              "p": 0.1
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "texto": "Te proponen invertir en publicidad para tu oficio/servicio.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$10,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Publicidad personal (fuerte)",
+          "costo": 10000,
+          "delayMin": 1,
+          "delayMax": 1,
+          "outcomes": [
+            {
+              "delta": 2500,
+              "p": 0.45
+            },
+            {
+              "delta": 1200,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -1500,
+              "p": 0.1
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$1,500",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Publicidad personal (poco)",
+          "costo": 1500,
+          "delayMin": 1,
+          "delayMax": 1,
+          "outcomes": [
+            {
+              "delta": 400,
+              "p": 0.45
+            },
+            {
+              "delta": 200,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -200,
+              "p": 0.1
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "texto": "Un vecino quiere comprar una máquina de hielo para fiestas.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$28,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Hielo para fiestas (fuerte)",
+          "costo": 28000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 12600,
+              "p": 0.35
+            },
+            {
+              "delta": 5600,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -7000,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$4,000",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Hielo para fiestas (poco)",
+          "costo": 4000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 1800,
+              "p": 0.35
+            },
+            {
+              "delta": 800,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -1000,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "texto": "Te invitan a un proyecto de renta de trajes para eventos.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$33,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Trajes en renta (fuerte)",
+          "costo": 33000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 14850,
+              "p": 0.35
+            },
+            {
+              "delta": 6600,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -8250,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$4,800",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Trajes en renta (poco)",
+          "costo": 4800,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 2150,
+              "p": 0.35
+            },
+            {
+              "delta": 950,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -1200,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "texto": "Una amiga abre tienda de plantas resistentes a dueños irresponsables.",
     "opciones": [
       {
         "texto": "Invertir fuerte -$15,000",
-        "descripcion": "Más potencial, más riesgo.",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
         "inversion": {
-          "nombre": "Cliente grande (fuerte)",
+          "nombre": "Plantas inmortales (fuerte)",
           "costo": 15000,
-          "delayMin": 2,
+          "delayMin": 1,
           "delayMax": 2,
           "outcomes": [
             {
@@ -956,20 +2078,20 @@
         }
       },
       {
-        "texto": "Invertir poco -$3,500",
-        "descripcion": "Pruebas el agua con el dedo.",
+        "texto": "Invertir poco -$2,000",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
         "inversion": {
-          "nombre": "Cliente grande (poco)",
-          "costo": 3500,
-          "delayMin": 2,
+          "nombre": "Plantas inmortales (poco)",
+          "costo": 2000,
+          "delayMin": 1,
           "delayMax": 2,
           "outcomes": [
             {
-              "delta": 875,
+              "delta": 500,
               "p": 0.45
             },
             {
-              "delta": 420,
+              "delta": 250,
               "p": 0.35
             },
             {
@@ -977,7 +2099,7 @@
               "p": 0.1
             },
             {
-              "delta": -525,
+              "delta": -300,
               "p": 0.1
             }
           ]
@@ -985,29 +2107,293 @@
       },
       {
         "texto": "Pasar",
-        "descripcion": "No es tu momento."
+        "descripcion": "Tu paz mental también es un activo."
       }
     ]
   },
   {
-    "id": 16,
-    "texto": "Herramienta para producir más (compras hoy, recuperas después).",
+    "id": 33,
+    "texto": "Te ofrecen participar en un canal de YouTube de finanzas con sketches.",
     "opciones": [
       {
-        "texto": "Invertir fuerte -$6,000",
-        "descripcion": "Más potencial, más riesgo.",
+        "texto": "Invertir fuerte -$12,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
         "inversion": {
-          "nombre": "Herramienta (fuerte)",
-          "costo": 6000,
-          "delayMin": 2,
+          "nombre": "Finanzas con memes (fuerte)",
+          "costo": 12000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 10800,
+              "p": 0.22
+            },
+            {
+              "delta": 4200,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -4800,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$1,800",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Finanzas con memes (poco)",
+          "costo": 1800,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 1600,
+              "p": 0.22
+            },
+            {
+              "delta": 650,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -700,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "texto": "Tu amigo quiere vender café de olla embotellado.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$22,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Café de olla listo (fuerte)",
+          "costo": 22000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 19800,
+              "p": 0.22
+            },
+            {
+              "delta": 7700,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -8800,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$3,000",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Café de olla listo (poco)",
+          "costo": 3000,
+          "delayMin": 1,
           "delayMax": 2,
           "outcomes": [
             {
               "delta": 2700,
+              "p": 0.22
+            },
+            {
+              "delta": 1050,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -1200,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "texto": "Una cooperativa busca comprar horno industrial para pan artesanal.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$38,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Horno cooperativo (fuerte)",
+          "costo": 38000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 9500,
+              "p": 0.45
+            },
+            {
+              "delta": 4550,
               "p": 0.35
             },
             {
-              "delta": 1200,
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -5700,
+              "p": 0.1
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$5,500",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Horno cooperativo (poco)",
+          "costo": 5500,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 1400,
+              "p": 0.45
+            },
+            {
+              "delta": 650,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -800,
+              "p": 0.1
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "texto": "Te ofrecen inversión en cajas de ahorro comunitarias con reglas claras.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$25,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Caja comunitaria (fuerte)",
+          "costo": 25000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 6250,
+              "p": 0.45
+            },
+            {
+              "delta": 3000,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -3750,
+              "p": 0.1
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$3,500",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Caja comunitaria (poco)",
+          "costo": 3500,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 900,
+              "p": 0.45
+            },
+            {
+              "delta": 400,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -500,
+              "p": 0.1
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "texto": "Un conocido quiere vender ropa de segunda mano curada, o sea lavada y bien colgada.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$16,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Ropa curada (fuerte)",
+          "costo": 16000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 7200,
+              "p": 0.35
+            },
+            {
+              "delta": 3200,
               "p": 0.25
             },
             {
@@ -1015,7 +2401,337 @@
               "p": 0.15
             },
             {
-              "delta": -1500,
+              "delta": -4000,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$2,200",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Ropa curada (poco)",
+          "costo": 2200,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 1000,
+              "p": 0.35
+            },
+            {
+              "delta": 450,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -550,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "texto": "Te proponen una microempresa de limpieza de oficinas.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$27,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Limpieza pro (fuerte)",
+          "costo": 27000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 6750,
+              "p": 0.45
+            },
+            {
+              "delta": 3250,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -4050,
+              "p": 0.1
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$4,000",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Limpieza pro (poco)",
+          "costo": 4000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 1000,
+              "p": 0.45
+            },
+            {
+              "delta": 500,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -600,
+              "p": 0.1
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "texto": "Una startup vende seguros para mascotas con nombre de superhéroe.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$45,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Seguro lomito (fuerte)",
+          "costo": 45000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 40500,
+              "p": 0.22
+            },
+            {
+              "delta": 15750,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -18000,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$6,000",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Seguro lomito (poco)",
+          "costo": 6000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 5400,
+              "p": 0.22
+            },
+            {
+              "delta": 2100,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -2400,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "texto": "Te ofrecen comprar acciones de una empresa que entiendes poco pero su logo está bonito.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$20,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Logo bonito S.A. (fuerte)",
+          "costo": 20000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 30000,
+              "p": 0.15
+            },
+            {
+              "delta": 10000,
+              "p": 0.15
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -16000,
+              "p": 0.45
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$2,500",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Logo bonito S.A. (poco)",
+          "costo": 2500,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 2250,
+              "p": 0.22
+            },
+            {
+              "delta": 900,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -1000,
+              "p": 0.35
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "texto": "Un amigo quiere abrir una barbería con café y reggaetón suave.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$30,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Barbería café (fuerte)",
+          "costo": 30000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 13500,
+              "p": 0.35
+            },
+            {
+              "delta": 6000,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -7500,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Invertir poco -$4,500",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Barbería café (poco)",
+          "costo": 4500,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 2000,
+              "p": 0.35
+            },
+            {
+              "delta": 900,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -1100,
+              "p": 0.25
+            }
+          ]
+        }
+      },
+      {
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "texto": "Te proponen invertir en clases de cocina para solteros con hambre.",
+    "opciones": [
+      {
+        "texto": "Invertir fuerte -$18,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Cocina para sobrevivir (fuerte)",
+          "costo": 18000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 8100,
+              "p": 0.35
+            },
+            {
+              "delta": 3600,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -4500,
               "p": 0.25
             }
           ]
@@ -1023,15 +2739,15 @@
       },
       {
         "texto": "Invertir poco -$2,500",
-        "descripcion": "Pruebas el agua con el dedo.",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
         "inversion": {
-          "nombre": "Herramienta (poco)",
+          "nombre": "Cocina para sobrevivir (poco)",
           "costo": 2500,
-          "delayMin": 2,
+          "delayMin": 1,
           "delayMax": 2,
           "outcomes": [
             {
-              "delta": 1125,
+              "delta": 1100,
               "p": 0.35
             },
             {
@@ -1043,7 +2759,7 @@
               "p": 0.15
             },
             {
-              "delta": -625,
+              "delta": -600,
               "p": 0.25
             }
           ]
@@ -1051,681 +2767,1103 @@
       },
       {
         "texto": "Pasar",
-        "descripcion": "No es tu momento."
-      }
-    ]
-  },
-  {
-    "id": 17,
-    "texto": "Te cae un bono inesperado en el trabajo.",
-    "opciones": [
-      {
-        "texto": "Agradecer en silencio +$2,000",
-        "dinero": 2000
-      },
-      {
-        "texto": "Celebrar caro -$1,200",
-        "dinero": -1200,
-        "salud": 2
-      },
-      {
-        "texto": "Guardarlo $0",
-        "dinero": 0
-      }
-    ]
-  },
-  {
-    "id": 18,
-    "texto": "Vendes algo que tenías guardado en casa.",
-    "opciones": [
-      {
-        "texto": "Vender rápido +$800",
-        "dinero": 800
-      },
-      {
-        "texto": "Vender bien +$1,600 (tarda, pero hoy cae)",
-        "dinero": 1600
-      },
-      {
-        "texto": "Mejor me lo quedo $0",
-        "dinero": 0
-      }
-    ]
-  },
-  {
-    "id": 19,
-    "texto": "Te ofrecen un freelance express.",
-    "opciones": [
-      {
-        "texto": "Aceptar +$1,500 (pero te desvelas)",
-        "dinero": 1500,
-        "salud": -3
-      },
-      {
-        "texto": "Negociar +$2,200 (más estrés)",
-        "dinero": 2200,
-        "salud": -5
-      },
-      {
-        "texto": "Pasar $0",
-        "dinero": 0,
-        "salud": 1
-      }
-    ]
-  },
-  {
-    "id": 20,
-    "texto": "Te llega una devolución (depósito / reembolso).",
-    "opciones": [
-      {
-        "texto": "Recibir +$1,000",
-        "dinero": 1000
-      },
-      {
-        "texto": "Invertirlo en comida chatarra -$600",
-        "dinero": -600,
-        "salud": -2
-      },
-      {
-        "texto": "Pasar $0",
-        "dinero": 0
-      }
-    ]
-  },
-  {
-    "id": 21,
-    "texto": "Un amigo te paga lo que te debía (milagro).",
-    "opciones": [
-      {
-        "texto": "Cobrar +$1,200",
-        "dinero": 1200
-      },
-      {
-        "texto": "Perdonar la mitad +$600 (karma)",
-        "dinero": 600,
-        "salud": 2
-      },
-      {
-        "texto": "Decirle 'luego' $0",
-        "dinero": 0
-      }
-    ]
-  },
-  {
-    "id": 22,
-    "texto": "Te ofrecen comisión por recomendar a alguien.",
-    "opciones": [
-      {
-        "texto": "Hacerlo +$900",
-        "dinero": 900
-      },
-      {
-        "texto": "Hacerlo bien +$1,500 (más tiempo)",
-        "dinero": 1500,
-        "salud": -2
-      },
-      {
-        "texto": "No hacerlo $0",
-        "dinero": 0
-      }
-    ]
-  },
-  {
-    "id": 23,
-    "texto": "Te llega una multa o cobro pendejo (sí pasa).",
-    "opciones": [
-      {
-        "texto": "Pagar -$900",
-        "dinero": -900
-      },
-      {
-        "texto": "Pelearla (pierdes tiempo) -1 salud",
-        "salud": -1
-      },
-      {
-        "texto": "Ignorar (crece deuda) +$1,200 deuda",
-        "deuda": 1200
-      }
-    ]
-  },
-  {
-    "id": 24,
-    "texto": "Te invitan a un evento con 'oportunidades'.",
-    "opciones": [
-      {
-        "texto": "Ir (networking) +1 salud",
-        "salud": 1
-      },
-      {
-        "texto": "Ir y gastar en chelas -$700",
-        "dinero": -700,
-        "salud": -1
-      },
-      {
-        "texto": "No ir $0",
-        "dinero": 0
-      }
-    ]
-  },
-  {
-    "id": 25,
-    "texto": "Te ofrecen horas extra.",
-    "opciones": [
-      {
-        "texto": "Aceptar +$1,000",
-        "dinero": 1000,
-        "salud": -2
-      },
-      {
-        "texto": "Aceptar fuerte +$2,000",
-        "dinero": 2000,
-        "salud": -5
-      },
-      {
-        "texto": "No $0",
-        "dinero": 0,
-        "salud": 1
-      }
-    ]
-  },
-  {
-    "id": 26,
-    "texto": "Te sale una reparación pequeña en casa.",
-    "opciones": [
-      {
-        "texto": "Arreglar ya -$700 (evitas peor)",
-        "dinero": -700,
-        "salud": 1
-      },
-      {
-        "texto": "Hacerlo tú -$200",
-        "dinero": -200,
-        "salud": -1
-      },
-      {
-        "texto": "Ignorar (te estresa) -2 salud",
-        "salud": -2
-      }
-    ]
-  },
-  {
-    "id": 27,
-    "texto": "Encuentras un billete en un pantalón viejo.",
-    "opciones": [
-      {
-        "texto": "Cobrar +$300",
-        "dinero": 300
-      },
-      {
-        "texto": "Invitar un café -$150",
-        "dinero": -150,
-        "salud": 1
-      },
-      {
-        "texto": "No pasa nada $0",
-        "dinero": 0
-      }
-    ]
-  },
-  {
-    "id": 28,
-    "texto": "Te ofrecen cambiarte a un trabajo mejor pagado… pero pesado.",
-    "opciones": [
-      {
-        "texto": "Aceptar +$3,000 (pero te drena)",
-        "dinero": 3000,
-        "salud": -6
-      },
-      {
-        "texto": "Negociar +$2,000",
-        "dinero": 2000,
-        "salud": -3
-      },
-      {
-        "texto": "Quedarme como estoy $0",
-        "dinero": 0
-      }
-    ]
-  },
-  {
-    "id": 29,
-    "texto": "Te sientes al 70%. ¿Qué haces con tu salud?",
-    "opciones": [
-      {
-        "texto": "Ir al médico -$800 (+8 salud)",
-        "dinero": -800,
-        "salud": 8
-      },
-      {
-        "texto": "Remedios caseros -$200 (+3 salud)",
-        "dinero": -200,
-        "salud": 3
-      },
-      {
-        "texto": "Aguantarme (baja) -4 salud",
-        "salud": -4
-      }
-    ]
-  },
-  {
-    "id": 30,
-    "texto": "Tu amigo te invita a salir. Tu cartera llora.",
-    "opciones": [
-      {
-        "texto": "Salir leve -$400 (+2 salud)",
-        "dinero": -400,
-        "salud": 2
-      },
-      {
-        "texto": "Salir fuerte -$1200 (+4 salud)",
-        "dinero": -1200,
-        "salud": 4
-      },
-      {
-        "texto": "No salir (+1 salud)",
-        "salud": 1
-      }
-    ]
-  },
-  {
-    "id": 31,
-    "texto": "Te ofrecen un plan para 'refinanciar' tu deuda.",
-    "opciones": [
-      {
-        "texto": "Aceptar (baja deuda -$3,000 pero cuesta -$700)",
-        "deuda": -3000,
-        "dinero": -700
-      },
-      {
-        "texto": "Negociar (baja deuda -$1,500)",
-        "deuda": -1500
-      },
-      {
-        "texto": "No moverle $0",
-        "dinero": 0
-      }
-    ]
-  },
-  {
-    "id": 32,
-    "texto": "Se te antoja comprar algo por impulso.",
-    "opciones": [
-      {
-        "texto": "Comprar -$600",
-        "dinero": -600,
-        "salud": 1
-      },
-      {
-        "texto": "No comprar (+1 salud)",
-        "salud": 1
-      },
-      {
-        "texto": "Comprar caro -$2,000",
-        "dinero": -2000,
-        "salud": 2
-      }
-    ]
-  },
-  {
-    "id": 33,
-    "texto": "Te ofrecen un curso GRATIS… pero con trampa de tiempo.",
-    "opciones": [
-      {
-        "texto": "Tomarlo (+2 salud, -1 dinero no)",
-        "salud": 2
-      },
-      {
-        "texto": "Tomarlo y obsesionarte (-3 salud)",
-        "salud": -3
-      },
-      {
-        "texto": "Pasar $0",
-        "dinero": 0
-      }
-    ]
-  },
-  {
-    "id": 34,
-    "texto": "Tu familia te pide apoyo económico.",
-    "opciones": [
-      {
-        "texto": "Ayudar -$1,000 (+2 salud emocional)",
-        "dinero": -1000,
-        "salud": 2
-      },
-      {
-        "texto": "Ayudar poco -$300",
-        "dinero": -300,
-        "salud": 1
-      },
-      {
-        "texto": "No puedo $0 (-1 salud)",
-        "salud": -1
-      }
-    ]
-  },
-  {
-    "id": 35,
-    "texto": "Te ofrecen una membresía de gimnasio.",
-    "opciones": [
-      {
-        "texto": "Pagar mensual -$600 (+6 salud)",
-        "dinero": -600,
-        "salud": 6
-      },
-      {
-        "texto": "Hacer ejercicio en casa (+3 salud)",
-        "salud": 3
-      },
-      {
-        "texto": "No hacer nada (-2 salud)",
-        "salud": -2
-      }
-    ]
-  },
-  {
-    "id": 36,
-    "texto": "Te proponen un seguro médico básico.",
-    "opciones": [
-      {
-        "texto": "Contratar -$900 (+10 salud)",
-        "dinero": -900,
-        "salud": 10
-      },
-      {
-        "texto": "No contratar $0",
-        "dinero": 0
-      },
-      {
-        "texto": "Guardar para emergencias (+1 salud mental)",
-        "salud": 1
-      }
-    ]
-  },
-  {
-    "id": 37,
-    "texto": "Un vecino te ofrece un 'trabajo rápido' dudoso.",
-    "opciones": [
-      {
-        "texto": "Aceptar +$1,500 (pero te estresa)",
-        "dinero": 1500,
-        "salud": -4
-      },
-      {
-        "texto": "Rechazar (+1 salud)",
-        "salud": 1
-      },
-      {
-        "texto": "Aceptar y sale mal (pierdes) -$800",
-        "dinero": -800,
-        "salud": -2
-      }
-    ]
-  },
-  {
-    "id": 38,
-    "texto": "Te llega una tentación de comprar a meses.",
-    "opciones": [
-      {
-        "texto": "Aceptar (sube deuda +$2,500)",
-        "deuda": 2500,
-        "salud": 1
-      },
-      {
-        "texto": "No aceptar (+1 salud)",
-        "salud": 1
-      },
-      {
-        "texto": "Buscar usado -$700",
-        "dinero": -700
-      }
-    ]
-  },
-  {
-    "id": 39,
-    "texto": "Te invitan a comer diario fuera.",
-    "opciones": [
-      {
-        "texto": "Sí, me lo merezco -$900 (-2 salud)",
-        "dinero": -900,
-        "salud": -2
-      },
-      {
-        "texto": "Cocinar en casa -$300 (+2 salud)",
-        "dinero": -300,
-        "salud": 2
-      },
-      {
-        "texto": "Mitad y mitad -$600",
-        "dinero": -600
-      }
-    ]
-  },
-  {
-    "id": 40,
-    "texto": "Un amigo te pide prestado (riesgo social).",
-    "opciones": [
-      {
-        "texto": "Prestar -$1,200",
-        "dinero": -1200
-      },
-      {
-        "texto": "Prestar poco -$300",
-        "dinero": -300
-      },
-      {
-        "texto": "No prestar (+1 salud)",
-        "salud": 1
-      }
-    ]
-  },
-  {
-    "id": 41,
-    "texto": "Te ofrecen comprar herramientas usadas.",
-    "opciones": [
-      {
-        "texto": "Comprar -$900 (+1 salud por productividad)",
-        "dinero": -900,
-        "salud": 1
-      },
-      {
-        "texto": "No comprar $0",
-        "dinero": 0
-      },
-      {
-        "texto": "Regatear -$500",
-        "dinero": -500
-      }
-    ]
-  },
-  {
-    "id": 42,
-    "texto": "Te inscriben sin querer a un servicio mensual.",
-    "opciones": [
-      {
-        "texto": "Cancelar (+1 salud)",
-        "salud": 1
-      },
-      {
-        "texto": "Dejarlo -$250",
-        "dinero": -250
-      },
-      {
-        "texto": "Olvidarlo (crece deuda) +$500 deuda",
-        "deuda": 500
+        "descripcion": "Tu paz mental también es un activo."
       }
     ]
   },
   {
     "id": 43,
-    "texto": "Tu cuerpo te pide descanso.",
+    "texto": "Tu primo quiere vender accesorios para home office que prometen postura de CEO.",
     "opciones": [
       {
-        "texto": "Dormir temprano (+6 salud)",
-        "salud": 6
+        "texto": "Invertir fuerte -$24,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Home office premium (fuerte)",
+          "costo": 24000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 21600,
+              "p": 0.22
+            },
+            {
+              "delta": 8400,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -9600,
+              "p": 0.35
+            }
+          ]
+        }
       },
       {
-        "texto": "Seguir en chinga (-4 salud)",
-        "salud": -4
+        "texto": "Invertir poco -$3,500",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Home office premium (poco)",
+          "costo": 3500,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 3150,
+              "p": 0.22
+            },
+            {
+              "delta": 1200,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -1400,
+              "p": 0.35
+            }
+          ]
+        }
       },
       {
-        "texto": "Café y aguante (-2 salud)",
-        "salud": -2
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
       }
     ]
   },
   {
     "id": 44,
-    "texto": "Te ofrecen un descuento si pagas una parte de tu deuda hoy.",
+    "texto": "Te ofrecen entrar a un negocio de renta de herramientas.",
     "opciones": [
       {
-        "texto": "Pagar -$1,000 y baja deuda -$2,000",
-        "dinero": -1000,
-        "deuda": -2000
+        "texto": "Invertir fuerte -$40,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Herramientas en renta (fuerte)",
+          "costo": 40000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 10000,
+              "p": 0.45
+            },
+            {
+              "delta": 4800,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -6000,
+              "p": 0.1
+            }
+          ]
+        }
       },
       {
-        "texto": "Pagar -$500 y baja deuda -$900",
-        "dinero": -500,
-        "deuda": -900
+        "texto": "Invertir poco -$6,000",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Herramientas en renta (poco)",
+          "costo": 6000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 1500,
+              "p": 0.45
+            },
+            {
+              "delta": 700,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -900,
+              "p": 0.1
+            }
+          ]
+        }
       },
       {
-        "texto": "No pagar $0",
-        "dinero": 0
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
       }
     ]
   },
   {
     "id": 45,
-    "texto": "Te da por ordenar tu vida financiera.",
+    "texto": "Una vecina vende postres sin azúcar que sí saben a postre.",
     "opciones": [
       {
-        "texto": "Hacer presupuesto (+2 salud)",
-        "salud": 2
+        "texto": "Invertir fuerte -$14,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Postres honestos (fuerte)",
+          "costo": 14000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 6300,
+              "p": 0.35
+            },
+            {
+              "delta": 2800,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -3500,
+              "p": 0.25
+            }
+          ]
+        }
       },
       {
-        "texto": "Ignorar (-1 salud)",
-        "salud": -1
+        "texto": "Invertir poco -$2,000",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Postres honestos (poco)",
+          "costo": 2000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 900,
+              "p": 0.35
+            },
+            {
+              "delta": 400,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -500,
+              "p": 0.25
+            }
+          ]
+        }
       },
       {
-        "texto": "Comprar app -$200",
-        "dinero": -200,
-        "salud": 1
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
       }
     ]
   },
   {
     "id": 46,
-    "texto": "Te ofrecen un 'reto de ahorro' con amigos.",
+    "texto": "Te proponen vender cursos para aprender a negociar sueldos.",
     "opciones": [
       {
-        "texto": "Entrarle -$400 (pero te motiva +2 salud)",
-        "dinero": -400,
-        "salud": 2
+        "texto": "Invertir fuerte -$18,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Negociación salarial (fuerte)",
+          "costo": 18000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 16200,
+              "p": 0.22
+            },
+            {
+              "delta": 6300,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -7200,
+              "p": 0.35
+            }
+          ]
+        }
       },
       {
-        "texto": "Entrarle fuerte -$800 (+3 salud)",
-        "dinero": -800,
-        "salud": 3
+        "texto": "Invertir poco -$2,500",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Negociación salarial (poco)",
+          "costo": 2500,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 2250,
+              "p": 0.22
+            },
+            {
+              "delta": 900,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -1000,
+              "p": 0.35
+            }
+          ]
+        }
       },
       {
-        "texto": "No entrar $0",
-        "dinero": 0
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
       }
     ]
   },
   {
     "id": 47,
-    "texto": "Te sugieren invertir en tu imagen (ropa / corte / etc.).",
+    "texto": "Un grupo quiere montar una tienda de reparación de celulares express.",
     "opciones": [
       {
-        "texto": "Invertir -$700 (+1 salud)",
-        "dinero": -700,
-        "salud": 1
+        "texto": "Invertir fuerte -$35,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Celular al rescate (fuerte)",
+          "costo": 35000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 15750,
+              "p": 0.35
+            },
+            {
+              "delta": 7000,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -8750,
+              "p": 0.25
+            }
+          ]
+        }
       },
       {
-        "texto": "No invertir $0",
-        "dinero": 0
+        "texto": "Invertir poco -$5,000",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Celular al rescate (poco)",
+          "costo": 5000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 2250,
+              "p": 0.35
+            },
+            {
+              "delta": 1000,
+              "p": 0.25
+            },
+            {
+              "delta": 0,
+              "p": 0.15
+            },
+            {
+              "delta": -1250,
+              "p": 0.25
+            }
+          ]
+        }
       },
       {
-        "texto": "Invertir fuerte -$1,800 (+2 salud)",
-        "dinero": -1800,
-        "salud": 2
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
       }
     ]
   },
   {
     "id": 48,
-    "texto": "Te dan una oportunidad de trueque.",
+    "texto": "Te ofrecen inversión en una plataforma de trueque local.",
     "opciones": [
       {
-        "texto": "Aceptar (+$500 equivalente)",
-        "dinero": 500
+        "texto": "Invertir fuerte -$22,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Trueque digital (fuerte)",
+          "costo": 22000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 19800,
+              "p": 0.22
+            },
+            {
+              "delta": 7700,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -8800,
+              "p": 0.35
+            }
+          ]
+        }
       },
       {
-        "texto": "Aceptar y te salen con trampa (-$300)",
-        "dinero": -300
+        "texto": "Invertir poco -$3,000",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Trueque digital (poco)",
+          "costo": 3000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 2700,
+              "p": 0.22
+            },
+            {
+              "delta": 1050,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -1200,
+              "p": 0.35
+            }
+          ]
+        }
       },
       {
-        "texto": "No aceptar $0",
-        "dinero": 0
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
       }
     ]
   },
   {
     "id": 49,
-    "texto": "Te sientes al límite mental.",
+    "texto": "Un familiar quiere abrir un mini súper en una zona sin tienditas.",
     "opciones": [
       {
-        "texto": "Terapia -$900 (+10 salud)",
-        "dinero": -900,
-        "salud": 10
+        "texto": "Invertir fuerte -$50,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Mini súper héroe (fuerte)",
+          "costo": 50000,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 12500,
+              "p": 0.45
+            },
+            {
+              "delta": 6000,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -7500,
+              "p": 0.1
+            }
+          ]
+        }
       },
       {
-        "texto": "Caminar (+4 salud)",
-        "salud": 4
+        "texto": "Invertir poco -$7,500",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Mini súper héroe (poco)",
+          "costo": 7500,
+          "delayMin": 2,
+          "delayMax": 3,
+          "outcomes": [
+            {
+              "delta": 1900,
+              "p": 0.45
+            },
+            {
+              "delta": 900,
+              "p": 0.35
+            },
+            {
+              "delta": 0,
+              "p": 0.1
+            },
+            {
+              "delta": -1100,
+              "p": 0.1
+            }
+          ]
+        }
       },
       {
-        "texto": "Ignorar (-6 salud)",
-        "salud": -6
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
       }
     ]
   },
   {
     "id": 50,
-    "texto": "Te ofrecen un servicio de suscripción útil.",
+    "texto": "Te invitan a comprar mercancía de temporada. Navidad en julio, finanzas en crisis.",
     "opciones": [
       {
-        "texto": "Contratar -$250 (+1 salud)",
-        "dinero": -250,
-        "salud": 1
+        "texto": "Invertir fuerte -$26,000",
+        "descripcion": "Más potencial, más riesgo y más ganas de revisar el celular cada 5 minutos.",
+        "inversion": {
+          "nombre": "Temporada loca (fuerte)",
+          "costo": 26000,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 23400,
+              "p": 0.22
+            },
+            {
+              "delta": 9100,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -10400,
+              "p": 0.35
+            }
+          ]
+        }
       },
       {
-        "texto": "No contratar $0",
-        "dinero": 0
+        "texto": "Invertir poco -$3,800",
+        "descripcion": "Pruebas el agua con el dedo, pero sin aventar la quincena completa.",
+        "inversion": {
+          "nombre": "Temporada loca (poco)",
+          "costo": 3800,
+          "delayMin": 1,
+          "delayMax": 2,
+          "outcomes": [
+            {
+              "delta": 3400,
+              "p": 0.22
+            },
+            {
+              "delta": 1350,
+              "p": 0.18
+            },
+            {
+              "delta": 0,
+              "p": 0.25
+            },
+            {
+              "delta": -1500,
+              "p": 0.35
+            }
+          ]
+        }
       },
       {
-        "texto": "Contratar caro -$600",
-        "dinero": -600
+        "texto": "Pasar",
+        "descripcion": "Tu paz mental también es un activo."
       }
     ]
   },
   {
     "id": 51,
-    "texto": "Te invitan a participar en una cooperacha.",
+    "texto": "Te ofrecen hacer un freelance de emergencia: 'es rápido' dijo nadie confiable.",
     "opciones": [
       {
-        "texto": "Poner -$300 (+1 salud social)",
-        "dinero": -300,
-        "salud": 1
+        "texto": "Aceptar +$2,000 (-4 salud)",
+        "descripcion": "Ingresas rápido, duermes lento.",
+        "dinero": 2000,
+        "salud": -4
       },
       {
-        "texto": "Poner -$800 (+2 salud)",
-        "dinero": -800,
+        "texto": "Cobrar tarifa nocturna +$3,200 (-7 salud)",
+        "descripcion": "Profesional, pero con ojeras premium.",
+        "dinero": 3200,
+        "salud": -7
+      },
+      {
+        "texto": "Pasar (+2 salud)",
+        "descripcion": "Tu descanso también factura.",
+        "salud": 2
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "texto": "Tu banco te ofrece aumentar tu línea de crédito con voz seductora.",
+    "opciones": [
+      {
+        "texto": "Aceptar +$5,000 deuda",
+        "descripcion": "Más límite, más tentación.",
+        "deuda": 5000,
+        "salud": -1
+      },
+      {
+        "texto": "Rechazar (+2 salud)",
+        "descripcion": "El autocontrol hizo flexiones.",
         "salud": 2
       },
       {
-        "texto": "No poner (-1 salud)",
+        "texto": "Aceptar y congelar tarjeta +$2,000 deuda",
+        "descripcion": "Plan medio responsable, medio novela.",
+        "deuda": 2000
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "texto": "Un amigo por fin te quiere pagar lo que te debe. No hagas movimientos bruscos.",
+    "opciones": [
+      {
+        "texto": "Cobrar completo +$1,500",
+        "descripcion": "Milagro documentado.",
+        "dinero": 1500
+      },
+      {
+        "texto": "Aceptar pago parcial +$700 (+1 salud)",
+        "descripcion": "Algo es algo, dijo la cartera.",
+        "dinero": 700,
+        "salud": 1
+      },
+      {
+        "texto": "Perdonar por paz mental (+3 salud)",
+        "descripcion": "La paz salió cara, pero paz.",
+        "salud": 3
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "texto": "Te ofrecen cuidar una mascota el fin de semana.",
+    "opciones": [
+      {
+        "texto": "Aceptar +$900 (+2 salud)",
+        "descripcion": "Dinero y lomito: portafolio diversificado.",
+        "dinero": 900,
+        "salud": 2
+      },
+      {
+        "texto": "Aceptar doble turno +$1,600 (-2 salud)",
+        "descripcion": "También paseas tus límites.",
+        "dinero": 1600,
+        "salud": -2
+      },
+      {
+        "texto": "No aceptar $0",
+        "descripcion": "Cero pelos en la ropa.",
+        "dinero": 0
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "texto": "Te invitan a una tanda. La organizadora trae libreta, fe y calculadora.",
+    "opciones": [
+      {
+        "texto": "Entrarle -$1,000 (+1 salud social)",
+        "descripcion": "Puede salir bien, puede salir grupo de WhatsApp eterno.",
+        "dinero": -1000,
+        "salud": 1
+      },
+      {
+        "texto": "Entrarle grande -$3,000 (-2 salud)",
+        "descripcion": "La emoción y el riesgo van en combo.",
+        "dinero": -3000,
+        "salud": -2
+      },
+      {
+        "texto": "No entrar (+2 salud)",
+        "descripcion": "Tu quincena se queda en casa.",
+        "salud": 2
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "texto": "Encontraste cosas para vender en Marketplace: una silla, una licuadora y tu dignidad negociadora.",
+    "opciones": [
+      {
+        "texto": "Vender rápido +$900",
+        "descripcion": "Barato pero libre de chats raros.",
+        "dinero": 900
+      },
+      {
+        "texto": "Vender con paciencia +$1,800 (-2 salud)",
+        "descripcion": "Regateo nivel telenovela.",
+        "dinero": 1800,
+        "salud": -2
+      },
+      {
+        "texto": "Quedártelas $0",
+        "descripcion": "El museo del 'por si acaso' sigue abierto.",
+        "dinero": 0
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "texto": "Te ofrecen comprar despensa al mayoreo con vecinos.",
+    "opciones": [
+      {
+        "texto": "Entrarle -$700 (+2 salud)",
+        "descripcion": "Ahorro con logística de boda.",
+        "dinero": -700,
+        "salud": 2
+      },
+      {
+        "texto": "Comprar de más -$1,500",
+        "descripcion": "Ahora tienes arroz para tres finales de temporada.",
+        "dinero": -1500
+      },
+      {
+        "texto": "No entrar $0",
+        "descripcion": "Tu alacena mantiene su misterio.",
+        "dinero": 0
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "texto": "Te llega un reembolso que ya habías dado por perdido.",
+    "opciones": [
+      {
+        "texto": "Guardar +$1,200",
+        "descripcion": "El dinero regresó con arco dramático.",
+        "dinero": 1200
+      },
+      {
+        "texto": "Celebrar -$500 (+2 salud)",
+        "descripcion": "Moderadamente irresponsable.",
+        "dinero": -500,
+        "salud": 2
+      },
+      {
+        "texto": "Pagar deuda -$0 y deuda -$1,200",
+        "descripcion": "Técnicamente no lo viste, pero ayudó.",
+        "deuda": -1200
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "texto": "Un cliente te pide descuento a cambio de 'exposición'.",
+    "opciones": [
+      {
+        "texto": "Aceptar +$500 (-3 salud)",
+        "descripcion": "Exposición al estrés.",
+        "dinero": 500,
+        "salud": -3
+      },
+      {
+        "texto": "Negociar +$1,500 (+1 salud)",
+        "descripcion": "Cobraste como persona con luz que pagar.",
+        "dinero": 1500,
+        "salud": 1
+      },
+      {
+        "texto": "Rechazar (+2 salud)",
+        "descripcion": "Tu autoestima manda factura.",
+        "salud": 2
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "texto": "Te ofrecen un curso para mejorar tus ingresos.",
+    "opciones": [
+      {
+        "texto": "Tomarlo -$800 (+4 salud)",
+        "descripcion": "Aprendes y presumes subrayador.",
+        "dinero": -800,
+        "salud": 4
+      },
+      {
+        "texto": "Comprar curso premium -$3,500 (+6 salud)",
+        "descripcion": "Incluye certificado y sticker mental.",
+        "dinero": -3500,
+        "salud": 6
+      },
+      {
+        "texto": "Ver videos gratis (+1 salud)",
+        "descripcion": "La universidad de YouTube abre inscripciones.",
+        "salud": 1
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "texto": "Un vecino necesita ayuda mudándose y paga en efectivo.",
+    "opciones": [
+      {
+        "texto": "Ayudar +$800 (-3 salud)",
+        "descripcion": "Ingresos con dolor de espalda.",
+        "dinero": 800,
+        "salud": -3
+      },
+      {
+        "texto": "Ayudar y llevar diablito +$1,200 (-1 salud)",
+        "descripcion": "Herramienta correcta, drama reducido.",
+        "dinero": 1200,
         "salud": -1
+      },
+      {
+        "texto": "No ayudar (+1 salud)",
+        "descripcion": "Tus lumbares te mandan flores.",
+        "salud": 1
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "texto": "Te ofrecen reparar algo en casa antes de que se vuelva tragedia.",
+    "opciones": [
+      {
+        "texto": "Arreglar ya -$600 (+3 salud)",
+        "descripcion": "Prevención: aburrida pero poderosa.",
+        "dinero": -600,
+        "salud": 3
+      },
+      {
+        "texto": "Parche temporal -$150",
+        "descripcion": "La cinta canela entra al chat.",
+        "dinero": -150
+      },
+      {
+        "texto": "Ignorar (-3 salud)",
+        "descripcion": "El problema empezó a cobrar renta.",
+        "salud": -3
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "texto": "Te invitan a salir justo cuando prometiste ahorrar.",
+    "opciones": [
+      {
+        "texto": "Ir tranqui -$450 (+3 salud)",
+        "descripcion": "Socializas sin empeñar el futuro.",
+        "dinero": -450,
+        "salud": 3
+      },
+      {
+        "texto": "Ir con todo -$1,800 (+4 salud)",
+        "descripcion": "La diversión vino con IVA emocional.",
+        "dinero": -1800,
+        "salud": 4
+      },
+      {
+        "texto": "Quedarte (+1 salud)",
+        "descripcion": "Pijama > cover.",
+        "salud": 1
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "texto": "Te proponen cambiar un hábito: llevar comida al trabajo por una semana.",
+    "opciones": [
+      {
+        "texto": "Preparar comida -$500 (+4 salud)",
+        "descripcion": "Tu tupper se siente importante.",
+        "dinero": -500,
+        "salud": 4
+      },
+      {
+        "texto": "Comprar ingredientes fancy -$1,200 (+5 salud)",
+        "descripcion": "Meal prep con complejo de restaurante.",
+        "dinero": -1200,
+        "salud": 5
+      },
+      {
+        "texto": "Seguir comprando fuera -$1,500 (-2 salud)",
+        "descripcion": "El señor de la fonda ya te dice 'joven'.",
+        "dinero": -1500,
+        "salud": -2
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "texto": "Te sale una oportunidad de hacer horas extra.",
+    "opciones": [
+      {
+        "texto": "Aceptar +$1,400 (-3 salud)",
+        "descripcion": "Dinero con ojeras.",
+        "dinero": 1400,
+        "salud": -3
+      },
+      {
+        "texto": "Aceptar doble +$2,800 (-7 salud)",
+        "descripcion": "Tu cama preguntó por ti.",
+        "dinero": 2800,
+        "salud": -7
+      },
+      {
+        "texto": "No aceptar (+2 salud)",
+        "descripcion": "Descanso con ROI invisible.",
+        "salud": 2
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "texto": "Un conocido quiere que seas aval. Se escuchó música de terror financiera.",
+    "opciones": [
+      {
+        "texto": "Aceptar (+$0, +$8,000 deuda potencial)",
+        "descripcion": "Amistad con cláusulas.",
+        "deuda": 8000,
+        "salud": -5
+      },
+      {
+        "texto": "Negarte con cariño (+3 salud)",
+        "descripcion": "Límites sanos, cartera sana.",
+        "salud": 3
+      },
+      {
+        "texto": "Ofrecer asesoría $0 (+1 salud)",
+        "descripcion": "Ayudas sin firmar tu destino.",
+        "salud": 1
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "texto": "Te ofrecen refinanciar deuda con mejor tasa.",
+    "opciones": [
+      {
+        "texto": "Aceptar -$700 y deuda -$3,000",
+        "descripcion": "Menos intereses, más oxígeno.",
+        "dinero": -700,
+        "deuda": -3000,
+        "salud": 2
+      },
+      {
+        "texto": "Negociar deuda -$1,500",
+        "descripcion": "El teléfono también sirve para pelear por tu futuro.",
+        "deuda": -1500,
+        "salud": 1
+      },
+      {
+        "texto": "No moverle $0",
+        "descripcion": "Don Interés sonríe desde lejos.",
+        "dinero": 0
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "texto": "Te invitan a un bazar para vender cosas hechas por ti.",
+    "opciones": [
+      {
+        "texto": "Poner puesto -$500, gana +$1,400",
+        "descripcion": "Terminas cansado pero con cambio.",
+        "dinero": 900,
+        "salud": -1
+      },
+      {
+        "texto": "Poner puesto bonito -$1,200, gana +$2,400",
+        "descripcion": "La decoración sí vendió.",
+        "dinero": 1200,
+        "salud": -2
+      },
+      {
+        "texto": "No ir $0",
+        "descripcion": "Tu domingo queda intacto.",
+        "dinero": 0
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "texto": "Te ofrecen usar una bici en lugar de transporte por una semana.",
+    "opciones": [
+      {
+        "texto": "Probar +$400 ahorro (+4 salud)",
+        "descripcion": "Piernas felices, cartera también.",
+        "dinero": 400,
+        "salud": 4
+      },
+      {
+        "texto": "Comprar accesorios -$900 (+5 salud)",
+        "descripcion": "Casco, luces y personalidad urbana.",
+        "dinero": -900,
+        "salud": 5
+      },
+      {
+        "texto": "No cambiar $0",
+        "descripcion": "El transporte público conserva tu asiento imaginario.",
+        "dinero": 0
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "texto": "Aparece una promoción de meses sin intereses. Brilla como villano elegante.",
+    "opciones": [
+      {
+        "texto": "Comprar +$3,000 deuda (+1 salud)",
+        "descripcion": "Tu yo futuro acaba de recibir tarea.",
+        "deuda": 3000,
+        "salud": 1
+      },
+      {
+        "texto": "Comprar versión barata -$700",
+        "descripcion": "Te salvaste a medias.",
+        "dinero": -700
+      },
+      {
+        "texto": "Cerrar la página (+2 salud)",
+        "descripcion": "Victoria silenciosa contra el algoritmo.",
+        "salud": 2
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "texto": "Te ofrecen un seguro básico para emergencias.",
+    "opciones": [
+      {
+        "texto": "Contratar -$900 (+8 salud)",
+        "descripcion": "Tranquilidad con recibo.",
+        "dinero": -900,
+        "salud": 8
+      },
+      {
+        "texto": "Guardar fondo -$500 (+3 salud)",
+        "descripcion": "Tu colchón financiero empieza flaco, pero existe.",
+        "dinero": -500,
+        "salud": 3
+      },
+      {
+        "texto": "No hacer nada $0",
+        "descripcion": "La suerte firma como responsable.",
+        "dinero": 0
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "texto": "Un familiar te pide apoyo económico.",
+    "opciones": [
+      {
+        "texto": "Ayudar -$1,200 (+3 salud)",
+        "descripcion": "La familia también paga dividendos emocionales.",
+        "dinero": -1200,
+        "salud": 3
+      },
+      {
+        "texto": "Ayudar poco -$400 (+1 salud)",
+        "descripcion": "Apoyo con cinturón financiero.",
+        "dinero": -400,
+        "salud": 1
+      },
+      {
+        "texto": "Decir que no (-1 salud)",
+        "descripcion": "Límites sanos con culpa incluida.",
+        "salud": -1
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "texto": "Te ofrecen cambiar a plan de celular más barato.",
+    "opciones": [
+      {
+        "texto": "Cambiar +$300 ahorro (+1 salud)",
+        "descripcion": "Menos gigas, más control.",
+        "dinero": 300,
+        "salud": 1
+      },
+      {
+        "texto": "Quedarte igual $0",
+        "descripcion": "La comodidad cuesta, aunque no hoy.",
+        "dinero": 0
+      },
+      {
+        "texto": "Cambiar a plan caro -$500 (+1 salud)",
+        "descripcion": "Datos infinitos, presupuesto finito.",
+        "dinero": -500,
+        "salud": 1
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "texto": "Tu jefe ofrece capacitación pagada.",
+    "opciones": [
+      {
+        "texto": "Tomarla +$0 (+5 salud)",
+        "descripcion": "Aprender gratis: especie en peligro.",
+        "salud": 5
+      },
+      {
+        "texto": "Tomarla y certificarte -$600 (+8 salud)",
+        "descripcion": "LinkedIn pide foto con diploma.",
+        "dinero": -600,
+        "salud": 8
+      },
+      {
+        "texto": "No tomarla $0",
+        "descripcion": "Tu zona de confort puso música.",
+        "dinero": 0
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "texto": "Te ofrecen compartir renta con alguien confiable.",
+    "opciones": [
+      {
+        "texto": "Aceptar +$2,500 ahorro (-1 salud)",
+        "descripcion": "Menos renta, más negociación por el baño.",
+        "dinero": 2500,
+        "salud": -1
+      },
+      {
+        "texto": "Aceptar con reglas +$2,000 (+1 salud)",
+        "descripcion": "Contrato, turnos y paz.",
+        "dinero": 2000,
+        "salud": 1
+      },
+      {
+        "texto": "No aceptar $0",
+        "descripcion": "Tu silencio doméstico sigue premium.",
+        "dinero": 0
       }
     ]
   }

@@ -1,9 +1,18 @@
 import { useGameStore } from "../../store/gameStore";
 
+function etiquetaBienestar(b) {
+  const v = Number(b || 0);
+  if (v >= 75) return { texto: "Pleno", color: "text-emerald-700" };
+  if (v >= 50) return { texto: "Estable", color: "text-blue-700" };
+  if (v >= 25) return { texto: "Estresado", color: "text-amber-700" };
+  return { texto: "Quemado", color: "text-red-700" };
+}
+
 export default function Cartera({ mesActual = null }) {
   const dinero = useGameStore((s) => s.dinero);
   const deuda = useGameStore((s) => s.deuda);
   const salud = useGameStore((s) => s.salud);
+  const bienestar = useGameStore((s) => s.bienestar);
   const sueldo = useGameStore((s) => s.sueldo);
   const inversionesPendientes = useGameStore(
     (s) => s.inversionesPendientes || []
@@ -19,9 +28,11 @@ export default function Cartera({ mesActual = null }) {
     return `en ${faltan} meses`;
   };
 
+  const bie = etiquetaBienestar(bienestar);
+
   return (
     <div className="bg-white rounded-xl shadow p-4">
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-3">
+      <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 mb-3">
         <div className="p-2 bg-gray-50 rounded-lg text-center">
           <div className="text-xs text-gray-500 font-medium">Dinero</div>
           <div className="text-green-700 font-bold">
@@ -44,6 +55,14 @@ export default function Cartera({ mesActual = null }) {
         </div>
 
         <div className="p-2 bg-gray-50 rounded-lg text-center">
+          <div className="text-xs text-gray-500 font-medium">Bienestar</div>
+          <div className={`font-bold ${bie.color}`}>
+            {Math.round(Number(bienestar || 0))}%
+          </div>
+          <div className={`text-[10px] ${bie.color}`}>{bie.texto}</div>
+        </div>
+
+        <div className="p-2 bg-gray-50 rounded-lg text-center col-span-2 sm:col-span-1">
           <div className="text-xs text-gray-500 font-medium">Sueldo</div>
           <div className="text-gray-700 font-bold">
             ${Number(sueldo || 0).toLocaleString()}

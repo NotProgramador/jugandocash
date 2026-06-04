@@ -11,6 +11,7 @@ function evaluarNivel({
   dinero,
   deuda,
   salud,
+  bienestar,
   sueldo,
   suenosCumplidos,
   suenosTotal,
@@ -21,6 +22,7 @@ function evaluarNivel({
   const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
 
   const healthScore = clamp(Number(salud || 0) / 100, 0, 1);
+  const wellbeingScore = clamp(Number(bienestar || 0) / 100, 0, 1);
 
   const targetMoney =
     sueldo > 0 ? sueldo * 3 : Math.max(1, Number(dineroInicial || 0) * 1.5);
@@ -30,11 +32,16 @@ function evaluarNivel({
     suenosTotal > 0 ? clamp(suenosCumplidos / suenosTotal, 0, 1) : 0;
 
   const invCount = Number(stats?.inversionesCount || 0);
-  const invNeto = Number(stats?.inversionesNeto || 0);
+  const invNeto = Number(stats?.inversionesNeto || 0); // ganancia/pérdida real
+  // Premia solo inversiones rentables. Recuperar capital no suma.
   const invParticipacion = clamp(invCount / 6, 0, 1);
   const invNetoNorm = clamp(invNeto / Math.max(1, sueldo || 1), -1, 1);
-  const invNetoScore = (invNetoNorm + 1) / 2;
-  const investScore = clamp(invParticipacion * 0.5 + invNetoScore * 0.5, 0, 1);
+  const invNetoScore = (invNetoNorm + 1) / 2; // 0..1
+  // Si neto <= 0, la participación ya no premia tanto:
+  const investScore =
+    invNeto > 0
+      ? clamp(invParticipacion * 0.4 + invNetoScore * 0.6, 0, 1)
+      : clamp(invNetoScore, 0, 1);
 
   const di = Math.max(1, Number(deudaInicial || 0));
   const debtScore =
@@ -42,18 +49,21 @@ function evaluarNivel({
       ? 1
       : clamp((di - Number(deuda || 0)) / di, 0, 1);
 
+  // Pesos: salud 35 + dinero 22 + sueños 18 + inversión 10 + deuda 5 + bienestar 10 = 100
   const puntos =
-    healthScore * 40 +
-    moneyScore * 25 +
-    dreamsScore * 20 +
+    healthScore * 35 +
+    moneyScore * 22 +
+    dreamsScore * 18 +
     investScore * 10 +
-    debtScore * 5;
+    debtScore * 5 +
+    wellbeingScore * 10;
 
   const ahorroOk = moneyScore >= 1;
 
   const topSecret =
     Number(deuda || 0) === 0 &&
     Number(salud || 0) === 100 &&
+    Number(bienestar || 0) >= 80 &&
     suenosCumplidos >= 3 &&
     ahorroOk &&
     invNeto >= 0;
@@ -121,6 +131,13 @@ function evaluarNivel({
     descripcion += " Ojo: hiciste dinero, pero te estás rompiendo por dentro.";
   }
 
+  const b = Number(bienestar || 0);
+  if (b < 25) {
+    descripcion += " Tu bienestar está en mínimos: estás quemado.";
+  } else if (b >= 80) {
+    descripcion += " Y lo más valioso: vives bien, no solo sobrevives.";
+  }
+
   return {
     nivel,
     titulo,
@@ -137,6 +154,7 @@ export default function Results() {
   const dinero = useGameStore((s) => s.dinero);
   const deuda = useGameStore((s) => s.deuda);
   const salud = useGameStore((s) => s.salud);
+  const bienestar = useGameStore((s) => s.bienestar);
   const sueldo = useGameStore((s) => s.sueldo);
   const suenos = useGameStore((s) => s.sueños || []);
   const baseline = useGameStore((s) => s.baseline);
@@ -161,6 +179,7 @@ export default function Results() {
         dinero,
         deuda,
         salud,
+        bienestar,
         sueldo,
         suenosCumplidos,
         suenosTotal,
@@ -168,7 +187,7 @@ export default function Results() {
         dineroInicial: baseline?.dineroInicial ?? 0,
         stats,
       }),
-    [dinero, deuda, salud, sueldo, suenosCumplidos, suenosTotal, baseline, stats]
+    [dinero, deuda, salud, bienestar, sueldo, suenosCumplidos, suenosTotal, baseline, stats]
   );
 
   const motivo = useMemo(() => {
@@ -223,7 +242,7 @@ export default function Results() {
           )}
           <p className="opacity-70 mt-1">{motivo}</p>
 
-          <div className="grid sm:grid-cols-3 gap-3 mt-4">
+          <div className="grid sm:grid-cols-4 gap-3 mt-4">
             <div className="p-3 rounded-lg border">
               <div className="text-xs opacity-70">Dinero final</div>
               <div className="text-lg font-bold text-green-700">
@@ -240,6 +259,12 @@ export default function Results() {
               <div className="text-xs opacity-70">Salud</div>
               <div className="text-lg font-bold text-blue-700">
                 {Math.round(salud)}%
+              </div>
+            </div>
+            <div className="p-3 rounded-lg border">
+              <div className="text-xs opacity-70">Bienestar</div>
+              <div className="text-lg font-bold text-emerald-700">
+                {Math.round(bienestar)}%
               </div>
             </div>
           </div>

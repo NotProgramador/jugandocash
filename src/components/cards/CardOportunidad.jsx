@@ -44,6 +44,7 @@ export default function CardOportunidad({
   const actualizarDinero = useGameStore((s) => s.actualizarDinero);
   const actualizarDeuda = useGameStore((s) => s.actualizarDeuda);
   const actualizarSalud = useGameStore((s) => s.actualizarSalud);
+  const actualizarBienestar = useGameStore((s) => s.actualizarBienestar);
   const agendarInversion = useGameStore((s) => s.agendarInversion);
 
   const opcionesNorm = useMemo(
@@ -91,10 +92,11 @@ export default function CardOportunidad({
       return;
     }
 
-    // Handle direct money/debt/health changes
+    // Handle direct money/debt/health/bienestar changes
     if (typeof op?.dinero === "number") actualizarDinero(op.dinero);
     if (typeof op?.deuda === "number") actualizarDeuda(op.deuda);
     if (typeof op?.salud === "number") actualizarSalud(op.salud);
+    if (typeof op?.bienestar === "number") actualizarBienestar(op.bienestar);
 
     onOpcion?.(op);
   };
