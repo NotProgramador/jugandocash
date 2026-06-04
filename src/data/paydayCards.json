@@ -10,7 +10,8 @@
         "afecta": [
           "dinero",
           "deuda"
-        ]
+        ],
+        "bienestar": 3
       },
       {
         "texto": "Ahorrar/invertir",
@@ -19,7 +20,8 @@
         "afecta": [
           "dinero",
           "inversiones"
-        ]
+        ],
+        "bienestar": 3
       },
       {
         "texto": "Cumplir un sueño",
@@ -29,20 +31,23 @@
           "dinero",
           "suenios",
           "salud"
-        ]
+        ],
+        "bienestar": 0
       },
       {
         "texto": "Salir con amigos -$1,500",
         "accion": "fiesta",
         "descripcion": "Diversión hoy, cartera en terapia mañana.",
         "dinero": -1500,
-        "salud": 8
+        "salud": 8,
+        "bienestar": 7
       },
       {
         "texto": "No hacer nada especial",
         "accion": "seguirNormal",
         "descripcion": "Descansas, respiras, no compras cosas raras. Salud +10.",
-        "salud": 10
+        "salud": 10,
+        "bienestar": 5
       }
     ]
   },
@@ -55,7 +60,8 @@
         "accion": "pagarIntereses",
         "descripcion": "Cumples lo mínimo. La deuda baja poquito, pero baja.",
         "dinero": -500,
-        "deuda": -500
+        "deuda": -500,
+        "bienestar": 2
       },
       {
         "texto": "Invertir en fondo seguro -$1,000",
@@ -67,14 +73,16 @@
             "tipo": "bajo",
             "monto": 1000
           }
-        ]
+        ],
+        "bienestar": 3
       },
       {
         "texto": "Ir al parque -$50 (+15 salud)",
         "accion": "salud",
         "descripcion": "Caminar: el DLC gratis de la vida adulta.",
         "dinero": -50,
-        "salud": 15
+        "salud": 15,
+        "bienestar": 6
       },
       {
         "texto": "Cumplir sueño",
@@ -83,7 +91,8 @@
         "afecta": [
           "dinero",
           "suenios"
-        ]
+        ],
+        "bienestar": 0
       }
     ]
   },
@@ -96,27 +105,31 @@
         "accion": "gastoInnecesario",
         "descripcion": "Tiene cámara, brillo y arrepentimiento en HD.",
         "dinero": -4000,
-        "salud": 1
+        "salud": 1,
+        "bienestar": -3
       },
       {
         "texto": "Retiro de meditación -$2,000 (+20 salud)",
         "accion": "salud",
         "descripcion": "Respiras, sueltas estrés y temporalmente no revisas el banco.",
         "dinero": -2000,
-        "salud": 20
+        "salud": 20,
+        "bienestar": 6
       },
       {
         "texto": "Pagar deuda agresivamente -$10,000",
         "accion": "pagarDeuda",
         "descripcion": "Le pegas directo al monstruo de intereses.",
         "dinero": -10000,
-        "deuda": -10000
+        "deuda": -10000,
+        "bienestar": 5
       },
       {
         "texto": "Guardar todo",
         "accion": "ahorrar",
         "descripcion": "Movimiento frío, calculado y casi mítico.",
-        "dinero": 0
+        "dinero": 0,
+        "bienestar": 4
       }
     ]
   },
@@ -128,7 +141,8 @@
         "texto": "Cancelar y ahorrar",
         "accion": "seguirNormal",
         "descripcion": "Revisas gastos fijos y recuperas calma. Salud +8.",
-        "salud": 8
+        "salud": 8,
+        "bienestar": 4
       },
       {
         "texto": "Pagar deuda",
@@ -137,7 +151,8 @@
         "afecta": [
           "dinero",
           "deuda"
-        ]
+        ],
+        "bienestar": 3
       },
       {
         "texto": "Invertir",
@@ -146,14 +161,16 @@
         "afecta": [
           "dinero",
           "inversiones"
-        ]
+        ],
+        "bienestar": 3
       },
       {
         "texto": "Pedir comida cara -$900",
         "accion": "gastoInnecesario",
         "descripcion": "La salsa venía aparte y el remordimiento incluido.",
         "dinero": -900,
-        "salud": 2
+        "salud": 2,
+        "bienestar": -1
       }
     ]
   },
@@ -166,7 +183,8 @@
         "accion": "pagarDeuda",
         "descripcion": "Un golpe serio a la deuda.",
         "dinero": -5000,
-        "deuda": -5000
+        "deuda": -5000,
+        "bienestar": 5
       },
       {
         "texto": "Fondo seguro -$1,500",
@@ -178,20 +196,23 @@
             "tipo": "bajo",
             "monto": 1500
           }
-        ]
+        ],
+        "bienestar": 3
       },
       {
         "texto": "Día de autocuidado -$700 (+12 salud)",
         "accion": "salud",
         "descripcion": "Cuidas tu cuerpo antes de que mande queja formal.",
         "dinero": -700,
-        "salud": 12
+        "salud": 12,
+        "bienestar": 4
       },
       {
         "texto": "No hacer nada",
         "accion": "seguirNormal",
         "descripcion": "Disfrutas no complicarte. Salud +6.",
-        "salud": 6
+        "salud": 6,
+        "bienestar": 4
       }
     ]
   },
@@ -204,14 +225,16 @@
         "accion": "gastoInnecesario",
         "descripcion": "Tu outfit sube, tu saldo baja.",
         "dinero": -1800,
-        "salud": 3
+        "salud": 3,
+        "bienestar": -2
       },
       {
         "texto": "Pagar intereses -$700",
         "accion": "pagarIntereses",
         "descripcion": "Mantienes la deuda a raya, más o menos.",
         "dinero": -700,
-        "deuda": -700
+        "deuda": -700,
+        "bienestar": 2
       },
       {
         "texto": "Cumplir un sueño",
@@ -221,7 +244,8 @@
           "dinero",
           "suenios",
           "salud"
-        ]
+        ],
+        "bienestar": 0
       },
       {
         "texto": "Ahorrar/invertir",
@@ -230,7 +254,8 @@
         "afecta": [
           "dinero",
           "inversiones"
-        ]
+        ],
+        "bienestar": 3
       }
     ]
   },
@@ -245,27 +270,31 @@
         "afecta": [
           "dinero",
           "deuda"
-        ]
+        ],
+        "bienestar": 3
       },
       {
         "texto": "Supermercado estratégico -$1,200 (+8 salud)",
         "accion": "salud",
         "descripcion": "Compras comida real, no solo botanas con forma de cena.",
         "dinero": -1200,
-        "salud": 8
+        "salud": 8,
+        "bienestar": 4
       },
       {
         "texto": "Fiesta -$2,200 (+6 salud)",
         "accion": "fiesta",
         "descripcion": "La noche estuvo buena; la mañana, no tanto.",
         "dinero": -2200,
-        "salud": 6
+        "salud": 6,
+        "bienestar": 10
       },
       {
         "texto": "Guardar todo",
         "accion": "ahorrar",
         "descripcion": "El dinero se queda quietecito.",
-        "dinero": 0
+        "dinero": 0,
+        "bienestar": 4
       }
     ]
   },
@@ -283,7 +312,8 @@
             "tipo": "bajo",
             "monto": 2000
           }
-        ]
+        ],
+        "bienestar": 3
       },
       {
         "texto": "Cumplir sueño",
@@ -293,20 +323,23 @@
           "dinero",
           "suenios",
           "salud"
-        ]
+        ],
+        "bienestar": 0
       },
       {
         "texto": "Salir tranqui -$600 (+5 salud)",
         "accion": "fiesta",
         "descripcion": "Socializas sin romper la alcancía.",
         "dinero": -600,
-        "salud": 5
+        "salud": 5,
+        "bienestar": 5
       },
       {
         "texto": "No hacer nada especial",
         "accion": "seguirNormal",
         "descripcion": "Descanso y cero drama. Salud +10.",
-        "salud": 10
+        "salud": 10,
+        "bienestar": 5
       }
     ]
   },
@@ -319,7 +352,8 @@
         "accion": "pagarDeuda",
         "descripcion": "Bajas capital y subes autoestima.",
         "dinero": -3000,
-        "deuda": -3000
+        "deuda": -3000,
+        "bienestar": 4
       },
       {
         "texto": "Invertir",
@@ -328,21 +362,24 @@
         "afecta": [
           "dinero",
           "inversiones"
-        ]
+        ],
+        "bienestar": 3
       },
       {
         "texto": "Curso útil -$1,200 (+10 salud)",
         "accion": "salud",
         "descripcion": "Inviertes en habilidades y en presumir agenda.",
         "dinero": -1200,
-        "salud": 10
+        "salud": 10,
+        "bienestar": 4
       },
       {
         "texto": "Comprar tonterías -$1,000",
         "accion": "gastoInnecesario",
         "descripcion": "Eran baratas hasta que fueron cinco.",
         "dinero": -1000,
-        "salud": 1
+        "salud": 1,
+        "bienestar": -1
       }
     ]
   },
@@ -355,14 +392,16 @@
         "accion": "pagarIntereses",
         "descripcion": "No es glamuroso, pero evita llamadas incómodas.",
         "dinero": -500,
-        "deuda": -500
+        "deuda": -500,
+        "bienestar": 2
       },
       {
         "texto": "Despensa saludable -$900 (+10 salud)",
         "accion": "salud",
         "descripcion": "Verduras con intención de ser comidas.",
         "dinero": -900,
-        "salud": 10
+        "salud": 10,
+        "bienestar": 4
       },
       {
         "texto": "Cumplir sueño",
@@ -372,14 +411,16 @@
           "dinero",
           "suenios",
           "salud"
-        ]
+        ],
+        "bienestar": 0
       },
       {
         "texto": "Fiesta -$1,700 (+7 salud)",
         "accion": "fiesta",
         "descripcion": "La alegría también se presupuesta. A veces mal.",
         "dinero": -1700,
-        "salud": 7
+        "salud": 7,
+        "bienestar": 7
       }
     ]
   },
@@ -394,7 +435,8 @@
         "afecta": [
           "dinero",
           "deuda"
-        ]
+        ],
+        "bienestar": 3
       },
       {
         "texto": "Ahorrar/invertir",
@@ -403,20 +445,23 @@
         "afecta": [
           "dinero",
           "inversiones"
-        ]
+        ],
+        "bienestar": 3
       },
       {
         "texto": "Mantenimiento preventivo -$800 (+5 salud)",
         "accion": "salud",
         "descripcion": "Arreglas algo antes de que sea tragedia.",
         "dinero": -800,
-        "salud": 5
+        "salud": 5,
+        "bienestar": 3
       },
       {
         "texto": "No hacer nada",
         "accion": "seguirNormal",
         "descripcion": "Tu paz mental agradece. Salud +8.",
-        "salud": 8
+        "salud": 8,
+        "bienestar": 4
       }
     ]
   },
@@ -428,14 +473,16 @@
         "texto": "Cerrar carrito (+5 salud)",
         "accion": "seguirNormal",
         "descripcion": "Victoria contra el algoritmo.",
-        "salud": 5
+        "salud": 5,
+        "bienestar": 4
       },
       {
         "texto": "Comprar carrito -$2,500",
         "accion": "gastoInnecesario",
         "descripcion": "Llegará en 3 días y el arrepentimiento en 3 minutos.",
         "dinero": -2500,
-        "salud": 1
+        "salud": 1,
+        "bienestar": -2
       },
       {
         "texto": "Fondo seguro -$1,000",
@@ -447,7 +494,8 @@
             "tipo": "bajo",
             "monto": 1000
           }
-        ]
+        ],
+        "bienestar": 3
       },
       {
         "texto": "Pagar deuda",
@@ -456,7 +504,8 @@
         "afecta": [
           "dinero",
           "deuda"
-        ]
+        ],
+        "bienestar": 3
       }
     ]
   },
@@ -468,7 +517,8 @@
         "texto": "Hacer presupuesto (+12 salud)",
         "accion": "seguirNormal",
         "descripcion": "La claridad también sana.",
-        "salud": 12
+        "salud": 12,
+        "bienestar": 5
       },
       {
         "texto": "Invertir",
@@ -477,7 +527,8 @@
         "afecta": [
           "dinero",
           "inversiones"
-        ]
+        ],
+        "bienestar": 3
       },
       {
         "texto": "Cumplir sueño",
@@ -487,14 +538,16 @@
           "dinero",
           "suenios",
           "salud"
-        ]
+        ],
+        "bienestar": 0
       },
       {
         "texto": "Cena elegante -$1,600 (+4 salud)",
         "accion": "fiesta",
         "descripcion": "Elegante también fue la cuenta.",
         "dinero": -1600,
-        "salud": 4
+        "salud": 4,
+        "bienestar": 7
       }
     ]
   },
@@ -507,14 +560,16 @@
         "accion": "pagarDeuda",
         "descripcion": "Menos deuda, menos ruido mental.",
         "dinero": -4000,
-        "deuda": -4000
+        "deuda": -4000,
+        "bienestar": 5
       },
       {
         "texto": "Salud preventiva -$1,000 (+15 salud)",
         "accion": "salud",
         "descripcion": "Chequeo, vitaminas y sentirte persona responsable.",
         "dinero": -1000,
-        "salud": 15
+        "salud": 15,
+        "bienestar": 6
       },
       {
         "texto": "Ahorrar/invertir",
@@ -523,13 +578,15 @@
         "afecta": [
           "dinero",
           "inversiones"
-        ]
+        ],
+        "bienestar": 3
       },
       {
         "texto": "Guardar todo",
         "accion": "ahorrar",
         "descripcion": "Cero movimientos extra.",
-        "dinero": 0
+        "dinero": 0,
+        "bienestar": 4
       }
     ]
   },
@@ -545,27 +602,31 @@
           "dinero",
           "suenios",
           "salud"
-        ]
+        ],
+        "bienestar": 0
       },
       {
         "texto": "Pagar intereses -$600",
         "accion": "pagarIntereses",
         "descripcion": "Mantienes la deuda con correa corta.",
         "dinero": -600,
-        "deuda": -600
+        "deuda": -600,
+        "bienestar": 2
       },
       {
         "texto": "Gimnasio -$700 (+12 salud)",
         "accion": "salud",
         "descripcion": "Ahora sí, según tú y el contrato.",
         "dinero": -700,
-        "salud": 12
+        "salud": 12,
+        "bienestar": 4
       },
       {
         "texto": "No hacer nada",
         "accion": "seguirNormal",
         "descripcion": "No todo depósito necesita drama. Salud +5.",
-        "salud": 5
+        "salud": 5,
+        "bienestar": 4
       }
     ]
   },
@@ -578,14 +639,16 @@
         "accion": "fiesta",
         "descripcion": "Risas, fotos y ticket largo.",
         "dinero": -1200,
-        "salud": 6
+        "salud": 6,
+        "bienestar": 7
       },
       {
         "texto": "Salir barato -$350 (+4 salud)",
         "accion": "fiesta",
         "descripcion": "Plan de banqueta con dignidad.",
         "dinero": -350,
-        "salud": 4
+        "salud": 4,
+        "bienestar": 5
       },
       {
         "texto": "Invertir",
@@ -594,7 +657,8 @@
         "afecta": [
           "dinero",
           "inversiones"
-        ]
+        ],
+        "bienestar": 3
       },
       {
         "texto": "Pagar deuda",
@@ -603,7 +667,8 @@
         "afecta": [
           "dinero",
           "deuda"
-        ]
+        ],
+        "bienestar": 3
       }
     ]
   },
@@ -616,7 +681,8 @@
         "accion": "salud",
         "descripcion": "El problema deja de mirarte feo.",
         "dinero": -1300,
-        "salud": 7
+        "salud": 7,
+        "bienestar": 3
       },
       {
         "texto": "Pagar deuda",
@@ -625,7 +691,8 @@
         "afecta": [
           "dinero",
           "deuda"
-        ]
+        ],
+        "bienestar": 3
       },
       {
         "texto": "Fondo seguro -$1,200",
@@ -637,14 +704,16 @@
             "tipo": "bajo",
             "monto": 1200
           }
-        ]
+        ],
+        "bienestar": 3
       },
       {
         "texto": "Comprar capricho -$900",
         "accion": "gastoInnecesario",
         "descripcion": "Pequeño capricho, mediano recibo.",
         "dinero": -900,
-        "salud": 2
+        "salud": 2,
+        "bienestar": -1
       }
     ]
   },
@@ -659,27 +728,31 @@
         "afecta": [
           "dinero",
           "inversiones"
-        ]
+        ],
+        "bienestar": 3
       },
       {
         "texto": "Pagar deuda -$2,500",
         "accion": "pagarDeuda",
         "descripcion": "Abono directo al jefe final.",
         "dinero": -2500,
-        "deuda": -2500
+        "deuda": -2500,
+        "bienestar": 4
       },
       {
         "texto": "Autocuidado gratis (+8 salud)",
         "accion": "seguirNormal",
         "descripcion": "Dormir temprano, tomar agua, actuar como planta bien regada.",
-        "salud": 8
+        "salud": 8,
+        "bienestar": 4
       },
       {
         "texto": "Compras impulsivas -$1,400",
         "accion": "gastoInnecesario",
         "descripcion": "El 'lo necesitaba' está en revisión.",
         "dinero": -1400,
-        "salud": 1
+        "salud": 1,
+        "bienestar": -1
       }
     ]
   },
@@ -692,7 +765,8 @@
         "accion": "pagarIntereses",
         "descripcion": "No resuelve todo, pero evita que empeore.",
         "dinero": -800,
-        "deuda": -800
+        "deuda": -800,
+        "bienestar": 2
       },
       {
         "texto": "Cumplir sueño",
@@ -702,7 +776,8 @@
           "dinero",
           "suenios",
           "salud"
-        ]
+        ],
+        "bienestar": 0
       },
       {
         "texto": "Invertir bajo riesgo -$2,500",
@@ -714,14 +789,16 @@
             "tipo": "bajo",
             "monto": 2500
           }
-        ]
+        ],
+        "bienestar": 3
       },
       {
         "texto": "Fiesta grande -$2,800 (+8 salud)",
         "accion": "fiesta",
         "descripcion": "La vida es una, pero el estado de cuenta también.",
         "dinero": -2800,
-        "salud": 8
+        "salud": 8,
+        "bienestar": 10
       }
     ]
   },
@@ -736,27 +813,31 @@
         "afecta": [
           "dinero",
           "deuda"
-        ]
+        ],
+        "bienestar": 3
       },
       {
         "texto": "Chequeo médico -$1,100 (+18 salud)",
         "accion": "salud",
         "descripcion": "Prevención con bata blanca.",
         "dinero": -1100,
-        "salud": 18
+        "salud": 18,
+        "bienestar": 6
       },
       {
         "texto": "Ahorrar",
         "accion": "ahorrar",
         "descripcion": "No gastar también es movimiento.",
-        "dinero": 0
+        "dinero": 0,
+        "bienestar": 4
       },
       {
         "texto": "Gadget innecesario -$3,000",
         "accion": "gastoInnecesario",
         "descripcion": "Tiene luces. No tiene sentido.",
         "dinero": -3000,
-        "salud": 1
+        "salud": 1,
+        "bienestar": -3
       }
     ]
   },
@@ -771,7 +852,8 @@
         "afecta": [
           "dinero",
           "inversiones"
-        ]
+        ],
+        "bienestar": 3
       },
       {
         "texto": "Cumplir sueño",
@@ -781,20 +863,23 @@
           "dinero",
           "suenios",
           "salud"
-        ]
+        ],
+        "bienestar": 0
       },
       {
         "texto": "Plan familiar -$1,000 (+6 salud)",
         "accion": "fiesta",
         "descripcion": "Compartir también alimenta, aunque cobre.",
         "dinero": -1000,
-        "salud": 6
+        "salud": 6,
+        "bienestar": 7
       },
       {
         "texto": "Seguir normal",
         "accion": "seguirNormal",
         "descripcion": "Paz, calma y ningún ticket raro. Salud +10.",
-        "salud": 10
+        "salud": 10,
+        "bienestar": 5
       }
     ]
   }

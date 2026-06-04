@@ -7,21 +7,25 @@
         "texto": "Ir al médico -$600 (+8 salud)",
         "dinero": -600,
         "salud": 8,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 5
       },
       {
         "texto": "Remedios caseros -$150 (-6 salud)",
         "dinero": -150,
         "salud": -6,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -3
       },
       {
         "texto": "Ignorar y trabajar (-18 salud)",
         "dinero": 0,
         "salud": -18,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -10
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 2,
@@ -31,21 +35,25 @@
         "texto": "Repararlo -$1,200",
         "dinero": -1200,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Comprar usado -$3,500",
         "dinero": -3500,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 0
       },
       {
         "texto": "Sacar a crédito +$6,000 deuda",
         "dinero": 0,
         "salud": -1,
-        "deuda": 6000
+        "deuda": 6000,
+        "bienestar": -5
       }
-    ]
+    ],
+    "severidad": "fuerte"
   },
   {
     "id": 3,
@@ -55,21 +63,25 @@
         "texto": "Repararlo -$2,000",
         "dinero": -2000,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Comprar usado -$4,500",
         "dinero": -4500,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 0
       },
       {
         "texto": "Comer fuera unos días -$1,200 (-2 salud)",
         "dinero": -1200,
         "salud": -2,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 4,
@@ -79,21 +91,25 @@
         "texto": "Reportar y recuperar -$300 (-2 salud)",
         "dinero": -300,
         "salud": -2,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Cambiar tarjetas -$800",
         "dinero": -800,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "No revisar movimientos +$2,000 deuda",
         "dinero": 0,
         "salud": -4,
-        "deuda": 2000
+        "deuda": 2000,
+        "bienestar": -4
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 5,
@@ -103,21 +119,25 @@
         "texto": "Comprar llanta -$1,800",
         "dinero": -1800,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Parchar -$350 (-3 salud)",
         "dinero": -350,
         "salud": -3,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Usar tarjeta +$2,200 deuda",
         "dinero": 0,
         "salud": 0,
-        "deuda": 2200
+        "deuda": 2200,
+        "bienestar": -3
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 6,
@@ -127,21 +147,25 @@
         "texto": "Técnico express -$900",
         "dinero": -900,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Resolver tú (-8 salud)",
         "dinero": 0,
         "salud": -8,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -4
       },
       {
         "texto": "Perder cliente -$2,500",
         "dinero": -2500,
         "salud": -4,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 7,
@@ -151,21 +175,25 @@
         "texto": "Arreglar techo -$3,500",
         "dinero": -3500,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 0
       },
       {
         "texto": "Cubeta y esperanza -$100 (-6 salud)",
         "dinero": -100,
         "salud": -6,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -3
       },
       {
         "texto": "Crédito para reparación +$4,000 deuda",
         "dinero": 0,
         "salud": 0,
-        "deuda": 4000
+        "deuda": 4000,
+        "bienestar": -4
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 8,
@@ -175,21 +203,25 @@
         "texto": "Veterinario -$1,200 (+2 salud)",
         "dinero": -1200,
         "salud": 2,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 2
       },
       {
         "texto": "Medicina básica -$400 (-4 salud)",
         "dinero": -400,
         "salud": -4,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Esperar (-12 salud)",
         "dinero": 0,
         "salud": -12,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -7
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 9,
@@ -199,21 +231,25 @@
         "texto": "Pagar multa -$1,400",
         "dinero": -1400,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Impugnar -$350 (-4 salud)",
         "dinero": -350,
         "salud": -4,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Ignorar +$1,800 deuda",
         "dinero": 0,
         "salud": -1,
-        "deuda": 1800
+        "deuda": 1800,
+        "bienestar": -3
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 10,
@@ -223,21 +259,25 @@
         "texto": "Médico -$800 (+10 salud)",
         "dinero": -800,
         "salud": 10,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 5
       },
       {
         "texto": "Farmacia -$250 (-5 salud)",
         "dinero": -250,
         "salud": -5,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -3
       },
       {
         "texto": "Aguantar (-15 salud)",
         "dinero": 0,
         "salud": -15,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -10
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 11,
@@ -247,21 +287,25 @@
         "texto": "Comprar nuevos -$2,500",
         "dinero": -2500,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Arreglar armazón -$600",
         "dinero": -600,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Usar cinta (-4 salud)",
         "dinero": -50,
         "salud": -4,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 12,
@@ -271,21 +315,25 @@
         "texto": "Cerrajero -$700",
         "dinero": -700,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Cambiar chapa -$1,500",
         "dinero": -1500,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Esperar ayuda (-5 salud)",
         "dinero": 0,
         "salud": -5,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -4
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 13,
@@ -295,21 +343,25 @@
         "texto": "Reparar -$1,800",
         "dinero": -1800,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Bañarte frío (-8 salud)",
         "dinero": 0,
         "salud": -8,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -4
       },
       {
         "texto": "Comprar nuevo +$4,000 deuda",
         "dinero": 0,
         "salud": 0,
-        "deuda": 4000
+        "deuda": 4000,
+        "bienestar": -4
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 14,
@@ -319,21 +371,25 @@
         "texto": "Mecánico -$3,000",
         "dinero": -3000,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 0
       },
       {
         "texto": "Arreglo temporal -$700 (-4 salud)",
         "dinero": -700,
         "salud": -4,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Ignorar +$5,000 deuda futura",
         "dinero": 0,
         "salud": -6,
-        "deuda": 5000
+        "deuda": 5000,
+        "bienestar": -7
       }
-    ]
+    ],
+    "severidad": "fuerte"
   },
   {
     "id": 15,
@@ -343,21 +399,25 @@
         "texto": "Comprar usada -$1,200",
         "dinero": -1200,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Comprar nueva -$4,000",
         "dinero": -4000,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 0
       },
       {
         "texto": "Transporte público -$400 (-2 salud)",
         "dinero": -400,
         "salud": -2,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 16,
@@ -367,21 +427,25 @@
         "texto": "Reparación -$1,600",
         "dinero": -1600,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Lavandería -$500 (-2 salud)",
         "dinero": -500,
         "salud": -2,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Comprar lavadora +$6,000 deuda",
         "dinero": 0,
         "salud": 0,
-        "deuda": 6000
+        "deuda": 6000,
+        "bienestar": -4
       }
-    ]
+    ],
+    "severidad": "fuerte"
   },
   {
     "id": 17,
@@ -391,21 +455,25 @@
         "texto": "Aceptar cargo -$1,200",
         "dinero": -1200,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Pelear reembolso (-4 salud)",
         "dinero": 0,
         "salud": -4,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Pagar con deuda +$1,200",
         "dinero": 0,
         "salud": 0,
-        "deuda": 1200
+        "deuda": 1200,
+        "bienestar": -2
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 18,
@@ -415,21 +483,25 @@
         "texto": "Dentista -$2,200 (+10 salud)",
         "dinero": -2200,
         "salud": 10,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 5
       },
       {
         "texto": "Analgésicos -$200 (-8 salud)",
         "dinero": -200,
         "salud": -8,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -3
       },
       {
         "texto": "Ignorar (-20 salud)",
         "dinero": 0,
         "salud": -20,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -10
       }
-    ]
+    ],
+    "severidad": "fuerte"
   },
   {
     "id": 19,
@@ -439,21 +511,25 @@
         "texto": "Plomero -$2,800",
         "dinero": -2800,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Arreglo casero -$500 (-6 salud)",
         "dinero": -500,
         "salud": -6,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -3
       },
       {
         "texto": "Crédito emergencia +$3,500 deuda",
         "dinero": 0,
         "salud": -1,
-        "deuda": 3500
+        "deuda": 3500,
+        "bienestar": -4
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 20,
@@ -463,21 +539,25 @@
         "texto": "Reponer documentos -$1,000 (-2 salud)",
         "dinero": -1000,
         "salud": -2,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Bloquear tarjetas -$200",
         "dinero": -200,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "No actuar +$2,500 deuda",
         "dinero": 0,
         "salud": -6,
-        "deuda": 2500
+        "deuda": 2500,
+        "bienestar": -6
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 21,
@@ -487,21 +567,25 @@
         "texto": "Datos extra -$350",
         "dinero": -350,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Café con Wi-Fi -$180",
         "dinero": -180,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Perder entrega -$1,500 (-6 salud)",
         "dinero": -1500,
         "salud": -6,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -3
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 22,
@@ -511,21 +595,25 @@
         "texto": "Comprar silla -$2,000 (+3 salud)",
         "dinero": -2000,
         "salud": 3,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 4
       },
       {
         "texto": "Arreglarla -$300 (-3 salud)",
         "dinero": -300,
         "salud": -3,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Seguir así (-10 salud)",
         "dinero": 0,
         "salud": -10,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -7
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 23,
@@ -535,21 +623,25 @@
         "texto": "Pagar -$1,700",
         "dinero": -1700,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Pagar parcial +$900 deuda",
         "dinero": -800,
         "salud": -1,
-        "deuda": 900
+        "deuda": 900,
+        "bienestar": -3
       },
       {
         "texto": "Ignorar +$2,000 deuda",
         "dinero": 0,
         "salud": -2,
-        "deuda": 2000
+        "deuda": 2000,
+        "bienestar": -4
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 24,
@@ -559,21 +651,25 @@
         "texto": "Comprar mochila -$900",
         "dinero": -900,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Arreglar cierre -$200",
         "dinero": -200,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Usar bolsa rara (-2 salud)",
         "dinero": 0,
         "salud": -2,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 25,
@@ -583,21 +679,25 @@
         "texto": "Reparar tú -$1,300",
         "dinero": -1300,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Negociar (-3 salud)",
         "dinero": 0,
         "salud": -3,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Abogado/carta -$600 (-1 salud)",
         "dinero": -600,
         "salud": -1,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 26,
@@ -607,21 +707,25 @@
         "texto": "Técnico -$1,200",
         "dinero": -1200,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Antivirus -$400 (-3 salud)",
         "dinero": -400,
         "salud": -3,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Formatear y llorar (-8 salud)",
         "dinero": 0,
         "salud": -8,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -4
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 27,
@@ -631,21 +735,25 @@
         "texto": "Descanso y consulta -$1,000 (+18 salud)",
         "dinero": -1000,
         "salud": 18,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 5
       },
       {
         "texto": "Medicina -$250 (-5 salud)",
         "dinero": -250,
         "salud": -5,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -3
       },
       {
         "texto": "Seguir igual (-18 salud)",
         "dinero": 0,
         "salud": -18,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -10
       }
-    ]
+    ],
+    "severidad": "fuerte"
   },
   {
     "id": 28,
@@ -655,21 +763,25 @@
         "texto": "Cambiar focos -$250",
         "dinero": -250,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Comprar lámpara -$700",
         "dinero": -700,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Vivir en penumbra (-3 salud)",
         "dinero": 0,
         "salud": -3,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 29,
@@ -679,21 +791,25 @@
         "texto": "Pagar y reclamar (-$600, -2 salud)",
         "dinero": -600,
         "salud": -2,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Pelear devolución (-5 salud)",
         "dinero": 0,
         "salud": -5,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -4
       },
       {
         "texto": "Dejarlo pasar -$600",
         "dinero": -600,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 30,
@@ -703,21 +819,25 @@
         "texto": "Pagar reconexión -$900",
         "dinero": -900,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Pedir apoyo +$900 deuda",
         "dinero": 0,
         "salud": -1,
-        "deuda": 900
+        "deuda": 900,
+        "bienestar": -3
       },
       {
         "texto": "Acarrear agua (-8 salud)",
         "dinero": 0,
         "salud": -8,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -4
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 31,
@@ -727,21 +847,25 @@
         "texto": "Comprar colchón -$5,000 (+12 salud)",
         "dinero": -5000,
         "salud": 12,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 5
       },
       {
         "texto": "Colchón usado -$2,000 (+5 salud)",
         "dinero": -2000,
         "salud": 5,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 4
       },
       {
         "texto": "Seguir así (-15 salud)",
         "dinero": 0,
         "salud": -15,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -10
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 32,
@@ -751,21 +875,25 @@
         "texto": "Médico -$700 (+10 salud)",
         "dinero": -700,
         "salud": 10,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 5
       },
       {
         "texto": "Antihistamínico -$180 (-4 salud)",
         "dinero": -180,
         "salud": -4,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Aguantar (-12 salud)",
         "dinero": 0,
         "salud": -12,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -7
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 33,
@@ -775,21 +903,25 @@
         "texto": "Reparar -$800",
         "dinero": -800,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Comprar usado -$1,500",
         "dinero": -1500,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Comer fuera -$600 (-2 salud)",
         "dinero": -600,
         "salud": -2,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 34,
@@ -799,21 +931,25 @@
         "texto": "Reimprimir -$250",
         "dinero": -250,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Mensajería urgente -$500",
         "dinero": -500,
         "salud": -1,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Entregar tarde (-6 salud)",
         "dinero": 0,
         "salud": -6,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -4
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 35,
@@ -823,21 +959,25 @@
         "texto": "Cancelar (+3 salud)",
         "dinero": 0,
         "salud": 3,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 3
       },
       {
         "texto": "Pagar -$250",
         "dinero": -250,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Olvidar cancelar +$500 deuda",
         "dinero": 0,
         "salud": -1,
-        "deuda": 500
+        "deuda": 500,
+        "bienestar": -3
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 36,
@@ -847,21 +987,25 @@
         "texto": "Técnico -$1,000 (+8 salud)",
         "dinero": -1000,
         "salud": 8,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 5
       },
       {
         "texto": "Cerrar y esperar (-8 salud)",
         "dinero": 0,
         "salud": -8,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -4
       },
       {
         "texto": "Reparación completa +$2,500 deuda",
         "dinero": 0,
         "salud": 0,
-        "deuda": 2500
+        "deuda": 2500,
+        "bienestar": -3
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 37,
@@ -871,21 +1015,25 @@
         "texto": "Comprar zapatos -$1,200",
         "dinero": -1200,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Reparar -$250",
         "dinero": -250,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Seguir así (-4 salud)",
         "dinero": 0,
         "salud": -4,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 38,
@@ -895,21 +1043,25 @@
         "texto": "Pagar -$450",
         "dinero": -450,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Caminar (-5 salud)",
         "dinero": 0,
         "salud": -5,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -4
       },
       {
         "texto": "Tomar transporte alterno -$120 (-2 salud)",
         "dinero": -120,
         "salud": -2,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 39,
@@ -919,21 +1071,25 @@
         "texto": "Comprar tinta -$900",
         "dinero": -900,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Imprimir fuera -$250",
         "dinero": -250,
         "salud": -1,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "No imprimir (-4 salud)",
         "dinero": 0,
         "salud": -4,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 40,
@@ -943,21 +1099,25 @@
         "texto": "Reponer cosas -$700",
         "dinero": -700,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Secar todo (-4 salud)",
         "dinero": 0,
         "salud": -4,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Comprar termo nuevo -$450",
         "dinero": -450,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 41,
@@ -967,21 +1127,25 @@
         "texto": "Pagar completo -$1,000",
         "dinero": -1000,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Negociar (-3 salud)",
         "dinero": 0,
         "salud": -3,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Pagar con tarjeta +$1,000 deuda",
         "dinero": 0,
         "salud": 0,
-        "deuda": 1000
+        "deuda": 1000,
+        "bienestar": -2
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 42,
@@ -991,21 +1155,25 @@
         "texto": "Cambiar vidrio -$1,100",
         "dinero": -1100,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Poner plástico -$100 (-5 salud)",
         "dinero": -100,
         "salud": -5,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -3
       },
       {
         "texto": "Crédito reparación +$1,300 deuda",
         "dinero": 0,
         "salud": 0,
-        "deuda": 1300
+        "deuda": 1300,
+        "bienestar": -2
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 43,
@@ -1015,21 +1183,25 @@
         "texto": "Pagar -$1,800",
         "dinero": -1800,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Convenio +$1,800 deuda",
         "dinero": 0,
         "salud": -1,
-        "deuda": 1800
+        "deuda": 1800,
+        "bienestar": -3
       },
       {
         "texto": "Apagar todo (-4 salud)",
         "dinero": 0,
         "salud": -4,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 44,
@@ -1039,21 +1211,25 @@
         "texto": "Reparar -$3,200",
         "dinero": -3200,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 0
       },
       {
         "texto": "Seguro/deducible -$1,500",
         "dinero": -1500,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Dejarlo así (-3 salud)",
         "dinero": 0,
         "salud": -3,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 45,
@@ -1063,21 +1239,25 @@
         "texto": "Descansar -$500 (+15 salud)",
         "dinero": -500,
         "salud": 15,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 5
       },
       {
         "texto": "Café y seguir -$80 (-8 salud)",
         "dinero": -80,
         "salud": -8,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -3
       },
       {
         "texto": "Ignorar (-20 salud)",
         "dinero": 0,
         "salud": -20,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -10
       }
-    ]
+    ],
+    "severidad": "fuerte"
   },
   {
     "id": 46,
@@ -1087,21 +1267,25 @@
         "texto": "Usar efectivo -$0 (-2 salud)",
         "dinero": 0,
         "salud": -2,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Transferir con comisión -$50",
         "dinero": -50,
         "salud": -1,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Comprar a crédito +$800 deuda",
         "dinero": 0,
         "salud": 0,
-        "deuda": 800
+        "deuda": 800,
+        "bienestar": -2
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 47,
@@ -1111,21 +1295,25 @@
         "texto": "Comprar control -$300",
         "dinero": -300,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Usar app rara (-2 salud)",
         "dinero": 0,
         "salud": -2,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Levantarte siempre (-4 salud)",
         "dinero": 0,
         "salud": -4,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 48,
@@ -1135,21 +1323,25 @@
         "texto": "Dentista -$1,800 (+8 salud)",
         "dinero": -1800,
         "salud": 8,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 5
       },
       {
         "texto": "Curación temporal -$500 (-4 salud)",
         "dinero": -500,
         "salud": -4,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Ignorar (-18 salud)",
         "dinero": 0,
         "salud": -18,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -10
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 49,
@@ -1159,21 +1351,25 @@
         "texto": "Insistir (-3 salud)",
         "dinero": 0,
         "salud": -3,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Aceptar pérdida -$1,000 (-1 salud)",
         "dinero": -1000,
         "salud": -1,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Reestructurar pago +$300",
         "dinero": 300,
         "salud": -1,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 50,
@@ -1183,21 +1379,25 @@
         "texto": "Pagar gestor -$900",
         "dinero": -900,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Hacer filas (-6 salud)",
         "dinero": 0,
         "salud": -6,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -4
       },
       {
         "texto": "Pagar multa +$1,200 deuda",
         "dinero": 0,
         "salud": -2,
-        "deuda": 1200
+        "deuda": 1200,
+        "bienestar": -3
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 51,
@@ -1207,21 +1407,25 @@
         "texto": "Comprar nuevos -$1,200",
         "dinero": -1200,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Reparar -$300",
         "dinero": -300,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Seguir así (-3 salud)",
         "dinero": 0,
         "salud": -3,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 52,
@@ -1231,21 +1435,25 @@
         "texto": "Médico -$900 (+10 salud)",
         "dinero": -900,
         "salud": 10,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 5
       },
       {
         "texto": "Pomada -$120 (-5 salud)",
         "dinero": -120,
         "salud": -5,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -3
       },
       {
         "texto": "Aguantar (-15 salud)",
         "dinero": 0,
         "salud": -15,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -10
       }
-    ]
+    ],
+    "severidad": "fuerte"
   },
   {
     "id": 53,
@@ -1255,21 +1463,25 @@
         "texto": "Comprar licuadora -$1,100",
         "dinero": -1100,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Reparar -$300",
         "dinero": -300,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Limpiar media vida (-5 salud)",
         "dinero": 0,
         "salud": -5,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -4
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 54,
@@ -1279,21 +1491,25 @@
         "texto": "Gestor/seguridad -$400 (+3 salud)",
         "dinero": -400,
         "salud": 3,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 4
       },
       {
         "texto": "Cambiar todo (-6 salud)",
         "dinero": 0,
         "salud": -6,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -4
       },
       {
         "texto": "Ignorar +$1,500 deuda potencial",
         "dinero": 0,
         "salud": -4,
-        "deuda": 1500
+        "deuda": 1500,
+        "bienestar": -3
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 55,
@@ -1303,21 +1519,25 @@
         "texto": "Comprar ventilador -$900 (+5 salud)",
         "dinero": -900,
         "salud": 5,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 4
       },
       {
         "texto": "Reparar -$250",
         "dinero": -250,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Sobrevivir con cartón (-8 salud)",
         "dinero": 0,
         "salud": -8,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -4
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 56,
@@ -1327,21 +1547,25 @@
         "texto": "Tintorería express -$450",
         "dinero": -450,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Comprar camisa -$800",
         "dinero": -800,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Ir así (-5 salud)",
         "dinero": 0,
         "salud": -5,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -4
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 57,
@@ -1351,21 +1575,25 @@
         "texto": "Reclamar (-3 salud)",
         "dinero": 0,
         "salud": -3,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Pagar -$350",
         "dinero": -350,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Cambiar cuenta -$100 (-1 salud)",
         "dinero": -100,
         "salud": -1,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 58,
@@ -1375,21 +1603,25 @@
         "texto": "Reclamar (-4 salud)",
         "dinero": 0,
         "salud": -4,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Comprar de nuevo -$700",
         "dinero": -700,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Aceptar pérdida -$700 (-1 salud)",
         "dinero": -700,
         "salud": -1,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 59,
@@ -1399,21 +1631,25 @@
         "texto": "Plomero -$900",
         "dinero": -900,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Cambiar pieza -$250 (-2 salud)",
         "dinero": -250,
         "salud": -2,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Seguir así (-6 salud)",
         "dinero": 0,
         "salud": -6,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -4
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 60,
@@ -1423,21 +1659,25 @@
         "texto": "Disco externo -$1,300",
         "dinero": -1300,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Borrar archivos (-4 salud)",
         "dinero": 0,
         "salud": -4,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Nube +$600 deuda anual",
         "dinero": 0,
         "salud": -1,
-        "deuda": 600
+        "deuda": 600,
+        "bienestar": -3
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 61,
@@ -1447,21 +1687,25 @@
         "texto": "Consulta -$600 (+8 salud)",
         "dinero": -600,
         "salud": 8,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 5
       },
       {
         "texto": "Crema -$150 (-3 salud)",
         "dinero": -150,
         "salud": -3,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Ignorar (-10 salud)",
         "dinero": 0,
         "salud": -10,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -7
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 62,
@@ -1471,21 +1715,25 @@
         "texto": "Trámite urgente -$1,200",
         "dinero": -1200,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Hacerlo normal (-5 salud)",
         "dinero": 0,
         "salud": -5,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -4
       },
       {
         "texto": "Multa +$1,500 deuda",
         "dinero": 0,
         "salud": -2,
-        "deuda": 1500
+        "deuda": 1500,
+        "bienestar": -3
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 63,
@@ -1495,21 +1743,25 @@
         "texto": "Comprar mueble -$2,000",
         "dinero": -2000,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Reparar -$400 (-2 salud)",
         "dinero": -400,
         "salud": -2,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Vivir con inclinación (-5 salud)",
         "dinero": 0,
         "salud": -5,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -4
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 64,
@@ -1519,21 +1771,25 @@
         "texto": "Comprar comida -$500",
         "dinero": -500,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Limpiar refri (-4 salud)",
         "dinero": 0,
         "salud": -4,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Comer fuera -$800 (-2 salud)",
         "dinero": -800,
         "salud": -2,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 65,
@@ -1543,21 +1799,25 @@
         "texto": "Comprar espejo -$700",
         "dinero": -700,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Arreglar -$250",
         "dinero": -250,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Usar cámara frontal (-2 salud)",
         "dinero": 0,
         "salud": -2,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 66,
@@ -1567,21 +1827,25 @@
         "texto": "Pagar -$1,200",
         "dinero": -1200,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Reacomodar maleta (-4 salud)",
         "dinero": 0,
         "salud": -4,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Usar tarjeta +$1,200 deuda",
         "dinero": 0,
         "salud": 0,
-        "deuda": 1200
+        "deuda": 1200,
+        "bienestar": -2
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 67,
@@ -1591,21 +1855,25 @@
         "texto": "Hacer estudios -$2,500 (+12 salud)",
         "dinero": -2500,
         "salud": 12,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 5
       },
       {
         "texto": "Solo consulta -$700 (+3 salud)",
         "dinero": -700,
         "salud": 3,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 4
       },
       {
         "texto": "Postergar (-12 salud)",
         "dinero": 0,
         "salud": -12,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -7
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 68,
@@ -1615,21 +1883,25 @@
         "texto": "Comprar teclado -$600",
         "dinero": -600,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Arreglar -$150 (-2 salud)",
         "dinero": -150,
         "salud": -2,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Usar teclado en pantalla (-6 salud)",
         "dinero": 0,
         "salud": -6,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -4
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 69,
@@ -1639,21 +1911,25 @@
         "texto": "Cooperacha -$1,000",
         "dinero": -1000,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Pelear junta vecinal (-6 salud)",
         "dinero": 0,
         "salud": -6,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -4
       },
       {
         "texto": "Pagar con deuda +$1,000",
         "dinero": 0,
         "salud": 0,
-        "deuda": 1000
+        "deuda": 1000,
+        "bienestar": -2
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 70,
@@ -1663,21 +1939,25 @@
         "texto": "Dermatólogo -$800 (+8 salud)",
         "dinero": -800,
         "salud": 8,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 5
       },
       {
         "texto": "Shampoo especial -$250 (+2 salud)",
         "dinero": -250,
         "salud": 2,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 2
       },
       {
         "texto": "Ignorar (-4 salud)",
         "dinero": 0,
         "salud": -4,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 71,
@@ -1687,21 +1967,25 @@
         "texto": "Comprar termo -$500",
         "dinero": -500,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Volver a café de calle -$900 (-1 salud)",
         "dinero": -900,
         "salud": -1,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Usar vaso raro (-2 salud)",
         "dinero": 0,
         "salud": -2,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 72,
@@ -1711,21 +1995,25 @@
         "texto": "Taller formal -$2,800",
         "dinero": -2800,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Aceptar primo -$900 (-5 salud)",
         "dinero": -900,
         "salud": -5,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -3
       },
       {
         "texto": "Seguro/deducible -$1,500",
         "dinero": -1500,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 73,
@@ -1735,21 +2023,25 @@
         "texto": "Comprar cafetera -$1,400",
         "dinero": -1400,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Café instantáneo -$150 (-2 salud)",
         "dinero": -150,
         "salud": -2,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Comprar café fuera -$800",
         "dinero": -800,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 74,
@@ -1759,21 +2051,25 @@
         "texto": "Médico -$700 (+10 salud)",
         "dinero": -700,
         "salud": 10,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 5
       },
       {
         "texto": "No ir, perder boleto -$900 (-3 salud)",
         "dinero": -900,
         "salud": -3,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Ir enfermo (-15 salud)",
         "dinero": 0,
         "salud": -15,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -10
       }
-    ]
+    ],
+    "severidad": "fuerte"
   },
   {
     "id": 75,
@@ -1783,21 +2079,25 @@
         "texto": "Reparar pintura -$1,600",
         "dinero": -1600,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Pedir cooperación (-4 salud)",
         "dinero": 0,
         "salud": -4,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Crédito reparación +$2,000 deuda",
         "dinero": 0,
         "salud": 0,
-        "deuda": 2000
+        "deuda": 2000,
+        "bienestar": -3
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 76,
@@ -1807,21 +2107,25 @@
         "texto": "Cambiar todo (-3 salud)",
         "dinero": 0,
         "salud": -3,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Soporte premium -$200",
         "dinero": -200,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Ignorar y perder cuenta -$700",
         "dinero": -700,
         "salud": -1,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 77,
@@ -1831,21 +2135,25 @@
         "texto": "Comprar maleta -$1,500",
         "dinero": -1500,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Reparar -$350 (-2 salud)",
         "dinero": -350,
         "salud": -2,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Viajar con bolsa (-6 salud)",
         "dinero": 0,
         "salud": -6,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -4
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 78,
@@ -1855,21 +2163,25 @@
         "texto": "Revisión -$700",
         "dinero": -700,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Reparación -$2,200",
         "dinero": -2200,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Ignorar (-8 salud)",
         "dinero": 0,
         "salud": -8,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -4
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 79,
@@ -1879,21 +2191,25 @@
         "texto": "Reponer -$1,300",
         "dinero": -1300,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Reparar -$300",
         "dinero": -300,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Aceptar destino (-3 salud)",
         "dinero": 0,
         "salud": -3,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 80,
@@ -1903,21 +2219,25 @@
         "texto": "Batería nueva -$1,800",
         "dinero": -1800,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Pasar corriente -$200",
         "dinero": -200,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Grúa +$1,000 deuda",
         "dinero": 0,
         "salud": -1,
-        "deuda": 1000
+        "deuda": 1000,
+        "bienestar": -3
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 81,
@@ -1927,21 +2247,25 @@
         "texto": "Cambiar pantalla -$3,000",
         "dinero": -3000,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 0
       },
       {
         "texto": "Monitor externo -$1,200",
         "dinero": -1200,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Seguir así (-8 salud)",
         "dinero": 0,
         "salud": -8,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -4
       }
-    ]
+    ],
+    "severidad": "media"
   },
   {
     "id": 82,
@@ -1951,21 +2275,25 @@
         "texto": "Pedir gas -$900",
         "dinero": -900,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Bañarte frío (-6 salud)",
         "dinero": 0,
         "salud": -6,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -4
       },
       {
         "texto": "Comer fuera -$500",
         "dinero": -500,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 83,
@@ -1975,21 +2303,25 @@
         "texto": "Arreglarla -$300",
         "dinero": -300,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Cambiar bisagras -$700",
         "dinero": -700,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Ignorar (-3 salud)",
         "dinero": 0,
         "salud": -3,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 84,
@@ -1999,21 +2331,25 @@
         "texto": "Reclamar (-4 salud)",
         "dinero": 0,
         "salud": -4,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Pagar -$600",
         "dinero": -600,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Cambiar plan -$300 (-1 salud)",
         "dinero": -300,
         "salud": -1,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 85,
@@ -2023,21 +2359,25 @@
         "texto": "Subir escaleras (-6 salud)",
         "dinero": 0,
         "salud": -6,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -4
       },
       {
         "texto": "Pagar mudanza emocional -$0 (-2 salud)",
         "dinero": 0,
         "salud": -2,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
       },
       {
         "texto": "Cooperar reparación -$800",
         "dinero": -800,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       }
-    ]
+    ],
+    "severidad": "leve"
   },
   {
     "id": 86,
@@ -2047,19 +2387,387 @@
         "texto": "Pedir comida -$500",
         "dinero": -500,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Reparar horno -$1,100",
         "dinero": -1100,
         "salud": 0,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": 1
       },
       {
         "texto": "Cenar cereal (-2 salud)",
         "dinero": 0,
         "salud": -2,
-        "deuda": 0
+        "deuda": 0,
+        "bienestar": -1
+      }
+    ],
+    "severidad": "leve"
+  },
+  {
+    "id": 87,
+    "severidad": "fuerte",
+    "texto": "Te hospitalizaron unos dias. El hospital cobra mas rapido que tu compania.",
+    "opciones": [
+      {
+        "texto": "Hospital privado -$15,000 (+25 salud)",
+        "dinero": -15000,
+        "salud": 25,
+        "deuda": 0,
+        "bienestar": 4
+      },
+      {
+        "texto": "Hospital publico -$3,500 (+12 salud)",
+        "dinero": -3500,
+        "salud": 12,
+        "deuda": 0,
+        "bienestar": 1
+      },
+      {
+        "texto": "Auto-medicarte (-25 salud)",
+        "dinero": 0,
+        "salud": -25,
+        "deuda": 0,
+        "bienestar": -10
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "severidad": "fuerte",
+    "texto": "Tu auto necesita reparacion mayor. El motor pidio renuncia formal.",
+    "opciones": [
+      {
+        "texto": "Reparacion completa -$18,000",
+        "dinero": -18000,
+        "salud": 0,
+        "deuda": 0,
+        "bienestar": -2
+      },
+      {
+        "texto": "Arreglo a medias -$6,000 (-5 salud)",
+        "dinero": -6000,
+        "salud": -5,
+        "deuda": 0,
+        "bienestar": -4
+      },
+      {
+        "texto": "Vender chatarra +$3,000 (-3 salud)",
+        "dinero": 3000,
+        "salud": -3,
+        "deuda": 0,
+        "bienestar": -5
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "severidad": "fuerte",
+    "texto": "Tu laptop de trabajo se quemo. Entrega manana sin Plan B.",
+    "opciones": [
+      {
+        "texto": "Comprar nueva ya -$22,000",
+        "dinero": -22000,
+        "salud": 0,
+        "deuda": 0,
+        "bienestar": -2
+      },
+      {
+        "texto": "Rentar mientras -$3,000 (-4 salud)",
+        "dinero": -3000,
+        "salud": -4,
+        "deuda": 0,
+        "bienestar": -3
+      },
+      {
+        "texto": "Pedir prestada +$8,000 deuda",
+        "dinero": 0,
+        "salud": -2,
+        "deuda": 8000,
+        "bienestar": -6
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "severidad": "fuerte",
+    "texto": "Detectaron fraude en tu cuenta. Cargos en una ciudad que ni conoces.",
+    "opciones": [
+      {
+        "texto": "Bloquear y disputar -$1,500 (+2 salud)",
+        "dinero": -1500,
+        "salud": 2,
+        "deuda": 0,
+        "bienestar": 3
+      },
+      {
+        "texto": "Pagar y olvidar -$9,500",
+        "dinero": -9500,
+        "salud": -4,
+        "deuda": 0,
+        "bienestar": -6
+      },
+      {
+        "texto": "Ignorar +$12,000 deuda",
+        "dinero": 0,
+        "salud": -8,
+        "deuda": 12000,
+        "bienestar": -10
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "severidad": "fuerte",
+    "texto": "Una deuda olvidada llego a juicio. El cobrador trae fecha y abogado.",
+    "opciones": [
+      {
+        "texto": "Pagar acuerdo -$12,000",
+        "dinero": -12000,
+        "salud": -2,
+        "deuda": -5000,
+        "bienestar": 0
+      },
+      {
+        "texto": "Convenio mensual +$15,000 deuda",
+        "dinero": 0,
+        "salud": -3,
+        "deuda": 15000,
+        "bienestar": -5
+      },
+      {
+        "texto": "Pelear en corte -$4,000 (-8 salud)",
+        "dinero": -4000,
+        "salud": -8,
+        "deuda": 0,
+        "bienestar": -7
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "severidad": "fuerte",
+    "texto": "Te mudan del depto con poca aviso. El casero tambien quiere depositos viejos.",
+    "opciones": [
+      {
+        "texto": "Mudanza decente -$14,000",
+        "dinero": -14000,
+        "salud": -2,
+        "deuda": 0,
+        "bienestar": -3
+      },
+      {
+        "texto": "Mudanza express -$6,000 (-8 salud)",
+        "dinero": -6000,
+        "salud": -8,
+        "deuda": 0,
+        "bienestar": -6
+      },
+      {
+        "texto": "Pedir prestado +$10,000 deuda",
+        "dinero": 0,
+        "salud": -4,
+        "deuda": 10000,
+        "bienestar": -7
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "severidad": "fuerte",
+    "texto": "Familiar cercano necesita apoyo urgente. La cartera no estaba lista.",
+    "opciones": [
+      {
+        "texto": "Apoyar fuerte -$10,000 (+5 salud)",
+        "dinero": -10000,
+        "salud": 5,
+        "deuda": 0,
+        "bienestar": 5
+      },
+      {
+        "texto": "Apoyar poquito -$2,500 (-3 salud)",
+        "dinero": -2500,
+        "salud": -3,
+        "deuda": 0,
+        "bienestar": -2
+      },
+      {
+        "texto": "No poder ayudar (-10 salud)",
+        "dinero": 0,
+        "salud": -10,
+        "deuda": 0,
+        "bienestar": -9
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "severidad": "fuerte",
+    "texto": "Fuga de agua grave en tu casa. Charcos con personalidad.",
+    "opciones": [
+      {
+        "texto": "Plomero serio + danos -$8,500",
+        "dinero": -8500,
+        "salud": 0,
+        "deuda": 0,
+        "bienestar": -2
+      },
+      {
+        "texto": "Arreglar a medias -$2,000 (-10 salud)",
+        "dinero": -2000,
+        "salud": -10,
+        "deuda": 0,
+        "bienestar": -6
+      },
+      {
+        "texto": "Credito reparacion +$10,000 deuda",
+        "dinero": 0,
+        "salud": -3,
+        "deuda": 10000,
+        "bienestar": -5
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "severidad": "fuerte",
+    "texto": "Te despidieron temporalmente. Indemnizacion magra, recibos puntuales.",
+    "opciones": [
+      {
+        "texto": "Ahorros + plan -$6,000 (-3 salud)",
+        "dinero": -6000,
+        "salud": -3,
+        "deuda": 0,
+        "bienestar": -3
+      },
+      {
+        "texto": "Aceptar deuda +$12,000",
+        "dinero": 0,
+        "salud": -5,
+        "deuda": 12000,
+        "bienestar": -7
+      },
+      {
+        "texto": "Buscar freelance ya -$1,000 (-8 salud)",
+        "dinero": -1000,
+        "salud": -8,
+        "deuda": 0,
+        "bienestar": -5
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "severidad": "fuerte",
+    "texto": "Accidente domestico: tropiezo con la mesa, mano rota, factura entera.",
+    "opciones": [
+      {
+        "texto": "Hospital + yeso -$7,500 (+15 salud)",
+        "dinero": -7500,
+        "salud": 15,
+        "deuda": 0,
+        "bienestar": 2
+      },
+      {
+        "texto": "Clinica barata -$2,000 (+3 salud)",
+        "dinero": -2000,
+        "salud": 3,
+        "deuda": 0,
+        "bienestar": -1
+      },
+      {
+        "texto": "Aguantar (-25 salud)",
+        "dinero": 0,
+        "salud": -25,
+        "deuda": 0,
+        "bienestar": -10
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "severidad": "fuerte",
+    "texto": "Tu mascota necesita cirugia. El veterinario habla bonito y caro.",
+    "opciones": [
+      {
+        "texto": "Cirugia completa -$11,000 (+5 salud)",
+        "dinero": -11000,
+        "salud": 5,
+        "deuda": 0,
+        "bienestar": 5
+      },
+      {
+        "texto": "Tratamiento basico -$3,000 (-3 salud)",
+        "dinero": -3000,
+        "salud": -3,
+        "deuda": 0,
+        "bienestar": -4
+      },
+      {
+        "texto": "No hacer nada (-15 salud)",
+        "dinero": 0,
+        "salud": -15,
+        "deuda": 0,
+        "bienestar": -10
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "severidad": "fuerte",
+    "texto": "Te robaron herramientas de trabajo. El emprendedor lloro en silencio.",
+    "opciones": [
+      {
+        "texto": "Reponer todo -$14,000",
+        "dinero": -14000,
+        "salud": 0,
+        "deuda": 0,
+        "bienestar": -2
+      },
+      {
+        "texto": "Reponer minimo -$4,000 (-5 salud)",
+        "dinero": -4000,
+        "salud": -5,
+        "deuda": 0,
+        "bienestar": -5
+      },
+      {
+        "texto": "Credito urgente +$12,000 deuda",
+        "dinero": 0,
+        "salud": -3,
+        "deuda": 12000,
+        "bienestar": -7
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "severidad": "fuerte",
+    "texto": "Problema legal menor pero caro: una notificacion con sello, abogado obligatorio.",
+    "opciones": [
+      {
+        "texto": "Abogado serio -$9,000 (+2 salud)",
+        "dinero": -9000,
+        "salud": 2,
+        "deuda": 0,
+        "bienestar": 1
+      },
+      {
+        "texto": "Abogado amigo -$3,000 (-4 salud)",
+        "dinero": -3000,
+        "salud": -4,
+        "deuda": 0,
+        "bienestar": -4
+      },
+      {
+        "texto": "Ignorar +$8,000 deuda",
+        "dinero": 0,
+        "salud": -6,
+        "deuda": 8000,
+        "bienestar": -8
       }
     ]
   }
