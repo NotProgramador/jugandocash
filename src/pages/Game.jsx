@@ -53,10 +53,12 @@ function pickWeighted(items) {
 }
 
 const EVENTO_PRINCIPAL_WEIGHTS = {
+  // Ajustado: critico baja tragedia 55->50 y sube oportunidad 20->28 para dar
+  // mas salidas al jugador atrapado en espiral negativa.
   critico: [
-    { value: "tragedia", weight: 55 },
-    { value: "fake", weight: 25 },
-    { value: "oportunidad", weight: 20 },
+    { value: "tragedia", weight: 50 },
+    { value: "fake", weight: 22 },
+    { value: "oportunidad", weight: 28 },
   ],
   bajo: [
     { value: "tragedia", weight: 40 },
@@ -167,7 +169,15 @@ function eventoToCarta(type, tier) {
   return wrap("normal", normCard(rand(normalCards)));
 }
 
-function generarSecuenciaMes(bienestar) {
+// Anti-espiral: si el mes anterior tuvo >=2 tragedias, el principal de este mes
+// no debe ser tragedia. Si saliera tragedia, se convierte a oportunidad (60%) o normal (40%).
+function aplicarAntiEspiral(principal, mesPrev) {
+  if (principal !== "tragedia") return principal;
+  if (!mesPrev || (mesPrev.tragedias || 0) < 2) return principal;
+  return Math.random() < 0.6 ? "oportunidad" : "normal";
+}
+
+function generarSecuenciaMes(bienestar, mesPrev = {}) {
   const tier = getBienestarTier(bienestar);
 
   // 2 o 3 cartas normales (50/50)
@@ -177,7 +187,8 @@ function generarSecuenciaMes(bienestar) {
   );
 
   // Eventos: 1 principal + 1 flexible + (0 o 1 extra)
-  const principal = pickWeighted(EVENTO_PRINCIPAL_WEIGHTS[tier]);
+  let principal = pickWeighted(EVENTO_PRINCIPAL_WEIGHTS[tier]);
+  principal = aplicarAntiEspiral(principal, mesPrev);
   const flex = pickWeighted(EVENTO_FLEX_WEIGHTS[tier]);
   const extra =
     Math.random() < 0.45 ? pickWeighted(EVENTO_FLEX_WEIGHTS[tier]) : null;
@@ -205,7 +216,10 @@ function generarSecuenciaMes(bienestar) {
   );
 
   const payday = wrap("payday", rand(paydayCards));
-  return [...todas, payday];
+  return {
+    deck: [...todas, payday],
+    tragediasMes: tragediaCount,
+  };
 }
 
 export default function Game() {
@@ -268,6 +282,8 @@ export default function Game() {
 
   const saludThresholdRef = useRef(60);
   const saludCooldownRef = useRef(false);
+  // Anti-espiral: cuantas tragedias hubo en el mes anterior
+  const tragediasMesPrevRef = useRef(0);
 
   const CARD_SALUD_60 = {
     __kind: "salud",
@@ -418,7 +434,12 @@ export default function Game() {
     const state = useGameStore.getState();
     const resultsNow = state.invResults || [];
     const bienestarActual = Number(state.bienestar || 0);
-    const base = generarSecuenciaMes(bienestarActual);
+    const mesPrev = { tragedias: tragediasMesPrevRef.current || 0 };
+    const { deck: base, tragediasMes } = generarSecuenciaMes(
+      bienestarActual,
+      mesPrev
+    );
+    tragediasMesPrevRef.current = tragediasMes;
     const deckBase = resultsNow.length
       ? [wrap("portfolio", { texto: "Revisión de portafolio" }), ...base]
       : base;
@@ -629,6 +650,7 @@ export default function Game() {
     setEndReason("");
     saludThresholdRef.current = 60;
     saludCooldownRef.current = false;
+    tragediasMesPrevRef.current = 0;
   };
 
   // --- Character selection ---
@@ -647,7 +669,8 @@ export default function Game() {
             onClick={() => {
               saludThresholdRef.current = 60;
               saludCooldownRef.current = false;
-          
+              tragediasMesPrevRef.current = 0;
+
               setValoresIniciales(personaje);
               setConfirmado(true);
               setMes(1);
@@ -678,7 +701,8 @@ export default function Game() {
                 const tercero = rand(personajes);
                 saludThresholdRef.current = 60;
                 saludCooldownRef.current = false;
-            
+                tragediasMesPrevRef.current = 0;
+
                 setValoresIniciales(tercero);
                 setConfirmado(true);
                 setMes(1);
