@@ -339,10 +339,13 @@ export const useGameStore = create(
           return acc + Math.max(0, c + d);
         }, 0);
 
-        const totalNeto = invResults.reduce(
-          (acc, r) => acc + Number(r?.delta || 0),
-          0
-        );
+        // Cap a -costo: no puedes perder mas que el capital invertido
+        // (retorno = max(0, costo+delta), por lo que neto real = max(delta, -costo)).
+        const totalNeto = invResults.reduce((acc, r) => {
+          const delta = Number(r?.delta || 0);
+          const costo = Number(r?.costo || 0);
+          return acc + Math.max(delta, -costo);
+        }, 0);
 
         set((s) => ({
           dinero: s.dinero + totalRetorno,

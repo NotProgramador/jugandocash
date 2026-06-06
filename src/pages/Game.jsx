@@ -543,6 +543,21 @@ export default function Game() {
     avanzarCarta();
   };
 
+  const handleNormalSiguiente = () => {
+    if (overlay) return;
+    const card = tarjetas[indice];
+    if (card) {
+      if (typeof card.dinero === "number") actualizarDinero(card.dinero);
+      if (typeof card.salud === "number") actualizarSalud(card.salud);
+      if (typeof card.bienestar === "number") actualizarBienestar(card.bienestar);
+      if (typeof card.deuda === "number") actualizarDeuda(card.deuda);
+    }
+    if (checkGameOver()) return;
+    if (checkBancarrota()) return;
+    maybeQueueHealthCard();
+    avanzarCarta();
+  };
+
   const agendarAhorroConservador = (monto) => {
     const m = Number(monto || 0);
     if (m <= 0) return;
@@ -774,6 +789,7 @@ export default function Game() {
       <CardTragedia
         texto={cartaActual.texto}
         opciones={cartaActual.opciones}
+        severidad={cartaActual.severidad}
         onOpcion={handleOpcion}
       />
     );
@@ -787,7 +803,14 @@ export default function Game() {
     );
   } else {
     cartaComponent = (
-      <CardNormal texto={cartaActual.texto} onSiguiente={avanzarCarta} />
+      <CardNormal
+        texto={cartaActual.texto}
+        dinero={cartaActual.dinero}
+        salud={cartaActual.salud}
+        bienestar={cartaActual.bienestar}
+        deuda={cartaActual.deuda}
+        onSiguiente={handleNormalSiguiente}
+      />
     );
   }
 

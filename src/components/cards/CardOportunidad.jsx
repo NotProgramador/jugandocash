@@ -1,5 +1,7 @@
 import { useMemo } from "react";
 import { useGameStore } from "../../store/gameStore";
+import CardShell from "./CardShell";
+import OptionButton from "./OptionButton";
 
 function delayLabel(inv) {
   const min = Number(inv?.delayMin ?? inv?.mesesMin ?? 0);
@@ -15,7 +17,6 @@ function delayLabel(inv) {
 
   const single = Number(inv?.delay ?? inv?.meses ?? 0);
   if (single > 0) return `Se resuelve en ${single} mes${single > 1 ? "es" : ""}`;
-
   return "Se resuelve en 1-2 meses";
 }
 
@@ -28,10 +29,8 @@ function pickDelay(inv) {
     const b = Math.max(min, max) || a;
     return a + Math.floor(Math.random() * (b - a + 1));
   }
-
   const single = Number(inv?.delay ?? inv?.meses ?? 0);
   if (single > 0) return single;
-
   return 1 + Math.floor(Math.random() * 2);
 }
 
@@ -58,23 +57,21 @@ export default function CardOportunidad({
       return;
     }
 
-    // Handle nested inversion object (from JSON data)
     if (op?.inversion) {
       const inv = op.inversion;
       const delay = pickDelay(inv);
       const resolveAt = Number(mesActual) + delay;
-
       agendarInversion({
         nombre: inv.nombre || "Inversión",
         costo: Number(inv.costo || 0),
         resolveAt,
         outcomes: inv.outcomes || inv.resultados || [{ delta: 0, p: 1 }],
       });
+      if (typeof op?.bienestar === "number") actualizarBienestar(op.bienestar);
       onOpcion?.(op);
       return;
     }
 
-    // Handle flat investment action
     const accion = op?.accion || op?.type || op?.tipo;
     if (
       accion === "invertir" ||
@@ -86,26 +83,26 @@ export default function CardOportunidad({
       const delay = pickDelay(op);
       const resolveAt = Number(mesActual) + delay;
       const outcomes = op?.outcomes || op?.resultados || [{ delta: 0, p: 1 }];
-
       agendarInversion({ nombre, costo, resolveAt, outcomes });
+      if (typeof op?.bienestar === "number") actualizarBienestar(op.bienestar);
       onOpcion?.(op);
       return;
     }
 
-    // Handle direct money/debt/health/bienestar changes
     if (typeof op?.dinero === "number") actualizarDinero(op.dinero);
     if (typeof op?.deuda === "number") actualizarDeuda(op.deuda);
     if (typeof op?.salud === "number") actualizarSalud(op.salud);
     if (typeof op?.bienestar === "number") actualizarBienestar(op.bienestar);
-
     onOpcion?.(op);
   };
 
   return (
-    <div className="max-w-lg mx-auto bg-white p-6 rounded-xl shadow text-center">
-      <p className="mb-6 text-lg font-semibold">{texto}</p>
+    <CardShell variant="neutral" header="Oportunidad">
+      <p className="text-base sm:text-lg text-gray-800 leading-relaxed mb-4">
+        {texto}
+      </p>
 
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-2.5">
         {opcionesNorm.map((op, idx) => {
           const isObj = typeof op === "object" && op !== null;
           const label = typeof op === "string" ? op : op?.texto ?? "Opción";
@@ -116,30 +113,37 @@ export default function CardOportunidad({
             accion === "inversion" ||
             accion === "invertirNegocio";
 
+          let hint = null;
+          if (hasInv) hint = delayLabel(op.inversion);
+          else if (isInvAction) hint = delayLabel(op);
+
+          // Para inversiones no mostramos pills (outcomes son sorpresa); solo costo en hint adicional
+          let pills = null;
+          if (isObj && !hasInv && !isInvAction) {
+            pills = {
+              dinero: op?.dinero,
+              salud: op?.salud,
+              bienestar: op?.bienestar,
+              deuda: op?.deuda,
+            };
+          } else if (hasInv && typeof op.inversion.costo === "number") {
+            // Para inversion solo mostrar el costo como pill negativa de dinero
+            pills = { dinero: -Math.abs(op.inversion.costo) };
+          }
+
           return (
-            <button
+            <OptionButton
               key={idx}
-              className="bg-blue-600 text-white rounded-lg p-3 hover:bg-blue-700 transition text-left"
+              tone="neutral"
+              title={label}
+              description={op?.descripcion}
+              hint={hint}
+              pills={pills}
               onClick={() => handleClick(op)}
-            >
-              <div className="font-semibold">{label}</div>
-              {op?.descripcion && (
-                <div className="text-xs opacity-80 mt-1">{op.descripcion}</div>
-              )}
-              {hasInv && (
-                <div className="text-xs opacity-70 mt-1">
-                  {delayLabel(op.inversion)}
-                </div>
-              )}
-              {isInvAction && !hasInv && (
-                <div className="text-xs opacity-70 mt-1">
-                  {delayLabel(op)}
-                </div>
-              )}
-            </button>
+            />
           );
         })}
       </div>
-    </div>
+    </CardShell>
   );
 }

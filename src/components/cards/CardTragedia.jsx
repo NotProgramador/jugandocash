@@ -1,6 +1,14 @@
 import { useGameStore } from "../../store/gameStore";
+import CardShell from "./CardShell";
+import OptionButton from "./OptionButton";
 
-export default function CardTragedia({ texto, opciones = [], onOpcion }) {
+const SEV_LABEL = {
+  leve: "Leve",
+  media: "Media",
+  fuerte: "Fuerte",
+};
+
+export default function CardTragedia({ texto, opciones = [], severidad, onOpcion }) {
   const actualizarDinero = useGameStore((s) => s.actualizarDinero);
   const actualizarDeuda = useGameStore((s) => s.actualizarDeuda);
   const actualizarSalud = useGameStore((s) => s.actualizarSalud);
@@ -12,36 +20,48 @@ export default function CardTragedia({ texto, opciones = [], onOpcion }) {
       if (typeof op.deuda === "number") actualizarDeuda(op.deuda);
       if (typeof op.salud === "number") actualizarSalud(op.salud);
       if (typeof op.bienestar === "number") actualizarBienestar(op.bienestar);
-      // Tragedia sin campo bienestar: pequeño golpe emocional implícito
-      if (typeof op.bienestar !== "number") {
-        actualizarBienestar(-2);
-      }
+      if (typeof op.bienestar !== "number") actualizarBienestar(-2);
     }
-    // Si la opción es string y menciona dinero negativo
     if (typeof op === "string" && op.match(/-\$([\d,]+)/)) {
       const monto = -parseInt(op.match(/-\$([\d,]+)/)[1].replace(/,/g, ""), 10);
       actualizarDinero(monto);
       actualizarBienestar(-2);
     }
-    // TODO: si dinero gastado > dinero disponible, evaluar convertir faltante en deuda
-    // (hoy se descuenta hasta 0 y el resto se evapora; tragedia no genera deuda automática).
     onOpcion(op);
   };
 
+  const badge = severidad ? SEV_LABEL[severidad] : null;
+
   return (
-    <div className="bg-red-100 rounded-xl shadow-md p-6 text-center max-w-lg mx-auto my-8">
-      <p className="text-lg font-semibold mb-4">{texto}</p>
-      <div className="flex flex-col gap-2">
-        {opciones.map((op, idx) => (
-          <button
-            key={idx}
-            className="bg-red-500 hover:bg-red-700 text-white px-4 py-2 rounded"
-            onClick={() => handleClick(op)}
-          >
-            {typeof op === "string" ? op : op.texto}
-          </button>
-        ))}
+    <CardShell variant="danger" header="Imprevisto" badge={badge}>
+      <p className="text-base sm:text-lg text-rose-950 leading-relaxed mb-4">
+        {texto}
+      </p>
+
+      <div className="flex flex-col gap-2.5">
+        {opciones.map((op, idx) => {
+          const isObj = typeof op === "object" && op !== null;
+          const label = typeof op === "string" ? op : op?.texto;
+          const pills = isObj
+            ? {
+                dinero: op?.dinero,
+                salud: op?.salud,
+                bienestar: op?.bienestar,
+                deuda: op?.deuda,
+              }
+            : null;
+          return (
+            <OptionButton
+              key={idx}
+              tone="danger"
+              title={label}
+              description={isObj ? op?.descripcion : null}
+              pills={pills}
+              onClick={() => handleClick(op)}
+            />
+          );
+        })}
       </div>
-    </div>
+    </CardShell>
   );
 }

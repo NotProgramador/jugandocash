@@ -29,7 +29,8 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": -3
       },
       {
         "texto": "Invertir poco -$2,500",
@@ -57,11 +58,13 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": 1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -95,7 +98,8 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": -4
       },
       {
         "texto": "Invertir poco -$4,500",
@@ -123,11 +127,13 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": 0
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": 3
       }
     ]
   },
@@ -161,7 +167,8 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": -3
       },
       {
         "texto": "Invertir poco -$3,000",
@@ -189,11 +196,13 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": 0
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": 3
       }
     ]
   },
@@ -227,7 +236,8 @@
               "p": 0.1
             }
           ]
-        }
+        },
+        "bienestar": -5
       },
       {
         "texto": "Invertir poco -$6,500",
@@ -255,11 +265,13 @@
               "p": 0.1
             }
           ]
-        }
+        },
+        "bienestar": -1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -293,7 +305,8 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": -4
       },
       {
         "texto": "Invertir poco -$4,000",
@@ -321,11 +334,13 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": 0
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -359,7 +374,8 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": -2
       },
       {
         "texto": "Invertir poco -$1,800",
@@ -387,11 +403,13 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": 1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -425,7 +443,8 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": -4
       },
       {
         "texto": "Invertir poco -$3,500",
@@ -453,11 +472,13 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": 0
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -491,7 +512,8 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": -3
       },
       {
         "texto": "Invertir poco -$2,000",
@@ -519,11 +541,13 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": 1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -557,7 +581,8 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": -3
       },
       {
         "texto": "Invertir poco -$3,200",
@@ -585,11 +610,13 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": 0
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": 3
       }
     ]
   },
@@ -623,7 +650,8 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": -5
       },
       {
         "texto": "Invertir poco -$7,000",
@@ -651,11 +679,13 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": -1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": 3
       }
     ]
   },
@@ -689,7 +719,8 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": -4
       },
       {
         "texto": "Invertir poco -$5,000",
@@ -717,11 +748,13 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": 0
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -755,7 +788,8 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": -3
       },
       {
         "texto": "Invertir poco -$2,500",
@@ -783,11 +817,13 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": 1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -821,7 +857,8 @@
               "p": 0.1
             }
           ]
-        }
+        },
+        "bienestar": -5
       },
       {
         "texto": "Invertir poco -$8,000",
@@ -849,11 +886,13 @@
               "p": 0.1
             }
           ]
-        }
+        },
+        "bienestar": -1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -887,7 +926,8 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": -3
       },
       {
         "texto": "Invertir poco -$2,200",
@@ -915,11 +955,13 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": 1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": 3
       }
     ]
   },
@@ -953,7 +995,8 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": -5
       },
       {
         "texto": "Invertir poco -$6,000",
@@ -981,11 +1024,13 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": -1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": 3
       }
     ]
   },
@@ -1019,7 +1064,8 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": -3
       },
       {
         "texto": "Invertir poco -$2,000",
@@ -1047,11 +1093,13 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": 1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -1085,7 +1133,8 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": -5
       },
       {
         "texto": "Invertir poco -$7,000",
@@ -1113,11 +1162,13 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": -1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -1151,7 +1202,8 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": -3
       },
       {
         "texto": "Invertir poco -$3,000",
@@ -1179,11 +1231,13 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": 0
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -1217,7 +1271,8 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": -4
       },
       {
         "texto": "Invertir poco -$4,500",
@@ -1245,11 +1300,13 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": 0
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": 3
       }
     ]
   },
@@ -1283,7 +1340,8 @@
               "p": 0.1
             }
           ]
-        }
+        },
+        "bienestar": -2
       },
       {
         "texto": "Invertir poco -$1,800",
@@ -1311,11 +1369,13 @@
               "p": 0.1
             }
           ]
-        }
+        },
+        "bienestar": 1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -1349,7 +1409,8 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": -5
       },
       {
         "texto": "Invertir poco -$8,500",
@@ -1377,11 +1438,13 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": -1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": 3
       }
     ]
   },
@@ -1415,7 +1478,8 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": -3
       },
       {
         "texto": "Invertir poco -$2,500",
@@ -1443,11 +1507,13 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": 1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": 3
       }
     ]
   },
@@ -1481,7 +1547,8 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": -4
       },
       {
         "texto": "Invertir poco -$3,500",
@@ -1509,11 +1576,13 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": 0
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -1547,7 +1616,8 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": -4
       },
       {
         "texto": "Invertir poco -$4,000",
@@ -1575,11 +1645,13 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": 0
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": 3
       }
     ]
   },
@@ -1613,7 +1685,8 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": -3
       },
       {
         "texto": "Invertir poco -$2,200",
@@ -1641,11 +1714,13 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": 1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -1679,7 +1754,8 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": -4
       },
       {
         "texto": "Invertir poco -$5,000",
@@ -1707,11 +1783,13 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": 0
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -1745,7 +1823,8 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": -5
       },
       {
         "texto": "Invertir poco -$6,500",
@@ -1773,11 +1852,13 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": -1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": 3
       }
     ]
   },
@@ -1811,7 +1892,8 @@
               "p": 0.1
             }
           ]
-        }
+        },
+        "bienestar": -3
       },
       {
         "texto": "Invertir poco -$3,000",
@@ -1839,11 +1921,13 @@
               "p": 0.1
             }
           ]
-        }
+        },
+        "bienestar": 0
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -1877,7 +1961,8 @@
               "p": 0.1
             }
           ]
-        }
+        },
+        "bienestar": -2
       },
       {
         "texto": "Invertir poco -$1,500",
@@ -1905,11 +1990,13 @@
               "p": 0.1
             }
           ]
-        }
+        },
+        "bienestar": 1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -1943,7 +2030,8 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": -4
       },
       {
         "texto": "Invertir poco -$4,000",
@@ -1971,11 +2059,13 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": 0
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -2009,7 +2099,8 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": -4
       },
       {
         "texto": "Invertir poco -$4,800",
@@ -2037,11 +2128,13 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": 0
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -2075,7 +2168,8 @@
               "p": 0.1
             }
           ]
-        }
+        },
+        "bienestar": -3
       },
       {
         "texto": "Invertir poco -$2,000",
@@ -2103,11 +2197,13 @@
               "p": 0.1
             }
           ]
-        }
+        },
+        "bienestar": 1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -2141,7 +2237,8 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": -2
       },
       {
         "texto": "Invertir poco -$1,800",
@@ -2169,11 +2266,13 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": 1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": 3
       }
     ]
   },
@@ -2207,7 +2306,8 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": -3
       },
       {
         "texto": "Invertir poco -$3,000",
@@ -2235,11 +2335,13 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": 0
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": 3
       }
     ]
   },
@@ -2273,7 +2375,8 @@
               "p": 0.1
             }
           ]
-        }
+        },
+        "bienestar": -4
       },
       {
         "texto": "Invertir poco -$5,500",
@@ -2301,11 +2404,13 @@
               "p": 0.1
             }
           ]
-        }
+        },
+        "bienestar": 0
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -2339,7 +2444,8 @@
               "p": 0.1
             }
           ]
-        }
+        },
+        "bienestar": -4
       },
       {
         "texto": "Invertir poco -$3,500",
@@ -2367,11 +2473,13 @@
               "p": 0.1
             }
           ]
-        }
+        },
+        "bienestar": 0
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -2405,7 +2513,8 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": -3
       },
       {
         "texto": "Invertir poco -$2,200",
@@ -2433,11 +2542,13 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": 1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -2471,7 +2582,8 @@
               "p": 0.1
             }
           ]
-        }
+        },
+        "bienestar": -4
       },
       {
         "texto": "Invertir poco -$4,000",
@@ -2499,11 +2611,13 @@
               "p": 0.1
             }
           ]
-        }
+        },
+        "bienestar": 0
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -2537,7 +2651,8 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": -5
       },
       {
         "texto": "Invertir poco -$6,000",
@@ -2565,11 +2680,13 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": -1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": 3
       }
     ]
   },
@@ -2603,7 +2720,8 @@
               "p": 0.45
             }
           ]
-        }
+        },
+        "bienestar": -3
       },
       {
         "texto": "Invertir poco -$2,500",
@@ -2631,11 +2749,13 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": 1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": 3
       }
     ]
   },
@@ -2669,7 +2789,8 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": -4
       },
       {
         "texto": "Invertir poco -$4,500",
@@ -2697,11 +2818,13 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": 0
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -2735,7 +2858,8 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": -3
       },
       {
         "texto": "Invertir poco -$2,500",
@@ -2763,11 +2887,13 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": 1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -2801,7 +2927,8 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": -3
       },
       {
         "texto": "Invertir poco -$3,500",
@@ -2829,11 +2956,13 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": 0
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": 3
       }
     ]
   },
@@ -2867,7 +2996,8 @@
               "p": 0.1
             }
           ]
-        }
+        },
+        "bienestar": -5
       },
       {
         "texto": "Invertir poco -$6,000",
@@ -2895,11 +3025,13 @@
               "p": 0.1
             }
           ]
-        }
+        },
+        "bienestar": -1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -2933,7 +3065,8 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": -2
       },
       {
         "texto": "Invertir poco -$2,000",
@@ -2961,11 +3094,13 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": 1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -2999,7 +3134,8 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": -3
       },
       {
         "texto": "Invertir poco -$2,500",
@@ -3027,11 +3163,13 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": 1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": 3
       }
     ]
   },
@@ -3065,7 +3203,8 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": -4
       },
       {
         "texto": "Invertir poco -$5,000",
@@ -3093,11 +3232,13 @@
               "p": 0.25
             }
           ]
-        }
+        },
+        "bienestar": 0
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -3131,7 +3272,8 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": -3
       },
       {
         "texto": "Invertir poco -$3,000",
@@ -3159,11 +3301,13 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": 0
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": 3
       }
     ]
   },
@@ -3197,7 +3341,8 @@
               "p": 0.1
             }
           ]
-        }
+        },
+        "bienestar": -5
       },
       {
         "texto": "Invertir poco -$7,500",
@@ -3225,11 +3370,13 @@
               "p": 0.1
             }
           ]
-        }
+        },
+        "bienestar": -1
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": -1
       }
     ]
   },
@@ -3263,7 +3410,8 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": -4
       },
       {
         "texto": "Invertir poco -$3,800",
@@ -3291,11 +3439,13 @@
               "p": 0.35
             }
           ]
-        }
+        },
+        "bienestar": 0
       },
       {
         "texto": "Pasar",
-        "descripcion": "Tu paz mental también es un activo."
+        "descripcion": "Tu paz mental también es un activo.",
+        "bienestar": 3
       }
     ]
   },
@@ -3307,18 +3457,21 @@
         "texto": "Aceptar +$2,000 (-4 salud)",
         "descripcion": "Ingresas rápido, duermes lento.",
         "dinero": 2000,
-        "salud": -4
+        "salud": -4,
+        "bienestar": -3
       },
       {
         "texto": "Cobrar tarifa nocturna +$3,200 (-7 salud)",
         "descripcion": "Profesional, pero con ojeras premium.",
         "dinero": 3200,
-        "salud": -7
+        "salud": -7,
+        "bienestar": -5
       },
       {
         "texto": "Pasar (+2 salud)",
         "descripcion": "Tu descanso también factura.",
-        "salud": 2
+        "salud": 2,
+        "bienestar": 3
       }
     ]
   },
@@ -3330,17 +3483,20 @@
         "texto": "Aceptar +$5,000 deuda",
         "descripcion": "Más límite, más tentación.",
         "deuda": 5000,
-        "salud": -1
+        "salud": -1,
+        "bienestar": -4
       },
       {
         "texto": "Rechazar (+2 salud)",
         "descripcion": "El autocontrol hizo flexiones.",
-        "salud": 2
+        "salud": 2,
+        "bienestar": 3
       },
       {
         "texto": "Aceptar y congelar tarjeta +$2,000 deuda",
         "descripcion": "Plan medio responsable, medio novela.",
-        "deuda": 2000
+        "deuda": 2000,
+        "bienestar": -3
       }
     ]
   },
@@ -3351,18 +3507,21 @@
       {
         "texto": "Cobrar completo +$1,500",
         "descripcion": "Milagro documentado.",
-        "dinero": 1500
+        "dinero": 1500,
+        "bienestar": 4
       },
       {
         "texto": "Aceptar pago parcial +$700 (+1 salud)",
         "descripcion": "Algo es algo, dijo la cartera.",
         "dinero": 700,
-        "salud": 1
+        "salud": 1,
+        "bienestar": 3
       },
       {
         "texto": "Perdonar por paz mental (+3 salud)",
         "descripcion": "La paz salió cara, pero paz.",
-        "salud": 3
+        "salud": 3,
+        "bienestar": 3
       }
     ]
   },
@@ -3374,18 +3533,21 @@
         "texto": "Aceptar +$900 (+2 salud)",
         "descripcion": "Dinero y lomito: portafolio diversificado.",
         "dinero": 900,
-        "salud": 2
+        "salud": 2,
+        "bienestar": 3
       },
       {
         "texto": "Aceptar doble turno +$1,600 (-2 salud)",
         "descripcion": "También paseas tus límites.",
         "dinero": 1600,
-        "salud": -2
+        "salud": -2,
+        "bienestar": -2
       },
       {
         "texto": "No aceptar $0",
         "descripcion": "Cero pelos en la ropa.",
-        "dinero": 0
+        "dinero": 0,
+        "bienestar": 0
       }
     ]
   },
@@ -3397,18 +3559,21 @@
         "texto": "Entrarle -$1,000 (+1 salud social)",
         "descripcion": "Puede salir bien, puede salir grupo de WhatsApp eterno.",
         "dinero": -1000,
-        "salud": 1
+        "salud": 1,
+        "bienestar": 2
       },
       {
         "texto": "Entrarle grande -$3,000 (-2 salud)",
         "descripcion": "La emoción y el riesgo van en combo.",
         "dinero": -3000,
-        "salud": -2
+        "salud": -2,
+        "bienestar": -1
       },
       {
         "texto": "No entrar (+2 salud)",
         "descripcion": "Tu quincena se queda en casa.",
-        "salud": 2
+        "salud": 2,
+        "bienestar": 3
       }
     ]
   },
@@ -3419,18 +3584,21 @@
       {
         "texto": "Vender rápido +$900",
         "descripcion": "Barato pero libre de chats raros.",
-        "dinero": 900
+        "dinero": 900,
+        "bienestar": 3
       },
       {
         "texto": "Vender con paciencia +$1,800 (-2 salud)",
         "descripcion": "Regateo nivel telenovela.",
         "dinero": 1800,
-        "salud": -2
+        "salud": -2,
+        "bienestar": -2
       },
       {
         "texto": "Quedártelas $0",
         "descripcion": "El museo del 'por si acaso' sigue abierto.",
-        "dinero": 0
+        "dinero": 0,
+        "bienestar": 0
       }
     ]
   },
@@ -3442,17 +3610,20 @@
         "texto": "Entrarle -$700 (+2 salud)",
         "descripcion": "Ahorro con logística de boda.",
         "dinero": -700,
-        "salud": 2
+        "salud": 2,
+        "bienestar": 2
       },
       {
         "texto": "Comprar de más -$1,500",
         "descripcion": "Ahora tienes arroz para tres finales de temporada.",
-        "dinero": -1500
+        "dinero": -1500,
+        "bienestar": 2
       },
       {
         "texto": "No entrar $0",
         "descripcion": "Tu alacena mantiene su misterio.",
-        "dinero": 0
+        "dinero": 0,
+        "bienestar": 0
       }
     ]
   },
@@ -3463,18 +3634,21 @@
       {
         "texto": "Guardar +$1,200",
         "descripcion": "El dinero regresó con arco dramático.",
-        "dinero": 1200
+        "dinero": 1200,
+        "bienestar": 4
       },
       {
         "texto": "Celebrar -$500 (+2 salud)",
         "descripcion": "Moderadamente irresponsable.",
         "dinero": -500,
-        "salud": 2
+        "salud": 2,
+        "bienestar": 2
       },
       {
         "texto": "Pagar deuda -$0 y deuda -$1,200",
         "descripcion": "Técnicamente no lo viste, pero ayudó.",
-        "deuda": -1200
+        "deuda": -1200,
+        "bienestar": 0
       }
     ]
   },
@@ -3486,18 +3660,21 @@
         "texto": "Aceptar +$500 (-3 salud)",
         "descripcion": "Exposición al estrés.",
         "dinero": 500,
-        "salud": -3
+        "salud": -3,
+        "bienestar": -3
       },
       {
         "texto": "Negociar +$1,500 (+1 salud)",
         "descripcion": "Cobraste como persona con luz que pagar.",
         "dinero": 1500,
-        "salud": 1
+        "salud": 1,
+        "bienestar": 4
       },
       {
         "texto": "Rechazar (+2 salud)",
         "descripcion": "Tu autoestima manda factura.",
-        "salud": 2
+        "salud": 2,
+        "bienestar": 3
       }
     ]
   },
@@ -3509,18 +3686,21 @@
         "texto": "Tomarlo -$800 (+4 salud)",
         "descripcion": "Aprendes y presumes subrayador.",
         "dinero": -800,
-        "salud": 4
+        "salud": 4,
+        "bienestar": 2
       },
       {
         "texto": "Comprar curso premium -$3,500 (+6 salud)",
         "descripcion": "Incluye certificado y sticker mental.",
         "dinero": -3500,
-        "salud": 6
+        "salud": 6,
+        "bienestar": 2
       },
       {
         "texto": "Ver videos gratis (+1 salud)",
         "descripcion": "La universidad de YouTube abre inscripciones.",
-        "salud": 1
+        "salud": 1,
+        "bienestar": 3
       }
     ]
   },
@@ -3532,18 +3712,21 @@
         "texto": "Ayudar +$800 (-3 salud)",
         "descripcion": "Ingresos con dolor de espalda.",
         "dinero": 800,
-        "salud": -3
+        "salud": -3,
+        "bienestar": -3
       },
       {
         "texto": "Ayudar y llevar diablito +$1,200 (-1 salud)",
         "descripcion": "Herramienta correcta, drama reducido.",
         "dinero": 1200,
-        "salud": -1
+        "salud": -1,
+        "bienestar": -2
       },
       {
         "texto": "No ayudar (+1 salud)",
         "descripcion": "Tus lumbares te mandan flores.",
-        "salud": 1
+        "salud": 1,
+        "bienestar": 3
       }
     ]
   },
@@ -3555,17 +3738,20 @@
         "texto": "Arreglar ya -$600 (+3 salud)",
         "descripcion": "Prevención: aburrida pero poderosa.",
         "dinero": -600,
-        "salud": 3
+        "salud": 3,
+        "bienestar": 2
       },
       {
         "texto": "Parche temporal -$150",
         "descripcion": "La cinta canela entra al chat.",
-        "dinero": -150
+        "dinero": -150,
+        "bienestar": 2
       },
       {
         "texto": "Ignorar (-3 salud)",
         "descripcion": "El problema empezó a cobrar renta.",
-        "salud": -3
+        "salud": -3,
+        "bienestar": -1
       }
     ]
   },
@@ -3577,18 +3763,21 @@
         "texto": "Ir tranqui -$450 (+3 salud)",
         "descripcion": "Socializas sin empeñar el futuro.",
         "dinero": -450,
-        "salud": 3
+        "salud": 3,
+        "bienestar": 2
       },
       {
         "texto": "Ir con todo -$1,800 (+4 salud)",
         "descripcion": "La diversión vino con IVA emocional.",
         "dinero": -1800,
-        "salud": 4
+        "salud": 4,
+        "bienestar": 2
       },
       {
         "texto": "Quedarte (+1 salud)",
         "descripcion": "Pijama > cover.",
-        "salud": 1
+        "salud": 1,
+        "bienestar": 3
       }
     ]
   },
@@ -3600,19 +3789,22 @@
         "texto": "Preparar comida -$500 (+4 salud)",
         "descripcion": "Tu tupper se siente importante.",
         "dinero": -500,
-        "salud": 4
+        "salud": 4,
+        "bienestar": 2
       },
       {
         "texto": "Comprar ingredientes fancy -$1,200 (+5 salud)",
         "descripcion": "Meal prep con complejo de restaurante.",
         "dinero": -1200,
-        "salud": 5
+        "salud": 5,
+        "bienestar": 2
       },
       {
         "texto": "Seguir comprando fuera -$1,500 (-2 salud)",
         "descripcion": "El señor de la fonda ya te dice 'joven'.",
         "dinero": -1500,
-        "salud": -2
+        "salud": -2,
+        "bienestar": -1
       }
     ]
   },
@@ -3624,18 +3816,21 @@
         "texto": "Aceptar +$1,400 (-3 salud)",
         "descripcion": "Dinero con ojeras.",
         "dinero": 1400,
-        "salud": -3
+        "salud": -3,
+        "bienestar": -3
       },
       {
         "texto": "Aceptar doble +$2,800 (-7 salud)",
         "descripcion": "Tu cama preguntó por ti.",
         "dinero": 2800,
-        "salud": -7
+        "salud": -7,
+        "bienestar": -5
       },
       {
         "texto": "No aceptar (+2 salud)",
         "descripcion": "Descanso con ROI invisible.",
-        "salud": 2
+        "salud": 2,
+        "bienestar": 3
       }
     ]
   },
@@ -3647,17 +3842,20 @@
         "texto": "Aceptar (+$0, +$8,000 deuda potencial)",
         "descripcion": "Amistad con cláusulas.",
         "deuda": 8000,
-        "salud": -5
+        "salud": -5,
+        "bienestar": -4
       },
       {
         "texto": "Negarte con cariño (+3 salud)",
         "descripcion": "Límites sanos, cartera sana.",
-        "salud": 3
+        "salud": 3,
+        "bienestar": 3
       },
       {
         "texto": "Ofrecer asesoría $0 (+1 salud)",
         "descripcion": "Ayudas sin firmar tu destino.",
-        "salud": 1
+        "salud": 1,
+        "bienestar": 3
       }
     ]
   },
@@ -3670,18 +3868,21 @@
         "descripcion": "Menos intereses, más oxígeno.",
         "dinero": -700,
         "deuda": -3000,
-        "salud": 2
+        "salud": 2,
+        "bienestar": 2
       },
       {
         "texto": "Negociar deuda -$1,500",
         "descripcion": "El teléfono también sirve para pelear por tu futuro.",
         "deuda": -1500,
-        "salud": 1
+        "salud": 1,
+        "bienestar": 3
       },
       {
         "texto": "No moverle $0",
         "descripcion": "Don Interés sonríe desde lejos.",
-        "dinero": 0
+        "dinero": 0,
+        "bienestar": 0
       }
     ]
   },
@@ -3693,18 +3894,21 @@
         "texto": "Poner puesto -$500, gana +$1,400",
         "descripcion": "Terminas cansado pero con cambio.",
         "dinero": 900,
-        "salud": -1
+        "salud": -1,
+        "bienestar": -2
       },
       {
         "texto": "Poner puesto bonito -$1,200, gana +$2,400",
         "descripcion": "La decoración sí vendió.",
         "dinero": 1200,
-        "salud": -2
+        "salud": -2,
+        "bienestar": -2
       },
       {
         "texto": "No ir $0",
         "descripcion": "Tu domingo queda intacto.",
-        "dinero": 0
+        "dinero": 0,
+        "bienestar": 0
       }
     ]
   },
@@ -3716,18 +3920,21 @@
         "texto": "Probar +$400 ahorro (+4 salud)",
         "descripcion": "Piernas felices, cartera también.",
         "dinero": 400,
-        "salud": 4
+        "salud": 4,
+        "bienestar": 2
       },
       {
         "texto": "Comprar accesorios -$900 (+5 salud)",
         "descripcion": "Casco, luces y personalidad urbana.",
         "dinero": -900,
-        "salud": 5
+        "salud": 5,
+        "bienestar": 2
       },
       {
         "texto": "No cambiar $0",
         "descripcion": "El transporte público conserva tu asiento imaginario.",
-        "dinero": 0
+        "dinero": 0,
+        "bienestar": 0
       }
     ]
   },
@@ -3739,17 +3946,20 @@
         "texto": "Comprar +$3,000 deuda (+1 salud)",
         "descripcion": "Tu yo futuro acaba de recibir tarea.",
         "deuda": 3000,
-        "salud": 1
+        "salud": 1,
+        "bienestar": -4
       },
       {
         "texto": "Comprar versión barata -$700",
         "descripcion": "Te salvaste a medias.",
-        "dinero": -700
+        "dinero": -700,
+        "bienestar": 2
       },
       {
         "texto": "Cerrar la página (+2 salud)",
         "descripcion": "Victoria silenciosa contra el algoritmo.",
-        "salud": 2
+        "salud": 2,
+        "bienestar": 3
       }
     ]
   },
@@ -3761,18 +3971,21 @@
         "texto": "Contratar -$900 (+8 salud)",
         "descripcion": "Tranquilidad con recibo.",
         "dinero": -900,
-        "salud": 8
+        "salud": 8,
+        "bienestar": 2
       },
       {
         "texto": "Guardar fondo -$500 (+3 salud)",
         "descripcion": "Tu colchón financiero empieza flaco, pero existe.",
         "dinero": -500,
-        "salud": 3
+        "salud": 3,
+        "bienestar": 2
       },
       {
         "texto": "No hacer nada $0",
         "descripcion": "La suerte firma como responsable.",
-        "dinero": 0
+        "dinero": 0,
+        "bienestar": 0
       }
     ]
   },
@@ -3784,18 +3997,21 @@
         "texto": "Ayudar -$1,200 (+3 salud)",
         "descripcion": "La familia también paga dividendos emocionales.",
         "dinero": -1200,
-        "salud": 3
+        "salud": 3,
+        "bienestar": 2
       },
       {
         "texto": "Ayudar poco -$400 (+1 salud)",
         "descripcion": "Apoyo con cinturón financiero.",
         "dinero": -400,
-        "salud": 1
+        "salud": 1,
+        "bienestar": 2
       },
       {
         "texto": "Decir que no (-1 salud)",
         "descripcion": "Límites sanos con culpa incluida.",
-        "salud": -1
+        "salud": -1,
+        "bienestar": -1
       }
     ]
   },
@@ -3807,18 +4023,21 @@
         "texto": "Cambiar +$300 ahorro (+1 salud)",
         "descripcion": "Menos gigas, más control.",
         "dinero": 300,
-        "salud": 1
+        "salud": 1,
+        "bienestar": 2
       },
       {
         "texto": "Quedarte igual $0",
         "descripcion": "La comodidad cuesta, aunque no hoy.",
-        "dinero": 0
+        "dinero": 0,
+        "bienestar": 0
       },
       {
         "texto": "Cambiar a plan caro -$500 (+1 salud)",
         "descripcion": "Datos infinitos, presupuesto finito.",
         "dinero": -500,
-        "salud": 1
+        "salud": 1,
+        "bienestar": 2
       }
     ]
   },
@@ -3829,18 +4048,21 @@
       {
         "texto": "Tomarla +$0 (+5 salud)",
         "descripcion": "Aprender gratis: especie en peligro.",
-        "salud": 5
+        "salud": 5,
+        "bienestar": 3
       },
       {
         "texto": "Tomarla y certificarte -$600 (+8 salud)",
         "descripcion": "LinkedIn pide foto con diploma.",
         "dinero": -600,
-        "salud": 8
+        "salud": 8,
+        "bienestar": 2
       },
       {
         "texto": "No tomarla $0",
         "descripcion": "Tu zona de confort puso música.",
-        "dinero": 0
+        "dinero": 0,
+        "bienestar": 0
       }
     ]
   },
@@ -3852,18 +4074,21 @@
         "texto": "Aceptar +$2,500 ahorro (-1 salud)",
         "descripcion": "Menos renta, más negociación por el baño.",
         "dinero": 2500,
-        "salud": -1
+        "salud": -1,
+        "bienestar": -2
       },
       {
         "texto": "Aceptar con reglas +$2,000 (+1 salud)",
         "descripcion": "Contrato, turnos y paz.",
         "dinero": 2000,
-        "salud": 1
+        "salud": 1,
+        "bienestar": 5
       },
       {
         "texto": "No aceptar $0",
         "descripcion": "Tu silencio doméstico sigue premium.",
-        "dinero": 0
+        "dinero": 0,
+        "bienestar": 0
       }
     ]
   }

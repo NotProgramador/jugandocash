@@ -1,7 +1,9 @@
 [
   {
     "id": 1,
-    "texto": "Encontraste $200 en un chamarra vieja. También encontraste un chicle fósil."
+    "texto": "Encontraste $200 en un chamarra vieja. También encontraste un chicle fósil.",
+    "dinero": 200,
+    "bienestar": 2
   },
   {
     "id": 2,
@@ -13,15 +15,22 @@
   },
   {
     "id": 4,
-    "texto": "Tu lunch casero sobrevivió intacto porque compraste tacos de todos modos."
+    "texto": "Tu lunch casero sobrevivió intacto porque compraste tacos de todos modos.",
+    "dinero": -250,
+    "salud": -1,
+    "bienestar": 1
   },
   {
     "id": 5,
-    "texto": "Cancelaste una suscripción que no recordabas tener. Tu yo financiero aplaude lento."
+    "texto": "Cancelaste una suscripción que no recordabas tener. Tu yo financiero aplaude lento.",
+    "dinero": 100,
+    "bienestar": 3
   },
   {
     "id": 6,
-    "texto": "Fuiste al súper por pan y saliste con pan, queso, velas y una planta llamada Rogelio."
+    "texto": "Fuiste al súper por pan y saliste con pan, queso, velas y una planta llamada Rogelio.",
+    "dinero": -400,
+    "bienestar": 2
   },
   {
     "id": 7,
@@ -29,15 +38,20 @@
   },
   {
     "id": 8,
-    "texto": "El internet se cayó justo cuando ibas a trabajar. Qué coincidencia tan conveniente."
+    "texto": "El internet se cayó justo cuando ibas a trabajar. Qué coincidencia tan conveniente.",
+    "salud": -1,
+    "bienestar": -2
   },
   {
     "id": 9,
-    "texto": "Lograste no comprar café de la calle. Celebraste comprando un muffin."
+    "texto": "Lograste no comprar café de la calle. Celebraste comprando un muffin.",
+    "dinero": -80,
+    "bienestar": 1
   },
   {
     "id": 10,
-    "texto": "Te llegó una notificación bancaria y sudaste como si fuera final de novela."
+    "texto": "Te llegó una notificación bancaria y sudaste como si fuera final de novela.",
+    "bienestar": -3
   },
   {
     "id": 11,
@@ -45,11 +59,14 @@
   },
   {
     "id": 12,
-    "texto": "Te propusiste hacer ejercicio. Caminaste hasta la cocina con determinación."
+    "texto": "Te propusiste hacer ejercicio. Caminaste hasta la cocina con determinación.",
+    "salud": 1,
+    "bienestar": 1
   },
   {
     "id": 13,
-    "texto": "El perro del vecino te saludó. Tu salud emocional subió, tu productividad bajó."
+    "texto": "El perro del vecino te saludó. Tu salud emocional subió, tu productividad bajó.",
+    "bienestar": 3
   },
   {
     "id": 14,
@@ -57,15 +74,21 @@
   },
   {
     "id": 15,
-    "texto": "Te invitaron a un plan caro y contestaste 'lo reviso'. Traducción: no."
+    "texto": "Te invitaron a un plan caro y contestaste 'lo reviso'. Traducción: no.",
+    "bienestar": 2
   },
   {
     "id": 16,
-    "texto": "Encontraste monedas en el sillón. El sillón exige comisión."
+    "texto": "Encontraste monedas en el sillón. El sillón exige comisión.",
+    "dinero": 30,
+    "bienestar": 1
   },
   {
     "id": 17,
-    "texto": "Hiciste meal prep. Duró 24 horas antes de convertirse en 'mejor pido algo'."
+    "texto": "Hiciste meal prep. Duró 24 horas antes de convertirse en 'mejor pido algo'.",
+    "dinero": -150,
+    "salud": -1,
+    "bienestar": -1
   },
   {
     "id": 18,
@@ -73,15 +96,20 @@
   },
   {
     "id": 19,
-    "texto": "Venciste la tentación de comprar en línea. Luego entraste 'solo a ver'."
+    "texto": "Venciste la tentación de comprar en línea. Luego entraste 'solo a ver'.",
+    "dinero": -250,
+    "bienestar": -1
   },
   {
     "id": 20,
-    "texto": "Te sentiste adulto porque comparaste precios de papel higiénico."
+    "texto": "Te sentiste adulto porque comparaste precios de papel higiénico.",
+    "bienestar": 1
   },
   {
     "id": 21,
-    "texto": "Te llegó un cupón del 10%. Compraste algo que no necesitabas con orgullo."
+    "texto": "Te llegó un cupón del 10%. Compraste algo que no necesitabas con orgullo.",
+    "dinero": -300,
+    "bienestar": 1
   },
   {
     "id": 22,
@@ -89,7 +117,9 @@
   },
   {
     "id": 23,
-    "texto": "Tuviste una reunión que pudo ser correo. Tu café no pudo ser gratis."
+    "texto": "Tuviste una reunión que pudo ser correo. Tu café no pudo ser gratis.",
+    "dinero": -90,
+    "bienestar": -1
   },
   {
     "id": 24,
@@ -97,7 +127,9 @@
   },
   {
     "id": 25,
-    "texto": "Te bañaste con agua fría por error. Despertaste tú y tus ancestros."
+    "texto": "Te bañaste con agua fría por error. Despertaste tú y tus ancestros.",
+    "salud": -1,
+    "bienestar": -1
   },
   {
     "id": 26,
@@ -113,15 +145,21 @@
   },
   {
     "id": 29,
-    "texto": "Tu planta sobrevivió otra semana. Ya administra mejor sus recursos que tú."
+    "texto": "Tu planta sobrevivió otra semana. Ya administra mejor sus recursos que tú.",
+    "salud": 2,
+    "bienestar": 3
   },
   {
     "id": 30,
-    "texto": "Pagaste a tiempo un servicio. La adultez te guiñó el ojo."
+    "texto": "Pagaste a tiempo un servicio. La adultez te guiñó el ojo.",
+    "bienestar": 3
   },
   {
     "id": 31,
-    "texto": "Olvidaste descongelar comida. El universo autorizó quesadillas."
+    "texto": "Olvidaste descongelar comida. El universo autorizó quesadillas.",
+    "dinero": -120,
+    "salud": -1,
+    "bienestar": 1
   },
   {
     "id": 32,
@@ -133,19 +171,25 @@
   },
   {
     "id": 34,
-    "texto": "El mercado subió y tú no tenías nada invertido. Aplausos internos incómodos."
+    "texto": "El mercado subió y tú no tenías nada invertido. Aplausos internos incómodos.",
+    "bienestar": -2
   },
   {
     "id": 35,
-    "texto": "Reutilizaste una bolsa del súper. Te sentiste inversionista ecológico."
+    "texto": "Reutilizaste una bolsa del súper. Te sentiste inversionista ecológico.",
+    "bienestar": 2
   },
   {
     "id": 36,
-    "texto": "Compraste café soluble para ahorrar. Le llamas 'espresso humilde'."
+    "texto": "Compraste café soluble para ahorrar. Le llamas 'espresso humilde'.",
+    "dinero": -50,
+    "bienestar": 1
   },
   {
     "id": 37,
-    "texto": "Tuviste un antojo de sushi y tu cartera fingió no hablar español."
+    "texto": "Tuviste un antojo de sushi y tu cartera fingió no hablar español.",
+    "dinero": -180,
+    "bienestar": -1
   },
   {
     "id": 38,
@@ -157,7 +201,9 @@
   },
   {
     "id": 40,
-    "texto": "Te pusiste a limpiar para evitar revisar tus deudas. Tu casa quedó impecable."
+    "texto": "Te pusiste a limpiar para evitar revisar tus deudas. Tu casa quedó impecable.",
+    "salud": 1,
+    "bienestar": 2
   },
   {
     "id": 41,
@@ -165,35 +211,50 @@
   },
   {
     "id": 42,
-    "texto": "Tuviste suerte: el antojo caro estaba cerrado."
+    "texto": "Tuviste suerte: el antojo caro estaba cerrado.",
+    "dinero": 200,
+    "bienestar": 3
   },
   {
     "id": 43,
-    "texto": "Te pagaron con transferencia y no con 'te lo paso al rato'. Día histórico."
+    "texto": "Te pagaron con transferencia y no con 'te lo paso al rato'. Día histórico.",
+    "dinero": 500,
+    "bienestar": 4
   },
   {
     "id": 44,
-    "texto": "Encontraste una tarjeta de regalo con $37. Riqueza fraccionada."
+    "texto": "Encontraste una tarjeta de regalo con $37. Riqueza fraccionada.",
+    "dinero": 37,
+    "bienestar": 2
   },
   {
     "id": 45,
-    "texto": "El microondas sonó y corriste como si anunciaran dividendos."
+    "texto": "El microondas sonó y corriste como si anunciaran dividendos.",
+    "salud": 1,
+    "bienestar": 2
   },
   {
     "id": 46,
-    "texto": "Te llegó correo de 'última oportunidad'. Lo ignoraste como campeón."
+    "texto": "Te llegó correo de 'última oportunidad'. Lo ignoraste como campeón.",
+    "bienestar": 3
   },
   {
     "id": 47,
-    "texto": "Tu refri tenía comida, pero tu corazón quería comida callejera."
+    "texto": "Tu refri tenía comida, pero tu corazón quería comida callejera.",
+    "dinero": -250,
+    "salud": -1,
+    "bienestar": 1
   },
   {
     "id": 48,
-    "texto": "Lograste decir 'no gracias' a una tanda sospechosa."
+    "texto": "Lograste decir 'no gracias' a una tanda sospechosa.",
+    "bienestar": 4
   },
   {
     "id": 49,
-    "texto": "Tuviste una siesta tan buena que parecía deducible de impuestos."
+    "texto": "Tuviste una siesta tan buena que parecía deducible de impuestos.",
+    "salud": 3,
+    "bienestar": 4
   },
   {
     "id": 50,
@@ -201,11 +262,15 @@
   },
   {
     "id": 51,
-    "texto": "Entraste a una tienda 'solo a cambiar'. Saliste con recibo nuevo."
+    "texto": "Entraste a una tienda 'solo a cambiar'. Saliste con recibo nuevo.",
+    "dinero": -350,
+    "bienestar": -1
   },
   {
     "id": 52,
-    "texto": "Te hiciste un café en casa y lo presumiste como logro financiero."
+    "texto": "Te hiciste un café en casa y lo presumiste como logro financiero.",
+    "dinero": -30,
+    "bienestar": 2
   },
   {
     "id": 53,
@@ -217,7 +282,8 @@
   },
   {
     "id": 55,
-    "texto": "Tu app de gastos clasificó tus compras como 'entretenimiento'. Tú las llamas supervivencia."
+    "texto": "Tu app de gastos clasificó tus compras como 'entretenimiento'. Tú las llamas supervivencia.",
+    "bienestar": -1
   },
   {
     "id": 56,
@@ -229,11 +295,15 @@
   },
   {
     "id": 58,
-    "texto": "Compraste fruta para ser saludable. Se maduró mientras pedías pizza."
+    "texto": "Compraste fruta para ser saludable. Se maduró mientras pedías pizza.",
+    "dinero": -150,
+    "salud": -1,
+    "bienestar": -1
   },
   {
     "id": 59,
-    "texto": "Lograste no abrir la app de delivery. El pulgar todavía tiembla."
+    "texto": "Lograste no abrir la app de delivery. El pulgar todavía tiembla.",
+    "bienestar": 3
   },
   {
     "id": 60,
@@ -249,7 +319,9 @@
   },
   {
     "id": 63,
-    "texto": "Tu recibo de luz llegó más bajo. Sospechas que fue un error del universo."
+    "texto": "Tu recibo de luz llegó más bajo. Sospechas que fue un error del universo.",
+    "dinero": 200,
+    "bienestar": 2
   },
   {
     "id": 64,
@@ -261,35 +333,50 @@
   },
   {
     "id": 66,
-    "texto": "Organizaste tus contraseñas y sentiste que dominas la vida moderna."
+    "texto": "Organizaste tus contraseñas y sentiste que dominas la vida moderna.",
+    "bienestar": 3
   },
   {
     "id": 67,
-    "texto": "Te pusiste bloqueador. Tu salud futura hizo una ovación."
+    "texto": "Te pusiste bloqueador. Tu salud futura hizo una ovación.",
+    "salud": 2,
+    "bienestar": 2
   },
   {
     "id": 68,
-    "texto": "Compraste genérico y no pasó nada. La marca famosa está ofendida."
+    "texto": "Compraste genérico y no pasó nada. La marca famosa está ofendida.",
+    "dinero": 80,
+    "bienestar": 2
   },
   {
     "id": 69,
-    "texto": "Tuviste ansiedad por dinero y la calmó una sopita. Economía conductual con fideo."
+    "texto": "Tuviste ansiedad por dinero y la calmó una sopita. Economía conductual con fideo.",
+    "dinero": -60,
+    "salud": 1,
+    "bienestar": 3
   },
   {
     "id": 70,
-    "texto": "El elevador no funcionó. Subiste escaleras y fingiste que era crossfit."
+    "texto": "El elevador no funcionó. Subiste escaleras y fingiste que era crossfit.",
+    "salud": 2,
+    "bienestar": -1
   },
   {
     "id": 71,
-    "texto": "Guardaste cambio en un frasco. Suena más rico de lo que es."
+    "texto": "Guardaste cambio en un frasco. Suena más rico de lo que es.",
+    "dinero": 50,
+    "bienestar": 1
   },
   {
     "id": 72,
-    "texto": "Aprendiste a decir 'no está en mi presupuesto' sin llorar."
+    "texto": "Aprendiste a decir 'no está en mi presupuesto' sin llorar.",
+    "bienestar": 4
   },
   {
     "id": 73,
-    "texto": "Te dio pena pedir descuento. Luego se te quitó al ver el total."
+    "texto": "Te dio pena pedir descuento. Luego se te quitó al ver el total.",
+    "dinero": -60,
+    "bienestar": -1
   },
   {
     "id": 74,
@@ -297,15 +384,19 @@
   },
   {
     "id": 75,
-    "texto": "Tuviste una junta con cámara apagada. Nadie supo que desayunabas cereal en taza."
+    "texto": "Tuviste una junta con cámara apagada. Nadie supo que desayunabas cereal en taza.",
+    "bienestar": 1
   },
   {
     "id": 76,
-    "texto": "Compraste una alcancía. Ahora tienes un puerquito con responsabilidades."
+    "texto": "Compraste una alcancía. Ahora tienes un puerquito con responsabilidades.",
+    "dinero": -150,
+    "bienestar": 2
   },
   {
     "id": 77,
-    "texto": "Tu tarjeta pasó a la primera. Pequeña victoria, gran sospecha."
+    "texto": "Tu tarjeta pasó a la primera. Pequeña victoria, gran sospecha.",
+    "bienestar": 2
   },
   {
     "id": 78,
@@ -317,11 +408,14 @@
   },
   {
     "id": 80,
-    "texto": "Tuviste un día sin gastos. Lo celebraste no gastando, por increíble que parezca."
+    "texto": "Tuviste un día sin gastos. Lo celebraste no gastando, por increíble que parezca.",
+    "bienestar": 4
   },
   {
     "id": 81,
-    "texto": "Pagaste algo en efectivo y descubriste que el dinero sí se va físicamente."
+    "texto": "Pagaste algo en efectivo y descubriste que el dinero sí se va físicamente.",
+    "dinero": -200,
+    "bienestar": 1
   },
   {
     "id": 82,
@@ -337,15 +431,20 @@
   },
   {
     "id": 85,
-    "texto": "Compraste un termo para ahorrar café. Ahora cargas tu futuro en acero inoxidable."
+    "texto": "Compraste un termo para ahorrar café. Ahora cargas tu futuro en acero inoxidable.",
+    "dinero": -350,
+    "bienestar": 2
   },
   {
     "id": 86,
-    "texto": "Tuviste energía para cocinar. El gas y tú trabajaron en equipo."
+    "texto": "Tuviste energía para cocinar. El gas y tú trabajaron en equipo.",
+    "salud": 2,
+    "bienestar": 3
   },
   {
     "id": 87,
-    "texto": "Te dieron ganas de ordenar recibos. Duró hasta el tercer papelito."
+    "texto": "Te dieron ganas de ordenar recibos. Duró hasta el tercer papelito.",
+    "bienestar": -1
   },
   {
     "id": 88,
@@ -353,7 +452,9 @@
   },
   {
     "id": 89,
-    "texto": "Encontraste un billete lavado en la ropa. Literalmente dinero limpio."
+    "texto": "Encontraste un billete lavado en la ropa. Literalmente dinero limpio.",
+    "dinero": 100,
+    "bienestar": 3
   },
   {
     "id": 90,
@@ -373,11 +474,15 @@
   },
   {
     "id": 94,
-    "texto": "Tuviste antojo de pan dulce. Negociaste contigo mismo y perdiste."
+    "texto": "Tuviste antojo de pan dulce. Negociaste contigo mismo y perdiste.",
+    "dinero": -40,
+    "bienestar": 1
   },
   {
     "id": 95,
-    "texto": "Descubriste que caminar es gratis. Tus tenis piden mantenimiento."
+    "texto": "Descubriste que caminar es gratis. Tus tenis piden mantenimiento.",
+    "salud": 2,
+    "bienestar": 2
   },
   {
     "id": 96,
@@ -385,11 +490,15 @@
   },
   {
     "id": 97,
-    "texto": "Te sobró comida y la guardaste. Mañana será 'comida gourmet recalentada'."
+    "texto": "Te sobró comida y la guardaste. Mañana será 'comida gourmet recalentada'.",
+    "dinero": 80,
+    "bienestar": 1
   },
   {
     "id": 98,
-    "texto": "Compraste pilas recargables y te sentiste fundador de una startup verde."
+    "texto": "Compraste pilas recargables y te sentiste fundador de una startup verde.",
+    "dinero": -200,
+    "bienestar": 3
   },
   {
     "id": 99,
@@ -397,15 +506,20 @@
   },
   {
     "id": 100,
-    "texto": "Aprendiste que 'barato' no siempre significa 'necesario'. Duró poco el aprendizaje."
+    "texto": "Aprendiste que 'barato' no siempre significa 'necesario'. Duró poco el aprendizaje.",
+    "dinero": -150,
+    "bienestar": -1
   },
   {
     "id": 101,
-    "texto": "Tu alarma sonó y tú invertiste 10 minutos más en sueño."
+    "texto": "Tu alarma sonó y tú invertiste 10 minutos más en sueño.",
+    "salud": -1,
+    "bienestar": 2
   },
   {
     "id": 102,
-    "texto": "Pasaste frente a una panadería y resististe. La panadería no lo tomó personal."
+    "texto": "Pasaste frente a una panadería y resististe. La panadería no lo tomó personal.",
+    "bienestar": 3
   },
   {
     "id": 103,
@@ -417,15 +531,21 @@
   },
   {
     "id": 105,
-    "texto": "Tuviste un gasto hormiga. La hormiga venía con familia."
+    "texto": "Tuviste un gasto hormiga. La hormiga venía con familia.",
+    "dinero": -120,
+    "bienestar": -2
   },
   {
     "id": 106,
-    "texto": "El semáforo en verde te ahorró gasolina y estrés. Gracias, infraestructura."
+    "texto": "El semáforo en verde te ahorró gasolina y estrés. Gracias, infraestructura.",
+    "dinero": 30,
+    "bienestar": 2
   },
   {
     "id": 107,
-    "texto": "Lograste tomar agua en vez de refresco. Tu riñón te mandó sticker."
+    "texto": "Lograste tomar agua en vez de refresco. Tu riñón te mandó sticker.",
+    "salud": 2,
+    "bienestar": 2
   },
   {
     "id": 108,
@@ -449,7 +569,10 @@
   },
   {
     "id": 113,
-    "texto": "Pagaste una deuda pequeña. Don Interés perdió un soldado."
+    "texto": "Pagaste una deuda pequeña. Don Interés perdió un soldado.",
+    "dinero": -300,
+    "bienestar": 4,
+    "deuda": -300
   },
   {
     "id": 114,
@@ -469,7 +592,9 @@
   },
   {
     "id": 118,
-    "texto": "Te salió barato el mandado porque olvidaste comprar la mitad."
+    "texto": "Te salió barato el mandado porque olvidaste comprar la mitad.",
+    "dinero": 80,
+    "bienestar": -1
   },
   {
     "id": 119,
@@ -477,7 +602,8 @@
   },
   {
     "id": 120,
-    "texto": "Tuviste un momento de paz: ninguna app pidió renovar suscripción."
+    "texto": "Tuviste un momento de paz: ninguna app pidió renovar suscripción.",
+    "bienestar": 3
   },
   {
     "id": 121,
@@ -489,6 +615,7 @@
   },
   {
     "id": 123,
-    "texto": "Le dijiste 'luego vemos' a un gasto innecesario. Madurez nivel jefe final."
+    "texto": "Le dijiste 'luego vemos' a un gasto innecesario. Madurez nivel jefe final.",
+    "bienestar": 4
   }
 ]

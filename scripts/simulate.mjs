@@ -134,9 +134,11 @@ function pickTragediaForTier(tier) {
   return { card, sev };
 }
 
+let antiEspiralCount = 0;
 function aplicarAntiEspiral(principal, mesPrev) {
   if (principal !== "tragedia") return principal;
   if (!mesPrev || (mesPrev.tragedias || 0) < 2) return principal;
+  antiEspiralCount += 1;
   return Math.random() < 0.6 ? "oportunidad" : "normal";
 }
 
@@ -168,7 +170,8 @@ function generarSecuenciaMes(bienestar, mesContext = {}) {
   };
 }
 
-function simular(bienestarFijo, meses = 50) {
+function simular(bienestarFijo, meses = 100) {
+  antiEspiralCount = 0;
   const counts = {
     normal: 0,
     oportunidad: 0,
@@ -178,13 +181,14 @@ function simular(bienestarFijo, meses = 50) {
     trag_fuerte: 0,
     payday: meses,
   };
+  const trDistrib = { 0: 0, 1: 0, 2: 0 };
   let totalCartas = 0;
   let mesPrev = { tragedias: 0 };
 
   for (let m = 0; m < meses; m++) {
     const r = generarSecuenciaMes(bienestarFijo, mesPrev);
     counts.normal += r.numNormales;
-    totalCartas += r.numNormales + r.eventos.length + 1; // +1 payday
+    totalCartas += r.numNormales + r.eventos.length + 1;
     let tragsThisMonth = 0;
     for (const e of r.eventos) {
       if (e === "normal") counts.normal += 1;
@@ -198,18 +202,23 @@ function simular(bienestarFijo, meses = 50) {
         tragsThisMonth += 1;
       }
     }
+    trDistrib[tragsThisMonth] = (trDistrib[tragsThisMonth] || 0) + 1;
     mesPrev = { tragedias: tragsThisMonth };
   }
-  const total = Object.values(counts).reduce((a, b) => a + b, 0);
-  return { counts, total, cartasPorMes: (totalCartas / meses).toFixed(2) };
+  return {
+    counts,
+    cartasPorMes: (totalCartas / meses).toFixed(2),
+    trDistrib,
+    antiEspiral: antiEspiralCount,
+  };
 }
 
-function report(label, bie) {
-  const r = simular(bie, 50);
+function report(label, bie, meses = 100) {
+  const r = simular(bie, meses);
   const c = r.counts;
   const evtTotal = c.oportunidad + c.fake + c.trag_leve + c.trag_media + c.trag_fuerte;
   const tragTotal = c.trag_leve + c.trag_media + c.trag_fuerte;
-  console.log(`\n=== ${label} (bienestar=${bie}, 50 meses) ===`);
+  console.log(`\n=== ${label} (bienestar=${bie}, ${meses} meses) ===`);
   console.log(`Promedio cartas por mes: ${r.cartasPorMes}`);
   console.log(`Normales:           ${c.normal}`);
   console.log(`Oportunidades:      ${c.oportunidad}`);
@@ -219,6 +228,10 @@ function report(label, bie) {
   console.log(`Tragedias fuertes:  ${c.trag_fuerte}`);
   console.log(`Total tragedias:    ${tragTotal} (${((tragTotal / evtTotal) * 100).toFixed(0)}% de eventos)`);
   console.log(`Paydays:            ${c.payday}`);
+  console.log(`Meses con 0 trag:   ${r.trDistrib[0] || 0}`);
+  console.log(`Meses con 1 trag:   ${r.trDistrib[1] || 0}`);
+  console.log(`Meses con 2 trag:   ${r.trDistrib[2] || 0}`);
+  console.log(`Anti-espiral activado: ${r.antiEspiral} veces`);
 }
 
 console.log("Cards disponibles:");
@@ -226,12 +239,53 @@ console.log("  Tragedias por severidad:");
 const sevCount = { leve: 0, media: 0, fuerte: 0 };
 for (const c of tragedyCards) sevCount[calcularSeveridadTragedia(c)] += 1;
 console.log("    leve:", sevCount.leve, " media:", sevCount.media, " fuerte:", sevCount.fuerte);
+
+// --- Validacion normalCards ---
+console.log("  Cartas normales:");
+const normTotal = normalCards.length;
+let normConEfecto = 0;
+let normSinEfecto = 0;
+const rng = (key) => {
+  let mn = Infinity, mx = -Infinity;
+  for (const c of normalCards) {
+    if (typeof c[key] === "number") {
+      if (c[key] < mn) mn = c[key];
+      if (c[key] > mx) mx = c[key];
+    }
+  }
+  return { min: mn === Infinity ? 0 : mn, max: mx === -Infinity ? 0 : mx };
+};
+for (const c of normalCards) {
+  const tiene =
+    typeof c.dinero === "number" ||
+    typeof c.salud === "number" ||
+    typeof c.bienestar === "number" ||
+    typeof c.deuda === "number";
+  if (tiene) normConEfecto += 1;
+  else normSinEfecto += 1;
+}
+console.log(`    total: ${normTotal}`);
+console.log(`    con efecto: ${normConEfecto} (${((normConEfecto / normTotal) * 100).toFixed(0)}%)`);
+console.log(`    sin efecto: ${normSinEfecto} (${((normSinEfecto / normTotal) * 100).toFixed(0)}%)`);
+const rd = rng("dinero"), rs = rng("salud"), rb = rng("bienestar"), rde = rng("deuda");
+console.log(`    rango dinero: ${rd.min} a ${rd.max}`);
+console.log(`    rango salud: ${rs.min} a ${rs.max}`);
+console.log(`    rango bienestar: ${rb.min} a ${rb.max}`);
+console.log(`    rango deuda: ${rde.min} a ${rde.max}`);
+const exagerados = normalCards.filter(
+  (c) =>
+    (typeof c.dinero === "number" && Math.abs(c.dinero) > 500) ||
+    (typeof c.salud === "number" && Math.abs(c.salud) > 3) ||
+    (typeof c.bienestar === "number" && Math.abs(c.bienestar) > 5) ||
+    (typeof c.deuda === "number" && Math.abs(c.deuda) > 500)
+);
+console.log(`    efectos exagerados (fuera de spec): ${exagerados.length}`);
 console.log("  Fakes con opcion bienestar positivo:");
 const fakesConPositiva = fakeOpportunityCards.filter((c) =>
   (c.opciones || []).some((op) => typeof op?.bienestar === "number" && op.bienestar > 0)
 );
 console.log("    " + fakesConPositiva.length + " / " + fakeOpportunityCards.length);
 
-report("BIENESTAR BAJO", 20);
-report("BIENESTAR MEDIO", 50);
-report("BIENESTAR ALTO", 85);
+report("BIENESTAR BAJO", 20, 100);
+report("BIENESTAR MEDIO", 50, 100);
+report("BIENESTAR ALTO", 85, 100);

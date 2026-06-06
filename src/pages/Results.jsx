@@ -18,6 +18,7 @@ function evaluarNivel({
   deudaInicial,
   dineroInicial,
   stats,
+  finMotivo,
 }) {
   const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
 
@@ -138,10 +139,71 @@ function evaluarNivel({
     descripcion += " Y lo más valioso: vives bien, no solo sobrevives.";
   }
 
+  // --- Narrativa con prioridad (cap 4) ---
+  const deudaActual = Number(deuda || 0);
+  const candidatas = [];
+
+  // P1: motivo de fin domina
+  if (finMotivo === "salud" || s <= 0) {
+    candidatas.push({
+      p: 100,
+      t: "Tu cuerpo dijo basta antes que tu cartera. La salud es el activo más caro de reponer.",
+    });
+  } else if (finMotivo === "dinero" || (Number(dinero || 0) <= 0 && deudaActual > 0)) {
+    candidatas.push({
+      p: 100,
+      t: "Te quedaste sin liquidez con la deuda viva. El primer error fue dejar que los intereses jugaran de local.",
+    });
+  }
+
+  // P2: estados criticos finales (no contradictorios con P1)
+  if (finMotivo !== "salud" && s > 0 && s < 25) {
+    candidatas.push({ p: 80, t: "Tu salud quedó en zona roja: cualquier mes más y se cae el castillo." });
+  }
+  if (finMotivo !== "dinero" && deudaActual >= di * 1.5) {
+    candidatas.push({ p: 78, t: "La deuda creció más rápido que tu margen: estás trabajando para los intereses." });
+  }
+
+  // P3: suenos cumplidos
+  if (suenosCumplidos >= 3) {
+    candidatas.push({ p: 70, t: "No solo sobreviviste: construiste algo y tachaste sueños." });
+  } else if (suenosCumplidos >= 1 && deudaActual <= di) {
+    candidatas.push({ p: 60, t: "Cumpliste sueños sin que la deuda se desbordara. Eso es disciplina." });
+  }
+
+  // P4: bienestar extremo
+  if (b >= 85 && s >= 70) {
+    candidatas.push({ p: 55, t: "Mantuviste la cabeza fría: prudencia con resultados." });
+  } else if (b < 25 && finMotivo !== "salud") {
+    candidatas.push({ p: 55, t: "Tu bienestar quedó quemado: el dinero no alcanzó para reponer la paz mental." });
+  }
+
+  // P5: inversiones
+  if (invCount >= 4 && invNeto > 0) {
+    candidatas.push({ p: 45, t: "Tu portafolio sí trabajó, no como tu compa del proyecto en equipo." });
+  } else if (invCount >= 3 && invNeto < 0) {
+    candidatas.push({ p: 42, t: "Probaste el mercado y te ensenó humildad: la mayoría de las apuestas no devolvieron." });
+  }
+
+  // P6: cierres humoristicos contextuales
+  if (!candidatas.some((c) => c.p >= 80)) {
+    if (moneyScore >= 0.8 && b < 35) {
+      candidatas.push({ p: 35, t: "Ganaste dinero, pero tu paz mental quedó en modo licuadora." });
+    } else if (moneyScore < 0.4 && b >= 70) {
+      candidatas.push({ p: 35, t: "No eres millonario, pero duermes como bebé sin notificaciones del banco." });
+    }
+  }
+
+  const narrativa = candidatas
+    .sort((a, b) => b.p - a.p)
+    .slice(0, 4)
+    .map((c) => c.t);
+
   return {
     nivel,
     titulo,
     descripcion,
+    narrativa,
     topSecret,
     puntos: Math.round(puntos),
     ahorroOk,
@@ -186,8 +248,9 @@ export default function Results() {
         deudaInicial: baseline?.deudaInicial ?? 0,
         dineroInicial: baseline?.dineroInicial ?? 0,
         stats,
+        finMotivo: meta?.finMotivo,
       }),
-    [dinero, deuda, salud, bienestar, sueldo, suenosCumplidos, suenosTotal, baseline, stats]
+    [dinero, deuda, salud, bienestar, sueldo, suenosCumplidos, suenosTotal, baseline, stats, meta]
   );
 
   const motivo = useMemo(() => {
@@ -283,6 +346,15 @@ export default function Results() {
               </div>
             </div>
             <p className="mt-2 opacity-80">{evaluacion.descripcion}</p>
+
+            {Array.isArray(evaluacion.narrativa) &&
+              evaluacion.narrativa.length > 0 && (
+                <ul className="mt-3 space-y-1 text-sm opacity-80 list-disc pl-5">
+                  {evaluacion.narrativa.map((n, i) => (
+                    <li key={i}>{n}</li>
+                  ))}
+                </ul>
+              )}
 
             {evaluacion.topSecret && (
               <div className="mt-4 p-4 rounded-lg border bg-black text-white">

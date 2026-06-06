@@ -84,7 +84,7 @@ for (const card of cards) {
   card.severidad = sev;
 }
 
-// --- Tragedias fuertes nuevas (12) ---
+// --- Tragedias fuertes nuevas (13: IDs 87-99) ---
 const nuevas = [
   {
     id: 87,
