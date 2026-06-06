@@ -671,16 +671,21 @@ export default function Game() {
   // --- Character selection ---
   if (!confirmado) {
     return (
-      <div className="min-h-screen p-4">
-        <h2 className="text-2xl font-bold text-center mt-8 mb-6">
-          ¡Te tocó este personaje!
-        </h2>
+      <div className="pt-6 pb-10">
+        <div className="text-center mb-5">
+          <div className="text-[10px] uppercase tracking-widest text-gray-500 font-semibold">
+            Nueva partida
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-extrabold mt-1 text-gray-900">
+            Te tocó este personaje
+          </h2>
+        </div>
 
         <TarjetaPersonaje personaje={personaje} />
 
-        <div className="flex flex-wrap gap-4 justify-center mt-4">
+        <div className="flex flex-wrap gap-3 justify-center mt-5 max-w-xl mx-auto px-2">
           <button
-            className="bg-green-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-green-700 transition"
+            className="flex-1 min-w-[180px] px-5 py-3 rounded-xl bg-gray-900 text-white font-semibold hover:bg-gray-800 transition shadow-md"
             onClick={() => {
               saludThresholdRef.current = 60;
               saludCooldownRef.current = false;
@@ -699,7 +704,7 @@ export default function Game() {
 
           {intentos === 1 && (
             <button
-              className="bg-blue-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+              className="flex-1 min-w-[180px] px-5 py-3 rounded-xl border border-gray-300 bg-white text-gray-700 font-semibold hover:bg-gray-50 transition"
               onClick={() => {
                 setPersonaje(rand(personajes));
                 setIntentos(2);
@@ -711,7 +716,7 @@ export default function Game() {
 
           {intentos === 2 && (
             <button
-              className="bg-orange-600 text-white px-5 py-3 rounded-lg font-semibold hover:bg-orange-700 transition"
+              className="flex-1 min-w-[180px] px-5 py-3 rounded-xl border border-amber-400 bg-amber-50 text-amber-900 font-semibold hover:bg-amber-100 transition"
               onClick={() => {
                 const tercero = rand(personajes);
                 saludThresholdRef.current = 60;
@@ -732,7 +737,7 @@ export default function Game() {
         </div>
 
         {intentos === 2 && (
-          <p className="text-center mt-2 text-sm text-gray-500 italic">
+          <p className="text-center mt-3 text-xs text-gray-500 italic">
             Si no te convence, ni modo, ¡ya no hay más oportunidades!
           </p>
         )}
@@ -815,20 +820,22 @@ export default function Game() {
   }
 
   return (
-    <div className="min-h-screen p-4 space-y-4 max-w-2xl mx-auto">
+    <div className="pt-4 pb-10 space-y-3 max-w-2xl mx-auto">
       <Cartera mesActual={mes} />
 
       <div className="flex items-center justify-between text-sm px-1">
-        <span className="font-semibold text-gray-700">
-          Mes {mes} / {maxMeses}
+        <div className="flex items-center gap-2">
+          <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-white border border-gray-200 text-xs font-semibold text-gray-700 shadow-sm">
+            Mes {mes} / {maxMeses}
+          </span>
           {invResults.length > 0 && (
-            <span className="ml-2 text-amber-600">
-              — resultados de inversión pendientes
+            <span className="text-xs text-amber-700">
+              resultados de inversión pendientes
             </span>
           )}
-        </span>
+        </div>
         <button
-          className="text-xs text-red-500 hover:text-red-700 underline"
+          className="text-xs text-gray-400 hover:text-rose-600 underline"
           onClick={resetAll}
         >
           Reiniciar partida

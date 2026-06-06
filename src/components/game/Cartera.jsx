@@ -2,32 +2,32 @@ import { useGameStore } from "../../store/gameStore";
 
 function etiquetaBienestar(b) {
   const v = Number(b || 0);
-  if (v >= 75) return { texto: "Pleno", color: "text-emerald-700", bar: "bg-emerald-500" };
-  if (v >= 50) return { texto: "Estable", color: "text-blue-700", bar: "bg-blue-500" };
-  if (v >= 25) return { texto: "Estresado", color: "text-amber-700", bar: "bg-amber-500" };
-  return { texto: "Quemado", color: "text-rose-700", bar: "bg-rose-500" };
+  if (v >= 75) return { texto: "Pleno", color: "text-emerald-700", bar: "from-emerald-400 to-emerald-500" };
+  if (v >= 50) return { texto: "Estable", color: "text-blue-700", bar: "from-blue-400 to-blue-500" };
+  if (v >= 25) return { texto: "Estresado", color: "text-amber-700", bar: "from-amber-400 to-amber-500" };
+  return { texto: "Quemado", color: "text-rose-700", bar: "from-rose-400 to-rose-500" };
 }
 
 function etiquetaSalud(s) {
   const v = Number(s || 0);
-  if (v >= 75) return { texto: "Fuerte", color: "text-emerald-700", bar: "bg-emerald-500" };
-  if (v >= 50) return { texto: "Estable", color: "text-blue-700", bar: "bg-blue-500" };
-  if (v >= 25) return { texto: "Delicado", color: "text-amber-700", bar: "bg-amber-500" };
-  return { texto: "Crítico", color: "text-rose-700", bar: "bg-rose-500" };
+  if (v >= 75) return { texto: "Fuerte", color: "text-emerald-700", bar: "from-emerald-400 to-emerald-500" };
+  if (v >= 50) return { texto: "Estable", color: "text-blue-700", bar: "from-blue-400 to-blue-500" };
+  if (v >= 25) return { texto: "Delicado", color: "text-amber-700", bar: "from-amber-400 to-amber-500" };
+  return { texto: "Crítico", color: "text-rose-700", bar: "from-rose-400 to-rose-500" };
 }
 
-function Barra({ valor, colorClase }) {
+function Barra({ valor, gradient }) {
   const v = Math.max(0, Math.min(100, Math.round(Number(valor || 0))));
   return (
     <div
-      className="w-full h-1.5 bg-gray-200 rounded-full mt-1 overflow-hidden"
+      className="w-full h-1.5 bg-gray-100 rounded-full mt-1.5 overflow-hidden"
       role="progressbar"
       aria-valuenow={v}
       aria-valuemin={0}
       aria-valuemax={100}
     >
       <div
-        className={`h-full ${colorClase} transition-all duration-500`}
+        className={`h-full rounded-full bg-gradient-to-r ${gradient} transition-all duration-500`}
         style={{ width: `${v}%` }}
       />
     </div>
@@ -40,7 +40,7 @@ function MetricaSimple({ label, value, valueClass = "text-gray-900" }) {
       <div className="text-[10px] uppercase tracking-wider text-gray-500 font-semibold">
         {label}
       </div>
-      <div className={`text-base font-bold ${valueClass}`}>{value}</div>
+      <div className={`text-base font-bold ${valueClass} mt-0.5`}>{value}</div>
     </div>
   );
 }
@@ -51,11 +51,11 @@ function MetricaBarra({ label, valor, etiqueta }) {
       <div className="text-[10px] uppercase tracking-wider text-gray-500 font-semibold">
         {label}
       </div>
-      <div className={`text-base font-bold ${etiqueta.color}`}>
+      <div className={`text-base font-bold ${etiqueta.color} mt-0.5`}>
         {Math.round(Number(valor || 0))}%
       </div>
-      <Barra valor={valor} colorClase={etiqueta.bar} />
-      <div className={`text-[10px] mt-0.5 ${etiqueta.color}`}>{etiqueta.texto}</div>
+      <Barra valor={valor} gradient={etiqueta.bar} />
+      <div className={`text-[10px] mt-1 ${etiqueta.color}`}>{etiqueta.texto}</div>
     </div>
   );
 }
@@ -82,11 +82,12 @@ export default function Cartera({ mesActual = null }) {
 
   const bie = etiquetaBienestar(bienestar);
   const sal = etiquetaSalud(salud);
-
   const suenosCumplidos = sueños.filter((s) => s.cumplido).length;
+  // Si hay 3 sueños o menos, no aplicamos scroll: deben verse completos
+  const pocasInversiones = inversionesPendientes.length <= 3;
 
   return (
-    <div className="bg-gray-50 rounded-2xl border border-gray-200 shadow-sm p-3 sm:p-4">
+    <div className="bg-white/80 backdrop-blur rounded-2xl border border-gray-200 shadow-sm p-3 sm:p-4">
       {/* Metricas */}
       <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 mb-3">
         <MetricaSimple
@@ -97,7 +98,7 @@ export default function Cartera({ mesActual = null }) {
         <MetricaSimple
           label="Deuda"
           value={`$${Number(deuda || 0).toLocaleString()}`}
-          valueClass={deuda > 0 ? "text-rose-700" : "text-gray-500"}
+          valueClass={deuda > 0 ? "text-rose-700" : "text-gray-400"}
         />
         <MetricaBarra label="Salud" valor={salud} etiqueta={sal} />
         <MetricaBarra label="Bienestar" valor={bienestar} etiqueta={bie} />
@@ -110,8 +111,8 @@ export default function Cartera({ mesActual = null }) {
 
       {/* Inversiones + Sueños */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-        {/* Inversiones pendientes */}
-        <div className="rounded-xl bg-white border border-gray-200 p-3">
+        {/* Inversiones */}
+        <div className="rounded-xl bg-gradient-to-br from-indigo-50/50 to-white border border-gray-200 p-3">
           <div className="flex items-center justify-between mb-2">
             <div className="text-[10px] uppercase tracking-wider text-gray-500 font-semibold">
               Inversiones pendientes
@@ -123,20 +124,24 @@ export default function Cartera({ mesActual = null }) {
             )}
           </div>
           {inversionesPendientes.length > 0 ? (
-            <ul className="space-y-1.5 max-h-32 overflow-y-auto pr-1">
+            <ul
+              className={`space-y-1.5 ${
+                pocasInversiones ? "" : "max-h-36 overflow-y-auto pr-1"
+              }`}
+            >
               {inversionesPendientes.map((inv) => (
                 <li
                   key={inv.id}
-                  className="rounded-lg border border-indigo-100 bg-indigo-50/50 p-2"
+                  className="rounded-lg border border-indigo-100 bg-white p-2 shadow-sm"
                 >
-                  <div className="font-semibold text-gray-900 leading-tight text-[13px]">
+                  <div className="font-semibold text-gray-900 leading-tight text-[13px] truncate">
                     {inv.nombre || "Inversión"}
                   </div>
                   <div className="flex items-center justify-between mt-1 text-[11px]">
-                    <span className="text-gray-600">
+                    <span className="text-gray-500">
                       Capital ${Number(inv.costo || 0).toLocaleString()}
                     </span>
-                    <span className="text-indigo-700 font-medium">
+                    <span className="font-medium text-indigo-700">
                       {fmtMeses(inv)}
                     </span>
                   </div>
@@ -144,38 +149,41 @@ export default function Cartera({ mesActual = null }) {
               ))}
             </ul>
           ) : (
-            <div className="text-gray-400 italic text-xs">
-              No tienes inversiones en curso.
+            <div className="text-center py-3">
+              <div className="text-2xl" aria-hidden>📈</div>
+              <div className="text-[11px] text-gray-500 mt-1 italic">
+                Sin inversiones en curso.
+              </div>
             </div>
           )}
         </div>
 
-        {/* Sueños */}
-        <div className="rounded-xl bg-white border border-gray-200 p-3">
+        {/* Sueños — 3 siempre visibles, sin scroll */}
+        <div className="rounded-xl bg-gradient-to-br from-amber-50/40 to-white border border-gray-200 p-3">
           <div className="flex items-center justify-between mb-2">
             <div className="text-[10px] uppercase tracking-wider text-gray-500 font-semibold">
               Sueños
             </div>
             {sueños.length > 0 && (
-              <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700 border border-emerald-200">
+              <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-amber-100 text-amber-700 border border-amber-200">
                 {suenosCumplidos} / {sueños.length}
               </span>
             )}
           </div>
           {sueños.length > 0 ? (
-            <ul className="space-y-1.5 max-h-32 overflow-y-auto pr-1">
+            <ul className="space-y-1.5">
               {sueños.map((s, idx) => (
                 <li
                   key={idx}
-                  className={`rounded-lg border p-2 ${
+                  className={`rounded-lg border p-2 shadow-sm ${
                     s.cumplido
-                      ? "border-emerald-100 bg-emerald-50/50"
-                      : "border-gray-100 bg-gray-50/50"
+                      ? "border-emerald-200 bg-emerald-50/60"
+                      : "border-gray-100 bg-white"
                   }`}
                 >
                   <div className="flex items-center justify-between gap-2">
                     <div
-                      className={`font-semibold text-[13px] leading-tight ${
+                      className={`font-semibold text-[13px] leading-tight truncate ${
                         s.cumplido ? "line-through text-emerald-700" : "text-gray-900"
                       }`}
                     >
@@ -197,8 +205,11 @@ export default function Cartera({ mesActual = null }) {
               ))}
             </ul>
           ) : (
-            <div className="text-gray-400 italic text-xs">
-              Aún no tienes sueños registrados.
+            <div className="text-center py-3">
+              <div className="text-2xl" aria-hidden>🌟</div>
+              <div className="text-[11px] text-gray-500 mt-1 italic">
+                Aún no tienes sueños.
+              </div>
             </div>
           )}
         </div>

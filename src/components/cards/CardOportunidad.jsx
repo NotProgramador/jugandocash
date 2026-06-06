@@ -117,7 +117,8 @@ export default function CardOportunidad({
           if (hasInv) hint = delayLabel(op.inversion);
           else if (isInvAction) hint = delayLabel(op);
 
-          // Para inversiones no mostramos pills (outcomes son sorpresa); solo costo en hint adicional
+          // Solo opciones directas (no inversiones) muestran efectos como linea
+          // sutil. El costo de la inversion ya esta en el texto principal.
           let pills = null;
           if (isObj && !hasInv && !isInvAction) {
             pills = {
@@ -126,9 +127,6 @@ export default function CardOportunidad({
               bienestar: op?.bienestar,
               deuda: op?.deuda,
             };
-          } else if (hasInv && typeof op.inversion.costo === "number") {
-            // Para inversion solo mostrar el costo como pill negativa de dinero
-            pills = { dinero: -Math.abs(op.inversion.costo) };
           }
 
           return (

@@ -1,5 +1,6 @@
-// Boton de opcion consistente: titulo + descripcion + pills opcionales.
-// Tones: neutral (default), danger (tragedias), payday (verde).
+// Boton de opcion narrativo: texto y descripcion como protagonistas, efectos
+// como linea secundaria discreta. Tones cambian solo bordes/hover, no
+// "premian" visualmente ninguna opcion.
 
 import EffectPills from "./EffectPills";
 
@@ -27,19 +28,19 @@ export default function OptionButton({
       type="button"
       onClick={onClick}
       disabled={disabled}
-      className={`w-full text-left rounded-xl border p-3 sm:p-3.5 transition shadow-sm hover:shadow ${clases} disabled:opacity-50 disabled:cursor-not-allowed`}
+      className={`w-full text-left rounded-xl border p-3.5 transition shadow-sm hover:shadow ${clases} disabled:opacity-50 disabled:cursor-not-allowed`}
     >
       <div className="font-semibold leading-snug">{title}</div>
       {description && (
-        <div className="text-xs text-gray-600 mt-1 leading-snug">
+        <div className="text-sm text-gray-600 mt-1 leading-snug">
           {description}
         </div>
       )}
       {hint && (
-        <div className="text-[11px] text-gray-500 mt-1 italic">{hint}</div>
+        <div className="text-[11px] text-gray-400 mt-1.5 italic">{hint}</div>
       )}
       {pills && (
-        <div className="mt-2">
+        <div className="mt-1.5">
           <EffectPills {...pills} />
         </div>
       )}
